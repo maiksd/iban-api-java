@@ -11,13 +11,13 @@ public class IbanImpl implements Iban {
     private String checkDigit;
     private BbanImpl bban;
 
-    public IbanImpl(String ibanString){
+    public IbanImpl(String ibanString) throws IbanException{
 	this.setCountry(ibanString);
 	this.setCheckDigit(ibanString);
 	this.setBban(new BbanImpl(country, ibanString.substring(4, ibanString.length())));
     }
 
-    public IbanImpl(String country, String bankIdent, String ktoIdent){
+    public IbanImpl(String country, String bankIdent, String ktoIdent) throws IbanException{
 	this.country = country;
 	this.bban = new BbanImpl(country, bankIdent, ktoIdent);
 	this.checkDigit = "00";
@@ -91,7 +91,7 @@ public class IbanImpl implements Iban {
     }
 
     private void setCountry(String ibanString) {
-	this.country = ibanString.substring(0, 2);;
+	this.country = ibanString.substring(0, 2).toUpperCase(Locale.ENGLISH);
     }
 
     private void setCheckDigit(String ibanString) {
@@ -105,8 +105,8 @@ public class IbanImpl implements Iban {
     private void validateFormat() throws IbanException {
 	switch (country){
 	case Iban.COUNTRY_CODE_GERMAN:
-	    if (this.length() != 22)
-		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_LENGTH);
+	    if (this.toString().matches("DE\\d{2}\\d{8}\\d{10}"))
+		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_FORMAT);
 	    break;
 	default:
 	    

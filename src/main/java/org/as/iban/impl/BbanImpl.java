@@ -3,6 +3,7 @@ package org.as.iban.impl;
 import java.util.Locale;
 
 import org.as.iban.Iban;
+import org.as.iban.exception.IbanException;
 
 class BbanImpl {
     
@@ -23,10 +24,9 @@ class BbanImpl {
 	default:
     	    System.out.println("Country Code not supported");
 	}
-	    
     }
     
-    BbanImpl (String country, String bankIdent, String ktoIdent){
+    BbanImpl (String country, String bankIdent, String ktoIdent) throws IbanException {
 	this.country = country.toUpperCase(Locale.ENGLISH);
 	buildBban(bankIdent, ktoIdent);
     }
@@ -56,16 +56,16 @@ class BbanImpl {
 	return bankIdent + ktoIdent;
     }
     
-    private void buildBban (String bankIdent, String ktoIdent) {
+    private void buildBban (String bankIdent, String ktoIdent) throws IbanException {
 	switch (country) {
     	case Iban.COUNTRY_CODE_GERMAN:
     	    if (bankIdent.length() != BANKIDENT_GERMAN_LENGTH)
-    		System.out.println("Exception: Invalid bankIdent length");
+    		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_BANK_LENGTH);
     	    else
     		setBankIdent(bankIdent);
     	    
     	    if (ktoIdent.length() > KTOIDENT_GERMAN_LENGTH)
-    		System.out.println("Exception: Invalid ktoIdent length");
+    		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_KTO_LENGTH);
     	    else 
     		setKtoIdent(ktoIdent, KTOIDENT_GERMAN_LENGTH);
     	    break;
