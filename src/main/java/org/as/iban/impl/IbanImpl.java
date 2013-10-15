@@ -3,6 +3,7 @@ package org.as.iban.impl;
 import java.util.Locale;
 
 import org.as.iban.Iban;
+import org.as.iban.exception.IbanException;
 
 public class IbanImpl implements Iban {
     
@@ -24,7 +25,8 @@ public class IbanImpl implements Iban {
     }
 
     @Override
-    public boolean validate() {
+    public boolean validate() throws IbanException {
+	validateFormat();
 	String ascii = asciiToNumber(shiftIbanToString());
 	if (mod97(ascii) == 1)
 	    return true;
@@ -45,6 +47,10 @@ public class IbanImpl implements Iban {
 	return this.country + this.checkDigit + this.bban.toString();
     }
 
+    private int length() {
+	return this.country.length() + this.checkDigit.length() + this.bban.toString().length();
+    }
+    
     private String shiftIbanToString() {
 	return bban.toString() + country + checkDigit;
     }
@@ -95,5 +101,15 @@ public class IbanImpl implements Iban {
     private void setBban(BbanImpl bban) {
         this.bban = bban;
     }
-    
+ 
+    private void validateFormat() throws IbanException {
+	switch (country){
+	case Iban.COUNTRY_CODE_GERMAN:
+	    if (this.length() != 22)
+		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_LENGTH);
+	    break;
+	default:
+	    
+	}
+    }
 }
