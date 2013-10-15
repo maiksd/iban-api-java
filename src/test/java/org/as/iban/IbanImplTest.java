@@ -21,6 +21,7 @@ public class IbanImplTest {
     public void testIbanImplStringStringString() {
 	
 	// German
+	// Standardrule
 	String blz = "37040044";
 	String kto = "532013000";
 	Iban ibanGerman = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, blz, kto);
