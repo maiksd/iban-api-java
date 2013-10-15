@@ -105,7 +105,7 @@ public class IbanImpl implements Iban {
     private void validateFormat() throws IbanException {
 	switch (country){
 	case Iban.COUNTRY_CODE_GERMAN:
-	    if (this.toString().matches("DE\\d{2}\\d{8}\\d{10}"))
+	    if (!this.toString().matches("DE\\d{2}\\d{8}\\d{10}"))
 		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_FORMAT);
 	    break;
 	default:
