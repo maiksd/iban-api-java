@@ -34,7 +34,7 @@ public interface Iban {
     public static final String COUNTRY_CODE_ROMANIA = "RO";
     public static final String COUNTRY_CODE_SLOVAKIA = "SK";
     public static final String COUNTRY_CODE_SLOVENIA  = "SI";
-    public static final String COUNTR_CODE_SPAIN = "ES";
+    public static final String COUNTRY_CODE_SPAIN = "ES";
     public static final String COUNTRY_CODE_SWEDEN = "SE";
     public static final String COUNTRY_CODE_SWITZERLAND = "CH";
     public static final String COUNTRY_CODE_UNITED_KINGDOM = "GB";
@@ -45,4 +45,6 @@ public interface Iban {
     public void generate ();
     
     public String toString();
+    
+    public String getBic();
 }

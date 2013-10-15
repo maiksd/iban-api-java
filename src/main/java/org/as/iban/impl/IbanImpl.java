@@ -10,6 +10,7 @@ public class IbanImpl implements Iban {
     private String country;
     private String checkDigit;
     private BbanImpl bban;
+    private String bic;
 
     public IbanImpl(String ibanString) throws IbanException{
 	this.setCountry(ibanString);
@@ -47,8 +48,9 @@ public class IbanImpl implements Iban {
 	return this.country + this.checkDigit + this.bban.toString();
     }
 
-    private int length() {
-	return this.country.length() + this.checkDigit.length() + this.bban.toString().length();
+    @Override
+    public String getBic() {
+	return this.bic;
     }
     
     private String shiftIbanToString() {
@@ -112,4 +114,5 @@ public class IbanImpl implements Iban {
 	    
 	}
     }
+
 }
