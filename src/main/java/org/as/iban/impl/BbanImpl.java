@@ -7,26 +7,30 @@ import org.as.iban.exception.IbanException;
 
 class BbanImpl {
     
-    private static final int BANKIDENT_GERMAN_LENGTH = 8;
-    private static final int KTOIDENT_GERMAN_LENGTH = 10;
-    
     private String bankIdent;
     private String ktoIdent;
     private String country;
+
+    IbanFormatImpl ibanFormat;
+    
+    private final int BANKIDENT_LENGTH;
+    private final int KTOIDENT_LENGTH;
     
     BbanImpl (String country, String bban) throws IbanException{
+	ibanFormat = new IbanFormatImpl(country);
+	BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
+	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
+	
 	this.country = country.toUpperCase(Locale.ENGLISH);
-	switch (country) {
-	case Iban.COUNTRY_CODE_GERMAN:
-	    this.bankIdent = bban.substring(0, BANKIDENT_GERMAN_LENGTH);
-	    this.ktoIdent = bban.substring(BANKIDENT_GERMAN_LENGTH, bban.length());
-	    break;
-	default:
-    	    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
-	}
+	this.bankIdent = bban.substring(0, BANKIDENT_LENGTH);
+	this.ktoIdent = bban.substring(BANKIDENT_LENGTH, bban.length());
     }
     
     BbanImpl (String country, String bankIdent, String ktoIdent) throws IbanException {
+	ibanFormat = new IbanFormatImpl(country);
+	BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
+	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
+
 	this.country = country.toUpperCase(Locale.ENGLISH);
 	buildBban(bankIdent, ktoIdent);
     }
@@ -57,21 +61,14 @@ class BbanImpl {
     }
     
     private void buildBban (String bankIdent, String ktoIdent) throws IbanException {
-	switch (country) {
-    	case Iban.COUNTRY_CODE_GERMAN:
-    	    if (bankIdent.length() != BANKIDENT_GERMAN_LENGTH)
-    		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_BANK_LENGTH);
-    	    else
-    		setBankIdent(bankIdent);
-    	    
-    	    if (ktoIdent.length() > KTOIDENT_GERMAN_LENGTH)
-    		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_KTO_LENGTH);
-    	    else 
-    		setKtoIdent(ktoIdent, KTOIDENT_GERMAN_LENGTH);
-    	    break;
-    	default:
-    	    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
-	}
+	if (bankIdent.length() != BANKIDENT_LENGTH)
+	    throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_BANK_LENGTH);
+	else
+	    setBankIdent(bankIdent);
+	    
+	if (ktoIdent.length() > KTOIDENT_LENGTH)
+	    throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_KTO_LENGTH);
+	else 
+	    setKtoIdent(ktoIdent, KTOIDENT_LENGTH);
     }
-
 }

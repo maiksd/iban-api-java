@@ -1,150 +1,201 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<countries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<country>
+<countries xmlns="org.as.iban" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<country countryCode="AT">
 		<name>Austria</name>
-		<country_code>AT</country_code>
-		<regexp>AT\\d{2}\\d{5}\\d{11}</regexp>
+		<regexp>AT\d{2}\d{5}\d{11}</regexp>
 		<bankIdentLength>5</bankIdentLength>
 		<ktoIdentLength>11</ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="BE">
 		<name>Belgium</name>
-		<country_code>BE</country_code>
-		<regexp>BE\\d{2}\\d{3}\\d{7}\\d{2}</regexp>
+		<regexp>BE\d{2}\d{3}\d{7}\d{2}</regexp>
 		<bankIdentLength>3</bankIdentLength>
 		<ktoIdentLength>9</ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="BG">
 		<name>Bulgaria</name>
-		<country_code>BG</country_code>
-		<regexp>BG\\d{2}[A-Z]{4}\\d{4}\\d{2}[a-zA-Z0-9]{8}</regexp>
+		<regexp>BG\d{2}[A-Z]{4}\d{4}\d{2}[a-zA-Z0-9]{8}</regexp>
 		<bankIdentLength>8</bankIdentLength>
 		<ktoIdentLength>10</ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="HR">
 		<name>Croatia</name>
-		<country_code>HR</country_code>
-		<regexp>HR\\d{2}\\d{7}\\d{10}</regexp>
+		<regexp>HR\d{2}\d{7}\d{10}</regexp>
 		<bankIdentLength>7</bankIdentLength>
 		<ktoIdentLength>10</ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="CY">
 		<name>Cyprus</name>
-		<country_code>CY</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="CZ">
 		<name>Czech Republic</name>
-		<country_code>CZ</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="DK">
 		<name>Denmark</name>
-		<country_code>DK</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="EE">
 		<name>Estonia</name>
-		<country_code>EE</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="FI">
 		<name>Finland</name>
-		<country_code>FI</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="FR">
 		<name>France</name>
-		<country_code>FR</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="DE">
 		<name>Germany</name>
-		<country_code>DE</country_code>
-		<regexp>DE\\d{2}\\d{8}\\d{10}</regexp>
+		<regexp>DE\d{2}\d{8}\d{10}</regexp>
 		<bankIdentLength>8</bankIdentLength>
 		<ktoIdentLength>10</ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="GR">
 		<name>Greece</name>
-		<country_code>GR</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="HU">
 		<name>Hungary</name>
-		<country_code>HU</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="IS">
 		<name>Iceland</name>
-		<country_code>IS</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="IE">
 		<name>Ireland</name>
-		<country_code>IE</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="IT">
 		<name>Italia</name>
-		<country_code>IT</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="LV">
 		<name>Latvia</name>
-		<country_code>LV</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="LI">
 		<name>Lichtenstein</name>
-		<country_code>LI</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="LT">
 		<name>Lithuania</name>
-		<country_code>LT</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="LU">
 		<name>Luxembourg</name>
-		<country_code>LU</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="MT">
 		<name>Malta</name>
-		<country_code>MT</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="MC">
 		<name>Monaco</name>
-		<country_code>MC</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="NL">
 		<name>Netherlands</name>
-		<country_code>NL</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="NO">
 		<name>Norway</name>
-		<country_code>NO</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="PL">
 		<name>Poland</name>
-		<country_code>PL</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="PT">
 		<name>Portugal</name>
-		<country_code>PT</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="RO">
 		<name>Romania</name>
-		<country_code>RO</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="SK">
 		<name>Slovakia</name>
-		<country_code>SK</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="SI">
 		<name>Slovenia</name>
-		<country_code>SI</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="ES">
 		<name>Spain</name>
-		<country_code>ES</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="SE">
 		<name>Sweden</name>
-		<country_code>SE</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="CH">
 		<name>Switzerland</name>
-		<country_code>CH</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-	<country>
+	<country countryCode="GB">
 		<name>United Kingdom</name>
-		<country_code>GB</country_code>
+		<regexp></regexp>
+		<bankIdentLength></bankIdentLength>
+		<ktoIdentLength></ktoIdentLength>
 	</country>
-</countries>
+</countries>	
