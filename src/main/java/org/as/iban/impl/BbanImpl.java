@@ -14,7 +14,7 @@ class BbanImpl {
     private String ktoIdent;
     private String country;
     
-    BbanImpl (String country, String bban){
+    BbanImpl (String country, String bban) throws IbanException{
 	this.country = country.toUpperCase(Locale.ENGLISH);
 	switch (country) {
 	case Iban.COUNTRY_CODE_GERMAN:
@@ -22,7 +22,7 @@ class BbanImpl {
 	    this.ktoIdent = bban.substring(BANKIDENT_GERMAN_LENGTH, bban.length());
 	    break;
 	default:
-    	    System.out.println("Country Code not supported");
+    	    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
 	}
     }
     
@@ -70,7 +70,7 @@ class BbanImpl {
     		setKtoIdent(ktoIdent, KTOIDENT_GERMAN_LENGTH);
     	    break;
     	default:
-    	    System.out.println("Country Code not supported");
+    	    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
 	}
     }
 

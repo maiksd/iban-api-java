@@ -17,10 +17,16 @@
 	<country>
 		<name>Bulgaria</name>
 		<country_code>BG</country_code>
+		<regexp>BG\\d{2}[A-Z]{4}\\d{4}\\d{2}[a-zA-Z0-9]{8}</regexp>
+		<bankIdentLength>8</bankIdentLength>
+		<ktoIdentLength>10</ktoIdentLength>
 	</country>
 	<country>
 		<name>Croatia</name>
 		<country_code>HR</country_code>
+		<regexp>HR\\d{2}\\d{7}\\d{10}</regexp>
+		<bankIdentLength>7</bankIdentLength>
+		<ktoIdentLength>10</ktoIdentLength>
 	</country>
 	<country>
 		<name>Cyprus</name>
@@ -39,7 +45,7 @@
 		<country_code>EE</country_code>
 	</country>
 	<country>
-		<name>Finland </name>
+		<name>Finland</name>
 		<country_code>FI</country_code>
 	</country>
 	<country>
@@ -74,7 +80,7 @@
 		<country_code>IT</country_code>
 	</country>
 	<country>
-		<name>Latvia </name>
+		<name>Latvia</name>
 		<country_code>LV</country_code>
 	</country>
 	<country>
@@ -82,7 +88,7 @@
 		<country_code>LI</country_code>
 	</country>
 	<country>
-		<name>Lithuania </name>
+		<name>Lithuania</name>
 		<country_code>LT</country_code>
 	</country>
 	<country>
@@ -98,7 +104,7 @@
 		<country_code>MC</country_code>
 	</country>
 	<country>
-		<name>Netherlands </name>
+		<name>Netherlands</name>
 		<country_code>NL</country_code>
 	</country>
 	<country>
@@ -106,7 +112,7 @@
 		<country_code>NO</country_code>
 	</country>
 	<country>
-		<name>Poland </name>
+		<name>Poland</name>
 		<country_code>PL</country_code>
 	</country>
 	<country>
@@ -118,7 +124,7 @@
 		<country_code>RO</country_code>
 	</country>
 	<country>
-		<name>Slovakia </name>
+		<name>Slovakia</name>
 		<country_code>SK</country_code>
 	</country>
 	<country>
