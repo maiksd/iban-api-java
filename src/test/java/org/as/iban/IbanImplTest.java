@@ -88,7 +88,23 @@ public class IbanImplTest {
 	assertTrue(ibanValid.validate());
 	assertFalse(ibanInvalid.validate());
     }
+
+    @Test
+    public void testIbanImplConstructorCyprus() {
+	bankIdent = "00200128";
+	ktoIdent = "1200527600";
+	iban = new IbanImpl(Iban.COUNTRY_CODE_CYPRUS, bankIdent, ktoIdent);
+	assertEquals("CY17002001280000001200527600", iban.toString());
+    }
     
+    @Test
+    public void testValidateCyprus() {
+	ibanValid = new IbanImpl("CY17002001280000001200527600");
+	ibanInvalid = new IbanImpl("CY17002001280000001200527601");
+	assertTrue(ibanValid.validate());
+	assertFalse(ibanInvalid.validate());
+    }
+
     @Test
     public void testIbanImplConstructorGerman() {
 	bankIdent = "37040044";
