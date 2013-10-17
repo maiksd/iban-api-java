@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="org.as.iban" xmlns:tns="org.as.iban" elementFormDefault="qualified">
+
+    <element name="banks" type="tns:banks_type"></element>
+    
+    <complexType name="banks_type">
+    	<sequence>
+    		<element name="bank" type="tns:bank_type" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    	<attribute name="schemaLocation" type="string"></attribute>
+    </complexType>
+
+    <complexType name="bank_type">
+    	<sequence>
+    		<element name="bic" type="string" minOccurs="1" maxOccurs="1"></element>
+    		<element name="rule" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    	<attribute name="blc" type="ID" use="required"></attribute>
+    </complexType>
+</schema>
