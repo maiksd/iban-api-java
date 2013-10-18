@@ -2,6 +2,7 @@ package org.as.iban.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -37,10 +38,12 @@ class IbanFormatImpl {
 	    factory.setNamespaceAware(true);
 	    factory.setValidating(true);
 	    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-	    factory.setAttribute(SCHEMA_SOURCE, new File("resources/iban_format.xsd"));
+//	    factory.setAttribute(SCHEMA_SOURCE, new File(this.getClass().getResource("/iban_format.xsd").getFile()));
+	    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/iban_format.xsd"));
 	    
 	    builder = factory.newDocumentBuilder();
-	    document = builder.parse( new File("resources/iban_format.xml") );
+//	    System.out.println(this.getClass().getResourceAsStream("/iban_format.xml"));
+	    document = builder.parse(this.getClass().getResourceAsStream("/iban_format.xml"));
 
 	} catch (ParserConfigurationException e) {
 	    e.printStackTrace();

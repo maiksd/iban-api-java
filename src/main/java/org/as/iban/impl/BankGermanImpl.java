@@ -37,10 +37,10 @@ class BankGermanImpl {
 	    factory.setNamespaceAware(true);
 	    factory.setValidating(true);
 	    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-	    factory.setAttribute(SCHEMA_SOURCE, new File("resources/banks_german.xsd"));
+	    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
 
 	    builder = factory.newDocumentBuilder();
-	    document = builder.parse( new File("resources/banks_german.xml") );
+	    document = builder.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
 
 	} catch (ParserConfigurationException e) {
 	    e.printStackTrace();
