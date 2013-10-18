@@ -1,5 +1,7 @@
 package org.as.iban;
 
+import java.util.LinkedList;
+
 import org.as.iban.exception.IbanException;
 
 
@@ -46,5 +48,5 @@ public interface Iban {
     
     public String toString();
     
-    public String getBic();
+    public LinkedList getBic();
 }

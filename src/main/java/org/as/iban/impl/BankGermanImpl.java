@@ -1,7 +1,7 @@
 package org.as.iban.impl;
 
-import java.io.File;
 import java.io.IOException;
+import java.util.LinkedList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -18,29 +18,43 @@ class BankGermanImpl {
     final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
 
     private String blz;
-    private String bic;
+    private LinkedList <String> bic;
     private String rule;
     private String name;
 
     BankGermanImpl (String blz) {
 	this.blz = blz;
+	this.bic = new LinkedList();
 	readBankConfig();
     }
     
     private void readBankConfig() {
-	
-	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	DocumentBuilder builder;
-	Document document = null;
+
+	DocumentBuilderFactory factoryMapping = DocumentBuilderFactory.newInstance();
+	DocumentBuilder builderMapping;
+	Document documentMapping = null;
+
+
+	DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
+	DocumentBuilder builderBank;
+	Document documentBank = null;
 	
 	try {
-	    factory.setNamespaceAware(true);
-	    factory.setValidating(true);
-	    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-	    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
+	    factoryMapping.setNamespaceAware(true);
+	    factoryMapping.setValidating(true);
+	    factoryMapping.setAttribute(SCHEMA_LANG, XML_SCHEMA);
+	    factoryMapping.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/mapping_german.xsd"));
+	    
+	    builderMapping = factoryMapping.newDocumentBuilder();
+	    documentMapping = builderMapping.parse(this.getClass().getResourceAsStream("/mapping_german.xml"));
+	    
+	    factoryBank.setNamespaceAware(true);
+	    factoryBank.setValidating(true);
+	    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
+	    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
 
-	    builder = factory.newDocumentBuilder();
-	    document = builder.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
+	    builderBank = factoryBank.newDocumentBuilder();
+	    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
 
 	} catch (ParserConfigurationException e) {
 	    e.printStackTrace();
@@ -49,22 +63,28 @@ class BankGermanImpl {
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-
-	NodeList nodeBank = document.getElementById("_011380").getChildNodes();
-	for (int i = 0; i < nodeBank.getLength(); i++){
-	    switch (nodeBank.item(i).getNodeName()){
-	    case "blz":
-		this.blz = nodeBank.item(i).getTextContent();
-		break;
-	    case "bic":
-		this.bic = nodeBank.item(i).getTextContent();
-		break;
-	    case "rule":
-		this.rule = nodeBank.item(i).getTextContent();
-		break;
-	    case "name":
-		this.name = nodeBank.item(i).getTextContent();
-	    }
+	
+	NodeList nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
+	for (int j = 0; j < nodeMapping.getLength(); j++) {
+	    if (nodeMapping.item(j).getNodeName() == "lfdnr") {
+		NodeList nodeBank = documentBank.getElementById("_" + nodeMapping.item(j).getTextContent()).getChildNodes();
+    	    	for (int i = 0; i < nodeBank.getLength(); i++){
+    	    	    switch (nodeBank.item(i).getNodeName()){
+    	    	    case "blz":
+    	    		this.blz = nodeBank.item(i).getTextContent();
+    	    		break;
+    	    	    case "bic":
+    	    		if (!nodeBank.item(i).getTextContent().isEmpty() && !this.bic.contains(nodeBank.item(i).getTextContent()))
+    	    		    this.bic.add(nodeBank.item(i).getTextContent());
+    	    		break;
+    	    	    case "rule":
+    	    		this.rule = nodeBank.item(i).getTextContent();
+    	    		break;
+    	    	    case "name":
+    	    		this.name = nodeBank.item(i).getTextContent();
+    	    	    }
+    	    	}
+    	    }
 	}
     }
     
@@ -72,7 +92,7 @@ class BankGermanImpl {
 	return blz;
     }
     
-    public String getBic() {
+    public LinkedList getBic() {
         return bic;
     }
 

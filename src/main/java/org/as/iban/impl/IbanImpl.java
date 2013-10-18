@@ -1,5 +1,6 @@
 package org.as.iban.impl;
 
+import java.util.LinkedList;
 import java.util.Locale;
 
 import org.as.iban.Iban;
@@ -48,7 +49,7 @@ public class IbanImpl implements Iban {
     }
 
     @Override
-    public String getBic() {
+    public LinkedList getBic() {
 	return bban.getBic();
     }
     

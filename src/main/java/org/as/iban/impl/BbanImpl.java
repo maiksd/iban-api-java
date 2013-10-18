@@ -1,5 +1,6 @@
 package org.as.iban.impl;
 
+import java.util.LinkedList;
 import java.util.Locale;
 
 import org.as.iban.Iban;
@@ -25,7 +26,7 @@ class BbanImpl {
 	this.country = country.toUpperCase(Locale.ENGLISH);
 	this.bankIdent = bban.substring(0, BANKIDENT_LENGTH);
 	this.ktoIdent = bban.substring(BANKIDENT_LENGTH, bban.length());
-	if (country == Iban.COUNTRY_CODE_GERMAN)
+	if (country.equals(Iban.COUNTRY_CODE_GERMAN))
 	    this.bankGerman = new BankGermanImpl(bankIdent);
     }
     
@@ -44,7 +45,7 @@ class BbanImpl {
         return bankIdent;
     }
 
-    public String getBic() {
+    public LinkedList getBic() {
 	return bankGerman.getBic();
     }
     

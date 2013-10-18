@@ -112,10 +112,10 @@ public class IbanImplTest {
 	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
 	assertEquals("DE89370400440532013000", iban.toString());
 
-	bankIdent = "10000000";
-	ktoIdent = "12345678";
+	bankIdent = "12070000";
+	ktoIdent = "350002200";
 	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	assertEquals("MARKDEF1100", iban.getBic());
+	assertEquals("DEUTDEBB160", iban.getBic().getFirst().toString());
     }
     
     @Test
@@ -123,6 +123,7 @@ public class IbanImplTest {
 	ibanValid = new IbanImpl("DE89370400440532013000");
 	ibanInvalid = new IbanImpl("DE89370400440532013001");
 	assertTrue(ibanValid.validate());
+	assertEquals("COBADEFF370", ibanValid.getBic().getFirst().toString());
 	assertFalse(ibanInvalid.validate());
     }
 }
