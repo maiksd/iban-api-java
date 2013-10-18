@@ -10,6 +10,7 @@ class BbanImpl {
     private String bankIdent;
     private String ktoIdent;
     private String country;
+    private BankGermanImpl bankGerman;
 
     IbanFormatImpl ibanFormat;
     
@@ -24,6 +25,8 @@ class BbanImpl {
 	this.country = country.toUpperCase(Locale.ENGLISH);
 	this.bankIdent = bban.substring(0, BANKIDENT_LENGTH);
 	this.ktoIdent = bban.substring(BANKIDENT_LENGTH, bban.length());
+	if (country == Iban.COUNTRY_CODE_GERMAN)
+	    this.bankGerman = new BankGermanImpl(bankIdent);
     }
     
     BbanImpl (String country, String bankIdent, String ktoIdent) throws IbanException {
@@ -33,12 +36,18 @@ class BbanImpl {
 
 	this.country = country.toUpperCase(Locale.ENGLISH);
 	buildBban(bankIdent, ktoIdent);
+	if (country == Iban.COUNTRY_CODE_GERMAN)
+	    this.bankGerman = new BankGermanImpl(bankIdent);
     }
 
     private String getBankIdent() {
         return bankIdent;
     }
 
+    public String getBic() {
+	return bankGerman.getBic();
+    }
+    
     private void setBankIdent(String bankIdent) {
         this.bankIdent = bankIdent;
     }

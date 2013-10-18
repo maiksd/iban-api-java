@@ -10,7 +10,6 @@ public class IbanImpl implements Iban {
     private String country;
     private String checkDigit;
     private BbanImpl bban;
-    private String bic;
 
     public IbanImpl(String ibanString) throws IbanException{
 	this.setCountry(ibanString);
@@ -36,7 +35,7 @@ public class IbanImpl implements Iban {
     }
 
     @Override
-    public void generate() {
+    public void generate() throws IbanException {
 	String ascii = asciiToNumber(shiftIbanToString());
 	checkDigit = String.valueOf(98 - mod97(ascii));
 	if (checkDigit.length() == 1)
@@ -50,7 +49,7 @@ public class IbanImpl implements Iban {
 
     @Override
     public String getBic() {
-	return this.bic;
+	return bban.getBic();
     }
     
     private String shiftIbanToString() {
@@ -108,8 +107,14 @@ public class IbanImpl implements Iban {
 	
 	IbanFormatImpl ibanFormat = new IbanFormatImpl(country);
 	
+	// Validation common IBAN-Format
 	if (!this.toString().matches(ibanFormat.getRegexp()))
 		throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_FORMAT);
+	
+	// Special Validation for countries
+	if (country == Iban.COUNTRY_CODE_GERMAN){
+	    System.out.println("ValidationConfig read");
+	}
     }
 
 }

@@ -111,6 +111,11 @@ public class IbanImplTest {
 	ktoIdent = "532013000";
 	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
 	assertEquals("DE89370400440532013000", iban.toString());
+
+	bankIdent = "10000000";
+	ktoIdent = "12345678";
+	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	assertEquals("MARKDEF1100", iban.getBic());
     }
     
     @Test
