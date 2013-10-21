@@ -1,8 +1,6 @@
-package org.as.iban.impl;
+package org.as.iban.model;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -12,7 +10,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-class IbanFormatImpl {
+public class IbanFormat {
     
     final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
     final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
@@ -23,7 +21,7 @@ class IbanFormatImpl {
     private int bankIdentLength;
     private int ktoIdentLength;
     
-    IbanFormatImpl(String countryCode) {
+    public IbanFormat(String countryCode) {
 	this.countryCode = countryCode;
 	readFormatConfig();
     }

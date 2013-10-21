@@ -5,6 +5,7 @@ import java.util.Locale;
 
 import org.as.iban.Iban;
 import org.as.iban.exception.IbanException;
+import org.as.iban.model.IbanFormat;
 
 public class IbanImpl implements Iban {
     
@@ -106,7 +107,7 @@ public class IbanImpl implements Iban {
  
     private void validateFormat() throws IbanException {
 	
-	IbanFormatImpl ibanFormat = new IbanFormatImpl(country);
+	IbanFormat ibanFormat = new IbanFormat(country);
 	
 	// Validation common IBAN-Format
 	if (!this.toString().matches(ibanFormat.getRegexp()))

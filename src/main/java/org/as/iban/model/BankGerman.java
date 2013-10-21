@@ -1,4 +1,4 @@
-package org.as.iban.impl;
+package org.as.iban.model;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -11,7 +11,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-class BankGermanImpl {
+public class BankGerman {
 
     final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
     final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
@@ -22,7 +22,7 @@ class BankGermanImpl {
     private String rule;
     private String name;
 
-    BankGermanImpl (String blz) {
+    public BankGerman (String blz) {
 	this.blz = blz;
 	this.bic = new LinkedList();
 	readBankConfig();

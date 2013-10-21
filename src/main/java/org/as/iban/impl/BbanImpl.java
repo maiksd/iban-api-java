@@ -5,21 +5,23 @@ import java.util.Locale;
 
 import org.as.iban.Iban;
 import org.as.iban.exception.IbanException;
+import org.as.iban.model.BankGerman;
+import org.as.iban.model.IbanFormat;
 
 class BbanImpl {
     
     private String bankIdent;
     private String ktoIdent;
     private String country;
-    private BankGermanImpl bankGerman;
+    private BankGerman bankGerman;
 
-    IbanFormatImpl ibanFormat;
+    IbanFormat ibanFormat;
     
     private final int BANKIDENT_LENGTH;
     private final int KTOIDENT_LENGTH;
     
     BbanImpl (String country, String bban) throws IbanException{
-	ibanFormat = new IbanFormatImpl(country);
+	ibanFormat = new IbanFormat(country);
 	BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
 	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
 	
@@ -27,18 +29,18 @@ class BbanImpl {
 	this.bankIdent = bban.substring(0, BANKIDENT_LENGTH);
 	this.ktoIdent = bban.substring(BANKIDENT_LENGTH, bban.length());
 	if (country.equals(Iban.COUNTRY_CODE_GERMAN))
-	    this.bankGerman = new BankGermanImpl(bankIdent);
+	    this.bankGerman = new BankGerman(bankIdent);
     }
     
     BbanImpl (String country, String bankIdent, String ktoIdent) throws IbanException {
-	ibanFormat = new IbanFormatImpl(country);
+	ibanFormat = new IbanFormat(country);
 	BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
 	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
 
 	this.country = country.toUpperCase(Locale.ENGLISH);
 	buildBban(bankIdent, ktoIdent);
 	if (country == Iban.COUNTRY_CODE_GERMAN)
-	    this.bankGerman = new BankGermanImpl(bankIdent);
+	    this.bankGerman = new BankGerman(bankIdent);
     }
 
     private String getBankIdent() {
