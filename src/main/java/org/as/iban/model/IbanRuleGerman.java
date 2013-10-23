@@ -143,8 +143,7 @@ public class IbanRuleGerman {
 	Iterator<Element> iter = listMappingBlz.iterator();
 	
 	while (iter.hasNext()) {
-	    Element element = iter.next();
-	    if (element.getAttribute("from").equals(blz))
+	    if (iter.next().getAttribute("from").equals(blz))
 		this.mappingBlz = true;
 	}
 	return mappingBlz;
