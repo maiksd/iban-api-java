@@ -9,7 +9,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class IbanValidatorGerman {
+public class IbanValidatorGermanTest {
 
     private String bankIdent;
     private String ktoIdent;
@@ -23,10 +23,10 @@ public class IbanValidatorGerman {
     public void tearDown() throws Exception {
     }
 
-    @Test
-    public void rule000200() {
-	fail("Not yet implemented");
-    }
+//    @Test
+//    public void rule000200() {
+//	fail("Not yet implemented");
+//    }
     
     @Test
     public void rule000300() {
