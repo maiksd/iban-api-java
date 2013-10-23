@@ -31,4 +31,125 @@
 			<mapping from="484848">0920018963</mapping> 
 		</mappings_kto>
 	</rule>
+	
+	<!--  -->
+	
+	
+	<!-- Evangelische Darlehnsgenossenschaft eG -->
+	<rule id="_005400">
+		<mappings_kto blz="10060237">
+			<mapping from="500">500500</mapping>
+			<mapping from="502">502502</mapping>
+			<mapping from="18067">180670</mapping>
+			<mapping from="484848">484849</mapping>
+			<mapping from="636306">63606</mapping>
+			<mapping from="760440">160440</mapping>
+			<mapping from="1018413">10108413</mapping>
+			<mapping from="2601577">26015776</mapping>
+			<mapping from="5005000">500500</mapping>
+			<mapping from="10796740">10796743</mapping>
+			<mapping from="11796740">11796743</mapping>
+			<mapping from="12796740">12796743</mapping>
+			<mapping from="13796740">13796743</mapping>
+			<mapping from="14796740">14796743</mapping>
+			<mapping from="15796740">15796743</mapping>
+			<mapping from="16307000">163107000</mapping>
+			<mapping from="16610700">166107000</mapping>
+			<mapping from="16796740">16796743</mapping>
+			<mapping from="17796740">17796743</mapping>
+			<mapping from="18796740">18796743</mapping>
+			<mapping from="19796740">19796743</mapping>
+			<mapping from="20796740">20796743</mapping>
+			<mapping from="21796740">21796743</mapping>
+			<mapping from="22796740">22796743</mapping>
+			<mapping from="23796740">23796743</mapping>
+			<mapping from="24796740">24796743</mapping>
+			<mapping from="25796740">25796743</mapping>
+			<mapping from="26610700">266107000</mapping>
+			<mapping from="26796740">26796743</mapping>
+			<mapping from="27796740">27796743</mapping>
+			<mapping from="28796740">28796743</mapping>
+			<mapping from="29796740">29796743</mapping>
+			<mapping from="45796740">45796743</mapping>
+			<mapping from="50796740">50796743</mapping>
+			<mapping from="51796740">51796743</mapping>
+			<mapping from="52796740">52796743</mapping>
+			<mapping from="53796740">53796743</mapping>
+			<mapping from="54796740">54796743</mapping>
+			<mapping from="55796740">55796743</mapping>
+			<mapping from="56796740">56796743</mapping>
+			<mapping from="57796740">57796743</mapping>
+			<mapping from="58796740">58796743</mapping>
+			<mapping from="59796740">59796743</mapping>
+			<mapping from="60796740">60796743</mapping>
+			<mapping from="61796740">61796743</mapping>
+			<mapping from="62796740">62796743</mapping>
+			<mapping from="63796740">63796743</mapping>
+			<mapping from="64796740"> 64796743</mapping>
+			<mapping from="65796740">65796743</mapping>
+			<mapping from="66796740">66796743</mapping>
+			<mapping from="67796740">67796743</mapping>
+			<mapping from="68796740">68796743</mapping>
+			<mapping from="69796740">69796743</mapping>
+			<mapping from="1761070000">176107000</mapping>
+			<mapping from="2210531180">201053180</mapping>
+		</mappings_kto>
+		<mappings_kto blz="21060237">
+			<mapping from="500">500500</mapping>
+			<mapping from="502">502502</mapping>
+			<mapping from="18067">180670</mapping>
+			<mapping from="484848">484849</mapping>
+			<mapping from="636306">63606</mapping>
+			<mapping from="760440">160440</mapping>
+			<mapping from="1018413">10108413</mapping>
+			<mapping from="2601577">26015776</mapping>
+			<mapping from="5005000">500500</mapping>
+			<mapping from="10796740">10796743</mapping>
+			<mapping from="11796740">11796743</mapping>
+			<mapping from="12796740">12796743</mapping>
+			<mapping from="13796740">13796743</mapping>
+			<mapping from="14796740">14796743</mapping>
+			<mapping from="15796740">15796743</mapping>
+			<mapping from="16307000">163107000</mapping>
+			<mapping from="16610700">166107000</mapping>
+			<mapping from="16796740">16796743</mapping>
+			<mapping from="17796740">17796743</mapping>
+			<mapping from="18796740">18796743</mapping>
+			<mapping from="19796740">19796743</mapping>
+			<mapping from="20796740">20796743</mapping>
+			<mapping from="21796740">21796743</mapping>
+			<mapping from="22796740">22796743</mapping>
+			<mapping from="23796740">23796743</mapping>
+			<mapping from="24796740">24796743</mapping>
+			<mapping from="25796740">25796743</mapping>
+			<mapping from="26610700">266107000</mapping>
+			<mapping from="26796740">26796743</mapping>
+			<mapping from="27796740">27796743</mapping>
+			<mapping from="28796740">28796743</mapping>
+			<mapping from="29796740">29796743</mapping>
+			<mapping from="45796740">45796743</mapping>
+			<mapping from="50796740">50796743</mapping>
+			<mapping from="51796740">51796743</mapping>
+			<mapping from="52796740">52796743</mapping>
+			<mapping from="53796740">53796743</mapping>
+			<mapping from="54796740">54796743</mapping>
+			<mapping from="55796740">55796743</mapping>
+			<mapping from="56796740">56796743</mapping>
+			<mapping from="57796740">57796743</mapping>
+			<mapping from="58796740">58796743</mapping>
+			<mapping from="59796740">59796743</mapping>
+			<mapping from="60796740">60796743</mapping>
+			<mapping from="61796740">61796743</mapping>
+			<mapping from="62796740">62796743</mapping>
+			<mapping from="63796740">63796743</mapping>
+			<mapping from="64796740"> 64796743</mapping>
+			<mapping from="65796740">65796743</mapping>
+			<mapping from="66796740">66796743</mapping>
+			<mapping from="67796740">67796743</mapping>
+			<mapping from="68796740">68796743</mapping>
+			<mapping from="69796740">69796743</mapping>
+			<mapping from="1761070000">176107000</mapping>
+			<mapping from="2210531180">201053180</mapping>
+		</mappings_kto>
+	</rule>
 </rules>
