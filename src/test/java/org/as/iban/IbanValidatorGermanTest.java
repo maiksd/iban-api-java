@@ -39,12 +39,6 @@ public class IbanValidatorGermanTest {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
     }
-    
-    @Test
-    public void rule004900(){
-    	//	TODO
-    }
-    
     @Test
     public void rule000400() {
 	bankIdent = "10050000";
@@ -53,6 +47,11 @@ public class IbanValidatorGermanTest {
 	assertEquals("DE86100500000990021440", iban.toString());	
     }
     
+    @Test
+    public void rule004900(){
+    	//	TODO
+    }
+        
     @Test
     public void rule005000(){
     	// BLZ 60050101
