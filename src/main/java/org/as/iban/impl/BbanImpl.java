@@ -77,9 +77,16 @@ class BbanImpl {
 		    }
 		}
 		
+		// Account mapping
 		if (rule.isMappingKto(bankIdent)){
 		    if (rule.getMappedKto(bankIdent, ktoIdent) != null)
 			ktoIdent = rule.getMappedKto(bankIdent, ktoIdent);
+		}
+		
+		// BLZ mapping
+		if (rule.isMappingBlz(bankIdent)) {
+		    if (rule.getMappedBlz(bankIdent) != null)
+			bankIdent = rule.getMappedBlz(bankIdent);
 		}
 	    }
 	}
