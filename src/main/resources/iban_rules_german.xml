@@ -33,7 +33,74 @@
 	</rule>
 	
 	<!--  -->
-	
+	<rule id="_005300">
+		<mappings_kto blz="55050000">
+			<mapping from="35000">7401555913</mapping>
+			<mapping from="119345106">7401555906</mapping>
+			<mapping from="908">7401507480</mapping>
+			<mapping from="901">7401507497</mapping>
+			<mapping from="910">7401507466</mapping>
+			<mapping from="35100">7401555913</mapping>
+			<mapping from="902">7401507473</mapping>
+			<mapping from="44000">7401555872</mapping>
+			<mapping from="110132511">7401550530</mapping>
+			<mapping from="110024270">7401501266</mapping>
+			<mapping from="3500">7401555913</mapping>
+			<mapping from="110050002">7401502234</mapping>
+			<mapping from="55020100">7401555872</mapping>
+			<mapping from="110149226">7401512248</mapping>
+		</mappings_kto>
+		<mappings_kto blz="60020030">
+			<mapping from="1047444300">7871538395</mapping>
+			<mapping from="1040748400">0001366705</mapping>
+			<mapping from="1000617900">0002009906</mapping>
+			<mapping from="1003340500">0002001155</mapping>
+			<mapping from="1002999900">0002588991</mapping>
+			<mapping from="1004184600">7871513509</mapping>
+			<mapping from="1000919900">7871531505</mapping>
+			<mapping from="1054290000">7871521216</mapping>
+		</mappings_kto>
+		<mappings_kto blz="60050000">
+			<mapping from="1523">0001364934</mapping>
+			<mapping from="2811">0001367450</mapping>
+			<mapping from="2502">0001366705</mapping>
+			<mapping from="250412">7402051588</mapping>
+			<mapping from="3009">0001367924</mapping>
+			<mapping from="4596">0001372809</mapping>
+			<mapping from="3080">0002009906</mapping>
+			<mapping from="1029204">0002782254</mapping>
+			<mapping from="3002">0001367924</mapping>
+			<mapping from="123456">0001362826</mapping>
+			<mapping from="2535">0001119897</mapping>
+			<mapping from="5500">0001375703</mapping>
+		</mappings_kto>
+		<mappings_kto blz="66020020">
+			<mapping from="4002401000">7495500967</mapping>
+			<mapping from="4000604100">0002810030</mapping>
+			<mapping from="4002015800">7495530102</mapping>
+			<mapping from="4003746700">7495501485</mapping>
+		</mappings_kto>
+		<mappings_kto blz="66050000">
+			<mapping from="86567">0001364934</mapping>
+			<mapping from="86345">7402046641</mapping>
+			<mapping from="85304">7402045439</mapping>
+			<mapping from="85990">7402051588</mapping>
+		</mappings_kto>
+		<mappings_kto blz="86050000">
+			<mapping from="1016">7461500128</mapping>
+			<mapping from="3535">7461505611</mapping>
+			<mapping from="2020">7461500018</mapping>
+			<mapping from="4394">7461505714</mapping>
+		</mappings_kto>
+		<mappings_blz>
+			<mapping from="55050000">60050101</mapping>
+			<mapping from="60020030">60050101</mapping>
+			<mapping from="60050000">60050101</mapping>
+			<mapping from="66020020">60050101</mapping>
+			<mapping from="66050000">60050101</mapping>
+			<mapping from="86050000">60050101</mapping>
+		</mappings_blz>
+	</rule>
 	
 	<!-- Evangelische Darlehnsgenossenschaft eG -->
 	<rule id="_005400">
