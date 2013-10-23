@@ -12,9 +12,9 @@
 	
 	<xs:complexType name="rule_type">
 		<xs:sequence>
-			<xs:element name="no_calculation" type="tns:no_calculation_type" minOccurs="0" maxOccurs="1"></xs:element>
-			<xs:element name="mappings_kto" type="tns:mappings_kto_type" minOccurs="0" maxOccurs="1"></xs:element>
-			<xs:element name="mappings_blz" type="tns:mappings_blz_type" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="no_calculation" type="tns:no_calculation_type" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="mappings_kto" type="tns:mappings_kto_type" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="mappings_blz" type="tns:mappings_blz_type" minOccurs="0" maxOccurs="unbounded"></xs:element>
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:ID"></xs:attribute>
 	</xs:complexType>
