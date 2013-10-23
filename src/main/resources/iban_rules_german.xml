@@ -32,7 +32,73 @@
 		</mappings_kto>
 	</rule>
 	
-	<!--  -->
+	<!-- WGZ Bank -->
+	<TODO></TODO>
+	
+	<!-- Sparkasse LeerWittmund -->
+	<rule id="_005000">
+		<mappings_blz>
+			<mapping from="28252760">28550000</mapping>
+		</mappings_blz>
+	</rule>
+	
+	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
+	<rule id="_005100">
+		<mappings_kto blz="60050101">
+			<mapping from="0000000333">7832500881</mapping> 
+			<mapping from="0000000502">0001108884</mapping> 
+			<mapping from="0500500500">0005005000</mapping> 
+			<mapping from="0502502502">0001108884</mapping> 
+		</mappings_kto>
+	</rule>
+	
+	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
+	<rule id="_005200">
+		<no_calculation>
+			<kto_number_range blz=""></kto_number_range>
+		</no_calculation>
+		<mappings_kto blz="67220020">
+			<mapping from="5308810004">0002662604</mapping>
+			<mapping from="5308810000">0002659600</mapping>
+		</mappings_kto>
+		<mappings_kto blz="67020020">
+			<mapping from="5203145700">7496510994</mapping>
+		</mappings_kto>
+		<mappings_kto blz="69421020">
+			<mapping from="6208908100">7481501341</mapping>
+		</mappings_kto>
+		<mappings_kto blz="66620020">
+			<mapping from="4840404000">7498502663</mapping>
+		</mappings_kto>
+		<mappings_kto blz="64120030">
+			<mapping from="1201200100">7477501214</mapping>
+		</mappings_kto>
+		<mappings_kto blz="64020030">
+			<mapping from="1408050100">7469534505</mapping>
+		</mappings_kto>
+		<mappings_kto blz="63020130">
+			<mapping from="1112156300">0004475655</mapping>
+		</mappings_kto>
+		<mappings_kto blz="62030050">
+			<mapping from="7002703200">7406501175</mapping>
+		</mappings_kto>
+		<mappings_kto blz="69220020">
+			<mapping from="6402145400">7485500252</mapping>
+		</mappings_kto>
+		<mappings_blz>
+			<mapping from="67220020">60050101</mapping>
+			<mapping from="67020020">60050101</mapping>
+			<mapping from="69421020">60050101</mapping>
+			<mapping from="66620020">60050101</mapping>
+			<mapping from="64120030">60050101</mapping>
+			<mapping from="64020030">60050101</mapping>
+			<mapping from="63020130">60050101</mapping>
+			<mapping from="62030050">60050101</mapping>
+			<mapping from="69220020">60050101</mapping>
+		</mappings_blz>
+	</rule>
+	
+	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005300">
 		<mappings_kto blz="55050000">
 			<mapping from="35000">7401555913</mapping>
