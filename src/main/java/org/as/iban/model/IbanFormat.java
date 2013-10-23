@@ -36,11 +36,9 @@ public class IbanFormat {
 	    factory.setNamespaceAware(true);
 	    factory.setValidating(true);
 	    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-//	    factory.setAttribute(SCHEMA_SOURCE, new File(this.getClass().getResource("/iban_format.xsd").getFile()));
 	    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/iban_format.xsd"));
 	    
 	    builder = factory.newDocumentBuilder();
-//	    System.out.println(this.getClass().getResourceAsStream("/iban_format.xml"));
 	    document = builder.parse(this.getClass().getResourceAsStream("/iban_format.xml"));
 
 	} catch (ParserConfigurationException e) {

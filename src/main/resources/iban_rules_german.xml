@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rules xmlns="org.as.iban" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<!-- Augsburger Aktienbank -->
+	<rule id="_000200">
+		<no_calculation>
+			<kto_number_range blz="72020700">\d{7}86\d{1}</kto_number_range>
+			<kto_number_range blz="72020700">\d{7}6\d{2}</kto_number_range>
+		</no_calculation>
+		<mappings_kto blz="10050000">
+			<mapping from="135">0990021440</mapping> 
+		</mappings_kto>
+	</rule>
+	
+	<!-- Aareal Bank AG ZWL Wiesbaden -->
+	<rule id="_000300">
+		<no_calculation>
+			<kto_number_range blz="51010800">6161604670</kto_number_range>
+		</no_calculation>
+	</rule>
+	
+	<!-- Landesbank Berlin / Berliner Sparkasse -->
+	<rule id="_000400">
+		<mappings_kto blz="10050000">
+			<mapping from="135">0990021440</mapping> 
+			<mapping from="1111">6600012020</mapping> 
+			<mapping from="1900">0920019005</mapping> 
+			<mapping from="7878">0780008006</mapping> 
+			<mapping from="8888">0250030942</mapping> 
+			<mapping from="9595">1653524703</mapping> 
+			<mapping from="97097">0013044150</mapping> 
+			<mapping from="112233">0630025819</mapping> 
+			<mapping from="336666">6604058903</mapping> 
+			<mapping from="484848">0920018963</mapping> 
+		</mappings_kto>
+	</rule>
+</rules>

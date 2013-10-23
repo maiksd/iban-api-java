@@ -7,6 +7,7 @@ import org.as.iban.Iban;
 import org.as.iban.exception.IbanException;
 import org.as.iban.model.BankGerman;
 import org.as.iban.model.IbanFormat;
+import org.as.iban.model.IbanRuleGerman;
 
 class BbanImpl {
     
@@ -38,9 +39,9 @@ class BbanImpl {
 	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
 
 	this.country = country.toUpperCase(Locale.ENGLISH);
-	buildBban(bankIdent, ktoIdent);
 	if (country == Iban.COUNTRY_CODE_GERMAN)
 	    this.bankGerman = new BankGerman(bankIdent);
+	buildBban(bankIdent, ktoIdent);
     }
 
     private String getBankIdent() {
@@ -60,6 +61,17 @@ class BbanImpl {
     }
 
     private void setKtoIdent(String ktoIdent, int length) {
+	// Consider Iban rules for Germany
+	if (country == Iban.COUNTRY_CODE_GERMAN) {
+	    // Only not standard rules
+//	    String ruleId = bankGerman.getRule();
+	    String ruleId = "_000400";
+	    if (!ruleId.equals("000000")){
+		IbanRuleGerman rule = new IbanRuleGerman(ruleId);
+		System.out.println(rule.isNoCalculation(bankIdent));
+	    }
+	}
+	
 	if (ktoIdent.length() < length){
 	    for (int i = ktoIdent.length(); i < length; i++)
 		ktoIdent = "0" + ktoIdent;
