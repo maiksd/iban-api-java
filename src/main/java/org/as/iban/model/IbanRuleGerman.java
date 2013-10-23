@@ -101,6 +101,7 @@ public class IbanRuleGerman {
 	return noCalculation;
     }
     
+
     public LinkedList<String> getRegexpNoCalculation (String blz) {
 	LinkedList<String> tempList = new LinkedList<String>();
 	Iterator<Element> iter = listNoCalculation.iterator();
@@ -114,6 +115,7 @@ public class IbanRuleGerman {
 	return tempList;
     }
     
+    
     public boolean isMappingKto (String blz) {
 	Iterator<MappingKto> iter = listMappingKto.iterator();
 	
@@ -124,6 +126,7 @@ public class IbanRuleGerman {
 	return mappingKto;
     }
     
+
     public String getMappedKto (String blz, String kto) {
 	Iterator<MappingKto> iter = listMappingKto.iterator();
 	
@@ -135,11 +138,27 @@ public class IbanRuleGerman {
 	return null;
     }
     
+  
     public boolean isMappingBlz (String blz) {
+	Iterator<Element> iter = listMappingBlz.iterator();
+	
+	while (iter.hasNext()) {
+	    Element element = iter.next();
+	    if (element.getAttribute("from").equals(blz))
+		this.mappingBlz = true;
+	}
 	return mappingBlz;
     }
     
-    public String getMappingBlz (String blz) {
+ 
+    public String getMappedBlz(String blz) {
+	Iterator<Element> iter = listMappingBlz.iterator();
+	
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (tempElement.getAttribute("from").equals(blz))
+		return tempElement.getTextContent();
+	}
 	return null;
     }
     
