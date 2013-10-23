@@ -92,17 +92,26 @@ public class IbanRuleGerman {
     }
     
     public boolean isNoCalculation (String blz) {
-	Iterator iter = listNoCalculation.iterator();
+	Iterator<Element> iter = listNoCalculation.iterator();
 	
 	while (iter.hasNext()) {
-	    if (((Element)iter.next()).getAttribute("blz").equals(blz))
+	    if (iter.next().getAttribute("blz").equals(blz))
 		this.noCalculation = true;
 	}
 	return noCalculation;
     }
     
-    public String getRegexpNoCalculation (String blz) {
-	return null;
+    public LinkedList<String> getRegexpNoCalculation (String blz) {
+	LinkedList<String> tempList = new LinkedList<String>();
+	Iterator<Element> iter = listNoCalculation.iterator();
+	
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (tempElement.getAttribute("blz").equals(blz))
+		tempList.add(tempElement.getTextContent());
+	}
+	
+	return tempList;
     }
     
     public boolean isMappingKto (String blz) {

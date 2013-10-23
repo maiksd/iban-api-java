@@ -64,11 +64,23 @@ class BbanImpl {
 	// Consider Iban rules for Germany
 	if (country == Iban.COUNTRY_CODE_GERMAN) {
 	    // Only not standard rules
-//	    String ruleId = bankGerman.getRule();
-	    String ruleId = "_000400";
+	    String ruleId = bankGerman.getRule();
 	    if (!ruleId.equals("000000")){
-		IbanRuleGerman rule = new IbanRuleGerman(ruleId);
-		System.out.println(rule.isNoCalculation(bankIdent));
+		
+		IbanRuleGerman rule = new IbanRuleGerman("_" + ruleId);
+
+		if (rule.isNoCalculation(bankIdent)){
+		    // check Excluded accounts
+		    for (int i = 0; i < rule.getRegexpNoCalculation(bankIdent).size(); i++) {
+			if (ktoIdent.matches(rule.getRegexpNoCalculation(bankIdent).get(i)))
+			    throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
+		    }
+		}
+		
+		if (rule.isMappingKto(bankIdent)){
+		    if (rule.getMappedKto(bankIdent, ktoIdent) != null)
+			ktoIdent = rule.getMappedKto(bankIdent, ktoIdent);
+		}
 	    }
 	}
 	

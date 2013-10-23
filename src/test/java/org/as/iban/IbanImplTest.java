@@ -107,15 +107,11 @@ public class IbanImplTest {
 
     @Test
     public void testIbanImplConstructorGerman() {
-	bankIdent = "37040044";
-	ktoIdent = "532013000";
+	bankIdent = "50010517";
+	ktoIdent = "648489890";
 	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	assertEquals("DE89370400440532013000", iban.toString());
-
-	bankIdent = "12070000";
-	ktoIdent = "350002200";
-	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	assertEquals("DEUTDEBB160", iban.getBic().getFirst().toString());
+	assertEquals("DE12500105170648489890", iban.toString());
+	assertEquals("INGDDEFFXXX", iban.getBic().getFirst().toString());
     }
     
     @Test
