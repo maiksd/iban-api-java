@@ -26,10 +26,12 @@ public class IbanRuleGerman {
     private boolean noCalculation = false;
     private boolean mappingKto = false;
     private boolean mappingBlz = false;
+    private boolean modificationKto = false;
     
     private ArrayList<Element> listNoCalculation = new ArrayList<Element>();
     private ArrayList<MappingKto> listMappingKto = new ArrayList<MappingKto>();
     private ArrayList<Element> listMappingBlz = new ArrayList<Element>();
+    private ArrayList<Element> listModificationKto = new ArrayList<Element>();
     
     public IbanRuleGerman (String rule_id) {
 	this.rule_id = rule_id;
@@ -86,6 +88,10 @@ public class IbanRuleGerman {
 			    
 			case "mappings_blz":
 			    listMappingBlz.add(element);
+			    break;
+			    
+			case "modification_kto":
+			    listModificationKto.add(element);
 			    break;
 			}
 		    }
@@ -164,7 +170,31 @@ public class IbanRuleGerman {
 	return null;
     }
     
+    public boolean isModification (String blz) {
+	Iterator<Element> iter = listModificationKto.iterator();
+	
+	while (iter.hasNext()) {
+	    if (iter.next().getAttribute("blz").equals(blz))
+		this.modificationKto = true;
+	}
+	return modificationKto;
+    }
     
+
+    public LinkedList<String> getRegexpModification (String blz) {
+	LinkedList<String> tempList = new LinkedList<String>();
+	Iterator<Element> iter = listModificationKto.iterator();
+	
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (tempElement.getAttribute("blz").equals(blz))
+		tempList.add(tempElement.getTextContent());
+	}
+	
+	return tempList;
+    }
+    
+
     class MappingKto {
 	
 	private String blz;
