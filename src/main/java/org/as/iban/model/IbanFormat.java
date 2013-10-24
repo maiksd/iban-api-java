@@ -43,10 +43,13 @@ public class IbanFormat {
 
 	} catch (ParserConfigurationException e) {
 	    e.printStackTrace();
+	    System.exit(-1);
 	} catch (SAXException e) {
 	    e.printStackTrace();
+	    System.exit(-1);
 	} catch (IOException e) {
 	    e.printStackTrace();
+	    System.exit(-1);
 	}
 	
 	NodeList nodeFormat = document.getElementById(countryCode).getChildNodes();
