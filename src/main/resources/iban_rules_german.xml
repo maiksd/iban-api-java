@@ -88,7 +88,7 @@
 	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005200">
 		<no_calculation>
-			<kto_number_range blz=""></kto_number_range>
+			<kto_number_range blz="1"></kto_number_range>
 		</no_calculation>
 		<mappings_kto blz="67220020">
 			<mapping from="5308810004">0002662604</mapping>
