@@ -90,10 +90,10 @@ class BbanImpl {
 		}
 		
 		// Kto Modification
-		if (rule.isNoCalculation(bankIdent)) {
+		if (rule.isModification(bankIdent)) {
 		    for (int i = 0; i < rule.getRegexpModification(bankIdent).size(); i++) {
 			String[] segs = rule.getRegexpModification(bankIdent).get(i).split(";");
-			ktoIdent.replaceAll(segs[0], segs[1]);
+			ktoIdent = ktoIdent.replaceAll(segs[0], segs[1]);
 		    }
 		}
 	    }
