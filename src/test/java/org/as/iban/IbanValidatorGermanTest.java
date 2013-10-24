@@ -48,6 +48,55 @@ public class IbanValidatorGermanTest {
     }
     
     @Test
+    public void rule004100(){
+    	// BLZ 10000000, Kto 50462000
+    	bankIdent = "62220000";
+    	ktoIdent = "0062220000";
+    	
+    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE96500604000000011404", iban.toString());
+    }
+    
+    @Test
+    public void rule004200(){
+    	//	BLZ 10000000, Kto 50462000
+    	bankIdent = "10000000";
+    	ktoIdent = "50462000";
+    	
+    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE08100000000050462000", iban.toString());
+    	
+    	//	BLZ 45000000, Kto 10001000
+    	bankIdent = "45000000";
+    	ktoIdent = "10001000";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE26450000000010001000", iban.toString());
+    	
+    	//	2 Bsp. für eine Kto-Nr, die nicht konvertiert werden darf
+    	bankIdent = "60000000";
+    	ktoIdent = "123456";
+    	try{
+    	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	}
+    	catch (IbanException e) {
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	}
+    	
+    	bankIdent = "82000000";
+    	ktoIdent = "65400111";
+    	try{
+    	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	}
+    	catch (IbanException e) {
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	}
+    }
+    
+    @Test
     public void rule004300(){
     	// BLZ 60651070, Kto 868
     	bankIdent = "60651070";
