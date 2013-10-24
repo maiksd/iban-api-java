@@ -76,6 +76,41 @@
 	
 	<!-- WGZ Bank -->
 	<rule id="_004900">
+		<mappings_kto blz="30060010">
+			<mapping from="36">0002310113</mapping>
+			<mapping from="936">0002310113</mapping>
+			<mapping from="999">0001310113</mapping>
+			<mapping from="6060">0000160602</mapping>
+		</mappings_kto>
+		<mappings_kto blz="40060000">
+			<mapping from="36">0002310113</mapping>
+			<mapping from="936">0002310113</mapping>
+			<mapping from="999">0001310113</mapping>
+			<mapping from="6060">0000160602</mapping>
+		</mappings_kto>
+		<mappings_kto blz="57060000">
+			<mapping from="36">0002310113</mapping>
+			<mapping from="936">0002310113</mapping>
+			<mapping from="999">0001310113</mapping>
+			<mapping from="6060">0000160602</mapping>
+		</mappings_kto>
+		<modification_kto>
+			<modification blz="30060010">\b(\d{4}?)(9\d{5})\Z;$2$1</modification>
+			<modification blz="30060010">\b(\d{3}?)(9\d{5})\Z;$20$1</modification>
+			<modification blz="30060010">\b(\d{2}?)(9\d{5})\Z;$200$1</modification>
+			<modification blz="30060010">\b(\d{1}?)(9\d{5})\Z;$2000$1</modification>
+			<modification blz="30060010">\b(9\d{5})\Z;$10000</modification>
+			<modification blz="40060000">\b(\d{4}?)(9\d{5})\Z;$2$1</modification>
+			<modification blz="40060000">\b(\d{3}?)(9\d{5})\Z;$20$1</modification>
+			<modification blz="40060000">\b(\d{2}?)(9\d{5})\Z;$200$1</modification>
+			<modification blz="40060000">\b(\d{1}?)(9\d{5})\Z;$2000$1</modification>
+			<modification blz="40060000">\b(9\d{5})\Z;$10000</modification>
+			<modification blz="57060000">\b(\d{4}?)(9\d{5})\Z;$2$1</modification>
+			<modification blz="57060000">\b(\d{3}?)(9\d{5})\Z;$20$1</modification>
+			<modification blz="57060000">\b(\d{2}?)(9\d{5})\Z;$200$1</modification>
+			<modification blz="57060000">\b(\d{1}?)(9\d{5})\Z;$2000$1</modification>
+			<modification blz="57060000">\b(9\d{5})\Z;$10000</modification>
+		</modification_kto>
 	</rule>
 	
 	<!-- Sparkasse LeerWittmund -->
