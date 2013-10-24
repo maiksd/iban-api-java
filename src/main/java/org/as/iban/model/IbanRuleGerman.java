@@ -54,10 +54,13 @@ public class IbanRuleGerman {
 
 	} catch (ParserConfigurationException e) {
 	    e.printStackTrace();
+	    System.exit(-1);
 	} catch (SAXException e) {
 	    e.printStackTrace();
+	    System.exit(-1);
 	} catch (IOException e) {
 	    e.printStackTrace();
+	    System.exit(-1);
 	}
 
 	NodeList nodes = document.getElementById(rule_id).getChildNodes();
