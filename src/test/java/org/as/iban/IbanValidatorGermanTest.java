@@ -120,6 +120,7 @@ public class IbanValidatorGermanTest {
     @Test
     public void rule005200()
     {
+    	//	Erst die, die funktionieren müssen
     	// BLZ 67220020
     	bankIdent = "67220020";
     	ktoIdent = "5308810004";
@@ -183,6 +184,17 @@ public class IbanValidatorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE91600501017485500252", iban.toString());
+    	
+    	//	Jetzt noch ein Beispiel, das nicht konvertiert werden darf
+    	// BLZ 69220020
+    	bankIdent = "67220020";
+    	ktoIdent = "1234567890";
+    	try{
+    	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	}
+    	catch (IbanException e) {
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	}
     }
     
     @Test
