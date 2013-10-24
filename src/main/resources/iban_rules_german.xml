@@ -54,7 +54,7 @@
 	<!-- Santander Consumer Bank -->
 	<rule id="_004700">
 		<modification_kto>
-			<modification blz="10033300">(\d{8})$;$100</modification>
+			<modification blz="10033300">^(\d{8}?)\Z;$100</modification>
 		</modification_kto>
 	</rule>
 	
