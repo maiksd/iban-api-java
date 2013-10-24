@@ -67,6 +67,9 @@ class BbanImpl {
 	    String ruleId = bankGerman.getRule();
 	    if (!ruleId.equals("000000")){
 		
+		// Remove leading '0'
+		ktoIdent = ktoIdent.replaceAll("\\b[0]{1,9}(\\d*)\\Z", "$1");
+		
 		IbanRuleGerman rule = new IbanRuleGerman("_" + ruleId);
 
 		if (rule.isNoCalculation(bankIdent)){
