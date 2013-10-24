@@ -32,6 +32,13 @@
 		</mappings_kto>
 	</rule>
 	
+	<!-- Sparkasse Pforzheim Calw -->
+	<rule id="_004300">
+		<mappings_blz>
+			<mapping from="60651070">66650085</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Sparkasse Freiburg -->
 	<rule id="_004400">
 		<mappings_kto blz="68050101">
@@ -88,8 +95,7 @@
 	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005200">
 		<no_calculation>
-			 <kto_number_range blz="67220020">\d{10}(?&lt;!5308810004)</kto_number_range>
-			 <kto_number_range blz="67220020">\d{10}(?&lt;!5308810000)</kto_number_range>
+			 <kto_number_range blz="67220020">\d{10}(?&lt;!5308810004)(?&lt;!5308810000)</kto_number_range>
 			 <kto_number_range blz="67020020">\d{10}(?&lt;!5203145700)</kto_number_range>
 			 <kto_number_range blz="69421020">\d{10}(?&lt;!6208908100)</kto_number_range>
 			 <kto_number_range blz="66620020">\d{10}(?&lt;!4840404000)</kto_number_range>
