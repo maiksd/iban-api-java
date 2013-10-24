@@ -32,6 +32,15 @@
 		</mappings_kto>
 	</rule>
 	
+	<!-- Ostfriesische Volksbank eG -->
+	<rule id="_003800">
+		<mappings_blz>
+			<mapping from="26691213">28590075</mapping>
+			<mapping from="28591579">28590075</mapping>
+			<mapping from="25090300">28590075</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Oldenburgische Landesbank AG -->
 	<rule id="_003900">
 		<mappings_blz>
