@@ -32,6 +32,13 @@
 		</mappings_kto>
 	</rule>
 	
+	<!-- The Bank of Tokyo-Mitsubishi UFJ, Ltd. -->
+	<rule id="_003700">
+		<mappings_blz>
+			<mapping from="20110700">30010700</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Ostfriesische Volksbank eG -->
 	<rule id="_003800">
 		<mappings_blz>
