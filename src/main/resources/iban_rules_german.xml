@@ -91,7 +91,16 @@
 	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005200">
 		<no_calculation>
-			<kto_number_range blz=""></kto_number_range>
+			 <kto_number_range blz="67220020">\d{10}(?&lt;!5308810004)</kto_number_range>
+			 <kto_number_range blz="67220020">\d{10}(?&lt;!5308810000)</kto_number_range>
+			 <kto_number_range blz="67020020">\d{10}(?&lt;!5203145700)</kto_number_range>
+			 <kto_number_range blz="69421020">\d{10}(?&lt;!6208908100)</kto_number_range>
+			 <kto_number_range blz="66620020">\d{10}(?&lt;!4840404000)</kto_number_range>
+			 <kto_number_range blz="64120030">\d{10}(?&lt;!1201200100)</kto_number_range>
+			 <kto_number_range blz="64020030">\d{10}(?&lt;!1408050100)</kto_number_range>
+			 <kto_number_range blz="63020130">\d{10}(?&lt;!1112156300)</kto_number_range>
+			 <kto_number_range blz="62030050">\d{10}(?&lt;!7002703200)</kto_number_range>
+			 <kto_number_range blz="69220020">\d{10}(?&lt;!6402145400)</kto_number_range>
 		</no_calculation>
 		<mappings_kto blz="67220020">
 			<mapping from="5308810004">0002662604</mapping>
