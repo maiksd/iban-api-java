@@ -32,6 +32,49 @@
 		</mappings_kto>
 	</rule>
 	
+	<!-- Oldenburgische Landesbank AG -->
+	<rule id="_003900">
+		<mappings_blz>
+			<mapping from="25621327">28020050</mapping>
+			<mapping from="26520017">28020050</mapping>
+			<mapping from="26521703">28020050</mapping>
+			<mapping from="26522319">28020050</mapping>
+			<mapping from="26620010">28020050</mapping>
+			<mapping from="26621413">28020050</mapping>
+			<mapping from="26720028">28020050</mapping>
+			<mapping from="28021002">28020050</mapping>
+			<mapping from="28021301">28020050</mapping>
+			<mapping from="28021504">28020050</mapping>
+			<mapping from="28021623">28020050</mapping>
+			<mapping from="28021705">28020050</mapping>
+			<mapping from="28021906">28020050</mapping>
+			<mapping from="28022015">28020050</mapping>
+			<mapping from="28022412">28020050</mapping>
+			<mapping from="28022511">28020050</mapping>
+			<mapping from="28022620">28020050</mapping>
+			<mapping from="28022822">28020050</mapping>
+			<mapping from="28023224">28020050</mapping>
+			<mapping from="28023325">28020050</mapping>
+			<mapping from="28220026">28020050</mapping>
+			<mapping from="28222208">28020050</mapping>
+			<mapping from="28222621">28020050</mapping>
+			<mapping from="28320014">28020050</mapping>
+			<mapping from="28321816">28020050</mapping>
+			<mapping from="28420007">28020050</mapping>
+			<mapping from="28421030">28020050</mapping>
+			<mapping from="28520009">28020050</mapping>
+			<mapping from="28521518">28020050</mapping>
+			<mapping from="29121731">28020050</mapping>
+		</mappings_blz>
+	</rule>
+	
+	<!-- Sparkasse Staufen-Breisach -->
+	<rule id="_004001">
+		<mappings_blz>
+			<mapping from="68051310">68052328</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Bausparkasse Schwäbisch Hall AG -->
 	<rule id="_004100">
 		<mappings_blz>
@@ -146,10 +189,10 @@
 	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005100">
 		<mappings_kto blz="60050101">
-			<mapping from="0000000333">7832500881</mapping> 
-			<mapping from="0000000502">0001108884</mapping> 
-			<mapping from="0500500500">0005005000</mapping> 
-			<mapping from="0502502502">0001108884</mapping> 
+			<mapping from="333">7832500881</mapping> 
+			<mapping from="502">0001108884</mapping> 
+			<mapping from="500500500">0005005000</mapping> 
+			<mapping from="502502502">0001108884</mapping> 
 		</mappings_kto>
 	</rule>
 	

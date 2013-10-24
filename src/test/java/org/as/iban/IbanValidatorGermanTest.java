@@ -48,6 +48,37 @@ public class IbanValidatorGermanTest {
     }
     
     @Test
+    public void rule003900(){
+    	// BLZ 26621413, Kto 1234567890
+    	bankIdent = "26621413";
+    	ktoIdent = "1234567890";
+    	
+    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE13280200501234567890", iban.toString());
+    	
+    	
+    	// BLZ 26621413, Kto 1234567890
+    	bankIdent = "28320014";
+    	ktoIdent = "88654578";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE20280200500088654578", iban.toString());
+    }
+    
+    @Test
+    public void rule004001(){
+    	// BLZ 680 513 10, Kto 6015002
+    	bankIdent = "68051310";
+    	ktoIdent = "6015002";
+    	
+    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE17680523280006015002", iban.toString());
+    }
+    
+    @Test
     public void rule004100(){
     	// BLZ 10000000, Kto 50462000
     	bankIdent = "62220000";
