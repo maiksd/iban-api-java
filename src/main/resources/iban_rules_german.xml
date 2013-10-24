@@ -32,8 +32,41 @@
 		</mappings_kto>
 	</rule>
 	
+	<!-- Sparkasse Freiburg -->
+	<rule id="_004400">
+		<mappings_kto blz="68050101">
+			<mapping from="202">2282022</mapping>
+		</mappings_kto>
+	</rule>
+	
+	<!-- SEB AG -->
+	<rule id="_004500">
+	</rule>
+	
+	<!-- Santander Consumer Bank -->
+	<rule id="_004600">
+		<mappings_blz>
+			<mapping from="10120600">31010833</mapping>
+			<mapping from="25020600">31010833</mapping>
+		</mappings_blz>
+	</rule>
+	
+	<!-- Santander Consumer Bank -->
+	<rule id="_004700">
+	</rule>
+	
+	<!-- VON ESSEN GmbH & Co. KG Bankgesellschaft -->
+	<rule id="_004800">
+		<mappings_blz>
+			<mapping from="10120800">36010200</mapping>
+			<mapping from="27010200">36010200</mapping>
+			<mapping from="60020300">36010200</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- WGZ Bank -->
-	<TODO></TODO>
+	<rule id="_004900">
+	</rule>
 	
 	<!-- Sparkasse LeerWittmund -->
 	<rule id="_005000">
