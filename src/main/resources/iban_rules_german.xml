@@ -32,6 +32,16 @@
 		</mappings_kto>
 	</rule>
 	
+	<!-- Bausparkasse Schwäbisch Hall AG -->
+	<rule id="_004100">
+		<mappings_blz>
+			<mapping from="62220000">50060400</mapping>
+		</mappings_blz>
+		<modification_kto>
+			<modification blz="50060400">\d{1,10};0000011404</modification>
+		</modification_kto>
+	</rule>
+	
 	<!-- Deutsche Bundesbank -->
 	<rule id="_004200">
 		<no_calculation>
