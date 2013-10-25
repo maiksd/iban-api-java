@@ -13,7 +13,6 @@ public class IbanValidatorGermanTest {
 
     private String bankIdent;
     private String ktoIdent;
-    private Iban iban;
 
     @Before
     public void setUp() throws Exception {
@@ -23,10 +22,43 @@ public class IbanValidatorGermanTest {
     public void tearDown() throws Exception {
     }
 
-//    @Test
-//    public void rule000200() {
-//	fail("Not yet implemented");
-//    }
+    @Test
+    public void rule000100(){
+	bankIdent = "35451460";
+	ktoIdent = "12345678";
+	try{
+	    Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	}
+	catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+    }
+    @Test
+    public void rule000200() {
+	// BLZ 72020700
+	bankIdent = "72020700";
+	ktoIdent = "12345678";
+	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	assertEquals("DE05720207000012345678", iban.toString());	
+	
+	bankIdent = "72020700";
+	ktoIdent = "1234567690";
+	try{
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	}
+	catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+
+	bankIdent = "72020700";
+	ktoIdent = "1234567860";
+	try{
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	}
+	catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+    }
     
     @Test
     public void rule000300() {

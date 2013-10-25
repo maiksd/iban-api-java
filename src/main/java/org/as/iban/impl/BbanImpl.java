@@ -65,6 +65,10 @@ class BbanImpl {
 	if (country == Iban.COUNTRY_CODE_GERMAN) {
 	    // Only not standard rules
 	    String ruleId = bankGerman.getRule();
+	    
+	    if (ruleId.equals("000100"))
+		throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
+	    
 	    if (!ruleId.equals("000000")){
 		
 		// Remove leading '0'
