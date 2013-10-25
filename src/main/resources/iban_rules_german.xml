@@ -744,6 +744,13 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Volksbank Osnabrück eG -->
+	<rule id="_002300">
+		<mappings_kto blz="26590025">
+			<mapping from="700">1000700800</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- Bank im Bistum Essen eG -->
 	<rule id="_002400">
 		<mappings_kto blz="36060295">
