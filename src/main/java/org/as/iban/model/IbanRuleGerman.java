@@ -27,11 +27,13 @@ public class IbanRuleGerman {
     private boolean mappingKto = false;
     private boolean mappingBlz = false;
     private boolean modificationKto = false;
+    private boolean mappingKtoKr = false;
     
     private ArrayList<Element> listNoCalculation = new ArrayList<Element>();
     private ArrayList<MappingKto> listMappingKto = new ArrayList<MappingKto>();
     private ArrayList<Element> listMappingBlz = new ArrayList<Element>();
     private ArrayList<Element> listModificationKto = new ArrayList<Element>();
+    private ArrayList<Element> listMappingKtoKr = new ArrayList<Element>();
     
     public IbanRuleGerman (String rule_id) {
 	this.rule_id = rule_id;
@@ -86,6 +88,10 @@ public class IbanRuleGerman {
 			    listMappingKto.add(mapKto);
 			    break;
 			    
+			case "mapping_ktokr":
+			    listMappingKtoKr.add(element);
+			    break;
+			    
 			case "mappings_blz":
 			    listMappingBlz.add(element);
 			    break;
@@ -104,7 +110,6 @@ public class IbanRuleGerman {
 	Iterator<Element> iter = listNoCalculation.iterator();
 	
 	while (iter.hasNext()) {
-//	    if (iter.next().getAttribute("blz").equals(blz))
 	    if (blz.matches(iter.next().getAttribute("blz")))
 		this.noCalculation = true;
 	}
@@ -148,7 +153,30 @@ public class IbanRuleGerman {
 	return null;
     }
     
-  
+    public boolean isMappingKtoKr (String kto) {
+	Iterator<Element> iter = listMappingKtoKr.iterator();
+	
+	while (iter.hasNext()) {
+	    if (kto.matches(iter.next().getAttribute("kto")))
+		this.mappingKtoKr = true;
+	}
+	return mappingKtoKr;
+    }
+    
+
+    public String getMappedKtoKr (String kto) {
+	Iterator<Element> iter = listMappingKtoKr.iterator();
+	
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (tempElement.getAttribute("from").equals(kto.substring(0, 2)));
+		return tempElement.getTextContent();
+	}
+	
+	return null;
+    }
+
+    
     public boolean isMappingBlz (String blz) {
 	Iterator<Element> iter = listMappingBlz.iterator();
 	

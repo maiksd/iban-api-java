@@ -90,6 +90,12 @@ class BbanImpl {
 			ktoIdent = rule.getMappedKto(bankIdent, ktoIdent);
 		}
 		
+		// KtoKr Mapping
+		if (rule.isMappingKtoKr(ktoIdent)) {
+		    if (rule.getMappedKtoKr(ktoIdent) != null)
+			bankIdent = rule.getMappedKtoKr(ktoIdent);
+		}
+		
 		// BLZ mapping
 		if (rule.isMappingBlz(bankIdent)) {
 		    if (rule.getMappedBlz(bankIdent) != null)
