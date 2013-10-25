@@ -744,6 +744,13 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Sparkasse Hannover -->
+	<rule id="_002800">
+		<mappings_blz>
+			<mapping from="25050299">25050180</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Société Générale -->
 	<rule id="_002900">
 		<modification_kto>
