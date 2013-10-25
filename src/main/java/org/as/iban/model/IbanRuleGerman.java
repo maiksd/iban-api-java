@@ -104,7 +104,8 @@ public class IbanRuleGerman {
 	Iterator<Element> iter = listNoCalculation.iterator();
 	
 	while (iter.hasNext()) {
-	    if (iter.next().getAttribute("blz").equals(blz))
+//	    if (iter.next().getAttribute("blz").equals(blz))
+	    if (blz.matches(iter.next().getAttribute("blz")))
 		this.noCalculation = true;
 	}
 	return noCalculation;
