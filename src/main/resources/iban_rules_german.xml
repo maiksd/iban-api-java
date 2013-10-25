@@ -776,38 +776,6 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- HSH Nordbank AG, Hamburg und Kiel -->
-	<rule id="_003600">
-		<no_calculation>
-			<kto_number_range blz="20050000">(\b([0]{1,4})*([09]\d{5})\Z|\b([0]{1,2})*([0-26-9]\d{7})\Z|\b([0]{1})*([09]\d{8})\Z|\b[0278]\d{9}(?&lt;!70\d{8})(?&lt;!85\d{8})\Z)</kto_number_range>
-			<kto_number_range blz="21050000">(\b([0]{1,4})*([09]\d{5})\Z|\b([0]{1,2})*([0-26-9]\d{7})\Z|\b([0]{1})*([09]\d{8})\Z|\b[0278]\d{9}(?&lt;!70\d{8})(?&lt;!85\d{8})\Z)</kto_number_range>
-			<kto_number_range blz="23050000">(\b([0]{1,4})*([09]\d{5})\Z|\b([0]{1,2})*([0-26-9]\d{7})\Z|\b([0]{1})*([09]\d{8})\Z|\b[0278]\d{9}(?&lt;!70\d{8})(?&lt;!85\d{8})\Z)</kto_number_range>
-		</no_calculation>
-		<mappings_blz>
-			<mapping from="20050000">21050000</mapping>
-			<mapping from="23050000">21050000</mapping>
-		</mappings_blz>
-		<modification_kto>
-			<modification blz="21050000">\b([0]{1,4})*([1-8]\d{5})\Z;$2000</modification>
-		</modification_kto>
-	</rule>
-	
-	<!-- The Bank of Tokyo-Mitsubishi UFJ, Ltd. -->
-	<rule id="_003700">
-		<mappings_blz>
-			<mapping from="20110700">30010700</mapping>
-		</mappings_blz>
-	</rule>
-	
-	<!-- Ostfriesische Volksbank eG -->
-	<rule id="_003800">
-		<mappings_blz>
-			<mapping from="26691213">28590075</mapping>
-			<mapping from="28591579">28590075</mapping>
-			<mapping from="25090300">28590075</mapping>
-		</mappings_blz>
-	</rule>
-	
 	<!-- Oldenburgische Landesbank AG -->
 	<rule id="_003900">
 		<mappings_blz>
