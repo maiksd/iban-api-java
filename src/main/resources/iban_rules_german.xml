@@ -744,6 +744,13 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- GLS Gemeinschaftsbank eG -->
+	<rule id="_002200">
+		<mappings_kto blz="43060967">
+			<mapping from="1111111">2222200000</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- Volksbank Osnabrück eG -->
 	<rule id="_002300">
 		<mappings_kto blz="26590025">
