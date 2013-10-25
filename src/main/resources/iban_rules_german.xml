@@ -744,6 +744,13 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Société Générale -->
+	<rule id="_002900">
+		<modification_kto>
+			<modification blz="51210800">\b(\d{3})0(\d{6})\Z;0$1$2</modification>
+		</modification_kto>
+	</rule>
+	
 	<!-- UniCredit Bank AG -->
 	<rule id="_003101">
 		<no_calculation>
@@ -2150,8 +2157,7 @@
 			<mapping from="733">83020087</mapping>
 			<mapping from="798">70020270</mapping>
 		</mappings_ktokr>
-		
-	</rule>
+	</rule>	
 	
 	<!-- UniCredit Bank AG -->
 	<rule id="_003400">
