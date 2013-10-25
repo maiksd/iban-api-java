@@ -88,7 +88,7 @@ public class IbanRuleGerman {
 			    listMappingKto.add(mapKto);
 			    break;
 			    
-			case "mapping_ktokr":
+			case "mappings_ktokr":
 			    listMappingKtoKr.add(element);
 			    break;
 			    
@@ -157,7 +157,7 @@ public class IbanRuleGerman {
 	Iterator<Element> iter = listMappingKtoKr.iterator();
 	
 	while (iter.hasNext()) {
-	    if (kto.matches(iter.next().getAttribute("kto")))
+	    if (kto.matches(((Element)iter.next().getParentNode()).getAttribute("kto")))
 		this.mappingKtoKr = true;
 	}
 	return mappingKtoKr;
@@ -169,10 +169,10 @@ public class IbanRuleGerman {
 	
 	while (iter.hasNext()) {
 	    Element tempElement = iter.next();
-	    if (tempElement.getAttribute("from").equals(kto.substring(0, 2)));
+	    if (tempElement.getAttribute("from").equals(kto.substring(0, 3)))
 		return tempElement.getTextContent();
 	}
-	
+
 	return null;
     }
 
