@@ -744,6 +744,25 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
+	<rule id="_002500">
+		<mappings_blz>
+			<mapping from="60250184">60050101</mapping>
+			<mapping from="60450193">60050101</mapping>
+			<mapping from="61050181">60050101</mapping>
+			<mapping from="61150185">60050101</mapping>
+			<mapping from="61450191">60050101</mapping>
+			<mapping from="62050181">60050101</mapping>
+			<mapping from="62250182">60050101</mapping>
+			<mapping from="63050181">60050101</mapping>
+			<mapping from="64050181">60050101</mapping>
+			<mapping from="64150182">60050101</mapping>
+			<mapping from="64450288">60050101</mapping>
+			<mapping from="65050281">60050101</mapping>
+			<mapping from="65350186">60050101</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Sparkasse Hannover -->
 	<rule id="_002800">
 		<mappings_blz>
