@@ -236,6 +236,191 @@ public class IbanValidatorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE06710221823200000012", iban.toString());
+    	
+    	
+    	// Testfall M
+    	// BLZ 100 208 90 Kto 5951950
+    	bankIdent = "10020890";
+    	ktoIdent = "5951950";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE07100208900005951950", iban.toString());
+    	
+    	
+    	// Testfall O
+    	// BLZ 850 200 86 Kto 847321750
+    	bankIdent = "85020086";
+    	ktoIdent = "847321750";
+    	
+    	try{
+    		iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	}
+    	catch (IbanException e) {
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	}
+    }
+    
+    @Test
+    public void rule003301(){
+    	// Testfall P1
+    	// BLZ 700 202 70 Kto 2950219435
+    	bankIdent = "70020270";
+    	ktoIdent = "2950219435";
+    	
+    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE76700202702950219435", iban.toString());
+    	
+    	
+    	// Testfall P2
+    	// BLZ 700 202 70 Kto 1457032621
+    	bankIdent = "70020270";
+    	ktoIdent = "1457032621";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE92660202861457032621", iban.toString());
+    	
+    	
+    	// Testfall P3
+    	// BLZ 700 202 70 Kto 897
+    	bankIdent = "70020270";
+    	ktoIdent = "897";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE55700202700000000897", iban.toString());
+    	
+    	
+    	// Testfall P4
+    	// BLZ 700 202 70 Kto 847321750
+    	bankIdent = "70020270";
+    	ktoIdent = "847321750";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE36700202700847321750", iban.toString());
+    	
+    	
+    	// Testfall Sonder
+    	// BLZ 700 202 70 Kto 1111111
+    	bankIdent = "70020270";
+    	ktoIdent = "1111111";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE88700202700039908140", iban.toString());
+    }
+    
+    @Test
+    public void rule003400(){
+    	// Testfall Q1
+    	// BLZ 600 202 90 Kto 1320815432
+    	bankIdent = "60020290";
+    	ktoIdent = "1320815432";
+    	
+    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE69600202901320815432", iban.toString());
+    	
+    	
+    	// Testfall Q2
+    	// BLZ 600 202 90 Kto 1457032621
+    	bankIdent = "60020290";
+    	ktoIdent = "1457032621";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE92660202861457032621", iban.toString());
+    	
+    	
+    	// Testfall Q3
+    	// BLZ 600 202 90 Kto 5951950
+    	bankIdent = "60020290";
+    	ktoIdent = "5951950";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE67600202900005951950", iban.toString());
+    	
+    	
+    	// Testfall Q4
+    	// BLZ 600 202 90 Kto 847321750
+    	bankIdent = "60020290";
+    	ktoIdent = "847321750";
+    	
+    	try{
+    		iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	}
+    	catch (IbanException e) {
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	}
+    	
+    	
+    	// Testfall Pseudo
+    	// BLZ 600 202 90 Kto 500500500
+    	bankIdent = "60020290";
+    	ktoIdent = "500500500";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE82600202904340111112", iban.toString());
+    }
+    
+    @Test
+    public void rule003501(){
+    	// Testfall R1
+    	// BLZ 790 200 76 Kto 1050958422
+    	bankIdent = "79020076";
+    	ktoIdent = "1050958422";
+    	
+    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE42790200761050958422", iban.toString());
+    	
+    	
+    	// Testfall R2
+    	// BLZ 790 200 76 Kto 1320815432
+    	bankIdent = "79020076";
+    	ktoIdent = "1320815432";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE69600202901320815432", iban.toString());
+    	
+    	
+    	// Testfall R3
+    	// BLZ 790 200 76 Kto 5951950
+    	bankIdent = "79020076";
+    	ktoIdent = "5951950";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE56790200760005951950", iban.toString());
+    	
+    	
+    	// Testfall R4
+    	// BLZ 790 200 76 Kto 847321750
+    	bankIdent = "79020076";
+    	ktoIdent = "847321750";
+    	
+    	try{
+    		iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	}
+    	catch (IbanException e) {
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	}
+    	
+    	
+    	// Testfall Sonder
+    	// BLZ 790 200 76 Kto 9696
+    	bankIdent = "79020076";
+    	ktoIdent = "9696";
+    	
+    	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE29790200761490196966", iban.toString());
     }
        
     @Test
