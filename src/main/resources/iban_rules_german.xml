@@ -744,6 +744,18 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- National-Bank AG -->
+	<rule id="_002101">
+		<no_calculation>
+			<kto_number_range blz="\d{8}">\b\d{1,5}\Z</kto_number_range>
+		</no_calculation>
+		<mappings_blz>
+			<mapping from="35020030">36020030</mapping>
+			<mapping from="36220030">36020030</mapping>
+			<mapping from="36520030">36020030</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- GLS Gemeinschaftsbank eG -->
 	<rule id="_002200">
 		<mappings_kto blz="43060967">
