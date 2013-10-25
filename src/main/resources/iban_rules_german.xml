@@ -744,6 +744,16 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Bank im Bistum Essen eG -->
+	<rule id="_002400">
+		<mappings_kto blz="36060295">
+			<mapping from="94">1694</mapping>
+			<mapping from="248">17248</mapping>
+			<mapping from="345">17345</mapping>
+			<mapping from="400">14400</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_002500">
 		<mappings_blz>
