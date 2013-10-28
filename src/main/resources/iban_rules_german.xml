@@ -744,6 +744,16 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Sparkasse Schopfheim-Zell -->
+	<rule id="_000900">
+		<mappings_blz>
+			<mapping from="68351976">68351557</mapping>
+		</mappings_blz>
+		<modification_kto>
+			<modification blz="68351557">\b1116(\d{6})\Z;3047$1</modification>
+		</modification_kto>
+	</rule>
+	
 	<!-- Frankfurter Sparkasse -->
 	<rule id="_001000">
 		<mappings_kto blz="50050201">
