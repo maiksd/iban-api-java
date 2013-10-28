@@ -744,6 +744,47 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Deutsche Apotheker- und Ärztebank eG -->
+	<rule id="_001400">
+		<mappings_blz>
+			<mapping from="10090603">30060601</mapping>
+			<mapping from="12090640">30060601</mapping>
+			<mapping from="20090602">30060601</mapping>
+			<mapping from="21090619">30060601</mapping>
+			<mapping from="23092620">30060601</mapping>
+			<mapping from="25090608">30060601</mapping>
+			<mapping from="26560625">30060601</mapping>
+			<mapping from="27090618">30060601</mapping>
+			<mapping from="28090633">30060601</mapping>
+			<mapping from="29090605">30060601</mapping>
+			<mapping from="33060616">30060601</mapping>
+			<mapping from="35060632">30060601</mapping>
+			<mapping from="36060610">30060601</mapping>
+			<mapping from="37060615">30060601</mapping>
+			<mapping from="39060630">30060601</mapping>
+			<mapping from="40060614">30060601</mapping>
+			<mapping from="44060604">30060601</mapping>
+			<mapping from="50090607">30060601</mapping>
+			<mapping from="50890634">30060601</mapping>
+			<mapping from="51090636">30060601</mapping>
+			<mapping from="52090611">30060601</mapping>
+			<mapping from="53390635">30060601</mapping>
+			<mapping from="54690623">30060601</mapping>
+			<mapping from="55060831">30060601</mapping>
+			<mapping from="57060612">30060601</mapping>
+			<mapping from="59090626">30060601</mapping>
+			<mapping from="60090609">30060601</mapping>
+			<mapping from="66090621">30060601</mapping>
+			<mapping from="67090617">30060601</mapping>
+			<mapping from="68090622">30060601</mapping>
+			<mapping from="70090606">30060601</mapping>
+			<mapping from="75090629">30060601</mapping>
+			<mapping from="76090613">30060601</mapping>
+			<mapping from="77390628">30060601</mapping>
+			<mapping from="79090624">30060601</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Pax-Bank eG -->
 	<rule id="_001500">
 		<mappings_kto blz="37060193">
