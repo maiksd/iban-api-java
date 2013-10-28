@@ -744,6 +744,16 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Deutsche Bank AG -->
+	<rule id="_002001">
+		<no_calculation>
+			<kto_number_range blz="\d{8}">\b\d*(?&lt;!\d{7,9})\Z</kto_number_range>
+		</no_calculation>
+		<mappings_kto blz="50070010">
+			<mapping from="9999">92777202</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- National-Bank AG -->
 	<rule id="_002101">
 		<no_calculation>
