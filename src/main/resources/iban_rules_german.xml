@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rules xmlns="org.as.iban" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	
-	<!-- Augsburger Aktienbank -->
+	<!-- Rule 0002-00 Augsburger Aktienbank -->
 	<rule id="_000200">
 		<no_calculation>
 			<kto_number_range blz="72020700">\d{7}86\d{1}</kto_number_range>
@@ -9,14 +9,14 @@
 		</no_calculation>
 	</rule>
 	
-	<!-- Aareal Bank AG ZWL Wiesbaden -->
+	<!-- Rule 0003-00 Aareal Bank AG ZWL Wiesbaden -->
 	<rule id="_000300">
 		<no_calculation>
 			<kto_number_range blz="51010800">6161604670</kto_number_range>
 		</no_calculation>
 	</rule>
 	
-	<!-- Landesbank Berlin / Berliner Sparkasse -->
+	<!-- Rule 0004-00 Landesbank Berlin / Berliner Sparkasse -->
 	<rule id="_000400">
 		<mappings_kto blz="10050000">
 			<mapping from="135">0990021440</mapping> 
@@ -32,7 +32,7 @@
 		</mappings_kto>
 	</rule>
 
-		<!-- Commerzbank AG -->
+	<!-- Rule 0005-01 Commerzbank AG -->
 	<rule id="_000501">
 		<no_calculation>
 			<kto_number_range blz="10080900">([9]{2}[8]\d{6}|[9]{3}[0-4]\d{5})</kto_number_range>
@@ -744,7 +744,7 @@
 		</modification_kto>		
 	</rule>
 	
-	<!-- Stadtsparkasse München -->
+	<!-- Rule 0006-00 Stadtsparkasse München -->
 	<rule id="_000600">
 		<mappings_kto blz="70150000">
 			<mapping from="1111111">20228888</mapping>
@@ -754,7 +754,7 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- Sparkasse KölnBonn -->
+	<!-- Rule 0007-00 Sparkasse KölnBonn -->
 	<rule id="_000700">
 		<mappings_kto blz="37050198">
 			<mapping from="111">1115</mapping>
@@ -793,7 +793,7 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- BHF-Bank AG -->
+	<!-- Rule 0008-00 BHF-Bank AG -->
 	<rule id="_000800">
 		<mappings_blz>
 			<mapping from="10020200">50020200</mapping>
@@ -808,7 +808,7 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Sparkasse Schopfheim-Zell -->
+	<!-- Rule 0009-00 Sparkasse Schopfheim-Zell -->
 	<rule id="_000900">
 		<mappings_blz>
 			<mapping from="68351976">68351557</mapping>
@@ -818,7 +818,7 @@
 		</modification_kto>
 	</rule>
 	
-	<!-- Frankfurter Sparkasse -->
+	<!-- Rule 0010-00 Frankfurter Sparkasse -->
 	<rule id="_001000">
 		<mappings_kto blz="50050201">
 			<mapping from="2000">222000</mapping>
@@ -826,7 +826,7 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- Sparkasse Krefeld -->
+	<!-- Rule 0011-00 Sparkasse Krefeld -->
 	<rule id="_001100">
 		<mappings_kto blz="32050000">
 			<mapping from="1000">8010001</mapping>
@@ -834,14 +834,14 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- Landesbank Hessen-Thüringen Girozentrale -->
+	<!-- Rule 0012-01 Landesbank Hessen-Thüringen Girozentrale -->
 	<rule id="_001201">
 		<mappings_blz>
 			<mapping from="50850049">50050000</mapping>
 		</mappings_blz>
 	</rule>
 	
-	<!-- Landesbank Hessen-Thüringen Girozentrale -->
+	<!-- Rule 0013-01 Landesbank Hessen-Thüringen Girozentrale -->
 	<rule id="_001301">
 		<mappings_blz>
 			<mapping from="40050000">30050000</mapping>
@@ -849,7 +849,7 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Deutsche Apotheker- und Ärztebank eG -->
+	<!-- Rule 0014-00 Deutsche Apotheker- und Ärztebank eG -->
 	<rule id="_001400">
 		<mappings_blz>
 			<mapping from="10090603">30060601</mapping>
@@ -890,7 +890,7 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Pax-Bank eG -->
+	<!-- Rule 0015-00 Pax-Bank eG -->
 	<rule id="_001500">
 		<mappings_kto blz="37060193">
 			<mapping from="556">0000101010</mapping>
@@ -907,14 +907,14 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- Kölner Bank eG -->
+	<!-- Rule 0016-00 Kölner Bank eG -->
 	<rule id="_001600">
 		<mappings_kto blz="37160087">
 			<mapping from="300000">18128012</mapping>
 		</mappings_kto>
 	</rule>
 	
-	<!-- Volksbank Bonn Rhein-Sieg -->
+	<!-- Rule 0017-00 Volksbank Bonn Rhein-Sieg -->
 	<rule id="_001700">
 		<mappings_kto blz="38060186">
 			<mapping from="100">2009090013</mapping>
@@ -930,7 +930,7 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- Aachener Bank eG -->
+	<!-- Rule 0018-00 Aachener Bank eG -->
 	<rule id="_001800">
 		<mappings_kto blz="39060180">
 			<mapping from="556">120440110</mapping>
@@ -941,7 +941,7 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- Bethmann Bank -->
+	<!-- Rule 0019-00 Bethmann Bank -->
 	<rule id="_001900">
 		<mappings_blz>
 			<mapping from="50130100">50120383</mapping>
@@ -950,7 +950,7 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Deutsche Bank AG -->
+	<!-- Rule 0020-01 Deutsche Bank AG -->
 	<rule id="_002001">
 		<no_calculation>
 			<kto_number_range blz="\d{8}">\b\d*(?&lt;!\d{7,9})\Z</kto_number_range>
@@ -960,7 +960,7 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- National-Bank AG -->
+	<!-- Rule 0021-01 National-Bank AG -->
 	<rule id="_002101">
 		<no_calculation>
 			<kto_number_range blz="\d{8}">\b\d{1,5}\Z</kto_number_range>
@@ -972,21 +972,21 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- GLS Gemeinschaftsbank eG -->
+	<!-- Rule 0022-00 GLS Gemeinschaftsbank eG -->
 	<rule id="_002200">
 		<mappings_kto blz="43060967">
 			<mapping from="1111111">2222200000</mapping>
 		</mappings_kto>
 	</rule>
 	
-	<!-- Volksbank Osnabrück eG -->
+	<!-- Rule 0023-00 Volksbank Osnabrück eG -->
 	<rule id="_002300">
 		<mappings_kto blz="26590025">
 			<mapping from="700">1000700800</mapping>
 		</mappings_kto>
 	</rule>
 	
-	<!-- Bank im Bistum Essen eG -->
+	<!-- Rule 0024-00 Bank im Bistum Essen eG -->
 	<rule id="_002400">
 		<mappings_kto blz="36060295">
 			<mapping from="94">1694</mapping>
@@ -996,7 +996,7 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
+	<!-- Rule 0025-00 Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_002500">
 		<mappings_blz>
 			<mapping from="60250184">60050101</mapping>
@@ -1015,21 +1015,21 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Sparkasse Hannover -->
+	<!-- Rule 0028-00 Sparkasse Hannover -->
 	<rule id="_002800">
 		<mappings_blz>
 			<mapping from="25050299">25050180</mapping>
 		</mappings_blz>
 	</rule>
 	
-	<!-- Société Générale -->
+	<!-- Rule 0029-00 Société Générale -->
 	<rule id="_002900">
 		<modification_kto>
 			<modification blz="51210800">\b(\d{3})0(\d{6})\Z;0$1$2</modification>
 		</modification_kto>
 	</rule>
 	
-	<!-- UniCredit Bank AG -->
+	<!-- Rule 0031-01 UniCredit Bank AG -->
 	<rule id="_003101">
 		<no_calculation>
 			<kto_number_range blz="\d{8}">\b\d{1,9}\Z</kto_number_range>
@@ -1497,7 +1497,7 @@
 		</mappings_ktokr>
 	</rule>
 	
-	<!-- UniCredit Bank AG -->
+	<!-- Rule 0032-00 UniCredit Bank AG -->
 	<rule id="_003200">
 		<no_calculation>
 			<kto_number_range blz="\d{8}">\b([0]{1})*8\d{8}\Z</kto_number_range>
@@ -1965,7 +1965,7 @@
 		</mappings_ktokr>
 	</rule>
 	
-	<!-- UniCredit Bank AG -->
+	<!-- Rule 0033-01 UniCredit Bank AG -->
 	<rule id="_003301">
 		<mappings_kto blz="70020270">
 			<mapping from="22222">5803435253</mapping> 
@@ -2437,7 +2437,7 @@
 		</mappings_ktokr>
 	</rule>	
 	
-	<!-- UniCredit Bank AG -->
+	<!-- Rule 0034-00 UniCredit Bank AG -->
 	<rule id="_003400">
 		<no_calculation>
 			<kto_number_range blz="\d{8}">\b([0]{1})*8\d{8}\Z</kto_number_range>
@@ -2909,7 +2909,7 @@
 		</mappings_ktokr>
 	</rule>
 	
-	<!-- UniCredit Bank AG -->
+	<!-- Rule 0035-01 UniCredit Bank AG -->
 	<rule id="_003501">
 		<no_calculation>
 			<kto_number_range blz="\d{8}">\b([0]{1})*8\d{8}\Z</kto_number_range>
@@ -3380,7 +3380,7 @@
 		</mappings_ktokr>
 	</rule>
 		
-	<!-- HSH Nordbank AG, Hamburg und Kiel -->
+	<!-- Rule 0036-00 HSH Nordbank AG, Hamburg und Kiel -->
 	<rule id="_003600">
 		<no_calculation>
 			<kto_number_range blz="20050000">(\b([0]{1,4})*([09]\d{5})\Z|\b([0]{1,2})*([0-26-9]\d{7})\Z|\b([0]{1})*([09]\d{8})\Z|\b[0278]\d{9}(?&lt;!70\d{8})(?&lt;!85\d{8})\Z)</kto_number_range>
@@ -3396,14 +3396,14 @@
 		</modification_kto>
 	</rule>
 	
-	<!-- The Bank of Tokyo-Mitsubishi UFJ, Ltd. -->
+	<!-- Rule 0037-00 The Bank of Tokyo-Mitsubishi UFJ, Ltd. -->
 	<rule id="_003700">
 		<mappings_blz>
 			<mapping from="20110700">30010700</mapping>
 		</mappings_blz>
 	</rule>
 	
-	<!-- Ostfriesische Volksbank eG -->
+	<!-- Rule 0038-00 Ostfriesische Volksbank eG -->
 	<rule id="_003800">
 		<mappings_blz>
 			<mapping from="26691213">28590075</mapping>
@@ -3412,7 +3412,7 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Oldenburgische Landesbank AG -->
+	<!-- Rule 0039-00 Oldenburgische Landesbank AG -->
 	<rule id="_003900">
 		<mappings_blz>
 			<mapping from="25621327">28020050</mapping>
@@ -3448,14 +3448,14 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Sparkasse Staufen-Breisach -->
+	<!-- Rule 0040-01 Sparkasse Staufen-Breisach -->
 	<rule id="_004001">
 		<mappings_blz>
 			<mapping from="68051310">68052328</mapping>
 		</mappings_blz>
 	</rule>
 	
-	<!-- Bausparkasse Schwäbisch Hall AG -->
+	<!-- Rule 0041-00 Bausparkasse Schwäbisch Hall AG -->
 	<rule id="_004100">
 		<mappings_blz>
 			<mapping from="62220000">50060400</mapping>
@@ -3465,7 +3465,7 @@
 		</modification_kto>
 	</rule>
 	
-	<!-- Deutsche Bundesbank -->
+	<!-- Rule 0042-00 Deutsche Bundesbank -->
 	<rule id="_004200">
 		<no_calculation>
 			<kto_number_range blz="10000000">\b\d*(?&lt;!\d{3}0[1-9]\d{3})(?&lt;!5046[239]\d{3})\Z</kto_number_range>
@@ -3513,25 +3513,25 @@
 		</no_calculation>
 	</rule>
 	
-	<!-- Sparkasse Pforzheim Calw -->
+	<!-- Rule 0043-00 Sparkasse Pforzheim Calw -->
 	<rule id="_004300">
 		<mappings_blz>
 			<mapping from="60651070">66650085</mapping>
 		</mappings_blz>
 	</rule>
 	
-	<!-- Sparkasse Freiburg -->
+	<!-- Rule 0044-00 Sparkasse Freiburg -->
 	<rule id="_004400">
 		<mappings_kto blz="68050101">
 			<mapping from="202">2282022</mapping>
 		</mappings_kto>
 	</rule>
 	
-	<!-- SEB AG -->
+	<!-- Rule 0045-00 SEB AG -->
 	<rule id="_004500">
 	</rule>
 	
-	<!-- Santander Consumer Bank -->
+	<!-- Rule 0046-00 Santander Consumer Bank -->
 	<rule id="_004600">
 		<mappings_blz>
 			<mapping from="10120600">31010833</mapping>
@@ -3539,14 +3539,14 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Santander Consumer Bank -->
+	<!-- Rule 0047-00 Santander Consumer Bank -->
 	<rule id="_004700">
 		<modification_kto>
 			<modification blz="10033300">^(\d{8}?)\Z;$100</modification>
 		</modification_kto>
 	</rule>
 	
-	<!-- VON ESSEN GmbH & Co. KG Bankgesellschaft -->
+	<!-- Rule 0048-00 VON ESSEN GmbH & Co. KG Bankgesellschaft -->
 	<rule id="_004800">
 		<mappings_blz>
 			<mapping from="10120800">36010200</mapping>
@@ -3555,7 +3555,7 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- WGZ Bank -->
+	<!-- Rule 0049-00 WGZ Bank -->
 	<rule id="_004900">
 		<mappings_kto blz="30060010">
 			<mapping from="36">0002310113</mapping>
@@ -3594,14 +3594,14 @@
 		</modification_kto>
 	</rule>
 	
-	<!-- Sparkasse LeerWittmund -->
+	<!-- Rule 0050-00 Sparkasse LeerWittmund -->
 	<rule id="_005000">
 		<mappings_blz>
 			<mapping from="28252760">28550000</mapping>
 		</mappings_blz>
 	</rule>
 	
-	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
+	<!-- Rule 0051-00 Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005100">
 		<mappings_kto blz="60050101">
 			<mapping from="333">7832500881</mapping> 
@@ -3611,7 +3611,7 @@
 		</mappings_kto>
 	</rule>
 	
-	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
+	<!-- Rule 0052-00 Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005200">
 		<no_calculation>
 			 <kto_number_range blz="67220020">\d{10}(?&lt;!5308810004)(?&lt;!5308810000)</kto_number_range>
@@ -3665,7 +3665,7 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
+	<!-- Rule 0053-00 Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005300">
 		<mappings_kto blz="55050000">
 			<mapping from="35000">7401555913</mapping>
@@ -3735,7 +3735,7 @@
 		</mappings_blz>
 	</rule>
 	
-	<!-- Evangelische Darlehnsgenossenschaft eG -->
+	<!-- Rule 0054-00 Evangelische Darlehnsgenossenschaft eG -->
 	<rule id="_005400">
 		<mappings_kto blz="10060237">
 			<mapping from="500">500500</mapping>
