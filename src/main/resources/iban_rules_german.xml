@@ -744,6 +744,45 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Sparkasse KölnBonn -->
+	<rule id="_000700">
+		<mappings_kto blz="37050198">
+			<mapping from="111">1115</mapping>
+			<mapping from="221">23002157</mapping>
+			<mapping from="1888">18882068</mapping>
+			<mapping from="2006">1900668508</mapping>
+			<mapping from="2626">1900730100</mapping>
+			<mapping from="3004">1900637016</mapping>
+			<mapping from="3636">23002447</mapping>
+			<mapping from="4000">4028</mapping>
+			<mapping from="4444">17368</mapping>
+			<mapping from="5050">73999</mapping>
+			<mapping from="8888">1901335750</mapping>
+			<mapping from="30000">9992959</mapping>
+			<mapping from="43430">1901693331</mapping>
+			<mapping from="46664">1900399856</mapping>
+			<mapping from="55555">34407379</mapping>
+			<mapping from="102030">1900480466</mapping>
+			<mapping from="151515">57762957</mapping>
+			<mapping from="222222">2222222</mapping>
+			<mapping from="300000">9992959</mapping>
+			<mapping from="333333">33217</mapping>
+			<mapping from="414141">92817</mapping>
+			<mapping from="606060">91025</mapping>
+			<mapping from="909090">90944</mapping>
+			<mapping from="2602024">5602024</mapping>
+			<mapping from="3000000">9992959</mapping>
+			<mapping from="7777777">2222222</mapping>
+			<mapping from="8090100">38901</mapping>
+			<mapping from="14141414">43597665</mapping>
+			<mapping from="15000023">15002223</mapping>
+			<mapping from="15151515">57762957</mapping>
+			<mapping from="22222222">2222222</mapping>
+			<mapping from="200820082">1901783868</mapping>
+			<mapping from="222220022">2222222</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- BHF-Bank AG -->
 	<rule id="_000800">
 		<mappings_blz>
