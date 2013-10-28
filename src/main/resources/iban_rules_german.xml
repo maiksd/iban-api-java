@@ -744,6 +744,21 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- BHF-Bank AG -->
+	<rule id="_000800">
+		<mappings_blz>
+			<mapping from="10020200">50020200</mapping>
+			<mapping from="20120200">50020200</mapping>
+			<mapping from="25020200">50020200</mapping>
+			<mapping from="30020500">50020200</mapping>
+			<mapping from="51020000">50020200</mapping>
+			<mapping from="55020000">50020200</mapping>
+			<mapping from="60120200">50020200</mapping>
+			<mapping from="70220200">50020200</mapping>
+			<mapping from="86020200">50020200</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Sparkasse Schopfheim-Zell -->
 	<rule id="_000900">
 		<mappings_blz>
