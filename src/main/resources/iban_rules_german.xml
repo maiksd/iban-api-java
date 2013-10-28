@@ -744,6 +744,14 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Sparkasse Krefeld -->
+	<rule id="_001100">
+		<mappings_kto blz="32050000">
+			<mapping from="1000">8010001</mapping>
+			<mapping from="47800">47803</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- Landesbank Hessen-Thüringen Girozentrale -->
 	<rule id="_001201">
 		<mappings_blz>
