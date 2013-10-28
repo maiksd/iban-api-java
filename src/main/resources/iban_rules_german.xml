@@ -744,6 +744,16 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Stadtsparkasse München -->
+	<rule id="_000600">
+		<mappings_kto blz="70150000">
+			<mapping from="1111111">20228888</mapping>
+			<mapping from="7777777">903286003</mapping>
+			<mapping from="34343434">1000506517</mapping>
+			<mapping from="70000">18180018</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- Sparkasse KölnBonn -->
 	<rule id="_000700">
 		<mappings_kto blz="37050198">
