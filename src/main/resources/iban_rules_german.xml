@@ -744,6 +744,14 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Landesbank Hessen-Thüringen Girozentrale -->
+	<rule id="_001301">
+		<mappings_blz>
+			<mapping from="40050000">30050000</mapping>
+			<mapping from="44050000">30050000</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Deutsche Apotheker- und Ärztebank eG -->
 	<rule id="_001400">
 		<mappings_blz>
