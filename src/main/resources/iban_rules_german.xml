@@ -744,6 +744,15 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Bethmann Bank -->
+	<rule id="_001900">
+		<mappings_blz>
+			<mapping from="50130100">50120383</mapping>
+			<mapping from="50220200">50120383</mapping>
+			<mapping from="70030800">50120383</mapping>
+		</mappings_blz>
+	</rule>
+	
 	<!-- Deutsche Bank AG -->
 	<rule id="_002001">
 		<no_calculation>
