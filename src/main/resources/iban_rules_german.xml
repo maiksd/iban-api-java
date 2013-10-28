@@ -744,6 +744,13 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Kölner Bank eG -->
+	<rule id="_001600">
+		<mappings_kto blz="37160087">
+			<mapping from="300000">18128012</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- Volksbank Bonn Rhein-Sieg -->
 	<rule id="_001700">
 		<mappings_kto blz="38060186">
