@@ -744,6 +744,14 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Frankfurter Sparkasse -->
+	<rule id="_001000">
+		<mappings_kto blz="50050201">
+			<mapping from="2000">222000</mapping>
+			<mapping from="800000">180802</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- Sparkasse Krefeld -->
 	<rule id="_001100">
 		<mappings_kto blz="32050000">
