@@ -744,6 +744,23 @@
 		</modification_kto>		
 	</rule>
 	
+	<!-- Pax-Bank eG -->
+	<rule id="_001500">
+		<mappings_kto blz="37060193">
+			<mapping from="556">0000101010</mapping>
+			<mapping from="888">0031870011</mapping>
+			<mapping from="4040">4003600101</mapping>
+			<mapping from="5826">1015826017</mapping>
+			<mapping from="25000">0025000110</mapping>
+			<mapping from="393393">0033013019</mapping>
+			<mapping from="444555">0032230016</mapping>
+			<mapping from="603060">6002919018</mapping>
+			<mapping from="2120041">0002130041</mapping>
+			<mapping from="80868086">4007375013</mapping>
+			<mapping from="400569017">4000569017</mapping>
+		</mappings_kto>
+	</rule>
+	
 	<!-- Kölner Bank eG -->
 	<rule id="_001600">
 		<mappings_kto blz="37160087">
