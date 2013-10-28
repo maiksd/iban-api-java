@@ -745,6 +745,13 @@
 	</rule>
 	
 	<!-- Landesbank Hessen-Thüringen Girozentrale -->
+	<rule id="_001201">
+		<mappings_blz>
+			<mapping from="50850049">50050000</mapping>
+		</mappings_blz>
+	</rule>
+	
+	<!-- Landesbank Hessen-Thüringen Girozentrale -->
 	<rule id="_001301">
 		<mappings_blz>
 			<mapping from="40050000">30050000</mapping>
