@@ -1,3 +1,7 @@
+/**
+ * 2013-10-xx	RG: new
+ */
+
 package org.as.iban.model;
 
 import java.io.IOException;
@@ -11,8 +15,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+/**
+ * Represents a german bank.
+ * @author Aventum Solutions GmbH (www.aventum-solutions.de)
+ *
+ */
 public class BankGerman {
 
+	//	local variables
     final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
     final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
     final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
@@ -22,87 +32,110 @@ public class BankGerman {
     private String rule;
     private String name;
 
+    /**
+     * Constructor. Reads the bank's information from config file.
+     * @param blz	The BLZ for the german bank (bank ident).
+     */
     public BankGerman (String blz) {
-	this.blz = blz;
-	this.bic = new LinkedList();
-	readBankConfig();
+		this.blz = blz;
+		this.bic = new LinkedList();
+		readBankConfig();
     }
     
+    /**
+     * Reads the configuration of the bank from config file
+     */
     private void readBankConfig() {
-
-	DocumentBuilderFactory factoryMapping = DocumentBuilderFactory.newInstance();
-	DocumentBuilder builderMapping;
-	Document documentMapping = null;
-
-
-	DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
-	DocumentBuilder builderBank;
-	Document documentBank = null;
+		DocumentBuilderFactory factoryMapping = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builderMapping;
+		Document documentMapping = null;
 	
-	try {
-	    factoryMapping.setNamespaceAware(true);
-	    factoryMapping.setValidating(true);
-	    factoryMapping.setAttribute(SCHEMA_LANG, XML_SCHEMA);
-	    factoryMapping.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/mapping_german.xsd"));
-	    
-	    builderMapping = factoryMapping.newDocumentBuilder();
-	    documentMapping = builderMapping.parse(this.getClass().getResourceAsStream("/mapping_german.xml"));
-	    
-	    factoryBank.setNamespaceAware(true);
-	    factoryBank.setValidating(true);
-	    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-	    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
-
-	    builderBank = factoryBank.newDocumentBuilder();
-	    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
-
-	} catch (ParserConfigurationException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	} catch (SAXException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	} catch (IOException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	}
+		DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builderBank;
+		Document documentBank = null;
+		
+		try {
+		    factoryMapping.setNamespaceAware(true);
+		    factoryMapping.setValidating(true);
+		    factoryMapping.setAttribute(SCHEMA_LANG, XML_SCHEMA);
+		    factoryMapping.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/mapping_german.xsd"));
+		    
+		    builderMapping = factoryMapping.newDocumentBuilder();
+		    documentMapping = builderMapping.parse(this.getClass().getResourceAsStream("/mapping_german.xml"));
+		    
+		    factoryBank.setNamespaceAware(true);
+		    factoryBank.setValidating(true);
+		    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
+		    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
 	
-	NodeList nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
-	for (int j = 0; j < nodeMapping.getLength(); j++) {
-	    if (nodeMapping.item(j).getNodeName() == "lfdnr") {
-		NodeList nodeBank = documentBank.getElementById("_" + nodeMapping.item(j).getTextContent()).getChildNodes();
-    	    	for (int i = 0; i < nodeBank.getLength(); i++){
-    	    	    switch (nodeBank.item(i).getNodeName()){
-    	    	    case "blz":
-    	    		this.blz = nodeBank.item(i).getTextContent();
-    	    		break;
-    	    	    case "bic":
-    	    		if (!nodeBank.item(i).getTextContent().isEmpty() && !this.bic.contains(nodeBank.item(i).getTextContent()))
-    	    		    this.bic.add(nodeBank.item(i).getTextContent());
-    	    		break;
-    	    	    case "rule":
-    	    		this.rule = nodeBank.item(i).getTextContent();
-    	    		break;
-    	    	    case "name":
-    	    		this.name = nodeBank.item(i).getTextContent();
-    	    	    }
-    	    	}
-    	    }
-	}
+		    builderBank = factoryBank.newDocumentBuilder();
+		    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
+	
+		} catch (ParserConfigurationException e) {
+		    e.printStackTrace();
+		    System.exit(-1);
+		} catch (SAXException e) {
+		    e.printStackTrace();
+		    System.exit(-1);
+		} catch (IOException e) {
+		    e.printStackTrace();
+		    System.exit(-1);
+		}
+		
+		NodeList nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
+		
+		for (int j = 0; j < nodeMapping.getLength(); j++) {
+		    if (nodeMapping.item(j).getNodeName() == "lfdnr") {
+		    	NodeList nodeBank = documentBank.getElementById("_" + nodeMapping.item(j).getTextContent()).getChildNodes();
+	    	    
+		    	for (int i = 0; i < nodeBank.getLength(); i++){
+	    	        switch (nodeBank.item(i).getNodeName()){
+	    	        case "blz":
+	    	        	this.blz = nodeBank.item(i).getTextContent();
+	    	        	break;
+	    	    	case "bic":
+	    	    		if (!nodeBank.item(i).getTextContent().isEmpty() && !this.bic.contains(nodeBank.item(i).getTextContent()))
+	    	    		    this.bic.add(nodeBank.item(i).getTextContent());
+	    	    		break;
+	    	    	case "rule":
+	    	    		this.rule = nodeBank.item(i).getTextContent();
+	    	    		break;
+	    	    	case "name":
+	    	    		this.name = nodeBank.item(i).getTextContent();
+	    	    	}
+		    	}
+		    }
+		}
     }
     
+    /**
+     * Gets the current bank ident of the german bank.
+     * @return	The current bank ident.
+     */
     public String getBlz() {
-	return blz;
+    	return blz;
     }
     
+    /**
+     * Gets the BICs of the current bank ident number.
+     * @return	All BICs associated with the bank.
+     */
     public LinkedList getBic() {
         return bic;
     }
 
+    /**
+     * Gets the iban rule associated to the current bank ident number.
+     * @return	The iban rule associated to the current bank ident number.
+     */
     public String getRule() {
         return rule;
     }
     
+    /**
+     * Gets the name of the current bank.
+     * @return	The name of the current bank.
+     */
     private String getName() {
 	return name;
     }

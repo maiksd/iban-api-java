@@ -1,12 +1,21 @@
+/***
+ * 2013-10-xx	RG: new
+ */
+
 package org.as.iban;
 
 import java.util.LinkedList;
 
 import org.as.iban.exception.IbanException;
 
-
+/**
+ * Interface declaring an Iban.
+ * @author Aventum Solutions GmbH (www.aventum-solutions.de)
+ *
+ */
 public interface Iban {
     
+	//	Defining country codes
     public static final String COUNTRY_CODE_AUSTRIA = "AT";
     public static final String COUNTRY_CODE_BELGIUM = "BE";
     public static final String COUNTRY_CODE_BULGARIA = "BG";
@@ -42,11 +51,29 @@ public interface Iban {
     public static final String COUNTRY_CODE_UNITED_KINGDOM = "GB";
     
     
+    /**
+     * Validates a iban.
+     * @return Indicates wether validating was succesful or not
+     * @throws IbanException
+     */
     public boolean validate() throws IbanException;
     
-    public void generate ();
     
+    /**
+     * Generates a iban.
+     */
+    public void generate();
+    
+    
+    /**
+     * Returns the iban code as a string.
+     * @return The iban code with format "country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
+     */
     public String toString();
     
+    /**
+     * Get's the BIC refering to the iban.
+     * @return A LinkedList of BIC's.
+     */
     public LinkedList getBic();
 }
