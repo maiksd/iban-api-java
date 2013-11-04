@@ -86,9 +86,9 @@
 	</country>
 	<country countryCode="IE">
 		<name>Ireland</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>IE\d{2}[A-Z]{4}\d{6}\d{8}</regexp>
+		<bankIdentLength>10</bankIdentLength>
+		<ktoIdentLength>8</ktoIdentLength>
 	</country>
 	<country countryCode="IT">
 		<name>Italia</name>
