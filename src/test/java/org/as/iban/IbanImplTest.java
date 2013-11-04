@@ -388,4 +388,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorNetherlands() {
+		bankIdent = "ABNA";
+		ktoIdent = "417164300";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_NETHERLANDS, bankIdent, ktoIdent);
+		assertEquals("NL91ABNA0417164300", iban.toString());
+    }
+    
+    @Test
+    public void testValidateNetherlands() {
+		ibanValid = new IbanImpl("NL91ABNA0417164300");
+		ibanInvalid = new IbanImpl("NL91ABNA0417164301");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

@@ -134,9 +134,9 @@
 	</country>
 	<country countryCode="NL">
 		<name>Netherlands</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>NL\d{2}[A-Z]{4}\d{10}</regexp>
+		<bankIdentLength>4</bankIdentLength>
+		<ktoIdentLength>10</ktoIdentLength>
 	</country>
 	<country countryCode="NO">
 		<name>Norway</name>
