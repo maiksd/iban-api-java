@@ -122,9 +122,9 @@
 	</country>
 	<country countryCode="MT">
 		<name>Malta</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>MT\d{2}[A-Z]{4}\d{5}[a-zA-Z0-9]{18}</regexp>
+		<bankIdentLength>9</bankIdentLength>
+		<ktoIdentLength>18</ktoIdentLength>
 	</country>
 	<country countryCode="MC">
 		<name>Monaco</name>

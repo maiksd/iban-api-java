@@ -356,4 +356,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorMalta() {
+		bankIdent = "MALT01100";
+		ktoIdent = "12345MTLCAST001S";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_MALTA, bankIdent, ktoIdent);
+		assertEquals("MT84MALT011000012345MTLCAST001S", iban.toString());
+    }
+    
+    @Test
+    public void testValidateMalta() {
+		ibanValid = new IbanImpl("MT84MALT011000012345MTLCAST001S");
+		ibanInvalid = new IbanImpl("MT84MALT011000012345MTLCAST001T");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }
