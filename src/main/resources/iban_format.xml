@@ -182,9 +182,9 @@
 	</country>
 	<country countryCode="SE">
 		<name>Sweden</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>SE\d{2}\d{3}\d{16}\d{1}</regexp>
+		<bankIdentLength>3</bankIdentLength>
+		<ktoIdentLength>17</ktoIdentLength>
 	</country>
 	<country countryCode="CH">
 		<name>Switzerland</name>
