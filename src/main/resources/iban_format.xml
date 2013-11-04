@@ -158,9 +158,9 @@
 	</country>
 	<country countryCode="RO">
 		<name>Romania</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>RO\d{2}[A-Z]{4}[a-zA-Z0-9]{16}</regexp>
+		<bankIdentLength>4</bankIdentLength>
+		<ktoIdentLength>16</ktoIdentLength>
 	</country>
 	<country countryCode="SK">
 		<name>Slovakia</name>

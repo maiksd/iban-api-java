@@ -452,4 +452,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorRomania() {
+		bankIdent = "AAAA";
+		ktoIdent = "1B31007593840000";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_ROMANIA, bankIdent, ktoIdent);
+		assertEquals("RO49AAAA1B31007593840000", iban.toString());
+    }
+    
+    @Test
+    public void testValidateRomania() {
+		ibanValid = new IbanImpl("RO49AAAA1B31007593840000");
+		ibanInvalid = new IbanImpl("RO49AAAA1B31007593840001");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }
