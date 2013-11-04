@@ -340,4 +340,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorLuxembourg() {
+		bankIdent = "001";
+		ktoIdent = "9400644750000";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_LUXEMBOURG, bankIdent, ktoIdent);
+		assertEquals("LU280019400644750000", iban.toString());
+    }
+    
+    @Test
+    public void testValidateLuxembourg() {
+		ibanValid = new IbanImpl("LU280019400644750000");
+		ibanInvalid = new IbanImpl("LU280019400644750001");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

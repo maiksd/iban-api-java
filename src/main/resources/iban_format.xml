@@ -116,9 +116,9 @@
 	</country>
 	<country countryCode="LU">
 		<name>Luxembourg</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>LU\d{2}\d{3}[a-zA-Z0-9]{13}</regexp>
+		<bankIdentLength>3</bankIdentLength>
+		<ktoIdentLength>13</ktoIdentLength>
 	</country>
 	<country countryCode="MT">
 		<name>Malta</name>
