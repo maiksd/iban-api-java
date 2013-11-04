@@ -436,4 +436,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorPortugal() {
+		bankIdent = "00020123";
+		ktoIdent = "1234567890154";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_PORTUGAL, bankIdent, ktoIdent);
+		assertEquals("PT50000201231234567890154", iban.toString());
+    }
+    
+    @Test
+    public void testValidatePortugal() {
+		ibanValid = new IbanImpl("PT50000201231234567890154");
+		ibanInvalid = new IbanImpl("PT50000201231234567890153");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

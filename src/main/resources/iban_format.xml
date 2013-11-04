@@ -152,9 +152,9 @@
 	</country>
 	<country countryCode="PT">
 		<name>Portugal</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>PT\d{2}\d{4}\d{4}\d{11}\d{2}</regexp>
+		<bankIdentLength>8</bankIdentLength>
+		<ktoIdentLength>13</ktoIdentLength>
 	</country>
 	<country countryCode="RO">
 		<name>Romania</name>
