@@ -38,9 +38,9 @@
 	</country>
 	<country countryCode="DK">
 		<name>Denmark</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>DK\d{2}\d{4}\d{9}\d{1}</regexp>
+		<bankIdentLength>4</bankIdentLength>
+		<ktoIdentLength>10</ktoIdentLength>
 	</country>
 	<country countryCode="EE">
 		<name>Estonia</name>

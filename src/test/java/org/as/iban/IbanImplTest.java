@@ -131,6 +131,22 @@ public class IbanImplTest {
     }
 
     @Test
+    public void testIbanImplConstructorDenmark() {
+		bankIdent = "0040";
+		ktoIdent = "440116243";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_DENMARK, bankIdent, ktoIdent);
+		assertEquals("DK5000400440116243", iban.toString());
+    }
+    
+    @Test
+    public void testValidateDenmark() {
+		ibanValid = new IbanImpl("DK5000400440116243");
+		ibanInvalid = new IbanImpl("DK5000400440116244");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
+    @Test
     public void testIbanImplConstructorGerman() {
 		bankIdent = "50010517";
 		ktoIdent = "648489890";
