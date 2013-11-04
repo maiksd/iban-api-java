@@ -147,6 +147,22 @@ public class IbanImplTest {
     }
 
     @Test
+    public void testIbanImplConstructorEstonia() {
+		bankIdent = "22";
+		ktoIdent = "221020145685";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_ESTONIA, bankIdent, ktoIdent);
+		assertEquals("EE382200221020145685", iban.toString());
+    }
+    
+    @Test
+    public void testValidateEstonia() {
+		ibanValid = new IbanImpl("EE382200221020145685");
+		ibanInvalid = new IbanImpl("EE382200221020145684");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
+    @Test
     public void testIbanImplConstructorGerman() {
 		bankIdent = "50010517";
 		ktoIdent = "648489890";

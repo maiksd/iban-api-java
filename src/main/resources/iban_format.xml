@@ -44,9 +44,9 @@
 	</country>
 	<country countryCode="EE">
 		<name>Estonia</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>EE\d{2}[1-9]\d{1}\d{2}\d{11}\d{1}</regexp>
+		<bankIdentLength>2</bankIdentLength>
+		<ktoIdentLength>14</ktoIdentLength>
 	</country>
 	<country countryCode="FI">
 		<name>Finland</name>
