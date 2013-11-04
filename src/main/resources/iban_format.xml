@@ -170,9 +170,9 @@
 	</country>
 	<country countryCode="SI">
 		<name>Slovenia</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>SI\d{2}\d{5}\d{8}\d{2}</regexp>
+		<bankIdentLength>5</bankIdentLength>
+		<ktoIdentLength>10</ktoIdentLength>
 	</country>
 	<country countryCode="ES">
 		<name>Spain</name>
