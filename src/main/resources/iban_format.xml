@@ -140,9 +140,9 @@
 	</country>
 	<country countryCode="NO">
 		<name>Norway</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>NO\d{2}\d{4}\d{6}\d{1}</regexp>
+		<bankIdentLength>4</bankIdentLength>
+		<ktoIdentLength>7</ktoIdentLength>
 	</country>
 	<country countryCode="PL">
 		<name>Poland</name>
