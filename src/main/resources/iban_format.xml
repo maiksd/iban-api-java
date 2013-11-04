@@ -146,9 +146,9 @@
 	</country>
 	<country countryCode="PL">
 		<name>Poland</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>PL\d{2}\d{8}\d{16}</regexp>
+		<bankIdentLength>8</bankIdentLength>
+		<ktoIdentLength>16</ktoIdentLength>
 	</country>
 	<country countryCode="PT">
 		<name>Portugal</name>
