@@ -532,4 +532,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorSwitzerland() {
+		bankIdent = "00762";
+		ktoIdent = "11623852957";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_SWITZERLAND, bankIdent, ktoIdent);
+		assertEquals("CH9300762011623852957", iban.toString());
+    }
+    
+    @Test
+    public void testValidateSwitzerland() {
+		ibanValid = new IbanImpl("CH9300762011623852957");
+		ibanInvalid = new IbanImpl("CH9300762011623852956");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

@@ -188,9 +188,9 @@
 	</country>
 	<country countryCode="CH">
 		<name>Switzerland</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>CH\d{2}\d{5}[a-zA-Z0-9]{12}</regexp>
+		<bankIdentLength>5</bankIdentLength>
+		<ktoIdentLength>12</ktoIdentLength>
 	</country>
 	<country countryCode="GB">
 		<name>United Kingdom</name>
