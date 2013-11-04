@@ -56,9 +56,9 @@
 	</country>
 	<country countryCode="FR">
 		<name>France</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>FR\d{2}\d{5}\d{5}[a-zA-Z0-9]{11}\d{2}</regexp>
+		<bankIdentLength>5</bankIdentLength>
+		<ktoIdentLength>18</ktoIdentLength>
 	</country>
 	<country countryCode="DE">
 		<name>Germany</name>
@@ -68,9 +68,9 @@
 	</country>
 	<country countryCode="GR">
 		<name>Greece</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>GR\d{2}\d{3}\d{4}[a-zA-Z0-9]{16}</regexp>
+		<bankIdentLength>7</bankIdentLength>
+		<ktoIdentLength>16</ktoIdentLength>
 	</country>
 	<country countryCode="HU">
 		<name>Hungary</name>

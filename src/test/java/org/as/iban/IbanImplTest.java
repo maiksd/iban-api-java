@@ -179,6 +179,22 @@ public class IbanImplTest {
     }
 
     @Test
+    public void testIbanImplConstructorFrance() {
+		bankIdent = "20041";
+		ktoIdent = "010050500013M02606";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_FRANCE, bankIdent, ktoIdent);
+		assertEquals("FR1420041010050500013M02606", iban.toString());
+    }
+    
+    @Test
+    public void testValidateFrance() {
+		ibanValid = new IbanImpl("FR1420041010050500013M02606");
+		ibanInvalid = new IbanImpl("FR1420041010050500013M02607");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
+    @Test
     public void testIbanImplConstructorGerman() {
 		bankIdent = "50010517";
 		ktoIdent = "648489890";
@@ -195,4 +211,20 @@ public class IbanImplTest {
 		assertEquals("COBADEFF370", ibanValid.getBic().getFirst().toString());
 		assertFalse(ibanInvalid.validate());
     }
+    @Test
+    public void testIbanImplConstructorGreece() {
+		bankIdent = "0110125";
+		ktoIdent = "0000000012300695";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_GREECE, bankIdent, ktoIdent);
+		assertEquals("GR1601101250000000012300695", iban.toString());
+    }
+    
+    @Test
+    public void testValidateGreece() {
+		ibanValid = new IbanImpl("GR1601101250000000012300695");
+		ibanInvalid = new IbanImpl("GR1601101250000000012300694");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }
