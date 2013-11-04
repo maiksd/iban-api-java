@@ -324,4 +324,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorLithuania() {
+		bankIdent = "10000";
+		ktoIdent = "11101001000";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_LITHUANIA, bankIdent, ktoIdent);
+		assertEquals("LT121000011101001000", iban.toString());
+    }
+    
+    @Test
+    public void testValidateLithuania() {
+		ibanValid = new IbanImpl("LT121000011101001000");
+		ibanInvalid = new IbanImpl("LT121000011101001001");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

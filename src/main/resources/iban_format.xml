@@ -110,9 +110,9 @@
 	</country>
 	<country countryCode="LT">
 		<name>Lithuania</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>LT\d{2}\d{5}\d{11}</regexp>
+		<bankIdentLength>5</bankIdentLength>
+		<ktoIdentLength>11</ktoIdentLength>
 	</country>
 	<country countryCode="LU">
 		<name>Luxembourg</name>
