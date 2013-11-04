@@ -19,7 +19,7 @@ import org.junit.Test;
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
-public class IbanValidatorGermanTest {
+public class IbanGeneratorGermanTest {
 
     private String bankIdent;
     private String ktoIdent;
