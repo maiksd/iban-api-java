@@ -308,4 +308,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorLiechtenstein() {
+		bankIdent = "08810";
+		ktoIdent = "2324013AA";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_LIECHTENSTEIN, bankIdent, ktoIdent);
+		assertEquals("LI21088100002324013AA", iban.toString());
+    }
+    
+    @Test
+    public void testValidateLiechtenstein() {
+		ibanValid = new IbanImpl("LI21088100002324013AA");
+		ibanInvalid = new IbanImpl("LI21088100002324013AB");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

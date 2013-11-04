@@ -104,9 +104,9 @@
 	</country>
 	<country countryCode="LI">
 		<name>Lichtenstein</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>LI\d{2}\d{5}[a-zA-Z0-9]{12}</regexp>
+		<bankIdentLength>5</bankIdentLength>
+		<ktoIdentLength>12</ktoIdentLength>
 	</country>
 	<country countryCode="LT">
 		<name>Lithuania</name>
