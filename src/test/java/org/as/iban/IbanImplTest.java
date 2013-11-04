@@ -115,6 +115,22 @@ public class IbanImplTest {
     }
 
     @Test
+    public void testIbanImplConstructorCzechRepublic() {
+		bankIdent = "0800";
+		ktoIdent = "192000145399";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_CZECH_REPUBLIC, bankIdent, ktoIdent);
+		assertEquals("CZ6508000000192000145399", iban.toString());
+    }
+    
+    @Test
+    public void testValidateCzechRepublic() {
+		ibanValid = new IbanImpl("CZ9455000000001011038930");
+		ibanInvalid = new IbanImpl("CZ9455000000001011038931");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
+    @Test
     public void testIbanImplConstructorGerman() {
 		bankIdent = "50010517";
 		ktoIdent = "648489890";
