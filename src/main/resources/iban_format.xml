@@ -176,9 +176,9 @@
 	</country>
 	<country countryCode="ES">
 		<name>Spain</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>ES\d{2}\d{4}\d{4}\d{1}\d{1}\d{10}</regexp>
+		<bankIdentLength>8</bankIdentLength>
+		<ktoIdentLength>12</ktoIdentLength>
 	</country>
 	<country countryCode="SE">
 		<name>Sweden</name>

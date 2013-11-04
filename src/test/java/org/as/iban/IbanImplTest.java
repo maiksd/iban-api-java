@@ -500,4 +500,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorSpain() {
+		bankIdent = "21000418";
+		ktoIdent = "450200051332";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_SPAIN, bankIdent, ktoIdent);
+		assertEquals("ES9121000418450200051332", iban.toString());
+    }
+    
+    @Test
+    public void testValidateSpain() {
+		ibanValid = new IbanImpl("ES9121000418450200051332");
+		ibanInvalid = new IbanImpl("ES9121000418450200051331");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }
