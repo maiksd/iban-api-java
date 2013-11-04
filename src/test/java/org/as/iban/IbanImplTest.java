@@ -292,4 +292,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorLatvia() {
+		bankIdent = "BANK";
+		ktoIdent = "435195001";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_LATVIA, bankIdent, ktoIdent);
+		assertEquals("LV80BANK0000435195001", iban.toString());
+    }
+    
+    @Test
+    public void testValidateLatvia() {
+		ibanValid = new IbanImpl("LV80BANK0000435195001");
+		ibanInvalid = new IbanImpl("LV80BANK0000435195000");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

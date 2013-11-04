@@ -98,9 +98,9 @@
 	</country>
 	<country countryCode="LV">
 		<name>Latvia</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>LV\d{2}[A-Z]{4}[a-zA-Z0-9]{13}</regexp>
+		<bankIdentLength>4</bankIdentLength>
+		<ktoIdentLength>13</ktoIdentLength>
 	</country>
 	<country countryCode="LI">
 		<name>Lichtenstein</name>
