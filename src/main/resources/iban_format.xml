@@ -74,9 +74,9 @@
 	</country>
 	<country countryCode="HU">
 		<name>Hungary</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>HU\d{2}\d{3}\d{4}\d{1}\d{15}\d{1}</regexp>
+		<bankIdentLength>7</bankIdentLength>
+		<ktoIdentLength>17</ktoIdentLength>
 	</country>
 	<country countryCode="IS">
 		<name>Iceland</name>
