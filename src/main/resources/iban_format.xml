@@ -50,9 +50,9 @@
 	</country>
 	<country countryCode="FI">
 		<name>Finland</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>FI\d{2}\d{6}\d{7}\d{1}</regexp>
+		<bankIdentLength>3</bankIdentLength>
+		<ktoIdentLength>11</ktoIdentLength>
 	</country>
 	<country countryCode="FR">
 		<name>France</name>

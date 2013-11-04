@@ -163,6 +163,22 @@ public class IbanImplTest {
     }
 
     @Test
+    public void testIbanImplConstructorFinland() {
+		bankIdent = "123";
+		ktoIdent = "45600000785";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_FINLAND, bankIdent, ktoIdent);
+		assertEquals("FI2112345600000785", iban.toString());
+    }
+    
+    @Test
+    public void testValidateFinland() {
+		ibanValid = new IbanImpl("FI5542345670000081");
+		ibanInvalid = new IbanImpl("FI5542345670000080");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
+    @Test
     public void testIbanImplConstructorGerman() {
 		bankIdent = "50010517";
 		ktoIdent = "648489890";
