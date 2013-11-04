@@ -92,9 +92,9 @@
 	</country>
 	<country countryCode="IT">
 		<name>Italia</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>IT\d{2}[A-Z]\d{5}\d{5}[a-zA-Z0-9]{12}</regexp>
+		<bankIdentLength>11</bankIdentLength>
+		<ktoIdentLength>12</ktoIdentLength>
 	</country>
 	<country countryCode="LV">
 		<name>Latvia</name>
