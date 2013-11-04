@@ -164,9 +164,9 @@
 	</country>
 	<country countryCode="SK">
 		<name>Slovakia</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>SK\d{2}\d{4}\d{6}\d{10}</regexp>
+		<bankIdentLength>4</bankIdentLength>
+		<ktoIdentLength>16</ktoIdentLength>
 	</country>
 	<country countryCode="SI">
 		<name>Slovenia</name>
