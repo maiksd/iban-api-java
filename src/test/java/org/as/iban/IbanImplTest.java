@@ -244,4 +244,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorIceland() {
+		bankIdent = "0159";
+		ktoIdent = "260076545510730339";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_ICELAND, bankIdent, ktoIdent);
+		assertEquals("IS140159260076545510730339", iban.toString());
+    }
+    
+    @Test
+    public void testValidateIceland() {
+		ibanValid = new IbanImpl("IS140159260076545510730339");
+		ibanInvalid = new IbanImpl("IS140159260076545510730338");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

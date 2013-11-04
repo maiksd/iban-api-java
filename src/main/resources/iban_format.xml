@@ -80,9 +80,9 @@
 	</country>
 	<country countryCode="IS">
 		<name>Iceland</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>IS\d{2}\d{4}\d{2}\d{6}\d{10}</regexp>
+		<bankIdentLength>4</bankIdentLength>
+		<ktoIdentLength>18</ktoIdentLength>
 	</country>
 	<country countryCode="IE">
 		<name>Ireland</name>
