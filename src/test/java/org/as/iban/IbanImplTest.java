@@ -372,4 +372,20 @@ public class IbanImplTest {
 		assertFalse(ibanInvalid.validate());
     }
 
+    @Test
+    public void testIbanImplConstructorMonaco() {
+		bankIdent = "1122200001";
+		ktoIdent = "123456789030";
+		iban = new IbanImpl(Iban.COUNTRY_CODE_MONACO, bankIdent, ktoIdent);
+		assertEquals("MC5811222000010123456789030", iban.toString());
+    }
+    
+    @Test
+    public void testValidateMonaco() {
+		ibanValid = new IbanImpl("MC5811222000010123456789030");
+		ibanInvalid = new IbanImpl("MC5811222000010123456789031");
+		assertTrue(ibanValid.validate());
+		assertFalse(ibanInvalid.validate());
+    }
+
 }

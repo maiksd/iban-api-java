@@ -128,9 +128,9 @@
 	</country>
 	<country countryCode="MC">
 		<name>Monaco</name>
-		<regexp></regexp>
-		<bankIdentLength></bankIdentLength>
-		<ktoIdentLength></ktoIdentLength>
+		<regexp>MC\d{2}\d{5}\d{5}[a-zA-Z0-9]{11}\d{2}</regexp>
+		<bankIdentLength>10</bankIdentLength>
+		<ktoIdentLength>13</ktoIdentLength>
 	</country>
 	<country countryCode="NL">
 		<name>Netherlands</name>
