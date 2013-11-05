@@ -73,7 +73,7 @@ public interface Iban {
     
     /**
      * Get's the BIC refering to the iban.
-     * @return A LinkedList of BIC's.
+     * @return The BIC for German banks, otherwise NULL.
      */
-    public LinkedList getBic();
+    public String getBic();
 }

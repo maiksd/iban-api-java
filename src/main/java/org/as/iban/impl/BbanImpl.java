@@ -37,15 +37,15 @@ class BbanImpl {
      * @throws IbanException
      */
     BbanImpl (String country, String bban) throws IbanException{
-		ibanFormat = new IbanFormat(country);
-		BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
-		KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
+	ibanFormat = new IbanFormat(country);
+	BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
+	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
 		
-		this.country = country.toUpperCase(Locale.ENGLISH);
-		this.bankIdent = bban.substring(0, BANKIDENT_LENGTH);
-		this.ktoIdent = bban.substring(BANKIDENT_LENGTH, bban.length());
-		if (country.equals(Iban.COUNTRY_CODE_GERMAN))
-		    this.bankGerman = new BankGerman(bankIdent);
+	this.country = country.toUpperCase(Locale.ENGLISH);
+	this.bankIdent = bban.substring(0, BANKIDENT_LENGTH);
+	this.ktoIdent = bban.substring(BANKIDENT_LENGTH, bban.length());
+	if (country.equals(Iban.COUNTRY_CODE_GERMAN))
+	    this.bankGerman = new BankGerman(bankIdent);
     }
     
     /**
@@ -56,14 +56,14 @@ class BbanImpl {
      * @throws IbanException
      */
     BbanImpl (String country, String bankIdent, String ktoIdent) throws IbanException {
-		ibanFormat = new IbanFormat(country);
-		BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
-		KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
+	ibanFormat = new IbanFormat(country);
+	BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
+	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
 	
-		this.country = country.toUpperCase(Locale.ENGLISH);
-		if (country == Iban.COUNTRY_CODE_GERMAN)
-		    this.bankGerman = new BankGerman(bankIdent);
-		buildBban(bankIdent, ktoIdent);
+	this.country = country.toUpperCase(Locale.ENGLISH);
+	if (country == Iban.COUNTRY_CODE_GERMAN)
+	    this.bankGerman = new BankGerman(bankIdent);
+	buildBban(bankIdent, ktoIdent);
     }
 
     /**
@@ -78,7 +78,7 @@ class BbanImpl {
      * Gets the BICs of the bank.
      * @return	A LinkedList of BICs.
      */
-    public LinkedList getBic() {
+    public String getBic() {
     	return bankGerman.getBic();
     }
     
@@ -104,62 +104,62 @@ class BbanImpl {
      * @param length	How long should the account number be.
      */
     private void setKtoIdent(String ktoIdent, int length) {
-		// Consider Iban rules for Germany
-		if (country == Iban.COUNTRY_CODE_GERMAN) {
-		    // Only not standard rules
-		    String ruleId = bankGerman.getRule();
+	// Consider Iban rules for Germany
+	if (country == Iban.COUNTRY_CODE_GERMAN) {
+	    // Only not standard rules
+	    String ruleId = bankGerman.getRule();
 		    
-		    if (ruleId.equals("000100"))
-		    	throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
+	    if (ruleId.equals("000100"))
+		throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
 		    
-		    if (!ruleId.equals("000000")){
-				// Remove leading '0'
-				ktoIdent = ktoIdent.replaceAll("\\b[0]{1,9}(\\d*)\\Z", "$1");
+	    if (!ruleId.equals("000000")){
+		// Remove leading '0'
+		ktoIdent = ktoIdent.replaceAll("\\b[0]{1,9}(\\d*)\\Z", "$1");
 				
-				IbanRuleGerman rule = new IbanRuleGerman("_" + ruleId);
+		IbanRuleGerman rule = new IbanRuleGerman("_" + ruleId);
 		
-				if (rule.isNoCalculation(bankIdent)){
-				    // check Excluded accounts
-				    for (int i = 0; i < rule.getRegexpNoCalculation(bankIdent).size(); i++) {
-				    	if (ktoIdent.matches(rule.getRegexpNoCalculation(bankIdent).get(i)))
-				    		throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
-				    }
-				}
-				
-				// Account mapping
-				if (rule.isMappingKto(bankIdent)){
-				    if (rule.getMappedKto(bankIdent, ktoIdent) != null)
-				    	ktoIdent = rule.getMappedKto(bankIdent, ktoIdent);
-				}
-				
-				// KtoKr Mapping
-				if (rule.isMappingKtoKr(ktoIdent)) {
-				    if (rule.getMappedKtoKr(ktoIdent) != null)
-				    	bankIdent = rule.getMappedKtoKr(ktoIdent);
-				}
-				
-				// BLZ mapping
-				if (rule.isMappingBlz(bankIdent)) {
-				    if (rule.getMappedBlz(bankIdent) != null)
-				    	bankIdent = rule.getMappedBlz(bankIdent);
-				}
-				
-				// Kto Modification
-				if (rule.isModification(bankIdent)) {
-				    for (int i = 0; i < rule.getRegexpModification(bankIdent).size(); i++) {
-						String[] segs = rule.getRegexpModification(bankIdent).get(i).split(";");
-						ktoIdent = ktoIdent.replaceAll(segs[0], segs[1]);
-				    }
-				}
-			}
+		if (rule.isNoCalculation(bankIdent)){
+		    // check Excluded accounts
+		    for (int i = 0; i < rule.getRegexpNoCalculation(bankIdent).size(); i++) {
+			if (ktoIdent.matches(rule.getRegexpNoCalculation(bankIdent).get(i)))
+			    throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
+		    }
 		}
+				
+		// Account mapping
+		if (rule.isMappingKto(bankIdent)){
+		    if (rule.getMappedKto(bankIdent, ktoIdent) != null)
+			ktoIdent = rule.getMappedKto(bankIdent, ktoIdent);
+		}
+				
+		// KtoKr Mapping
+		if (rule.isMappingKtoKr(ktoIdent)) {
+		    if (rule.getMappedKtoKr(ktoIdent) != null)
+			setBankIdent(rule.getMappedKtoKr(ktoIdent));
+		}
+				
+		// BLZ mapping
+		if (rule.isMappingBlz(bankIdent)) {
+		    if (rule.getMappedBlz(bankIdent) != null)
+			setBankIdent(rule.getMappedBlz(bankIdent));
+		}
+				
+		// Kto Modification
+		if (rule.isModification(bankIdent)) {
+		    for (int i = 0; i < rule.getRegexpModification(bankIdent).size(); i++) {
+			String[] segs = rule.getRegexpModification(bankIdent).get(i).split(";");
+			ktoIdent = ktoIdent.replaceAll(segs[0], segs[1]);
+		    }
+		}
+	    }
+	}
 		
-		if (ktoIdent.length() < length){
-		    for (int i = ktoIdent.length(); i < length; i++)
-		    	ktoIdent = "0" + ktoIdent;
-		}
+	if (ktoIdent.length() < length){
+	    for (int i = ktoIdent.length(); i < length; i++)
+		ktoIdent = "0" + ktoIdent;
+	}
 	        
-		this.ktoIdent = ktoIdent;
+	this.ktoIdent = ktoIdent;
     }
 
     @Override

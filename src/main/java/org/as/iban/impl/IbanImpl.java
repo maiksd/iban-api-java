@@ -4,7 +4,6 @@
 
 package org.as.iban.impl;
 
-import java.util.LinkedList;
 import java.util.Locale;
 
 import org.as.iban.Iban;
@@ -30,9 +29,9 @@ public class IbanImpl implements Iban {
      * @throws IbanException
      */
     public IbanImpl(String ibanString) throws IbanException{
-		this.setCountry(ibanString);
-		this.setCheckDigit(ibanString);
-		this.setBban(new BbanImpl(country, ibanString.substring(4, ibanString.length())));
+	this.setCountry(ibanString);
+	this.setCheckDigit(ibanString);
+	this.setBban(new BbanImpl(country, ibanString.substring(4, ibanString.length())));
     }
 
     /**
@@ -43,28 +42,28 @@ public class IbanImpl implements Iban {
      * @throws IbanException
      */
     public IbanImpl(String country, String bankIdent, String ktoIdent) throws IbanException{
-		this.country = country;
-		this.bban = new BbanImpl(country, bankIdent, ktoIdent);
-		this.checkDigit = "00";
-		this.generate();
+	this.country = country;
+	this.bban = new BbanImpl(country, bankIdent, ktoIdent);
+	this.checkDigit = "00";
+	this.generate();
     }
 
     @Override
     public boolean validate() throws IbanException {
-		validateFormat();
-		String ascii = asciiToNumber(shiftIbanToString());
-		if (mod97(ascii) == 1)
-		    return true;
-		else
-		    return false;
+	validateFormat();
+	String ascii = asciiToNumber(shiftIbanToString());
+	if (mod97(ascii) == 1)
+	    return true;
+	else
+	    return false;
     }
 
     @Override
     public void generate() throws IbanException {
-		String ascii = asciiToNumber(shiftIbanToString());
-		checkDigit = String.valueOf(98 - mod97(ascii));
-		if (checkDigit.length() == 1)
-		    checkDigit = "0" + checkDigit;
+	String ascii = asciiToNumber(shiftIbanToString());
+	checkDigit = String.valueOf(98 - mod97(ascii));
+	if (checkDigit.length() == 1)
+	    checkDigit = "0" + checkDigit;
     }
     
     @Override
@@ -73,7 +72,7 @@ public class IbanImpl implements Iban {
     }
 
     @Override
-    public LinkedList getBic() {
+    public String getBic() {
     	return bban.getBic();
     }
     
@@ -91,22 +90,21 @@ public class IbanImpl implements Iban {
      * @return The shifted iban code as a string of numbers (the ascii code numbers)
      */
     private String asciiToNumber(String shiftedIban){
-		char ch;
-		String tmpStr = ""; 
+	char ch;
+	String tmpStr = ""; 
 		
-		shiftedIban.toUpperCase(Locale.ENGLISH);
+	shiftedIban.toUpperCase(Locale.ENGLISH);
 		
-		for (int i=0; i <= shiftedIban.length() - 1; i++) {
-		    ch = shiftedIban.charAt(i);
+	for (int i=0; i <= shiftedIban.length() - 1; i++) {
+	    ch = shiftedIban.charAt(i);
 		    
-		    if ((int)ch >= 48 && (int)ch <= 57)
-		    	tmpStr = tmpStr + ch;
-		    
-		    if ((int)ch >= 65 && (int)ch <= 90)
-		    	tmpStr = tmpStr + ((int)ch - 55);
-			
-		}
-		return tmpStr;
+	    if ((int)ch >= 48 && (int)ch <= 57)
+		tmpStr = tmpStr + ch;
+	    
+	    if ((int)ch >= 65 && (int)ch <= 90)
+		tmpStr = tmpStr + ((int)ch - 55);
+	}
+	return tmpStr;
     }
     
     /**
@@ -115,19 +113,18 @@ public class IbanImpl implements Iban {
      * @return	The mod97 of the given String.
      */
     private int mod97 (String modString) {
-		String part = "";
-		int modPart;
+	String part = "";
+	int modPart;
 		
-		for (int i = 0; i < modString.length(); i++){
-		    if (part.length() < 9)
-		    	part = part + modString.charAt(i);
-		    else {
-				modPart = (int)Long.parseLong(part)%97;
-				part = Integer.toString(modPart) + modString.charAt(i);
-		    }
-		}
-		
-		return (int)Long.parseLong(part)%97;
+	for (int i = 0; i < modString.length(); i++){
+	    if (part.length() < 9)
+		part = part + modString.charAt(i);
+	    else {
+		modPart = (int)Long.parseLong(part)%97;
+		part = Integer.toString(modPart) + modString.charAt(i);
+	    }
+	}
+	return (int)Long.parseLong(part)%97;
     }
 
     /**
@@ -160,16 +157,16 @@ public class IbanImpl implements Iban {
      */
     private void validateFormat() throws IbanException {
 	
-		IbanFormat ibanFormat = new IbanFormat(country);
+	IbanFormat ibanFormat = new IbanFormat(country);
 		
-		// Validation common IBAN-Format
-		if (!this.toString().matches(ibanFormat.getRegexp()))
-			throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_FORMAT);
+	// Validation common IBAN-Format
+	if (!this.toString().matches(ibanFormat.getRegexp()))
+	    throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_FORMAT);
 		
-		// Special Validation for countries
-		if (country == Iban.COUNTRY_CODE_GERMAN){
-		    System.out.println("ValidationConfig read");
-		}
+	// Special Validation for countries
+	if (country == Iban.COUNTRY_CODE_GERMAN){
+	    System.out.println("ValidationConfig read");
+	}
     }
 
 }

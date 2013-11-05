@@ -28,7 +28,7 @@ public class BankGerman {
     final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
 
     private String blz;
-    private LinkedList <String> bic;
+    private String bic;
     private String rule;
     private String name;
 
@@ -37,75 +37,74 @@ public class BankGerman {
      * @param blz	The BLZ for the german bank (bank ident).
      */
     public BankGerman (String blz) {
-		this.blz = blz;
-		this.bic = new LinkedList();
-		readBankConfig();
+	this.blz = blz;
+	readBankConfig();
     }
     
     /**
      * Reads the configuration of the bank from config file
      */
     private void readBankConfig() {
-		DocumentBuilderFactory factoryMapping = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builderMapping;
-		Document documentMapping = null;
+	DocumentBuilderFactory factoryMapping = DocumentBuilderFactory.newInstance();
+	DocumentBuilder builderMapping;
+	Document documentMapping = null;
 	
-		DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builderBank;
-		Document documentBank = null;
-		
-		try {
-		    factoryMapping.setNamespaceAware(true);
-		    factoryMapping.setValidating(true);
-		    factoryMapping.setAttribute(SCHEMA_LANG, XML_SCHEMA);
-		    factoryMapping.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/mapping_german.xsd"));
-		    
-		    builderMapping = factoryMapping.newDocumentBuilder();
-		    documentMapping = builderMapping.parse(this.getClass().getResourceAsStream("/mapping_german.xml"));
-		    
-		    factoryBank.setNamespaceAware(true);
-		    factoryBank.setValidating(true);
-		    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-		    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
+	DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
+	DocumentBuilder builderBank;
+	Document documentBank = null;
 	
-		    builderBank = factoryBank.newDocumentBuilder();
-		    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
+	try {
+	    factoryMapping.setNamespaceAware(true);
+	    factoryMapping.setValidating(true);
+	    factoryMapping.setAttribute(SCHEMA_LANG, XML_SCHEMA);
+	    factoryMapping.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/mapping_german.xsd"));
+	    
+	    builderMapping = factoryMapping.newDocumentBuilder();
+	    documentMapping = builderMapping.parse(this.getClass().getResourceAsStream("/mapping_german.xml"));
+	    
+	    factoryBank.setNamespaceAware(true);
+	    factoryBank.setValidating(true);
+	    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
+	    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
 	
-		} catch (ParserConfigurationException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		} catch (SAXException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		} catch (IOException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		}
+	    builderBank = factoryBank.newDocumentBuilder();
+	    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
+	    
+	} catch (ParserConfigurationException e) {
+	    e.printStackTrace();
+	    System.exit(-1);
+	} catch (SAXException e) {
+	    e.printStackTrace();
+	    System.exit(-1);
+	} catch (IOException e) {
+	    e.printStackTrace();
+	    System.exit(-1);
+	}
 		
-		NodeList nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
+	NodeList nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
 		
-		for (int j = 0; j < nodeMapping.getLength(); j++) {
-		    if (nodeMapping.item(j).getNodeName() == "lfdnr") {
-		    	NodeList nodeBank = documentBank.getElementById("_" + nodeMapping.item(j).getTextContent()).getChildNodes();
+	for (int j = 0; j < nodeMapping.getLength(); j++) {
+	    if (nodeMapping.item(j).getNodeName() == "lfdnr") {
+		NodeList nodeBank = documentBank.getElementById("_" + nodeMapping.item(j).getTextContent()).getChildNodes();
 	    	    
-		    	for (int i = 0; i < nodeBank.getLength(); i++){
-	    	        switch (nodeBank.item(i).getNodeName()){
-	    	        case "blz":
-	    	        	this.blz = nodeBank.item(i).getTextContent();
-	    	        	break;
-	    	    	case "bic":
-	    	    		if (!nodeBank.item(i).getTextContent().isEmpty() && !this.bic.contains(nodeBank.item(i).getTextContent()))
-	    	    		    this.bic.add(nodeBank.item(i).getTextContent());
-	    	    		break;
-	    	    	case "rule":
-	    	    		this.rule = nodeBank.item(i).getTextContent();
-	    	    		break;
-	    	    	case "name":
-	    	    		this.name = nodeBank.item(i).getTextContent();
-	    	    	}
-		    	}
+		for (int i = 0; i < nodeBank.getLength(); i++){
+		    switch (nodeBank.item(i).getNodeName()){
+		    case "blz":
+			this.blz = nodeBank.item(i).getTextContent();
+			break;
+		    case "bic":
+			if (!nodeBank.item(i).getTextContent().isEmpty())
+			    this.bic = nodeBank.item(i).getTextContent();
+			break;
+		    case "rule":
+			this.rule = nodeBank.item(i).getTextContent();
+			break;
+		    case "name":
+			this.name = nodeBank.item(i).getTextContent();
 		    }
 		}
+	    }
+	}
     }
     
     /**
@@ -120,7 +119,7 @@ public class BankGerman {
      * Gets the BICs of the current bank ident number.
      * @return	All BICs associated with the bank.
      */
-    public LinkedList getBic() {
+    public String getBic() {
         return bic;
     }
 
