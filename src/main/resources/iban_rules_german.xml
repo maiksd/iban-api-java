@@ -809,6 +809,9 @@
 			<mapping from="70220200">50020200</mapping>
 			<mapping from="86020200">50020200</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">BHFBDEFF500</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0009-00 Sparkasse Schopfheim-Zell -->
