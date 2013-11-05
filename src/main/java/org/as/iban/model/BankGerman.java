@@ -29,8 +29,9 @@ public class BankGerman {
 
     private String blz;
     private String bic;
-    private String rule;
+    private String ruleId;
     private String name;
+    private IbanRuleGerman rule;
 
     /**
      * Constructor. Reads the bank's information from config file.
@@ -39,6 +40,10 @@ public class BankGerman {
     public BankGerman (String blz) {
 	this.blz = blz;
 	readBankConfig();
+	if (ruleId.equals("000000") || ruleId.equals("000100"))
+	    this.rule = null;
+	else
+	    this.rule = new IbanRuleGerman("_" + ruleId);
     }
     
     /**
@@ -97,7 +102,7 @@ public class BankGerman {
 			    this.bic = nodeBank.item(i).getTextContent();
 			break;
 		    case "rule":
-			this.rule = nodeBank.item(i).getTextContent();
+			this.ruleId = nodeBank.item(i).getTextContent();
 			break;
 		    case "name":
 			this.name = nodeBank.item(i).getTextContent();
@@ -116,10 +121,14 @@ public class BankGerman {
     }
     
     /**
-     * Gets the BICs of the current bank ident number.
-     * @return	All BICs associated with the bank.
+     * Gets the BIC of the current bank ident number.
+     * @return	BIC associated with the bank.
      */
     public String getBic() {
+	if (this.rule != null) {
+	    if (rule.isMappingBic(blz))
+		this.bic = rule.getMappedBic(blz);
+	}
         return bic;
     }
 
@@ -127,8 +136,12 @@ public class BankGerman {
      * Gets the iban rule associated to the current bank ident number.
      * @return	The iban rule associated to the current bank ident number.
      */
-    public String getRule() {
-        return rule;
+    public String getRuleId() {
+        return ruleId;
+    }
+    
+    public IbanRuleGerman getIbanRule(){
+	return rule;
     }
     
     /**

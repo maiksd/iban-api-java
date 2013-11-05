@@ -742,6 +742,9 @@
 			<modification blz="86040000">\b(\d{7}|\d{6}|\d{5})\Z;$100</modification>
 			<modification blz="87040000">\b(\d{7}|\d{6}|\d{5})\Z;$100</modification>
 		</modification_kto>		
+		<mappings_bic>
+			<mapping blz="\b\d{3}400\d{2}\Z">COBADEFFXXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0006-00 Stadtsparkasse München -->

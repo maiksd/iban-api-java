@@ -25,6 +25,7 @@ class BbanImpl {
     private String ktoIdent;
     private String country;
     private BankGerman bankGerman;
+    private IbanRuleGerman ruleGerman;
     IbanFormat ibanFormat;
     
     private final int BANKIDENT_LENGTH;
@@ -61,8 +62,10 @@ class BbanImpl {
 	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
 	
 	this.country = country.toUpperCase(Locale.ENGLISH);
-	if (country == Iban.COUNTRY_CODE_GERMAN)
+	if (country == Iban.COUNTRY_CODE_GERMAN) {
 	    this.bankGerman = new BankGerman(bankIdent);
+	    this.ruleGerman = bankGerman.getIbanRule();
+	}
 	buildBban(bankIdent, ktoIdent);
     }
 
@@ -107,7 +110,7 @@ class BbanImpl {
 	// Consider Iban rules for Germany
 	if (country == Iban.COUNTRY_CODE_GERMAN) {
 	    // Only not standard rules
-	    String ruleId = bankGerman.getRule();
+	    String ruleId = bankGerman.getRuleId();
 		    
 	    if (ruleId.equals("000100"))
 		throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
@@ -116,38 +119,36 @@ class BbanImpl {
 		// Remove leading '0'
 		ktoIdent = ktoIdent.replaceAll("\\b[0]{1,9}(\\d*)\\Z", "$1");
 				
-		IbanRuleGerman rule = new IbanRuleGerman("_" + ruleId);
-		
-		if (rule.isNoCalculation(bankIdent)){
+		if (ruleGerman.isNoCalculation(bankIdent)){
 		    // check Excluded accounts
-		    for (int i = 0; i < rule.getRegexpNoCalculation(bankIdent).size(); i++) {
-			if (ktoIdent.matches(rule.getRegexpNoCalculation(bankIdent).get(i)))
+		    for (int i = 0; i < ruleGerman.getRegexpNoCalculation(bankIdent).size(); i++) {
+			if (ktoIdent.matches(ruleGerman.getRegexpNoCalculation(bankIdent).get(i)))
 			    throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
 		    }
 		}
 				
 		// Account mapping
-		if (rule.isMappingKto(bankIdent)){
-		    if (rule.getMappedKto(bankIdent, ktoIdent) != null)
-			ktoIdent = rule.getMappedKto(bankIdent, ktoIdent);
+		if (ruleGerman.isMappingKto(bankIdent)){
+		    if (ruleGerman.getMappedKto(bankIdent, ktoIdent) != null)
+			ktoIdent = ruleGerman.getMappedKto(bankIdent, ktoIdent);
 		}
 				
 		// KtoKr Mapping
-		if (rule.isMappingKtoKr(ktoIdent)) {
-		    if (rule.getMappedKtoKr(ktoIdent) != null)
-			setBankIdent(rule.getMappedKtoKr(ktoIdent));
+		if (ruleGerman.isMappingKtoKr(ktoIdent)) {
+		    if (ruleGerman.getMappedKtoKr(ktoIdent) != null)
+			setBankIdent(ruleGerman.getMappedKtoKr(ktoIdent));
 		}
 				
 		// BLZ mapping
-		if (rule.isMappingBlz(bankIdent)) {
-		    if (rule.getMappedBlz(bankIdent) != null)
-			setBankIdent(rule.getMappedBlz(bankIdent));
+		if (ruleGerman.isMappingBlz(bankIdent)) {
+		    if (ruleGerman.getMappedBlz(bankIdent) != null)
+			setBankIdent(ruleGerman.getMappedBlz(bankIdent));
 		}
 				
 		// Kto Modification
-		if (rule.isModification(bankIdent)) {
-		    for (int i = 0; i < rule.getRegexpModification(bankIdent).size(); i++) {
-			String[] segs = rule.getRegexpModification(bankIdent).get(i).split(";");
+		if (ruleGerman.isModification(bankIdent)) {
+		    for (int i = 0; i < ruleGerman.getRegexpModification(bankIdent).size(); i++) {
+			String[] segs = ruleGerman.getRegexpModification(bankIdent).get(i).split(";");
 			ktoIdent = ktoIdent.replaceAll(segs[0], segs[1]);
 		    }
 		}

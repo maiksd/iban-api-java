@@ -37,90 +37,96 @@ public class IbanRuleGerman {
     private boolean mappingBlz = false;
     private boolean modificationKto = false;
     private boolean mappingKtoKr = false;
+    private boolean mappingBic = false;
     
     private ArrayList<Element> listNoCalculation = new ArrayList<Element>();
     private ArrayList<MappingKto> listMappingKto = new ArrayList<MappingKto>();
     private ArrayList<Element> listMappingBlz = new ArrayList<Element>();
     private ArrayList<Element> listModificationKto = new ArrayList<Element>();
     private ArrayList<Element> listMappingKtoKr = new ArrayList<Element>();
+    private ArrayList<Element> listMappingBic = new ArrayList<Element>();
     
     /**
      * Constructor. Loads a specified Rule.
      * @param rule_id	The id that identifies the rule that should be loaded from config.
      */
     public IbanRuleGerman (String rule_id) {
-		this.rule_id = rule_id;
-		readRule();
+	this.rule_id = rule_id;
+	readRule();
     }
     
     /**
      * Reads the rule from config file.
      */
     private void readRule() {
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder;
-		Document document = null;
+	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	DocumentBuilder builder;
+	Document document = null;
 		
-		Element element = null;
+	Element element = null;
 		
-		try {
-		    factory.setNamespaceAware(true);
-		    factory.setValidating(true);
-		    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-		    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/iban_rules_german.xsd"));
+	try {
+	    factory.setNamespaceAware(true);
+	    factory.setValidating(true);
+	    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
+	    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/iban_rules_german.xsd"));
 		    
-		    builder = factory.newDocumentBuilder();
-		    document = builder.parse(this.getClass().getResourceAsStream("/iban_rules_german.xml"));
+	    builder = factory.newDocumentBuilder();
+	    document = builder.parse(this.getClass().getResourceAsStream("/iban_rules_german.xml"));
 	
-		} catch (ParserConfigurationException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		} catch (SAXException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		} catch (IOException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		}
+	} catch (ParserConfigurationException e) {
+	    e.printStackTrace();
+	    System.exit(-1);
+	} catch (SAXException e) {
+	    e.printStackTrace();
+	    System.exit(-1);
+	} catch (IOException e) {
+	    e.printStackTrace();
+	    System.exit(-1);
+	}
 	
-		NodeList nodes = document.getElementById(rule_id).getChildNodes();
+	NodeList nodes = document.getElementById(rule_id).getChildNodes();
 		
-		for (int i = 0; i < nodes.getLength(); i++) {
-		    if (nodes.item(i).getNodeType() == Node.ELEMENT_NODE) {
-		    	NodeList nodeRule = nodes.item(i).getChildNodes();
+	for (int i = 0; i < nodes.getLength(); i++) {
+	    if (nodes.item(i).getNodeType() == Node.ELEMENT_NODE) {
+		NodeList nodeRule = nodes.item(i).getChildNodes();
 			
-				for (int j = 0; j < nodeRule.getLength(); j++) {
-				    if (nodeRule.item(j).getNodeType() == Node.ELEMENT_NODE) { 
-				    	element = (Element) nodeRule.item(j);
+		for (int j = 0; j < nodeRule.getLength(); j++) {
+		    if (nodeRule.item(j).getNodeType() == Node.ELEMENT_NODE) { 
+			element = (Element) nodeRule.item(j);
 				    
-						switch (nodes.item(i).getNodeName()) {
-						case "no_calculation":
-						    listNoCalculation.add(element);
-						    break;
+			switch (nodes.item(i).getNodeName()) {
+			case "no_calculation":
+			    listNoCalculation.add(element);
+			    break;
 						    
-						case "mappings_kto":
-						    MappingKto mapKto = new MappingKto(((Element)element.getParentNode()).getAttribute("blz"));
-						    mapKto.setFrom(element.getAttribute("from"));
-						    mapKto.setTo(element.getTextContent());
-						    listMappingKto.add(mapKto);
-						    break;
+			case "mappings_kto":
+			    MappingKto mapKto = new MappingKto(((Element)element.getParentNode()).getAttribute("blz"));
+			    mapKto.setFrom(element.getAttribute("from"));
+			    mapKto.setTo(element.getTextContent());
+			    listMappingKto.add(mapKto);
+			    break;
 						    
-						case "mappings_ktokr":
-						    listMappingKtoKr.add(element);
-						    break;
-						    
-						case "mappings_blz":
-						    listMappingBlz.add(element);
-						    break;
-						    
-						case "modification_kto":
-						    listModificationKto.add(element);
-						    break;
-						}
-				    }
-				}
+			case "mappings_ktokr":
+			    listMappingKtoKr.add(element);
+			    break;
+			    
+			case "mappings_blz":
+			    listMappingBlz.add(element);
+			    break;
+			    
+			case "modification_kto":
+			    listModificationKto.add(element);
+			    break;
+			    
+			case "mappings_bic":
+			    listMappingBic.add(element);
+			    break;
+			}
 		    }
 		}
+	    }
+	}
     }
     
     /**
@@ -129,13 +135,13 @@ public class IbanRuleGerman {
      * @return	'True' if there are no calculation rules, otherwise 'false'.
      */
     public boolean isNoCalculation (String blz) {
-		Iterator<Element> iter = listNoCalculation.iterator();
+	Iterator<Element> iter = listNoCalculation.iterator();
 		
-		while (iter.hasNext()) {
-		    if (blz.matches(iter.next().getAttribute("blz")))
-		    	this.noCalculation = true;
-		}
-		return noCalculation;
+	while (iter.hasNext()) {
+	    if (blz.matches(iter.next().getAttribute("blz")))
+		this.noCalculation = true;
+	}
+	return noCalculation;
     }
     
     /**
@@ -144,16 +150,16 @@ public class IbanRuleGerman {
      * @return	A LinkedList of regular expressions.
      */
     public LinkedList<String> getRegexpNoCalculation (String blz) {
-		LinkedList<String> tempList = new LinkedList<String>();
-		Iterator<Element> iter = listNoCalculation.iterator();
+	LinkedList<String> tempList = new LinkedList<String>();
+	Iterator<Element> iter = listNoCalculation.iterator();
 		
-		while (iter.hasNext()) {
-		    Element tempElement = iter.next();
-		    if (tempElement.getAttribute("blz").equals(blz))
-		    	tempList.add(tempElement.getTextContent());
-		}
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (tempElement.getAttribute("blz").equals(blz))
+		tempList.add(tempElement.getTextContent());
+	}
 		
-		return tempList;
+	return tempList;
     }
     
     /**
@@ -162,13 +168,13 @@ public class IbanRuleGerman {
      * @return	'True' if there are mapping rules, otherwise 'false'.
      */
     public boolean isMappingKto (String blz) {
-		Iterator<MappingKto> iter = listMappingKto.iterator();
+	Iterator<MappingKto> iter = listMappingKto.iterator();
 		
-		while (iter.hasNext()) {
-		    if ((iter.next()).getBlz().equals(blz))
-		    	this.mappingKto = true;
-		}
-		return mappingKto;
+	while (iter.hasNext()) {
+	    if ((iter.next()).getBlz().equals(blz))
+		this.mappingKto = true;
+	}
+	return mappingKto;
     }
     
     /**
@@ -209,15 +215,15 @@ public class IbanRuleGerman {
      * @return	The mapped account number.
      */
     public String getMappedKtoKr (String kto) {
-		Iterator<Element> iter = listMappingKtoKr.iterator();
+	Iterator<Element> iter = listMappingKtoKr.iterator();
 		
-		while (iter.hasNext()) {
-		    Element tempElement = iter.next();
-		    if (tempElement.getAttribute("from").equals(kto.substring(0, 3)))
-		    	return tempElement.getTextContent();
-		}
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (tempElement.getAttribute("from").equals(kto.substring(0, 3)))
+		return tempElement.getTextContent();
+	}
 	
-		return null;
+	return null;
     }
 
     /**
@@ -226,13 +232,13 @@ public class IbanRuleGerman {
      * @return	'True' if there are mapping rules, otherwise 'false'.
      */
     public boolean isMappingBlz (String blz) {
-		Iterator<Element> iter = listMappingBlz.iterator();
+	Iterator<Element> iter = listMappingBlz.iterator();
 		
-		while (iter.hasNext()) {
-		    if (iter.next().getAttribute("from").equals(blz))
-		    	this.mappingBlz = true;
-		}
-		return mappingBlz;
+	while (iter.hasNext()) {
+	    if (iter.next().getAttribute("from").equals(blz))
+		this.mappingBlz = true;
+	}
+	return mappingBlz;
     }
     
     /**
@@ -241,14 +247,14 @@ public class IbanRuleGerman {
      * @return	The mapped account number.
      */
     public String getMappedBlz(String blz) {
-		Iterator<Element> iter = listMappingBlz.iterator();
+	Iterator<Element> iter = listMappingBlz.iterator();
 		
-		while (iter.hasNext()) {
-		    Element tempElement = iter.next();
-		    if (tempElement.getAttribute("from").equals(blz))
-		    	return tempElement.getTextContent();
-		}
-		return null;
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (tempElement.getAttribute("from").equals(blz))
+		return tempElement.getTextContent();
+	}
+	return null;
     }
     
     /**
@@ -257,13 +263,13 @@ public class IbanRuleGerman {
      * @return	'True' if there are modification rules, otherwise 'false'.
      */
     public boolean isModification (String blz) {
-		Iterator<Element> iter = listModificationKto.iterator();
+	Iterator<Element> iter = listModificationKto.iterator();
 		
-		while (iter.hasNext()) {
-		    if (iter.next().getAttribute("blz").equals(blz))
-		    	this.modificationKto = true;
-		}
-		return modificationKto;
+	while (iter.hasNext()) {
+	    if (iter.next().getAttribute("blz").equals(blz))
+		this.modificationKto = true;
+	}
+	return modificationKto;
     }
     
     /**
@@ -272,19 +278,49 @@ public class IbanRuleGerman {
      * @return	A LinkedList of regular expressions.
      */
     public LinkedList<String> getRegexpModification (String blz) {
-		LinkedList<String> tempList = new LinkedList<String>();
-		Iterator<Element> iter = listModificationKto.iterator();
+	LinkedList<String> tempList = new LinkedList<String>();
+	Iterator<Element> iter = listModificationKto.iterator();
 		
-		while (iter.hasNext()) {
-		    Element tempElement = iter.next();
-		    if (tempElement.getAttribute("blz").equals(blz))
-		    	tempList.add(tempElement.getTextContent());
-		}
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (tempElement.getAttribute("blz").equals(blz))
+		tempList.add(tempElement.getTextContent());
+	}
 		
-		return tempList;
+	return tempList;
     }
     
-
+    /**
+     * Checks if there is a BIC-Mapping for the given bank ident number
+     * @param blz	The given bank ident number
+     * @return True in case of BIC-Mapping otherwise false
+     */
+    public boolean isMappingBic(String blz) {
+	Iterator<Element> iter = listMappingBic.iterator();
+	
+	while (iter.hasNext()) {
+	    if (blz.matches(iter.next().getAttribute("blz")))
+		this.mappingBic = true;
+	}
+	return mappingBic;
+    }
+    
+    /**
+     * Gets the mapped BIC for the given bank ident number
+     * @param blz	The given bank ident number
+     * @return The mapped BIC
+     */
+    public String getMappedBic (String blz) {
+	Iterator<Element> iter = listMappingBic.iterator();
+	
+	while (iter.hasNext()) {
+	    Element tempElement = iter.next();
+	    if (blz.matches(tempElement.getAttribute("blz")))
+		return tempElement.getTextContent();
+	}
+	return null;
+    }
+    
     /**
      * Represents a mapped account number.
      * @author Aventum Solutions GmbH (www.aventum-solutions.de)
@@ -292,56 +328,56 @@ public class IbanRuleGerman {
      */
     class MappingKto {
 	
-		private String blz;
-		private String from;
-		private String to;
+	private String blz;
+	private String from;
+	private String to;
 		
-		/**
-		 * Constructor.
-		 * @param blz	The bank ident number of the bank.
-		 */
-		MappingKto (String blz){
-		    this.blz = blz;
-		}
+	/**
+	 * Constructor.
+	 * @param blz	The bank ident number of the bank.
+	 */
+	MappingKto (String blz){
+	    this.blz = blz;
+	}
 		
-		/**
-		 * Sets the account number from which should be mapped.
-		 * @param from	The account number "from".
-		 */
-		private void setFrom (String from) {
-		    this.from = from;
-		}
+	/**
+	 * Sets the account number from which should be mapped.
+	 * @param from	The account number "from".
+	 */
+	private void setFrom (String from) {
+	    this.from = from;
+	}
 		
-		/**
-		 * Sets the account number to which should be mapped.
-		 * @param to	The account number "to".
-		 */
-		private void setTo (String to) {
-		    this.to = to;
-		}
+	/**
+	 * Sets the account number to which should be mapped.
+	 * @param to	The account number "to".
+	 */
+	private void setTo (String to) {
+	    this.to = to;
+	}
 		
-		/**
-		 * Gets the account number from which should be mapped.
-		 * @return	The account number "from".
-		 */
-		private String getFrom() {
-		    return this.from;
-		}
+	/**
+	 * Gets the account number from which should be mapped.
+	 * @return	The account number "from".
+	 */
+	private String getFrom() {
+	    return this.from;
+	}
 		
-		/**
-		 * Gets the account number to which should be mapped.
-		 * @return	The account number "to".
-		 */
-		private String getTo() {
-		    return this.to;
-		}
+	/**
+	 * Gets the account number to which should be mapped.
+	 * @return	The account number "to".
+	 */
+	private String getTo() {
+	    return this.to;
+	}
 		
-		/**
-		 * Gets the bank ident number.
-		 * @return	The bank ident number.
-		 */
-		private String getBlz() {
-		    return this.blz;
-		}
+	/**
+	 * Gets the bank ident number.
+	 * @return	The bank ident number.
+	 */
+	private String getBlz() {
+	    return this.blz;
+	}
     }
 }
