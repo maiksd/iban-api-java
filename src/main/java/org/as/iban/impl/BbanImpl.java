@@ -90,7 +90,7 @@ class BbanImpl {
      * @param bankIdent	The bank ident number.
      */
     private void setBankIdent(String bankIdent) {
-        this.bankIdent = bankIdent;
+	this.bankIdent = bankIdent;
     }
 
     /**
@@ -135,8 +135,10 @@ class BbanImpl {
 				
 		// KtoKr Mapping
 		if (ruleGerman.isMappingKtoKr(ktoIdent)) {
-		    if (ruleGerman.getMappedKtoKr(ktoIdent) != null)
+		    if (ruleGerman.getMappedKtoKr(ktoIdent) != null) {
 			setBankIdent(ruleGerman.getMappedKtoKr(ktoIdent));
+			bankGerman.setBlz(bankIdent);
+		    }
 		}
 				
 		// BLZ mapping
@@ -179,7 +181,7 @@ class BbanImpl {
 	    throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_BANK_LENGTH);
 	else
 	    setBankIdent(bankIdent);
-	    
+
 	if (ktoIdent.length() > KTOIDENT_LENGTH)
 	    throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_KTO_LENGTH);
 	else 

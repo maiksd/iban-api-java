@@ -338,7 +338,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE03683515573047232594", iban.toString());
-    	
+    	assertEquals("SOLADES1SFH", iban.getBic());
     	
     	// BLZ 683 519 76 Kto 0016005845
     	bankIdent = "68351976";
@@ -347,6 +347,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE10683515570016005845", iban.toString());
+    	assertEquals("SOLADES1SFH", iban.getBic());
     }
     
     @Test
@@ -397,6 +398,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE95500500005000002096", iban.toString());
+    	assertEquals("HELADEFFXXX", iban.getBic());
     }
     
     @Test
@@ -408,6 +410,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE15300500000000060624", iban.toString());
+    	assertEquals("WELADEDDXXX", iban.getBic());
     	
     	
     	// BLZ 44050000 Kto 1564896
@@ -417,6 +420,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE15300500000000060624", iban.toString());
+    	assertEquals("WELADEDDXXX", iban.getBic());
     }
     
     @Test
@@ -428,6 +432,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE46300606010456456789", iban.toString());
+    	assertEquals("DAAEDEDDXXX", iban.getBic());
     	
     	
     	// BLZ 67090617 Kto 1564896
@@ -437,6 +442,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE36300606010001564896", iban.toString());
+    	assertEquals("DAAEDEDDXXX", iban.getBic());
     	
     	
     	// BLZ 10090603 Kto 78976
@@ -446,6 +452,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE94300606010000078976", iban.toString());
+    	assertEquals("DAAEDEDDXXX", iban.getBic());
     	
     	
     	// BLZ 30060601 Kto 4561238
@@ -455,6 +462,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE03300606010004561238", iban.toString());
+    	assertEquals("DAAEDEDDXXX", iban.getBic());
     }
     
     @Test
@@ -546,6 +554,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE82501203830020475000", iban.toString());
+    	assertEquals("DELBDE33XXX", iban.getBic());
     }
     
     @Test
@@ -557,7 +566,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE80500700100092777202", iban.toString());
-    	
+    	assertEquals("DEUTDEFFXXX", iban.getBic());
     	
     	// BLZ 20070000 Kto 600103660
     	bankIdent = "20070000";
@@ -566,7 +575,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE83200700000600103660", iban.toString());
-    	
+    	assertEquals("DEUTDEHHXXX", iban.getBic());
     	
     	// BLZ 10070000 Kto 350002200
     	bankIdent = "10070000";
@@ -575,7 +584,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE72100700000350002200", iban.toString());
-    	
+    	assertEquals("DEUTDEBBXXX", iban.getBic());
     	
     	// BLZ 25070024 Kto 12345
     	bankIdent = "25070024";
@@ -590,7 +599,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule002100(){
+    public void rule002101(){
     	// BLZ 350 200 30 Kto 305200
     	bankIdent = "35020030";
     	ktoIdent = "305200";
@@ -598,7 +607,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE81360200300000305200", iban.toString());
-    	
+    	assertEquals("NBAGDE3EXXX", iban.getBic());
     	
     	// BLZ 362 200 30 Kto 900826
     	bankIdent = "36220030";
@@ -607,6 +616,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE03360200300000900826", iban.toString());
+    	assertEquals("NBAGDE3EXXX", iban.getBic());
     	
     	
     	// BLZ 365 200 30 Kto 705020
@@ -616,6 +626,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE71360200300000705020", iban.toString());
+    	assertEquals("NBAGDE3EXXX", iban.getBic());
     	
     	
     	// BLZ 360 200 30 Kto 9197354
@@ -625,6 +636,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE18360200300009197354", iban.toString());
+    	assertEquals("NBAGDE3EXXX", iban.getBic());
     	
     	
     	// BLZ 360 200 30 Kto 12345
@@ -690,7 +702,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE81600501010002777939", iban.toString());
-    	
+    	assertEquals("SOLADEST470", iban.getBic());
     	
     	// BLZ 644 502 88 Kto 7893500686
     	bankIdent = "64450288";
@@ -699,6 +711,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE80600501017893500686", iban.toString());
+    	assertEquals("SOLADEST480", iban.getBic());
     }
     
     @Test
@@ -720,6 +733,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE69250501800000017095", iban.toString());
+    	assertEquals("SPKHDE2HXXX", iban.getBic());
     }
     
     @Test
@@ -757,7 +771,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE70762200731210100047", iban.toString());
-    	
+    	assertEquals("HYVEDEMM419", iban.getBic());
     	
     	// Testfall B
     	// BLZ 700 200 01 Kto 1210100047
@@ -767,6 +781,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE70762200731210100047", iban.toString());
+    	assertEquals("HYVEDEMM419", iban.getBic());
     	
     	
     	// Testfall C
@@ -777,6 +792,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE70762200731210100047", iban.toString());
+    	assertEquals("HYVEDEMM419", iban.getBic());
     	
     	
     	// Testfall F
@@ -800,6 +816,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE92660202861457032621", iban.toString());
+    	assertEquals("HYVEDEMM475", iban.getBic());
     }
     
     @Test
@@ -812,7 +829,8 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE70762200731210100047", iban.toString());
-    	
+    	assertEquals("HYVEDEMM419", iban.getBic());
+  	
     	
     	// Testfall K
     	// BLZ 660 202 86 Kto 1457032621
@@ -822,6 +840,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE92660202861457032621", iban.toString());
+    	assertEquals("HYVEDEMM475", iban.getBic());
     	
     	
     	// Testfall L
@@ -832,7 +851,8 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE06710221823200000012", iban.toString());
-    	
+    	assertEquals("HYVEDEMM453", iban.getBic());
+   	
     	
     	// Testfall M
     	// BLZ 100 208 90 Kto 5951950
@@ -842,6 +862,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE07100208900005951950", iban.toString());
+    	assertEquals("HYVEDEMM488", iban.getBic());
     	
     	
     	// Testfall O
@@ -867,6 +888,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE76700202702950219435", iban.toString());
+    	assertEquals("HYVEDEMMXXX", iban.getBic());
     	
     	
     	// Testfall P2
@@ -877,6 +899,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE92660202861457032621", iban.toString());
+    	assertEquals("HYVEDEMM475", iban.getBic());
     	
     	
     	// Testfall P3
@@ -887,7 +910,8 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE55700202700000000897", iban.toString());
-    	
+    	assertEquals("HYVEDEMMXXX", iban.getBic());
+
     	
     	// Testfall P4
     	// BLZ 700 202 70 Kto 847321750
@@ -897,6 +921,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE36700202700847321750", iban.toString());
+    	assertEquals("HYVEDEMMXXX", iban.getBic());
     	
     	
     	// Testfall Sonder
@@ -907,6 +932,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE88700202700039908140", iban.toString());
+    	assertEquals("HYVEDEMMXXX", iban.getBic());
     }
     
     @Test
@@ -919,6 +945,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE69600202901320815432", iban.toString());
+    	assertEquals("HYVEDEMM473", iban.getBic());
     	
     	
     	// Testfall Q2
@@ -929,6 +956,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE92660202861457032621", iban.toString());
+    	assertEquals("HYVEDEMM475", iban.getBic());
     	
     	
     	// Testfall Q3
@@ -939,6 +967,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE67600202900005951950", iban.toString());
+    	assertEquals("HYVEDEMM473", iban.getBic());
     	
     	
     	// Testfall Q4
@@ -962,7 +991,8 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE82600202904340111112", iban.toString());
-    }
+    	assertEquals("HYVEDEMM473", iban.getBic());
+   }
     
     @Test
     public void rule003501(){
@@ -974,6 +1004,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE42790200761050958422", iban.toString());
+    	assertEquals("HYVEDEMM455", iban.getBic());
     	
     	
     	// Testfall R2
@@ -984,6 +1015,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE69600202901320815432", iban.toString());
+    	assertEquals("HYVEDEMM473", iban.getBic());
     	
     	
     	// Testfall R3
@@ -994,6 +1026,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE56790200760005951950", iban.toString());
+    	assertEquals("HYVEDEMM455", iban.getBic());
     	
     	
     	// Testfall R4
@@ -1017,6 +1050,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE29790200761490196966", iban.toString());
+    	assertEquals("HYVEDEMM455", iban.getBic());
     }
        
     @Test
@@ -1319,6 +1353,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE41300107000000123456", iban.toString());
+    	assertEquals("BOTKDEDXXXX", iban.getBic());
     	
     	
     	// BLZ 300 107 00, Kto 0000654321
@@ -1328,6 +1363,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE85300107000000654321", iban.toString());
+    	assertEquals("BOTKDEDXXXX", iban.getBic());
     }
     
     @Test
@@ -1339,6 +1375,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE25285900751234567890", iban.toString());
+    	assertEquals("GENODEF1LER", iban.getBic());
     	
     	
     	// BLZ 28591579, Kto 88654578
@@ -1348,6 +1385,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE32285900750088654578", iban.toString());
+    	assertEquals("GENODEF1LER", iban.getBic());
     	
     	// BLZ 25090300, Kto 7789845
     	bankIdent = "25090300";
@@ -1356,6 +1394,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE43285900750007789845", iban.toString());
+    	assertEquals("GENODEF1LER", iban.getBic());
     }
     
     @Test
@@ -1367,6 +1406,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE13280200501234567890", iban.toString());
+    	assertEquals("OLBODEH2243", iban.getBic());
     	
     	
     	// BLZ 26621413, Kto 1234567890
@@ -1376,6 +1416,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE20280200500088654578", iban.toString());
+    	assertEquals("OLBODEH2286", iban.getBic());
     }
     
     @Test
@@ -1387,6 +1428,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE17680523280006015002", iban.toString());
+    	assertEquals("SOLADES1STF", iban.getBic());
     }
     
     @Test
@@ -1398,6 +1440,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE96500604000000011404", iban.toString());
+    	assertEquals("GENODEFFXXX", iban.getBic());
     }
     
     @Test
@@ -1447,7 +1490,8 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE49666500850000000868", iban.toString());
-    	
+    	assertEquals("PZHSDE66XXX", iban.getBic());
+
     	// BLZ 60651070, Kto 12602
     	bankIdent = "60651070";
     	ktoIdent = "12602";
@@ -1455,6 +1499,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE33666500850000012602", iban.toString());
+    	assertEquals("PZHSDE66XXX", iban.getBic());
     }
     
     @Test
@@ -1470,7 +1515,14 @@ public class IbanGeneratorGermanTest {
     
     @Test
     public void rule004500(){
-    	//	TODO
+    	// BLZ 68050101
+    	bankIdent = "50210142";
+    	ktoIdent = "12345678";
+    	
+    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+    	
+    	assertEquals("DE08502101420012345678", iban.toString());
+    	assertEquals("ESSEDE5FXXX", iban.getBic());
     }
     
     @Test
@@ -1482,6 +1534,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE62310108331234567890", iban.toString());
+    	assertEquals("GEMKDE21BER", iban.getBic());
     }
     
     @Test
@@ -1513,6 +1566,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE12360102001231234567", iban.toString());
+    	assertEquals("VONEDE33XXX", iban.getBic());
     }
     
     @Test
@@ -1560,13 +1614,13 @@ public class IbanGeneratorGermanTest {
         
     @Test
     public void rule005000(){
-    	// BLZ 60050101
-//    	bankIdent = "28252760";
-//    	ktoIdent = "0130084981";
-//    	
-//    	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-//    	assertEquals("DE24285500000130084981", iban.toString());
-    	assertTrue(true);
+	// Regel nicht ausgeführt im BLZ-Verzeichnis - Standard
+	bankIdent = "28252760";
+	ktoIdent = "130084981";
+	
+	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	assertEquals("DE68282527600130084981", iban.toString());
+	assertEquals("BRLADE21WTM", iban.getBic());
     }
     
     @Test
@@ -1591,6 +1645,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE38600501010002662604", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 69421020
     	bankIdent = "69421020";
@@ -1599,6 +1654,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE85600501017481501341", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 66620020
     	bankIdent = "66620020";
@@ -1607,6 +1663,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE13600501017498502663", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 64120030
     	bankIdent = "64120030";
@@ -1615,6 +1672,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE28600501017477501214", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 64020030
     	bankIdent = "64020030";
@@ -1623,6 +1681,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE82600501017469534505", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 64020030
     	bankIdent = "63020130";
@@ -1631,6 +1690,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE69600501010004475655", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 62030050
     	bankIdent = "62030050";
@@ -1639,6 +1699,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE72600501017406501175", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 69220020
     	bankIdent = "69220020";
@@ -1647,6 +1708,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE91600501017485500252", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	//	Jetzt noch ein Beispiel, das nicht konvertiert werden darf
     	// BLZ 69220020
@@ -1670,6 +1732,7 @@ public class IbanGeneratorGermanTest {
     	Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE94600501017401555913", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	//	BLZ 60020030
     	bankIdent = "60020030";
@@ -1678,6 +1741,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE06600501010002001155", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 60050000
     	bankIdent = "60050000";
@@ -1686,6 +1750,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE23600501010001367924", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 66020020
     	bankIdent = "66020020";
@@ -1694,6 +1759,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE02600501017495530102", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 66050000
     	bankIdent = "66050000";
@@ -1702,6 +1768,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE15600501017402045439", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 86050000
     	bankIdent = "86050000";
@@ -1710,6 +1777,7 @@ public class IbanGeneratorGermanTest {
     	iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
     	
     	assertEquals("DE61600501017461505611", iban.toString());
+    	assertEquals("SOLADEST600", iban.getBic());
     }
     
     @Test

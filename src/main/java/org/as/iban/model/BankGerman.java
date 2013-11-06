@@ -33,31 +33,22 @@ public class BankGerman {
     private String name;
     private IbanRuleGerman rule;
 
+    DocumentBuilderFactory factoryMapping = DocumentBuilderFactory.newInstance();
+    DocumentBuilder builderMapping;
+    Document documentMapping = null;
+	
+    DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
+    DocumentBuilder builderBank;
+    Document documentBank = null;
+	
+
     /**
      * Constructor. Reads the bank's information from config file.
      * @param blz	The BLZ for the german bank (bank ident).
      */
     public BankGerman (String blz) {
 	this.blz = blz;
-	readBankConfig();
-	if (ruleId.equals("000000") || ruleId.equals("000100"))
-	    this.rule = null;
-	else
-	    this.rule = new IbanRuleGerman("_" + ruleId);
-    }
-    
-    /**
-     * Reads the configuration of the bank from config file
-     */
-    private void readBankConfig() {
-	DocumentBuilderFactory factoryMapping = DocumentBuilderFactory.newInstance();
-	DocumentBuilder builderMapping;
-	Document documentMapping = null;
-	
-	DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
-	DocumentBuilder builderBank;
-	Document documentBank = null;
-	
+
 	try {
 	    factoryMapping.setNamespaceAware(true);
 	    factoryMapping.setValidating(true);
@@ -85,7 +76,18 @@ public class BankGerman {
 	    e.printStackTrace();
 	    System.exit(-1);
 	}
-		
+	
+	readBankConfig();
+	if (ruleId.equals("000000") || ruleId.equals("000100"))
+	    this.rule = null;
+	else
+	    this.rule = new IbanRuleGerman("_" + ruleId);
+    }
+    
+    /**
+     * Reads the configuration of the bank from config file
+     */
+    private void readBankConfig() {
 	NodeList nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
 		
 	for (int j = 0; j < nodeMapping.getLength(); j++) {
@@ -118,6 +120,19 @@ public class BankGerman {
      */
     public String getBlz() {
     	return blz;
+    }
+    
+    /**
+     * Sets the bank ident for this bank (i.e. in case of mapping)
+     * @param blz The new bank ident
+     */
+    public void setBlz (String blz) {
+	this.blz = blz;
+	readBankConfig();
+	if (ruleId.equals("000000") || ruleId.equals("000100"))
+	    this.rule = null;
+	else
+	    this.rule = new IbanRuleGerman("_" + ruleId);
     }
     
     /**

@@ -822,6 +822,9 @@
 		<modification_kto>
 			<modification blz="68351557">\b1116(\d{6})\Z;3047$1</modification>
 		</modification_kto>
+		<mappings_bic>
+			<mapping blz="68351976">SOLADES1SFH</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0010-00 Frankfurter Sparkasse -->
@@ -845,6 +848,9 @@
 		<mappings_blz>
 			<mapping from="50850049">50050000</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">HELADEFFXXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0013-01 Landesbank Hessen-Thüringen Girozentrale -->
@@ -853,6 +859,9 @@
 			<mapping from="40050000">30050000</mapping>
 			<mapping from="44050000">30050000</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">WELADEDDXXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0014-00 Deutsche Apotheker- und Ärztebank eG -->
@@ -894,6 +903,9 @@
 			<mapping from="77390628">30060601</mapping>
 			<mapping from="79090624">30060601</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">DAAEDEDDXXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0015-00 Pax-Bank eG -->
@@ -954,6 +966,9 @@
 			<mapping from="50220200">50120383</mapping>
 			<mapping from="70030800">50120383</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">DELBDE33XXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0020-01 Deutsche Bank AG -->
@@ -976,6 +991,9 @@
 			<mapping from="36220030">36020030</mapping>
 			<mapping from="36520030">36020030</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">NBAGDE3EXXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0022-00 GLS Gemeinschaftsbank eG -->
@@ -1026,6 +1044,9 @@
 		<mappings_blz>
 			<mapping from="25050299">25050180</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="25050299">SPKHDE2HXXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0029-00 Société Générale -->
@@ -3407,6 +3428,9 @@
 		<mappings_blz>
 			<mapping from="20110700">30010700</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="20110700">BOTKDEDXXXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0038-00 Ostfriesische Volksbank eG -->
@@ -3416,6 +3440,9 @@
 			<mapping from="28591579">28590075</mapping>
 			<mapping from="25090300">28590075</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">GENODEF1LER</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0039-00 Oldenburgische Landesbank AG -->
@@ -3459,6 +3486,9 @@
 		<mappings_blz>
 			<mapping from="68051310">68052328</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">SOLADES1STF</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0041-00 Bausparkasse Schwäbisch Hall AG -->
@@ -3469,6 +3499,9 @@
 		<modification_kto>
 			<modification blz="50060400">\d{1,10};0000011404</modification>
 		</modification_kto>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">GENODEFFXXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0042-00 Deutsche Bundesbank -->
@@ -3559,6 +3592,9 @@
 			<mapping from="27010200">36010200</mapping>
 			<mapping from="60020300">36010200</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">VONEDE33XXX</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0049-00 WGZ Bank -->
@@ -3669,6 +3705,9 @@
 			<mapping from="62030050">60050101</mapping>
 			<mapping from="69220020">60050101</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">SOLADEST600</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0053-00 Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
@@ -3739,6 +3778,9 @@
 			<mapping from="66050000">60050101</mapping>
 			<mapping from="86050000">60050101</mapping>
 		</mappings_blz>
+		<mappings_bic>
+			<mapping blz="\b\d{8}\Z">SOLADEST600</mapping>
+		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0054-00 Evangelische Darlehnsgenossenschaft eG -->

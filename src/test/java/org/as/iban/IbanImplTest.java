@@ -205,10 +205,10 @@ public class IbanImplTest {
     
     @Test
     public void testValidateGerman() {
-		ibanValid = new IbanImpl("DE89370400440532013000");
-		ibanInvalid = new IbanImpl("DE89370400440532013001");
+		ibanValid = new IbanImpl("DE98458510200012345678");
+		ibanInvalid = new IbanImpl("DE98458510200012345679");
 		assertTrue(ibanValid.validate());
-		assertEquals("COBADEFF370", ibanValid.getBic());
+		assertEquals("WELADED1PLB", ibanValid.getBic());
 		assertFalse(ibanInvalid.validate());
     }
 

@@ -45,26 +45,20 @@ public class IbanRuleGerman {
     private ArrayList<Element> listModificationKto = new ArrayList<Element>();
     private ArrayList<Element> listMappingKtoKr = new ArrayList<Element>();
     private ArrayList<Element> listMappingBic = new ArrayList<Element>();
-    
+
+    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    DocumentBuilder builder;
+    Document document = null;
+		
+    Element element = null;
+		    
     /**
      * Constructor. Loads a specified Rule.
      * @param rule_id	The id that identifies the rule that should be loaded from config.
      */
     public IbanRuleGerman (String rule_id) {
 	this.rule_id = rule_id;
-	readRule();
-    }
-    
-    /**
-     * Reads the rule from config file.
-     */
-    private void readRule() {
-	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	DocumentBuilder builder;
-	Document document = null;
-		
-	Element element = null;
-		
+
 	try {
 	    factory.setNamespaceAware(true);
 	    factory.setValidating(true);
@@ -85,6 +79,13 @@ public class IbanRuleGerman {
 	    System.exit(-1);
 	}
 	
+	readRule();
+    }
+    
+    /**
+     * Reads the rule from config file.
+     */
+    private void readRule() {
 	NodeList nodes = document.getElementById(rule_id).getChildNodes();
 		
 	for (int i = 0; i < nodes.getLength(); i++) {
