@@ -4,8 +4,6 @@
 
 package org.as.iban;
 
-import java.util.LinkedList;
-
 import org.as.iban.exception.IbanException;
 
 /**
@@ -57,13 +55,7 @@ public interface Iban {
      * @throws IbanException
      */
     public boolean validate() throws IbanException;
-    
-    
-    /**
-     * Generates a iban.
-     */
-    public void generate();
-    
+       
     
     /**
      * Returns the iban code as a string.

@@ -62,7 +62,7 @@ class BbanImpl {
 	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
 	
 	this.country = country.toUpperCase(Locale.ENGLISH);
-	if (country == Iban.COUNTRY_CODE_GERMAN) {
+	if (country.equals(Iban.COUNTRY_CODE_GERMAN)) {
 	    this.bankGerman = new BankGerman(bankIdent);
 	    this.ruleGerman = bankGerman.getIbanRule();
 	}
@@ -73,7 +73,7 @@ class BbanImpl {
      * Gets the bank ident.
      * @return	The bank ident number as String.
      */
-    private String getBankIdent() {
+    public String getBankIdent() {
         return bankIdent;
     }
 
@@ -97,7 +97,7 @@ class BbanImpl {
      * Gets the account number.
      * @return	The account number as String.
      */
-    private String getKtoIdent() {
+    public String getKtoIdent() {
         return ktoIdent;
     }
 
@@ -108,7 +108,7 @@ class BbanImpl {
      */
     private void setKtoIdent(String ktoIdent, int length) {
 	// Consider Iban rules for Germany
-	if (country == Iban.COUNTRY_CODE_GERMAN) {
+	if (country.equals(Iban.COUNTRY_CODE_GERMAN)) {
 	    // Only not standard rules
 	    String ruleId = bankGerman.getRuleId();
 		    

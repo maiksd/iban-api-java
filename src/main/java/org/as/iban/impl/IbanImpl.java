@@ -44,26 +44,37 @@ public class IbanImpl implements Iban {
     public IbanImpl(String country, String bankIdent, String ktoIdent) throws IbanException{
 	this.country = country;
 	this.bban = new BbanImpl(country, bankIdent, ktoIdent);
-	this.checkDigit = "00";
-	this.generate();
+	this.checkDigit = calcCheckDigit(bban);
     }
 
     @Override
     public boolean validate() throws IbanException {
 	validateFormat();
-	String ascii = asciiToNumber(shiftIbanToString());
-	if (mod97(ascii) == 1)
-	    return true;
-	else
-	    return false;
+	if (country.equals(Iban.COUNTRY_CODE_GERMAN)) {
+	    BbanImpl bbanTmp = new BbanImpl(country, bban.getBankIdent(), bban.getKtoIdent());
+	    String checkDigitTmp = calcCheckDigit(bbanTmp);
+	    if (this.checkDigit.equals(checkDigitTmp))
+		return true;
+	    else
+		return false;
+	}
+	else {
+	    String ascii = asciiToNumber(shiftIbanToString(bban, this.checkDigit));
+	    if (mod97(ascii) == 1)
+		return true;
+	    else
+		return false;
+	}
     }
 
-    @Override
-    public void generate() throws IbanException {
-	String ascii = asciiToNumber(shiftIbanToString());
+    private String calcCheckDigit(BbanImpl bban) throws IbanException {
+	String checkDigit = "00";
+	String ascii = asciiToNumber(shiftIbanToString(bban, checkDigit));
 	checkDigit = String.valueOf(98 - mod97(ascii));
 	if (checkDigit.length() == 1)
 	    checkDigit = "0" + checkDigit;
+	
+	return checkDigit;
     }
     
     @Override
@@ -71,16 +82,16 @@ public class IbanImpl implements Iban {
     	return this.country + this.checkDigit + this.bban.toString();
     }
 
-    @Override
     public String getBic() {
     	return bban.getBic();
     }
     
     /**
      * Generates a shifted iban code (bank-ident|kto-ident|country-code|check-digit).
+     * @param bban 
      * @return The shifted code.
      */
-    private String shiftIbanToString() {
+    private String shiftIbanToString(BbanImpl bban, String checkDigit) {
     	return bban.toString() + country + checkDigit;
     }
 
