@@ -1,7 +1,3 @@
-/**
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban.model;
 
 import java.io.IOException;
@@ -31,8 +27,8 @@ public class IbanFormat {
     private int ktoIdentLength;
     
     /**
-     * Constructor.
-     * @param countryCode	The country code of the country for which the iban format should be loaded.
+     * Constructor for the IbanFormat for a specific country
+     * @param countryCode	The country code for which the IBAN format definition is loaded
      */
     public IbanFormat(String countryCode) {
 		this.countryCode = countryCode;
@@ -40,7 +36,7 @@ public class IbanFormat {
     }
 
     /**
-     * Reads the iban format information from the config file. 
+     * Reads the iban format information from the config file
      */
     private void readFormatConfig() {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -84,24 +80,24 @@ public class IbanFormat {
     }
 
     /**
-     * Gets the regular expression of the current format.
-     * @return	The regular expression that represents the current format.
+     * Gets the regular expression of the IBAN current format
+     * @return	The regular expression that represents the current format as defined in iban_format.xml
      */
     public String getRegexp() {
         return regexp;
     }
 
     /**
-     * Gets the defined length for a bank ident number.
-     * @return	The defined length for a bank ident number.
+     * Gets the defined length for a bank identifier number
+     * @return	The max length for a bank identifier number as defined in iban_format.xml
      */
     public int getBankIdentLength() {
         return bankIdentLength;
     }
 
     /**
-     * Gets the defined length for a account ident number.
-     * @return	The defined length for a account ident number.
+     * Gets the defined length for a account identifier number
+     * @return	The max length for a account identifier number as defined in iban_format.xml
      */
     public int getKtoIdentLength() {
         return ktoIdentLength;

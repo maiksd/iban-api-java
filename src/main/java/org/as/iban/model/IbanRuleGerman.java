@@ -1,7 +1,3 @@
-/**
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban.model;
 
 import java.io.IOException;
@@ -20,7 +16,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * Represents a iban rule.
+ * Represents an IBAN rule for a german bank
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
@@ -53,8 +49,8 @@ public class IbanRuleGerman {
     Element element = null;
 		    
     /**
-     * Constructor. Loads a specified Rule.
-     * @param rule_id	The id that identifies the rule that should be loaded from config.
+     * Constructor. Loads a specified Rule by a given ruleID
+     * @param rule_id	The id that identifies the specific rule from iban_rule_german.xml
      */
     public IbanRuleGerman (String rule_id) {
 	this.rule_id = rule_id;
@@ -83,7 +79,7 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Reads the rule from config file.
+     * Reads the rule from config file
      */
     private void readRule() {
 	NodeList nodes = document.getElementById(rule_id).getChildNodes();
@@ -131,9 +127,9 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Checks if there are no calculation rules.
-     * @param blz	The bank ident number to check.
-     * @return	'True' if there are no calculation rules, otherwise 'false'.
+     * Check for no calculation rules for a specific bank identifier
+     * @param blz	The bank identifier number to check.
+     * @return	'True' in case of existing no calculation rules, otherwise 'false'
      */
     public boolean isNoCalculation (String blz) {
 	Iterator<Element> iter = listNoCalculation.iterator();
@@ -146,9 +142,9 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Gets the regular expressions of no calculation rule.
-     * @param blz	The bank ident number.
-     * @return	A LinkedList of regular expressions.
+     * Get the regular expressions of no calculation rule
+     * @param blz	The bank identifier number
+     * @return	A LinkedList of regular expressions
      */
     public LinkedList<String> getRegexpNoCalculation (String blz) {
 	LinkedList<String> tempList = new LinkedList<String>();
@@ -164,9 +160,9 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Checks if there are account numbers to mapp to a different account number.
-     * @param blz	The bank ident number.
-     * @return	'True' if there are mapping rules, otherwise 'false'.
+     * Check for account numbers mapped to differing account numbers
+     * @param blz	The bank identifier number
+     * @return	'True' in case of existing mapping rules, otherwise 'false'
      */
     public boolean isMappingKto (String blz) {
 	Iterator<MappingKto> iter = listMappingKto.iterator();
@@ -179,10 +175,10 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Gets the mapped account number for a given bank ident number and account number.
-     * @param blz	The given bank ident number.
-     * @param kto	The given account number.
-     * @return	The mapped account number.
+     * Get the mapped account number for a given bank identifier number and account number
+     * @param blz	The given bank identifier number
+     * @param kto	The given account number
+     * @return	The mapped account number
      */
     public String getMappedKto (String blz, String kto) {
 	Iterator<MappingKto> iter = listMappingKto.iterator();
@@ -196,9 +192,9 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Checks if there are bank ident mappings to an account number circle to a given account number.
-     * @param kto	The given account number.
-     * @return	'True' if there are mapping rules, otherwise 'false'.
+     * Check for bank identifier mappings to an account number circle to a given account number
+     * @param kto	The given account number
+     * @return	'True' in case of existing mapping rules, otherwise 'false'
      */
     public boolean isMappingKtoKr (String kto) {
 	Iterator<Element> iter = listMappingKtoKr.iterator();
@@ -211,9 +207,9 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Gets the mapped bank ident number for a given account number from a account number circle.
-     * @param kto	The given account number.
-     * @return	The mapped account number.
+     * Get the mapped bank identifier number for a given account number from a account number circle
+     * @param kto	The given account number
+     * @return	The mapped account number
      */
     public String getMappedKtoKr (String kto) {
 	Iterator<Element> iter = listMappingKtoKr.iterator();
@@ -228,9 +224,9 @@ public class IbanRuleGerman {
     }
 
     /**
-     * Checks if there are bank ident mappings to a given bank ident number.
-     * @param blz	The given bank ident number.
-     * @return	'True' if there are mapping rules, otherwise 'false'.
+     * Check for bank identifier mappings to differing bank identifier numbers
+     * @param blz	The given bank identifier number
+     * @return	'True' in case of existing mapping rules, otherwise 'false'
      */
     public boolean isMappingBlz (String blz) {
 	Iterator<Element> iter = listMappingBlz.iterator();
@@ -243,9 +239,9 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Gets the mapped bank ident number circle for a given bank ident number.
-     * @param blz	The given bank ident number.
-     * @return	The mapped account number.
+     * Get the mapped bank identifier number circle for a given bank identifier number
+     * @param blz	The given bank identifier number
+     * @return	The mapped account number
      */
     public String getMappedBlz(String blz) {
 	Iterator<Element> iter = listMappingBlz.iterator();
@@ -259,9 +255,9 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Checks if there are account number modification rules for a given bank ident number.
-     * @param blz	The given bank ident number.
-     * @return	'True' if there are modification rules, otherwise 'false'.
+     * Check for account number modification rules for a given bank identifier number
+     * @param blz	The given bank identifier number
+     * @return	'True' in case of existing modification rules, otherwise 'false'
      */
     public boolean isModification (String blz) {
 	Iterator<Element> iter = listModificationKto.iterator();
@@ -274,9 +270,9 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Gets regular expressions that modifies the bank account number.
-     * @param blz	The given bank ident number.
-     * @return	A LinkedList of regular expressions.
+     * Get regular expressions that modifies the bank account number
+     * @param blz	The given bank ident number
+     * @return	A LinkedList of regular expressions
      */
     public LinkedList<String> getRegexpModification (String blz) {
 	LinkedList<String> tempList = new LinkedList<String>();
@@ -292,8 +288,8 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Checks if there is a BIC-Mapping for the given bank ident number
-     * @param blz	The given bank ident number
+     * Check for a BIC-Mapping for the given bank identifier number
+     * @param blz	The given bank identifier number
      * @return True in case of BIC-Mapping otherwise false
      */
     public boolean isMappingBic(String blz) {
@@ -307,8 +303,8 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Gets the mapped BIC for the given bank ident number
-     * @param blz	The given bank ident number
+     * Get the mapped BIC for the given bank identifier number
+     * @param blz	The given bank identifier number
      * @return The mapped BIC
      */
     public String getMappedBic (String blz) {
@@ -323,7 +319,7 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Represents a mapped account number.
+     * Represents a mapped account number
      * @author Aventum Solutions GmbH (www.aventum-solutions.de)
      *
      */
@@ -334,48 +330,48 @@ public class IbanRuleGerman {
 	private String to;
 		
 	/**
-	 * Constructor.
-	 * @param blz	The bank ident number of the bank.
+	 * Constructor
+	 * @param blz	The bank ident number of the bank
 	 */
 	MappingKto (String blz){
 	    this.blz = blz;
 	}
 		
 	/**
-	 * Sets the account number from which should be mapped.
-	 * @param from	The account number "from".
+	 * Set the "mapped from" account number
+	 * @param from	The account number to map from
 	 */
 	private void setFrom (String from) {
 	    this.from = from;
 	}
 		
 	/**
-	 * Sets the account number to which should be mapped.
-	 * @param to	The account number "to".
+	 * Set the "mapped to" account number
+	 * @param to	The account number to map to
 	 */
 	private void setTo (String to) {
 	    this.to = to;
 	}
 		
 	/**
-	 * Gets the account number from which should be mapped.
-	 * @return	The account number "from".
+	 * Get the "mapped from" account number
+	 * @return	The account number to map from
 	 */
 	private String getFrom() {
 	    return this.from;
 	}
 		
 	/**
-	 * Gets the account number to which should be mapped.
-	 * @return	The account number "to".
+	 * Get the "mapped from" account number
+	 * @return	The account number to map to
 	 */
 	private String getTo() {
 	    return this.to;
 	}
 		
 	/**
-	 * Gets the bank ident number.
-	 * @return	The bank ident number.
+	 * Get the bank identifier number
+	 * @return	The bank identifier number
 	 */
 	private String getBlz() {
 	    return this.blz;

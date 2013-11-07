@@ -1,13 +1,9 @@
-/***
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban;
 
 import org.as.iban.exception.IbanException;
 
 /**
- * Interface declaring an Iban.
+ * Interface declaring an Iban
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
@@ -50,22 +46,22 @@ public interface Iban {
     
     
     /**
-     * Validates a iban.
-     * @return Indicates wether validating was succesful or not
+     * Validates a IBAN
+     * @return true in case of successfully validation, otherwise false
      * @throws IbanException
      */
     public boolean validate() throws IbanException;
        
     
     /**
-     * Returns the iban code as a string.
-     * @return The iban code with format "country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
+     * Returns the string representation of the IBAN
+     * @return The IBAN in the format "country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
      */
     public String toString();
     
     /**
-     * Get's the BIC refering to the iban.
-     * @return The BIC for German banks, otherwise NULL.
+     * Get the BIC refers to the IBAN
+     * @return The BIC for German banks, otherwise NULL
      */
     public String getBic();
 }

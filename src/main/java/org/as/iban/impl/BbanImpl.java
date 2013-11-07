@@ -1,10 +1,5 @@
-/***
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban.impl;
 
-import java.util.LinkedList;
 import java.util.Locale;
 
 import org.as.iban.Iban;
@@ -14,7 +9,7 @@ import org.as.iban.model.IbanFormat;
 import org.as.iban.model.IbanRuleGerman;
 
 /**
- * Represents the basic bank account number (Bban)
+ * Represents the basic bank account number (BBan)
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
@@ -24,7 +19,7 @@ class BbanImpl {
     private String bankIdent;
     private String ktoIdent;
     private String country;
-    private BankGerman bankGerman;
+    private BankGerman bankGerman = null;
     private IbanRuleGerman ruleGerman;
     IbanFormat ibanFormat;
     
@@ -32,12 +27,12 @@ class BbanImpl {
     private final int KTOIDENT_LENGTH;
     
     /**
-     * Constructor which sets information for validation.
-     * @param country	The country of the bank account.
-     * @param bban		The given bban which should be validated.
+     * Constructor setting up the BBan for a specific country
+     * @param country	The country code of the bank
+     * @param bban		The given BBan (Basic Bank account number)
      * @throws IbanException
      */
-    BbanImpl (String country, String bban) throws IbanException{
+    protected BbanImpl (String country, String bban) throws IbanException{
 	ibanFormat = new IbanFormat(country);
 	BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
 	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
@@ -50,13 +45,13 @@ class BbanImpl {
     }
     
     /**
-     * Constructor which sets information for generation.
-     * @param country		The country of the bank account.
-     * @param bankIdent		The bank ident number.
-     * @param ktoIdent		The account number.
+     * Constructor setting up the BBan from the given parameters
+     * @param country		The country of the bank
+     * @param bankIdent		The bank identifier number
+     * @param ktoIdent		The account number
      * @throws IbanException
      */
-    BbanImpl (String country, String bankIdent, String ktoIdent) throws IbanException {
+    protected BbanImpl (String country, String bankIdent, String ktoIdent) throws IbanException {
 	ibanFormat = new IbanFormat(country);
 	BANKIDENT_LENGTH = ibanFormat.getBankIdentLength();
 	KTOIDENT_LENGTH = ibanFormat.getKtoIdentLength();
@@ -70,41 +65,41 @@ class BbanImpl {
     }
 
     /**
-     * Gets the bank ident.
-     * @return	The bank ident number as String.
+     * Get the bank identifier
+     * @return	The bank identifier as String
      */
     public String getBankIdent() {
         return bankIdent;
     }
 
     /**
-     * Gets the BICs of the bank.
-     * @return	A LinkedList of BICs.
+     * Get the bank object of the specific german bank
+     * @return	The bank object of the specific german bank, otherwise null
      */
-    public String getBic() {
-    	return bankGerman.getBic();
+    protected BankGerman getBankGerman() {
+	return this.bankGerman;
     }
-    
+
     /**
-     * Sets the bank ident number
-     * @param bankIdent	The bank ident number.
+     * Set the bank identifier number
+     * @param bankIdent	The bank identifier number
      */
     private void setBankIdent(String bankIdent) {
 	this.bankIdent = bankIdent;
     }
 
     /**
-     * Gets the account number.
-     * @return	The account number as String.
+     * Get the account number
+     * @return	The account number as String
      */
     public String getKtoIdent() {
         return ktoIdent;
     }
 
     /**
-     * Sets the account number. There are some validations and mappings.
+     * Set the account number. There are some validations and mappings for german banks
      * @param ktoIdent	The account number
-     * @param length	How long should the account number be.
+     * @param length	The max length of the account number
      * @throws IbanException 
      */
     private void setKtoIdent(String ktoIdent, int length) throws IbanException {
@@ -166,14 +161,16 @@ class BbanImpl {
 	this.ktoIdent = ktoIdent;
     }
 
-    @Override
+    /** Return the String representation of the BBan
+     * @return The String representation of the BBan (format: bank identifier + account number)
+     */
     public String toString() {
     	return bankIdent + ktoIdent;
     }
     
     /**
-     * Builds the bban code.
-     * @param bankIdent	The given bank ident.
+     * Build the BBan code.
+     * @param bankIdent	The given bank identifier
      * @param ktoIdent	The given account number
      * @throws IbanException
      */

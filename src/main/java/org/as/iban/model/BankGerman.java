@@ -1,7 +1,3 @@
-/**
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban.model;
 
 import java.io.IOException;
@@ -16,7 +12,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * Represents a german bank.
+ * Represents a german bank
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
@@ -43,8 +39,8 @@ public class BankGerman {
 	
 
     /**
-     * Constructor. Reads the bank's information from config file.
-     * @param blz	The BLZ for the german bank (bank ident).
+     * Constructor. Reads the informations for a specific bank from banks_german.xml 
+     * @param blz	The BLZ for a german bank (bank identifier)
      */
     public BankGerman (String blz) {
 	this.blz = blz;
@@ -115,16 +111,16 @@ public class BankGerman {
     }
     
     /**
-     * Gets the current bank ident of the german bank.
-     * @return	The current bank ident.
+     * Get the current bank identifier of the bank
+     * @return	The current bank identifier
      */
     public String getBlz() {
     	return blz;
     }
     
     /**
-     * Sets the bank ident for this bank (i.e. in case of mapping)
-     * @param blz The new bank ident
+     * Set the bank identifier for this bank (i.e. in case of mapping)
+     * @param blz The new bank identifier
      */
     public void setBlz (String blz) {
 	this.blz = blz;
@@ -136,8 +132,8 @@ public class BankGerman {
     }
     
     /**
-     * Gets the BIC of the current bank ident number.
-     * @return	BIC associated with the bank.
+     * Get the BIC of the current bank identifier number
+     * @return	BIC associated with the bank
      */
     public String getBic() {
 	if (this.rule != null) {
@@ -148,20 +144,24 @@ public class BankGerman {
     }
 
     /**
-     * Gets the iban rule associated to the current bank ident number.
-     * @return	The iban rule associated to the current bank ident number.
+     * Get the IBAN ruleID associated to the current bank identifier number
+     * @return	The IBAN ruleID associated to the current bank identifier number
      */
     public String getRuleId() {
         return ruleId;
     }
     
+    /**
+     * Get the IBAN rule associated to the current bank identifier number
+     * @return	The IBAN rule associated to the current bank identifier number
+     */
     public IbanRuleGerman getIbanRule(){
 	return rule;
     }
     
     /**
-     * Gets the name of the current bank.
-     * @return	The name of the current bank.
+     * Get the name of the current bank
+     * @return	The name of the current bank
      */
     private String getName() {
 	return name;
