@@ -11,6 +11,10 @@ import org.as.iban.exception.IbanException;
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
+/**
+ * @author RGierse
+ *
+ */
 public interface Iban {
     
 	//	Defining country codes
@@ -58,7 +62,7 @@ public interface Iban {
        
     
     /**
-     * Returns the iban code as a string.
+     * Returns the string representation of the IBAN
      * @return The iban code with format "country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
      */
     public String toString();

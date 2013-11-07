@@ -47,7 +47,9 @@ public class IbanImpl implements Iban {
 	this.checkDigit = calcCheckDigit(bban);
     }
 
-    @Override
+    /* (non-Javadoc)
+     * @see org.as.iban.Iban#validate()
+     */
     public boolean validate() throws IbanException {
 	validateFormat();
 	if (country.equals(Iban.COUNTRY_CODE_GERMAN)) {
@@ -67,6 +69,11 @@ public class IbanImpl implements Iban {
 	}
     }
 
+    /**
+     * @param bban	The BBan (local bank identifier and account number)
+     * @return		The check digit for the IBAN
+     * @throws IbanException
+     */
     private String calcCheckDigit(BbanImpl bban) throws IbanException {
 	String checkDigit = "00";
 	String ascii = asciiToNumber(shiftIbanToString(bban, checkDigit));
@@ -77,11 +84,16 @@ public class IbanImpl implements Iban {
 	return checkDigit;
     }
     
-    @Override
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     public String toString() {
     	return this.country + this.checkDigit + this.bban.toString();
     }
 
+    /* (non-Javadoc)
+     * @see org.as.iban.Iban#getBic()
+     */
     public String getBic() {
     	return bban.getBic();
     }

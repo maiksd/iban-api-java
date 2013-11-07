@@ -102,7 +102,7 @@ class BbanImpl {
     }
 
     /**
-     * Sets the account number. There are some validations and mappings.
+     * Sets the account number. There are some validations and mappings for german banks
      * @param ktoIdent	The account number
      * @param length	How long should the account number be.
      */
@@ -165,7 +165,9 @@ class BbanImpl {
 	this.ktoIdent = ktoIdent;
     }
 
-    @Override
+    /** Returns the String representation of the BBan
+     * @return The String representation of the BBan (format: bank identifier + account number)
+     */
     public String toString() {
     	return bankIdent + ktoIdent;
     }
