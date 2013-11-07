@@ -5,7 +5,7 @@ package org.as.iban.exception;
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
-public class IbanException extends RuntimeException {
+public class IbanException extends Exception {
 
 	//	Define possible exception messages
     public static final String IBAN_EXCEPTION_MESSAGE_LENGTH = "Invalid IBAN length for Country";

@@ -100,8 +100,9 @@ class BbanImpl {
      * Set the account number. There are some validations and mappings for german banks
      * @param ktoIdent	The account number
      * @param length	The max length of the account number
+     * @throws IbanException 
      */
-    private void setKtoIdent(String ktoIdent, int length) {
+    private void setKtoIdent(String ktoIdent, int length) throws IbanException {
 	// Consider Iban rules for Germany
 	if (country.equals(Iban.COUNTRY_CODE_GERMAN)) {
 	    // Only not standard rules
