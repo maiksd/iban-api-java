@@ -23,7 +23,7 @@ public class IbanImpl implements Iban {
     private BbanImpl bban;
 
     /**
-     * Constructor which sets information for validation.
+     * Constructor for validating a given IBAN
      * @param ibanString	A iban-code with format 
      * 						"country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
      * @throws IbanException
@@ -35,7 +35,7 @@ public class IbanImpl implements Iban {
     }
 
     /**
-     * Constructor which generates a iban-code.
+     * Constructor generating the IBAN for a specific country with the given bank identifier and account number
      * @param country		A country-code.
      * @param bankIdent		A bank ident.
      * @param ktoIdent		A account number
@@ -99,16 +99,16 @@ public class IbanImpl implements Iban {
     }
     
     /**
-     * Generates a shifted iban code (bank-ident|kto-ident|country-code|check-digit).
+     * Generates a shifted iban code (bank-ident|kto-ident|country-code|check-digit)
      * @param bban 
-     * @return The shifted code.
+     * @return The shifted code
      */
     private String shiftIbanToString(BbanImpl bban, String checkDigit) {
     	return bban.toString() + country + checkDigit;
     }
 
     /**
-     * Convert iban code to a string of numbers (the ascii code numbers).
+     * Convert iban code to a string of numbers (the ascii code numbers)
      * @param shiftedIban	The shifted iban code
      * @return The shifted iban code as a string of numbers (the ascii code numbers)
      */
