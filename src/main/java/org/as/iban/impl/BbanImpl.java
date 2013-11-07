@@ -99,7 +99,11 @@ class BbanImpl {
     /**
      * Set the account number. There are some validations and mappings for german banks
      * @param ktoIdent	The account number
+<<<<<<< HEAD
      * @param length	The max length of the account number
+=======
+     * @param length	How long should the account number be.
+>>>>>>> refs/heads/fix_exception
      * @throws IbanException 
      */
     private void setKtoIdent(String ktoIdent, int length) throws IbanException {
