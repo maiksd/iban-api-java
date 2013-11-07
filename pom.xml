@@ -31,7 +31,7 @@
 						-enumerations -types -visibility -inferrel -inferdep -hide java.*
 						-inferrel -collpackages java.util.*</additionalparam>
 					<excludePackageNames></excludePackageNames>
-					<show>protected</show>
+					<show>private</show>
 				</configuration>
 			</plugin>
     </plugins>
