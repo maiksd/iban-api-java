@@ -1,12 +1,7 @@
-/***
- * 2013-10
- * Copyright: Aventum Solutions GmbH
- */
-
 package org.as.iban.exception;
 
 /**
- * Defines a exception that can occur during the process of generating oder validating an iban code.
+ * Defines a exception that can occur during the process of generating oder validating an IBAN
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
@@ -21,8 +16,8 @@ public class IbanException extends RuntimeException {
     public static final String IBAN_EXCEPTION_NO_IBAN_CALCULTATION = "No Iban Calculation for this accountnumber";
     
     /**
-     * Constructor.
-     * @param message	Message of the exception.
+     * Constructor
+     * @param message	Message of the exception
      */
     public IbanException(String message){
     	super(message);

@@ -1,7 +1,3 @@
-/***
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban.impl;
 
 import java.util.Locale;
@@ -13,7 +9,7 @@ import org.as.iban.model.IbanFormat;
 import org.as.iban.model.IbanRuleGerman;
 
 /**
- * Represents the basic bank account number (Bban)
+ * Represents the basic bank account number (BBan)
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
@@ -23,7 +19,7 @@ class BbanImpl {
     private String bankIdent;
     private String ktoIdent;
     private String country;
-    private BankGerman bankGerman;
+    private BankGerman bankGerman = null;
     private IbanRuleGerman ruleGerman;
     IbanFormat ibanFormat;
     
@@ -70,31 +66,31 @@ class BbanImpl {
 
     /**
      * Get the bank identifier
-     * @return	The bank identifier as String.
+     * @return	The bank identifier as String
      */
     public String getBankIdent() {
         return bankIdent;
     }
 
     /**
-     * Get the BIC of the specific bank.
-     * @return	The BIC of the specific german bank, otherwise null
+     * Get the bank object of the specific german bank
+     * @return	The bank object of the specific german bank, otherwise null
      */
-    public String getBic() {
-    	return bankGerman.getBic();
+    protected BankGerman getBankGerman() {
+	return this.bankGerman;
     }
-    
+
     /**
      * Set the bank identifier number
-     * @param bankIdent	The bank identifier number.
+     * @param bankIdent	The bank identifier number
      */
     private void setBankIdent(String bankIdent) {
 	this.bankIdent = bankIdent;
     }
 
     /**
-     * Get the account number.
-     * @return	The account number as String.
+     * Get the account number
+     * @return	The account number as String
      */
     public String getKtoIdent() {
         return ktoIdent;
@@ -164,7 +160,7 @@ class BbanImpl {
 	this.ktoIdent = ktoIdent;
     }
 
-    /** Returns the String representation of the BBan
+    /** Return the String representation of the BBan
      * @return The String representation of the BBan (format: bank identifier + account number)
      */
     public String toString() {
@@ -172,8 +168,8 @@ class BbanImpl {
     }
     
     /**
-     * Builds the BBan code.
-     * @param bankIdent	The given bank identifier.
+     * Build the BBan code.
+     * @param bankIdent	The given bank identifier
      * @param ktoIdent	The given account number
      * @throws IbanException
      */

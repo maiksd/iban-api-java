@@ -1,7 +1,3 @@
-/***
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban.impl;
 
 import java.util.Locale;
@@ -11,7 +7,7 @@ import org.as.iban.exception.IbanException;
 import org.as.iban.model.IbanFormat;
 
 /**
- * Implements the @see org.as.iban.Iban interface.
+ * Implements the @see org.as.iban.Iban interface
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
@@ -24,8 +20,7 @@ public class IbanImpl implements Iban {
 
     /**
      * Constructor for validating a given IBAN
-     * @param ibanString	A iban-code with format 
-     * 						"country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
+     * @param ibanString	A iban-code with format "country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
      * @throws IbanException
      */
     public IbanImpl(String ibanString) throws IbanException{
@@ -36,9 +31,9 @@ public class IbanImpl implements Iban {
 
     /**
      * Constructor generating the IBAN for a specific country with the given bank identifier and account number
-     * @param country		A country-code.
-     * @param bankIdent		A bank ident.
-     * @param ktoIdent		A account number
+     * @param country		The country code
+     * @param bankIdent		The bank identifier
+     * @param ktoIdent		The account number
      * @throws IbanException
      */
     public IbanImpl(String country, String bankIdent, String ktoIdent) throws IbanException{
@@ -95,11 +90,11 @@ public class IbanImpl implements Iban {
      * @see org.as.iban.Iban#getBic()
      */
     public String getBic() {
-    	return bban.getBic();
+    	return bban.getBankGerman().getBic();
     }
     
     /**
-     * Generates a shifted iban code (bank-ident|kto-ident|country-code|check-digit)
+     * Generates the shifted iban code (bank-ident|kto-ident|country-code|check-digit)
      * @param bban 
      * @return The shifted code
      */
@@ -132,8 +127,8 @@ public class IbanImpl implements Iban {
     
     /**
      * Calculates the mod97 of the iban code for the check digit
-     * @param modString	The given String.
-     * @return	The mod97 of the given String.
+     * @param modString	The given String
+     * @return	The mod97 of the given String
      */
     private int mod97 (String modString) {
 	String part = "";
@@ -151,23 +146,23 @@ public class IbanImpl implements Iban {
     }
 
     /**
-     * Sets the country of a given iban code.
-     * @param ibanString	The iban code.
+     * Sets the country of a given IBAN string representation
+     * @param ibanString	The string representation of the IBAN
      */
     private void setCountry(String ibanString) {
     	this.country = ibanString.substring(0, 2).toUpperCase(Locale.ENGLISH);
     }
 
     /**
-     * Sets the check digit of a given iban code.
-     * @param ibanString	The iban code.
+     * Sets the check digit of a given IBAN string representation
+     * @param ibanString	The string representation of the IBAN
      */
     private void setCheckDigit(String ibanString) {
         this.checkDigit = ibanString.substring(2, 4);
     }
 
     /**
-     * Sets the @see org.as.iban.impl.BbanImpl.
+     * Sets the @see org.as.iban.impl.BbanImpl
      * @param bban	The @see org.as.iban.impl.BbanImpl
      */
     private void setBban(BbanImpl bban) {
@@ -175,7 +170,7 @@ public class IbanImpl implements Iban {
     }
  
     /**
-     * Validates if the current iban format is a valid one.
+     * Validates if the current IBAN format is a valid one
      * @throws IbanException
      */
     private void validateFormat() throws IbanException {

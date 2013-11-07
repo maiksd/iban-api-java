@@ -1,7 +1,3 @@
-/**
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban.model;
 
 import java.io.IOException;
@@ -40,7 +36,7 @@ public class IbanFormat {
     }
 
     /**
-     * Reads the iban format information from the config file. 
+     * Reads the iban format information from the config file
      */
     private void readFormatConfig() {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -93,7 +89,7 @@ public class IbanFormat {
 
     /**
      * Gets the defined length for a bank identifier number
-     * @return	The length for a bank identifier number as defined in iban_format.xml
+     * @return	The max length for a bank identifier number as defined in iban_format.xml
      */
     public int getBankIdentLength() {
         return bankIdentLength;

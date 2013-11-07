@@ -1,7 +1,3 @@
-/**
- * 2013-10-xx	RG: new
- */
-
 package org.as.iban.model;
 
 import java.io.IOException;
@@ -16,7 +12,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * Represents a german bank.
+ * Represents a german bank
  * @author Aventum Solutions GmbH (www.aventum-solutions.de)
  *
  */
