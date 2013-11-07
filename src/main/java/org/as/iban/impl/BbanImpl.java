@@ -107,7 +107,7 @@ class BbanImpl {
 	if (country.equals(Iban.COUNTRY_CODE_GERMAN)) {
 	    // Only not standard rules
 	    String ruleId = bankGerman.getRuleId();
-		    
+	    // test
 	    if (ruleId.equals("000100"))
 		throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
 		    
