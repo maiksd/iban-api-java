@@ -1961,7 +1961,7 @@ public class IbanGeneratorGermanTest {
     	
     	assertEquals("DE26450000000010001000", iban.toString());
     	
-    	//	2 Bsp. für eine Kto-Nr, die nicht konvertiert werden darf
+    	//	2 Bsp. fÃ¼r eine KtoNr, die nicht konvertiert werden darf
     	bankIdent = "60000000";
     	ktoIdent = "123456";
     	try{
@@ -2181,7 +2181,7 @@ public class IbanGeneratorGermanTest {
         
     @Test
     public void rule005000(){
-	// Regel nicht ausgeführt im BLZ-Verzeichnis - Standard
+	// Regel nicht ausgefÃ¼hrt im BLZ-Verzeichnis - Standard
 	bankIdent = "28252760";
 	ktoIdent = "130084981";
 	
@@ -2214,7 +2214,7 @@ public class IbanGeneratorGermanTest {
     @Test
     public void rule005200()
     {
-    	//	Erst die, die funktionieren müssen
+    	//	Erst die, die funktionieren mÃ¼ssen
     	// BLZ 67220020
     	bankIdent = "67220020";
     	ktoIdent = "5308810004";
