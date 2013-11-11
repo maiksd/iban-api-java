@@ -48,6 +48,7 @@
 					<excludePackageNames></excludePackageNames>
 					<show>private</show>
 				</configuration>
+<!-- Assembling binaries and javadoc in one file
 				<executions>
 					<execution>
 						<id>generate-javadoc</id>
@@ -58,6 +59,7 @@
 						<inherited>false</inherited>
 					</execution>
 				</executions>
+-->
 			</plugin>
 <!-- Assembling binaries and javadoc in one file
 			<plugin>
