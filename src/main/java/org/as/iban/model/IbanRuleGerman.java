@@ -152,7 +152,7 @@ public class IbanRuleGerman {
 		
 	while (iter.hasNext()) {
 	    Element tempElement = iter.next();
-	    if (tempElement.getAttribute("blz").equals(blz))
+	    if (blz.matches(tempElement.getAttribute("blz")))
 		tempList.add(tempElement.getTextContent());
 	}
 		
@@ -168,7 +168,7 @@ public class IbanRuleGerman {
 	Iterator<MappingKto> iter = listMappingKto.iterator();
 		
 	while (iter.hasNext()) {
-	    if ((iter.next()).getBlz().equals(blz))
+	    if (blz.matches(iter.next().getBlz()))
 		this.mappingKto = true;
 	}
 	return mappingKto;
@@ -185,7 +185,7 @@ public class IbanRuleGerman {
 	
 	while (iter.hasNext()) {
 	    MappingKto tempMapping = iter.next();
-	    if (tempMapping.getBlz().equals(blz) && tempMapping.getFrom().equals(kto))
+	    if (blz.matches(tempMapping.getBlz()) && kto.matches(tempMapping.getFrom()))
 	    	return tempMapping.getTo();
 	}
 	return null;
@@ -216,7 +216,7 @@ public class IbanRuleGerman {
 		
 	while (iter.hasNext()) {
 	    Element tempElement = iter.next();
-	    if (tempElement.getAttribute("from").equals(kto.substring(0, 3)))
+	    if (kto.substring(0, 3).matches(tempElement.getAttribute("from")))
 		return tempElement.getTextContent();
 	}
 	
@@ -232,7 +232,7 @@ public class IbanRuleGerman {
 	Iterator<Element> iter = listMappingBlz.iterator();
 		
 	while (iter.hasNext()) {
-	    if (iter.next().getAttribute("from").equals(blz))
+	    if (blz.matches(iter.next().getAttribute("from")))
 		this.mappingBlz = true;
 	}
 	return mappingBlz;
@@ -248,7 +248,7 @@ public class IbanRuleGerman {
 		
 	while (iter.hasNext()) {
 	    Element tempElement = iter.next();
-	    if (tempElement.getAttribute("from").equals(blz))
+	    if (blz.matches(tempElement.getAttribute("from")))
 		return tempElement.getTextContent();
 	}
 	return null;
@@ -263,7 +263,7 @@ public class IbanRuleGerman {
 	Iterator<Element> iter = listModificationKto.iterator();
 		
 	while (iter.hasNext()) {
-	    if (iter.next().getAttribute("blz").equals(blz))
+	    if (blz.matches(iter.next().getAttribute("blz")))
 		this.modificationKto = true;
 	}
 	return modificationKto;
@@ -280,7 +280,7 @@ public class IbanRuleGerman {
 		
 	while (iter.hasNext()) {
 	    Element tempElement = iter.next();
-	    if (tempElement.getAttribute("blz").equals(blz))
+	    if (blz.matches(tempElement.getAttribute("blz")))
 		tempList.add(tempElement.getTextContent());
 	}
 		
