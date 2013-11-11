@@ -26,8 +26,6 @@
 			    <executions>
 			        <execution>
 			            <id>default-jar</id>
-			            <phase>none</phase>
-			            <inherited>false</inherited>
 			        </execution>
 			    </executions>
 			</plugin>		
@@ -48,39 +46,7 @@
 					<excludePackageNames></excludePackageNames>
 					<show>private</show>
 				</configuration>
-<!-- Assembling binaries and javadoc in one file
-				<executions>
-					<execution>
-						<id>generate-javadoc</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>javadoc</goal>
-						</goals>
-						<inherited>false</inherited>
-					</execution>
-				</executions>
--->
 			</plugin>
-<!-- Assembling binaries and javadoc in one file
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>src/main/assembly/assemble_jar.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>		
--->	
 			<plugin>
 			    <groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -127,8 +93,8 @@
 				    <configuration>
 				        <!-- Sets the VM argument line used when unit tests are run. -->
 				        <argLine>${surefireArgLine}</argLine>
-				        <!-- Skips unit tests if the value of skip.unit.tests property is true -->
-				        <skipTests>${skip.unit.tests}</skipTests>
+				        <!-- Skips unit tests if the value of skip.unit.tests property is true --> 
+				        <skipTests>true</skipTests>
 				    </configuration>
 				</plugin>
 		</plugins>
