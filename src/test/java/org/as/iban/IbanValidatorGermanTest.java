@@ -394,4 +394,93 @@ public class IbanValidatorGermanTest {
 	}
     }
     
+    @Test
+    public void rule002001() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE58500700100000009999");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE80500700100092777202");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE76500700100000123456");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+    }
+    
+    @Test
+    public void rule002101() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE81360200300000305200");
+	    assertTrue(iban.validate());
+	    assertEquals("NBAGDE3EXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE09350200300000305200");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE03360200300000900826");
+	    assertTrue(iban.validate());
+	    assertEquals("NBAGDE3EXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE95360200300000900826");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE71360200300000705020");
+	    assertTrue(iban.validate());
+	    assertEquals("NBAGDE3EXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE10365200300000705020");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE18360200300009197354");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE12362200300000012345");
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+	
+    }
 }
