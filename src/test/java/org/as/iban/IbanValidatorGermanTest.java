@@ -481,6 +481,93 @@ public class IbanValidatorGermanTest {
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
+    }
+    
+    @Test
+    public void rule002200() {
+	Iban iban = null;
 	
+	try {
+	    iban = new IbanImpl("DE36430609670001111111");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule002300() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE43265900250000000700");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule002400() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE14360602950000000345");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule002500() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE49641501820002777939");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule002800() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE63250502990000017095");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE69250501800000017095");
+	    assertTrue(iban.validate());
+	    assertEquals("SPKHDE2HXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule002900() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE81512108002600123456");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE02512108000260123456");
+	    assertTrue(iban.validate());
+	    assertEquals("SOGEDEFFXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
     }
 }
