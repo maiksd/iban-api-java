@@ -180,11 +180,6 @@ public class IbanImpl implements Iban {
 	// Validation common IBAN-Format
 	if (!this.toString().matches(ibanFormat.getRegexp()))
 	    throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_FORMAT);
-		
-	// Special Validation for countries
-	if (country == Iban.COUNTRY_CODE_GERMAN){
-	    System.out.println("ValidationConfig read");
-	}
     }
 
 }

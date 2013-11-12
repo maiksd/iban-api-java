@@ -14,6 +14,7 @@ public class IbanException extends Exception {
     public static final String IBAN_EXCEPTION_MESSAGE_BANK_LENGTH = "Invalid BankIdent for Country";
     public static final String IBAN_EXCEPTION_UNSUPPORTED_COUNTRY = "Country code ist not supported in this version";
     public static final String IBAN_EXCEPTION_NO_IBAN_CALCULTATION = "No Iban Calculation for this accountnumber";
+    public static final String IBAN_EXCEPTION_INVALID_BANKIDENT = "No existing bank with this BLZ";
     
     /**
      * Constructor

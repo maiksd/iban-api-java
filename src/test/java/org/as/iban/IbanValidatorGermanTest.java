@@ -79,8 +79,9 @@ public class IbanValidatorGermanTest {
     public void rule000800() {
 	Iban iban = null;
 	
+	// Bsp. 2
 	try {
-	    iban = new IbanImpl("DE80500202000000038000");
+	    iban = new IbanImpl("DE46500202000030009963");
 	    assertTrue(iban.validate());
 	    assertEquals("BHFBDEFF500", iban.getBic());
 	} catch (IbanException e) {
@@ -94,5 +95,72 @@ public class IbanValidatorGermanTest {
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}
+	
+	// Bsp. 3
+	try {
+	    iban = new IbanImpl("DE02500202000040033086");
+	    assertTrue(iban.validate());
+	    assertEquals("BHFBDEFF500", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE41300205000040033086");
+	    assertFalse(iban.validate());
+	    assertEquals("BHFBDEFF500", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+
+	// Bsp. 4
+	try {
+	    iban = new IbanImpl("DE55500202000050017409");
+	    assertTrue(iban.validate());
+	    assertEquals("BHFBDEFF500", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE75201202000050017409");
+	    assertFalse(iban.validate());
+	    assertEquals("BHFBDEFF500", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+
+	// Bsp. 5
+	try {
+	    iban = new IbanImpl("DE38500202000055036107");
+	    assertTrue(iban.validate());
+	    assertEquals("BHFBDEFF500", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE187052202000055036107");
+	} catch (IbanException e) {
+	    assertEquals(e.getMessage(), IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
+	}
+
+	// Bsp. 6
+	try {
+	    iban = new IbanImpl("DE98500202000070049754");
+	    assertTrue(iban.validate());
+	    assertEquals("BHFBDEFF500", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE31100202000070049754");
+	    assertFalse(iban.validate());
+	    assertEquals("BHFBDEFF500", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+
     }
 }

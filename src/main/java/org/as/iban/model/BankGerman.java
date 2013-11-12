@@ -7,6 +7,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.as.iban.exception.IbanException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -41,8 +42,9 @@ public class BankGerman {
     /**
      * Constructor. Reads the informations for a specific bank from banks_german.xml 
      * @param blz	The BLZ for a german bank (bank identifier)
+     * @throws Exception 
      */
-    public BankGerman (String blz) {
+    public BankGerman (String blz) throws IbanException {
 	this.blz = blz;
 
 	try {
@@ -82,10 +84,20 @@ public class BankGerman {
     
     /**
      * Reads the configuration of the bank from config file
+     * @throws IbanException 
      */
-    private void readBankConfig() {
-	NodeList nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
-		
+    private void readBankConfig() throws IbanException {
+
+	NodeList nodeMapping = null;
+	try {
+	    nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
+	} catch (Exception e) {
+	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
+	}
+	
+	if (nodeMapping.getLength() == 0)
+	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
+	
 	for (int j = 0; j < nodeMapping.getLength(); j++) {
 	    if (nodeMapping.item(j).getNodeName() == "lfdnr") {
 		NodeList nodeBank = documentBank.getElementById("_" + nodeMapping.item(j).getTextContent()).getChildNodes();
@@ -121,8 +133,9 @@ public class BankGerman {
     /**
      * Set the bank identifier for this bank (i.e. in case of mapping)
      * @param blz The new bank identifier
+     * @throws IbanException 
      */
-    public void setBlz (String blz) {
+    public void setBlz (String blz) throws IbanException {
 	this.blz = blz;
 	readBankConfig();
 	if (ruleId.equals("000000") || ruleId.equals("000100"))
