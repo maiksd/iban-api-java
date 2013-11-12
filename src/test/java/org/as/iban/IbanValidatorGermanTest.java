@@ -40,7 +40,7 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE98720207001234567860");
-	    assertTrue("No expected exception", false);
+	    assertTrue(iban.validate());
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -52,7 +52,7 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE00510108006161604670");
-	    assertTrue("No expected exception", false);
+	    assertTrue(iban.validate());
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -76,14 +76,14 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE00257800220999499999");
-	    assertTrue("No expected exception", false);
+	    assertTrue(iban.validate());
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
 	
 	try {
 	    iban = new IbanImpl("DE00500400330012345678");
-	    assertTrue("No expected exception", false);
+	    assertTrue(iban.validate());
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -186,9 +186,9 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE187052202000055036107");
-	    assertTrue("No expected exception", false);
+	    assertTrue(iban.validate());
 	} catch (IbanException e) {
-	    assertEquals(e.getMessage(), IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
+	    assertEquals(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT, e.getMessage());
 	}
 
 	// Bsp. 6
@@ -286,7 +286,7 @@ public class IbanValidatorGermanTest {
 	Iban iban = null;
 	
 	try {
-	    iban = new IbanImpl("DEDE44508500495000002096");
+	    iban = new IbanImpl("DE44508500495000002096");
 	    assertFalse(iban.validate());
 	} catch (IbanException e) {
 	    e.printStackTrace();
@@ -417,10 +417,10 @@ public class IbanValidatorGermanTest {
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}
-// TODO: richtig?	
+	
 	try {
 	    iban = new IbanImpl("DE76500700100000123456");
-	    assertFalse(iban.validate());
+	    assertTrue(iban.validate());
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -484,7 +484,7 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE12362200300000012345");
-	    assertTrue("No expected exception", false);
+	    assertTrue(iban.validate());
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -629,7 +629,7 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE46630204500044613352");
-	    assertTrue("No expected exception", false);
+	    assertTrue(iban.validate());
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}

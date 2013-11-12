@@ -3410,16 +3410,20 @@
 	<!-- Rule 0036-00 HSH Nordbank AG, Hamburg und Kiel -->
 	<rule id="_003600">
 		<no_calculation>
-			<kto_number_range blz="20050000">(\b([0]{1,4})*([09]\d{5})\Z|\b([0]{1,2})*([0-26-9]\d{7})\Z|\b([0]{1})*([09]\d{8})\Z|\b[0278]\d{9}(?&lt;!70\d{8})(?&lt;!85\d{8})\Z)</kto_number_range>
-			<kto_number_range blz="21050000">(\b([0]{1,4})*([09]\d{5})\Z|\b([0]{1,2})*([0-26-9]\d{7})\Z|\b([0]{1})*([09]\d{8})\Z|\b[0278]\d{9}(?&lt;!70\d{8})(?&lt;!85\d{8})\Z)</kto_number_range>
-			<kto_number_range blz="23050000">(\b([0]{1,4})*([09]\d{5})\Z|\b([0]{1,2})*([0-26-9]\d{7})\Z|\b([0]{1})*([09]\d{8})\Z|\b[0278]\d{9}(?&lt;!70\d{8})(?&lt;!85\d{8})\Z)</kto_number_range>
+			<kto_number_range blz="\d{8}">\b\d{1,5}\Z</kto_number_range>
+			<kto_number_range blz="\d{8}">\b(9\d{5}|\d{7}|[1-2]\d{7})\Z</kto_number_range>
+			<kto_number_range blz="\d{8}">\b[6-9]\d{7}\Z</kto_number_range>
+			<kto_number_range blz="\d{8}">\b9\d{8}\Z</kto_number_range>
+			<kto_number_range blz="\d{8}">\b2\d{9}\Z</kto_number_range>
+			<kto_number_range blz="\d{8}">\b(7[1-9]\d{8}|8[0-4]\d{8})\Z</kto_number_range>
+			<kto_number_range blz="\d{8}">\b8[6-9]\d{8}\Z</kto_number_range>
 		</no_calculation>
 		<mappings_blz>
 			<mapping from="20050000">21050000</mapping>
 			<mapping from="23050000">21050000</mapping>
 		</mappings_blz>
 		<modification_kto>
-			<modification blz="21050000">\b([0]{1,4})*([1-8]\d{5})\Z;$2000</modification>
+			<modification blz="21050000">\b([1-8]\d{5})\Z;$1000</modification>
 		</modification_kto>
 	</rule>
 	
