@@ -1092,4 +1092,94 @@ public class IbanValidatorGermanTest {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
     }
+    
+    @Test
+    public void rule004300() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE49666500850000000868");
+	    assertTrue(iban.validate());
+	    assertEquals("PZHSDE66XXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE29606510700000012602");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule004400() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE29680501010000000202");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule004500() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE40505101750012345678");
+	    assertTrue(iban.validate());
+	    assertEquals("ESSEDE5FXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule004600() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE62310108331234567890");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE68101206001234567890");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule004700() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE47601333000001234567");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE33601333001234567800");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE80550333000012345678");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
 }
