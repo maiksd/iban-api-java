@@ -6,6 +6,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.as.iban.exception.IbanException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -29,16 +30,18 @@ public class IbanFormat {
     /**
      * Constructor for the IbanFormat for a specific country
      * @param countryCode	The country code for which the IBAN format definition is loaded
+     * @throws IbanException 
      */
-    public IbanFormat(String countryCode) {
+    public IbanFormat(String countryCode) throws IbanException {
 		this.countryCode = countryCode;
 		readFormatConfig();
     }
 
     /**
      * Reads the iban format information from the config file
+     * @throws IbanException 
      */
-    private void readFormatConfig() {
+    private void readFormatConfig() throws IbanException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder;
 		Document document = null;
@@ -63,8 +66,16 @@ public class IbanFormat {
 		    System.exit(-1);
 		}
 		
-		NodeList nodeFormat = document.getElementById(countryCode).getChildNodes();
-		
+		NodeList nodeFormat = null;
+		try {
+		    nodeFormat = document.getElementById(countryCode).getChildNodes();
+		} catch (Exception e) {
+		    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
+		}
+
+		if (nodeFormat.getLength() == 0)
+		    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
+
 		for (int i = 0; i < nodeFormat.getLength(); i++){
 		    switch (nodeFormat.item(i).getNodeName()){
 		    	case "regexp":

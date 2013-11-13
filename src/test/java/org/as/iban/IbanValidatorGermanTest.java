@@ -1056,4 +1056,40 @@ public class IbanValidatorGermanTest {
 	    e.printStackTrace();
 	}
     }
+    
+    @Test
+    public void rule004200() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE61694000000123456789");
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+	
+	try {
+	    iban = new IbanImpl("DE79773000000050463999");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE61850000000012345678");
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+	
+	try {
+	    iban = new IbanImpl("DE24545000000012300123");
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+    }
 }
