@@ -40,7 +40,8 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE98720207001234567860");
-	    assertTrue(iban.validate());
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -52,7 +53,8 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE00510108006161604670");
-	    assertTrue(iban.validate());
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -76,14 +78,16 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE00257800220999499999");
-	    assertTrue(iban.validate());
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
 	
 	try {
 	    iban = new IbanImpl("DE00500400330012345678");
-	    assertTrue(iban.validate());
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -186,7 +190,8 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE187052202000055036107");
-	    assertTrue(iban.validate());
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT, e.getMessage());
 	}
@@ -420,7 +425,8 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE76500700100000123456");
-	    assertTrue(iban.validate());
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -484,7 +490,8 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE12362200300000012345");
-	    assertTrue(iban.validate());
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -629,7 +636,8 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE46630204500044613352");
-	    assertTrue(iban.validate());
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
 	}
@@ -645,6 +653,103 @@ public class IbanValidatorGermanTest {
 	    iban = new IbanImpl("DE92660202861457032621");
 	    assertTrue(iban.validate());
 	    assertEquals("HYVEDEMM475", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule003200() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE70762200731210100047");
+	    assertTrue(iban.validate());
+	    assertEquals("HYVEDEMM419", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE92660202861457032621");
+	    assertTrue(iban.validate());
+	    assertEquals("HYVEDEMM475", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE06710221823200000012");
+	    assertTrue(iban.validate());
+	    assertEquals("HYVEDEMM453", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE07100208900005951950");
+	    assertTrue(iban.validate());
+	    assertEquals("HYVEDEMM488", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE11850200860847321750");
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+    }
+    
+    @Test
+    public void rule003301() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE76700202702950219435");
+	    assertTrue(iban.validate());
+	    assertEquals("HYVEDEMMXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE92660202861457032621");
+	    assertTrue(iban.validate());
+	    assertEquals("HYVEDEMM475", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE55700202700000000897");
+	    assertTrue(iban.validate());
+	    assertEquals("HYVEDEMMXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE36700202700847321750");
+	    assertTrue(iban.validate());
+	    assertEquals("HYVEDEMMXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE67720200700847321750");
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+	
+	try {
+	    iban = new IbanImpl("DE00700202700007777777");
+	    assertFalse(iban.validate());
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}

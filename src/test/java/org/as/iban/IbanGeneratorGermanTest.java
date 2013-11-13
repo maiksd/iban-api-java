@@ -38,7 +38,7 @@ public class IbanGeneratorGermanTest {
 	ktoIdent = "12345678";
 	try{
 	    Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
 	}
 	catch (IbanException e) {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -61,7 +61,7 @@ public class IbanGeneratorGermanTest {
 		ktoIdent = "1234567690";
 		try{
 		    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-		    assertTrue("No expected exception", false);
+		    assertTrue("Asserting exception", false);
 		}
 		catch (IbanException e) {
 		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -71,7 +71,7 @@ public class IbanGeneratorGermanTest {
 		ktoIdent = "1234567860";
 		try{
 		    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-		    assertTrue("No expected exception", false);
+		    assertTrue("Asserting exception", false);
 		}
 		catch (IbanException e) {
 		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -84,7 +84,7 @@ public class IbanGeneratorGermanTest {
 		ktoIdent = "6161604670";
 		try{
 		    Iban iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-		    assertTrue("No expected exception", false);
+		    assertTrue("Asserting exception", false);
 		}
 		catch (IbanException e) {
 		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -191,7 +191,7 @@ public class IbanGeneratorGermanTest {
 		ktoIdent = "998761700";
 		try {
 		    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-		    assertTrue("No expected exception", false);
+		    assertTrue("Asserting exception", false);
 		}
 		catch (IbanException e) {
 		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -835,7 +835,7 @@ public class IbanGeneratorGermanTest {
     	
     	try {
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -906,7 +906,7 @@ public class IbanGeneratorGermanTest {
     	
     	try {
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1119,7 +1119,7 @@ public class IbanGeneratorGermanTest {
     	
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-    	    assertTrue("No expected exception", false);
+    	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1211,7 +1211,7 @@ public class IbanGeneratorGermanTest {
     	
     	try {
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1351,7 +1351,7 @@ public class IbanGeneratorGermanTest {
     	
     	try {
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1428,7 +1428,7 @@ public class IbanGeneratorGermanTest {
     	
     	try {
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1669,7 +1669,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "0000000000";
     	try {
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1680,7 +1680,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "0000099999";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1691,7 +1691,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "0000900000";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1702,7 +1702,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "0029999999";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1713,7 +1713,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "0060000000";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1724,7 +1724,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "0099999999";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1735,7 +1735,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "0900000000";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1746,7 +1746,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "0999999999";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
  	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1757,7 +1757,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "2000000000";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1768,7 +1768,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "2999999999";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1779,7 +1779,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "7100000000";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
   	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1790,7 +1790,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "8499999999";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1801,7 +1801,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "8600000000";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
   	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1812,7 +1812,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "8999999999";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
   	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -1992,7 +1992,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "123456";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
  	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -2002,7 +2002,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "65400111";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
  	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
@@ -2353,7 +2353,7 @@ public class IbanGeneratorGermanTest {
     	ktoIdent = "1234567890";
     	try{
     	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("No expected exception", false);
+	    assertTrue("Asserting exception", false);
   	}
     	catch (IbanException e) {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
