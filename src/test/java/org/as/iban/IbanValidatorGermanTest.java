@@ -997,4 +997,63 @@ public class IbanValidatorGermanTest {
 	    e.printStackTrace();
 	}
     }
+    
+    @Test
+    public void rule003900() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE13280200501234567890");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE29266214131234567890");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule004001() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE17680523280006015002");
+	    assertTrue(iban.validate());
+	    assertEquals("SOLADES1STF", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE83680513100006015002");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule004100() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE96500604000000011404");
+	    assertTrue(iban.validate());
+	    assertEquals("GENODEFFXXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE27622200001234567890");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
 }
