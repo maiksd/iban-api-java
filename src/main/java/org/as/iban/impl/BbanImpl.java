@@ -125,8 +125,16 @@ class BbanImpl {
 				
 		// Account mapping
 		if (ruleGerman.isMappingKto(bankIdent)){
-		    if (ruleGerman.getMappedKto(bankIdent, ktoIdent) != null)
+		    // remember the unmapped account number
+		    String ktoIdentOld = ktoIdent;
+		    if (ruleGerman.getMappedKto(bankIdent, ktoIdent) != null) 
 			ktoIdent = ruleGerman.getMappedKto(bankIdent, ktoIdent);
+		    
+		    // in case of new bank identifier for account number set it here
+		    if (ruleGerman.getMappedBlz(bankIdent, ktoIdentOld) != null) {
+			setBankIdent(ruleGerman.getMappedBlz(bankIdent, ktoIdentOld));
+			bankGerman.setBlz(bankIdent);
+		    }
 		}
 				
 		// KtoKr Mapping

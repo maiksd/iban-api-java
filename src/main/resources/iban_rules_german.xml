@@ -3716,7 +3716,7 @@
 	
 	<!-- Rule 0053-00 Landesbank Baden-Württemberg / Baden-Württembergische Bank -->
 	<rule id="_005300">
-		<mappings_kto blz="55050000">
+		<mappings_kto blz="55050000" blz_new="60050101">
 			<mapping from="35000">7401555913</mapping>
 			<mapping from="119345106">7401555906</mapping>
 			<mapping from="908">7401507480</mapping>
@@ -3732,7 +3732,7 @@
 			<mapping from="55020100">7401555872</mapping>
 			<mapping from="110149226">7401512248</mapping>
 		</mappings_kto>
-		<mappings_kto blz="60020030">
+		<mappings_kto blz="60020030" blz_new="60050101">
 			<mapping from="1047444300">7871538395</mapping>
 			<mapping from="1040748400">0001366705</mapping>
 			<mapping from="1000617900">0002009906</mapping>
@@ -3742,7 +3742,7 @@
 			<mapping from="1000919900">7871531505</mapping>
 			<mapping from="1054290000">7871521216</mapping>
 		</mappings_kto>
-		<mappings_kto blz="60050000">
+		<mappings_kto blz="60050000" blz_new="60050101">
 			<mapping from="1523">0001364934</mapping>
 			<mapping from="2811">0001367450</mapping>
 			<mapping from="2502">0001366705</mapping>
@@ -3756,35 +3756,24 @@
 			<mapping from="2535">0001119897</mapping>
 			<mapping from="5500">0001375703</mapping>
 		</mappings_kto>
-		<mappings_kto blz="66020020">
+		<mappings_kto blz="66020020" blz_new="60050101">
 			<mapping from="4002401000">7495500967</mapping>
 			<mapping from="4000604100">0002810030</mapping>
 			<mapping from="4002015800">7495530102</mapping>
 			<mapping from="4003746700">7495501485</mapping>
 		</mappings_kto>
-		<mappings_kto blz="66050000">
+		<mappings_kto blz="66050000" blz_new="60050101">
 			<mapping from="86567">0001364934</mapping>
 			<mapping from="86345">7402046641</mapping>
 			<mapping from="85304">7402045439</mapping>
 			<mapping from="85990">7402051588</mapping>
 		</mappings_kto>
-		<mappings_kto blz="86050000">
+		<mappings_kto blz="86050000" blz_new="60050101">
 			<mapping from="1016">7461500128</mapping>
 			<mapping from="3535">7461505611</mapping>
 			<mapping from="2020">7461500018</mapping>
 			<mapping from="4394">7461505714</mapping>
 		</mappings_kto>
-		<mappings_blz>
-			<mapping from="55050000">60050101</mapping>
-			<mapping from="60020030">60050101</mapping>
-			<mapping from="60050000">60050101</mapping>
-			<mapping from="66020020">60050101</mapping>
-			<mapping from="66050000">60050101</mapping>
-			<mapping from="86050000">60050101</mapping>
-		</mappings_blz>
-		<mappings_bic>
-			<mapping blz="\b\d{8}\Z">SOLADEST600</mapping>
-		</mappings_bic>
 	</rule>
 	
 	<!-- Rule 0054-00 Evangelische Darlehnsgenossenschaft eG -->

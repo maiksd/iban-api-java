@@ -99,6 +99,7 @@ public class IbanRuleGerman {
 						    
 			case "mappings_kto":
 			    MappingKto mapKto = new MappingKto(((Element)element.getParentNode()).getAttribute("blz"));
+			    mapKto.setBlzNew(((Element)element.getParentNode()).getAttribute("blz_new"));
 			    mapKto.setFrom(element.getAttribute("from"));
 			    mapKto.setTo(element.getTextContent());
 			    listMappingKto.add(mapKto);
@@ -190,7 +191,23 @@ public class IbanRuleGerman {
 	}
 	return null;
     }
-    
+
+    /**
+     * Get the mapped bank identifier for a given bank identifier number and a specific account number
+     * @param blz	The given bank identifier number
+     * @return	The mapped account number
+     */
+    public String getMappedBlz(String blz, String kto) {
+	Iterator<MappingKto> iter = listMappingKto.iterator();
+	
+	while (iter.hasNext()) {
+	    MappingKto tempMapping = iter.next();
+	    if (blz.matches(tempMapping.getBlz()) && kto.matches(tempMapping.getFrom()))
+	    	return tempMapping.getBlzNew();
+	}
+	return null;
+    }
+
     /**
      * Check for bank identifier mappings to an account number circle to a given account number
      * @param kto	The given account number
@@ -239,7 +256,7 @@ public class IbanRuleGerman {
     }
     
     /**
-     * Get the mapped bank identifier number circle for a given bank identifier number
+     * Get the mapped bank identifier for a given bank identifier number
      * @param blz	The given bank identifier number
      * @return	The mapped account number
      */
@@ -328,12 +345,13 @@ public class IbanRuleGerman {
 	private String blz;
 	private String from;
 	private String to;
+	private String blzNew;
 		
 	/**
 	 * Constructor
 	 * @param blz	The bank ident number of the bank
 	 */
-	MappingKto (String blz){
+	MappingKto (String blz) {
 	    this.blz = blz;
 	}
 		
@@ -351,6 +369,14 @@ public class IbanRuleGerman {
 	 */
 	private void setTo (String to) {
 	    this.to = to;
+	}
+	
+	/**
+	 * Set the new bank identifier
+	 * @param blzNew	The new bank identifier
+	 */
+	private void setBlzNew (String blzNew) {
+	    this.blzNew = blzNew;
 	}
 		
 	/**
@@ -375,6 +401,14 @@ public class IbanRuleGerman {
 	 */
 	private String getBlz() {
 	    return this.blz;
+	}
+	
+	/**
+	 * Get the new bank identifier (in case of matching account number)
+	 * @return	The new Bank identifier
+	 */
+	private String getBlzNew() {
+	    return this.blzNew;
 	}
     }
 }

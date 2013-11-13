@@ -2441,6 +2441,18 @@ public class IbanGeneratorGermanTest {
     	
     	assertEquals("DE61600501017461505611", iban.toString());
     	assertEquals("SOLADEST600", iban.getBic());
+    	
+    	// BLZ 55050000 (no account mapping)
+    	bankIdent = "55050000";
+    	ktoIdent = "4658732104";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	
+    	assertEquals("DE85550500004658732104", iban.toString());
+    	assertEquals("SOLADEST550", iban.getBic());
     }
     
     @Test

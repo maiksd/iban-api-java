@@ -1182,4 +1182,110 @@ public class IbanValidatorGermanTest {
 	    e.printStackTrace();
 	}
     }
+    
+    @Test
+    public void rule004800() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE12360102001231234567");
+	    assertTrue(iban.validate());
+	    assertEquals("VONEDE33XXX", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE04101208001231234567");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule004900() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE26300600109911820001");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE19300600100001991182");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE39570600001234967890");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule005000() {
+	// Regel nicht ausgeführt im BLZ-Verzeichnis -> Standard
+
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE24285500000130084981");
+	    assertTrue(iban.validate());
+	    assertEquals("BRLADE21LER", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule005100() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE13600501010502502502");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
+    public void rule005200() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE30694210207481501341");
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	}
+    }
+    
+    @Test
+    public void rule005300() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE85550500001234567890");
+	    assertTrue(iban.validate());
+	    assertEquals("SOLADEST550", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE64550500000119345106");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
 }
