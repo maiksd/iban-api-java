@@ -202,7 +202,7 @@ public class IbanRuleGerman {
 	
 	while (iter.hasNext()) {
 	    MappingKto tempMapping = iter.next();
-	    if (blz.matches(tempMapping.getBlz()) && kto.matches(tempMapping.getFrom()))
+	    if (blz.matches(tempMapping.getBlz()) && kto.matches(tempMapping.getFrom()) && !tempMapping.getBlzNew().isEmpty())
 	    	return tempMapping.getBlzNew();
 	}
 	return null;
