@@ -1288,4 +1288,24 @@ public class IbanValidatorGermanTest {
 	    e.printStackTrace();
 	}
     }
+    
+    @Test
+    public void rule005400() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE42210602370163107000");
+	    assertTrue(iban.validate());
+	    assertEquals("GENODEF1EDG", iban.getBic());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE42100602370024796740");
+	    assertFalse(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
 }
