@@ -30,10 +30,6 @@ public class BankGerman {
     private String name;
     private IbanRuleGerman rule;
 
-    DocumentBuilderFactory factoryMapping = DocumentBuilderFactory.newInstance();
-    DocumentBuilder builderMapping;
-    Document documentMapping = null;
-	
     DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
     DocumentBuilder builderBank;
     Document documentBank = null;
@@ -47,15 +43,19 @@ public class BankGerman {
     public BankGerman (String blz) throws IbanException {
 	this.blz = blz;
 
+	readBankConfig();
+	if (ruleId.equals("000000") || ruleId.equals("000100"))
+	    this.rule = null;
+	else
+	    this.rule = new IbanRuleGerman("_" + ruleId);
+    }
+    
+    /**
+     * Reads the configuration of the bank from config file
+     * @throws IbanException 
+     */
+    private void readBankConfig() throws IbanException {
 	try {
-	    factoryMapping.setNamespaceAware(true);
-	    factoryMapping.setValidating(true);
-	    factoryMapping.setAttribute(SCHEMA_LANG, XML_SCHEMA);
-	    factoryMapping.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/mapping_german.xsd"));
-	    
-	    builderMapping = factoryMapping.newDocumentBuilder();
-	    documentMapping = builderMapping.parse(this.getClass().getResourceAsStream("/mapping_german.xml"));
-	    
 	    factoryBank.setNamespaceAware(true);
 	    factoryBank.setValidating(true);
 	    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
@@ -74,50 +74,29 @@ public class BankGerman {
 	    e.printStackTrace();
 	    System.exit(-1);
 	}
-	
-	readBankConfig();
-	if (ruleId.equals("000000") || ruleId.equals("000100"))
-	    this.rule = null;
-	else
-	    this.rule = new IbanRuleGerman("_" + ruleId);
-    }
-    
-    /**
-     * Reads the configuration of the bank from config file
-     * @throws IbanException 
-     */
-    private void readBankConfig() throws IbanException {
 
-	NodeList nodeMapping = null;
+	NodeList nodeBank = null;
+	
 	try {
-	    nodeMapping = documentMapping.getElementById("_" + blz).getChildNodes();
+	    nodeBank = documentBank.getElementById("_" + this.blz).getChildNodes();
 	} catch (Exception e) {
 	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
 	}
-	
-	if (nodeMapping.getLength() == 0)
+	    	    
+	if (nodeBank.getLength() == 0)
 	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
 	
-	for (int j = 0; j < nodeMapping.getLength(); j++) {
-	    if (nodeMapping.item(j).getNodeName() == "lfdnr") {
-		NodeList nodeBank = documentBank.getElementById("_" + nodeMapping.item(j).getTextContent()).getChildNodes();
-	    	    
-		for (int i = 0; i < nodeBank.getLength(); i++){
-		    switch (nodeBank.item(i).getNodeName()){
-		    case "blz":
-			this.blz = nodeBank.item(i).getTextContent();
-			break;
-		    case "bic":
-			if (!nodeBank.item(i).getTextContent().isEmpty())
-			    this.bic = nodeBank.item(i).getTextContent();
-			break;
-		    case "rule":
-			this.ruleId = nodeBank.item(i).getTextContent();
-			break;
-		    case "name":
-			this.name = nodeBank.item(i).getTextContent();
-		    }
-		}
+	for (int i = 0; i < nodeBank.getLength(); i++){
+	    switch (nodeBank.item(i).getNodeName()){
+	    case "bic":
+		if (!nodeBank.item(i).getTextContent().isEmpty())
+		    this.bic = nodeBank.item(i).getTextContent();
+		break;
+	    case "rule":
+		this.ruleId = nodeBank.item(i).getTextContent();
+		break;
+	    case "name":
+		this.name = nodeBank.item(i).getTextContent();
 	    }
 	}
     }
