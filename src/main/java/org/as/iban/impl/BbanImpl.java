@@ -109,7 +109,7 @@ class BbanImpl {
 	    String ruleId = bankGerman.getRuleId();
 
 	    if (ruleId.equals("000100"))
-		throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
+		throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION);
 		    
 	    if (!ruleId.equals("000000")){
 		// Remove leading '0'
@@ -119,7 +119,7 @@ class BbanImpl {
 		    // check Excluded accounts
 		    for (int i = 0; i < ruleGerman.getRegexpNoCalculation(bankIdent).size(); i++) {
 			if (ktoIdent.matches(ruleGerman.getRegexpNoCalculation(bankIdent).get(i)))
-			    throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION);
+			    throw new IbanException(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION);
 		    }
 		}
 				

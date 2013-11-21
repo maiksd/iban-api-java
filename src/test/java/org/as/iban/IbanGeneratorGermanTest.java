@@ -41,7 +41,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
 	}
 	catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     @Test
@@ -64,7 +64,7 @@ public class IbanGeneratorGermanTest {
 		    assertTrue("Asserting exception", false);
 		}
 		catch (IbanException e) {
-		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 		}
 	
 		bankIdent = "72020700";
@@ -74,7 +74,7 @@ public class IbanGeneratorGermanTest {
 		    assertTrue("Asserting exception", false);
 		}
 		catch (IbanException e) {
-		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 		}
     }
     
@@ -87,7 +87,7 @@ public class IbanGeneratorGermanTest {
 		    assertTrue("Asserting exception", false);
 		}
 		catch (IbanException e) {
-		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 		}
     }
     
@@ -194,7 +194,7 @@ public class IbanGeneratorGermanTest {
 		    assertTrue("Asserting exception", false);
 		}
 		catch (IbanException e) {
-		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+		    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 		}
 		
 		bankIdent = "50540028";
@@ -838,7 +838,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     }
     
@@ -909,7 +909,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     }
     
@@ -1122,7 +1122,7 @@ public class IbanGeneratorGermanTest {
     	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	
@@ -1214,7 +1214,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     }
     
@@ -1354,7 +1354,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	
@@ -1431,7 +1431,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	
@@ -1672,7 +1672,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 20050000 Kto 0000099999
@@ -1683,7 +1683,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 20050000 Kto 0000900000
@@ -1694,7 +1694,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 20050000 Kto 0029999999
@@ -1705,7 +1705,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 20050000 Kto 0060000000
@@ -1716,7 +1716,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
     	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 21050000 Kto 0099999999
@@ -1727,7 +1727,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 21050000 Kto 0900000000
@@ -1738,7 +1738,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 21050000 Kto 0999999999
@@ -1749,7 +1749,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
  	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 21050000 Kto 2000000000
@@ -1760,7 +1760,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 23050000 Kto 2999999999
@@ -1771,7 +1771,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 23050000 Kto 7100000000
@@ -1782,7 +1782,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
   	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 23050000 Kto 8499999999
@@ -1793,7 +1793,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
    	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 23050000 Kto 8600000000
@@ -1804,7 +1804,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
   	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	// BLZ 23050000 Kto 8999999999
@@ -1815,7 +1815,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
   	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	// *** Ende Variante 3 ***
     }
@@ -1995,7 +1995,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
  	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     	
     	bankIdent = "82000000";
@@ -2005,7 +2005,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
  	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     }
     
@@ -2356,7 +2356,7 @@ public class IbanGeneratorGermanTest {
 	    assertTrue("Asserting exception", false);
   	}
     	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     }
     

@@ -43,7 +43,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
@@ -56,7 +56,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
@@ -81,7 +81,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 	
 	try {
@@ -89,7 +89,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 	
 	try {
@@ -428,7 +428,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
@@ -493,7 +493,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
@@ -639,7 +639,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 	
 	try {
@@ -699,7 +699,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
@@ -744,7 +744,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 	
 	try {
@@ -779,7 +779,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 	
 	try {
@@ -814,7 +814,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
@@ -946,7 +946,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 
 	try {
@@ -954,7 +954,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
@@ -1066,7 +1066,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 	
 	try {
@@ -1081,7 +1081,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 	
 	try {
@@ -1089,7 +1089,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
@@ -1265,7 +1265,7 @@ public class IbanValidatorGermanTest {
 	    iban.validate();
 	    assertTrue("Asserting exception", false);
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULTATION, e.getMessage());
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
     }
     
