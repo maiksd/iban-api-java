@@ -1004,7 +1004,7 @@ public class IbanGeneratorGermanTest {
 	}
     	
     	assertEquals("DE81600501010002777939", iban.toString());
-    	assertEquals("SOLADEST470", iban.getBic());
+    	assertEquals("SOLADEST600", iban.getBic());
     	
     	// BLZ 644 502 88 Kto 7893500686
     	bankIdent = "64450288";
@@ -1017,7 +1017,7 @@ public class IbanGeneratorGermanTest {
 	}
     	
     	assertEquals("DE80600501017893500686", iban.toString());
-    	assertEquals("SOLADEST480", iban.getBic());
+    	assertEquals("SOLADEST600", iban.getBic());
     }
     
     @Test
@@ -1925,7 +1925,7 @@ public class IbanGeneratorGermanTest {
 	}
     	
     	assertEquals("DE13280200501234567890", iban.toString());
-    	assertEquals("OLBODEH2243", iban.getBic());
+    	assertEquals("OLBODEH2XXX", iban.getBic());
     	
     	
     	// BLZ 26621413, Kto 1234567890
@@ -1939,7 +1939,7 @@ public class IbanGeneratorGermanTest {
 	}
     	
     	assertEquals("DE20280200500088654578", iban.toString());
-    	assertEquals("OLBODEH2286", iban.getBic());
+    	assertEquals("OLBODEH2XXX", iban.getBic());
     }
     
     @Test
@@ -2102,7 +2102,7 @@ public class IbanGeneratorGermanTest {
 	}
     	
     	assertEquals("DE62310108331234567890", iban.toString());
-    	assertEquals("GEMKDE21BER", iban.getBic());
+    	assertEquals("CCBADE31XXX", iban.getBic());
     }
     
     @Test

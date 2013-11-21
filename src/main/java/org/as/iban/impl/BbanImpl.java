@@ -170,6 +170,7 @@ class BbanImpl {
 		if (ruleGerman.isMappingBlz(bankIdent)) {
 		    if (ruleGerman.getMappedBlz(bankIdent) != null)
 			setBankIdent(ruleGerman.getMappedBlz(bankIdent));
+		    	bankGerman.setBlz(bankIdent);
 		}
 				
 		// Kto Modification
