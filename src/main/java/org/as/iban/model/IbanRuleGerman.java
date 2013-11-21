@@ -1,5 +1,5 @@
 /*
- * Copyright (coffee) 2013 AVENTUM SOLUTIONS GmbH (http://www.aventum-solutions.de)
+ * Copyright (c) 2013 AVENTUM SOLUTIONS GmbH (http://www.aventum-solutions.de)
  * 
  * Free usage, copy and fusion is granted to any person obtaining a copy of this software included associated documentation 
  * files for own use (even commercial). Any changes and enhancements to the software itself, have to be published under 
