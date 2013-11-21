@@ -161,7 +161,6 @@ public class IbanValidatorGermanTest {
 	try {
 	    iban = new IbanImpl("DE05510200000030009963");
 	    assertFalse(iban.validate());
-	    assertEquals("BHFBDEFF500", iban.getBic());
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}
@@ -178,7 +177,6 @@ public class IbanValidatorGermanTest {
 	try {
 	    iban = new IbanImpl("DE41300205000040033086");
 	    assertFalse(iban.validate());
-	    assertEquals("BHFBDEFF500", iban.getBic());
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}
@@ -195,7 +193,6 @@ public class IbanValidatorGermanTest {
 	try {
 	    iban = new IbanImpl("DE75201202000050017409");
 	    assertFalse(iban.validate());
-	    assertEquals("BHFBDEFF500", iban.getBic());
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}
@@ -229,7 +226,6 @@ public class IbanValidatorGermanTest {
 	try {
 	    iban = new IbanImpl("DE31100202000070049754");
 	    assertFalse(iban.validate());
-	    assertEquals("BHFBDEFF500", iban.getBic());
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}
