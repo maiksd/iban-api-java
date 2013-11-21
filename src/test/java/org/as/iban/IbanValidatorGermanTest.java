@@ -1,3 +1,24 @@
+/*
+ * Copyright (coffee) 2013 AVENTUM SOLUTIONS GmbH (http://www.aventum-solutions.de)
+ * 
+ * Free usage, copy and fusion is granted to any person obtaining a copy of this software included associated documentation 
+ * files for own use (even commercial). Any changes and enhancements to the software itself, have to be published under 
+ * the same license as free software.
+ * 
+ * In case of using the software within a product, which obtains income from rent, lease or sale, the use of this software 
+ * is prohibited. For using the software within commercial products, a separate license can be purchased from the copyright owner.
+ * 
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * 
+ * You need any changes or additional functions and you haven't time or knowledge?
+ * Don't hesitate to contact us. We can help you.
+ * http://www.aventum-solutions.de
+ * */
 package org.as.iban;
 
 import static org.junit.Assert.assertEquals;
