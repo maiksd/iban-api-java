@@ -828,11 +828,14 @@
 	</rule>
 	
 	<!-- Rule 0010-00 Frankfurter Sparkasse -->
-	<rule id="_001000">
+	<rule id="_001001">
 		<mappings_kto blz="50050201">
 			<mapping from="2000">222000</mapping>
 			<mapping from="800000">180802</mapping>
 		</mappings_kto>
+		<mappings_blz>
+			<mapping from="50050222">50050201</mapping>
+		</mappings_blz>
 	</rule>
 	
 	<!-- Rule 0011-00 Sparkasse Krefeld -->

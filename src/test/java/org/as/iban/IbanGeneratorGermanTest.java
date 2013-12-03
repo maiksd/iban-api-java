@@ -501,7 +501,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule001000(){
+    public void rule001001(){
     	// BLZ 50050201 Kto 2000
     	bankIdent = "50050201";
     	ktoIdent = "2000";
@@ -527,6 +527,16 @@ public class IbanGeneratorGermanTest {
 	}
     	
     	assertEquals("DE89500502010000180802", iban.toString());
+    	
+    	
+    	bankIdent = "50050222";
+    	ktoIdent = "1241539870";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	assertEquals("DE45500502011241539870", iban.toString());
     }
     
     @Test
