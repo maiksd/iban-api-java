@@ -1,4 +1,4 @@
-# Java-API for Generation/Validation IBAN (TODO: Anpassen Link ->)[![Build Status](https://travis-ci.org/aventum-solutions/eclipse-websearch.png?branch=master)](https://travis-ci.org/aventum-solutions/eclipse-websearch)
+# Java-API for Generation/Validation IBAN 
 
 Open Source Java-API for generating an IBAN from a given bank account and validate an IBAN.
 
@@ -6,7 +6,7 @@ Open Source Java-API for generating an IBAN from a given bank account and valida
 
 Two quick start options are available:
 
-* [Download the latest release](https://github.com/aventum-solutions/eclipse-websearch/tree/master/jar/org.as.plugin.websearch-0.2.0.jar) (TODO: Anpassen Link) and add it to your Java classpath
+* [Download the latest release](https://github.com/aventum-solutions/iban-java-api/tree/master/jar/org.as.iban-java-1.0.0-RELEASE.jar) (TODO: Anpassen Link) and add it to your Java classpath
 * Build from sourcecode
 
 
@@ -20,7 +20,7 @@ Two quick start options are available:
 
 
 ## Using the API
-* Javadoc of the current release is available here (TODO: Anpassen Link)
+* Javadoc of the current release is available [here](https://github.com/aventum-solutions/iban-java-api/tree/master/jar/org.as.iban-java-1.0.0-RELEASE-javadoc.jar)
 
 ---
 * For generating an Iban for a given bank account just call the constructor from interface 'Iban' with the following parameters
