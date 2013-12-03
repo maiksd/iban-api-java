@@ -3964,6 +3964,38 @@
 			<kto_number_range blz="82010111"></kto_number_range>
 			<kto_number_range blz="86010111"></kto_number_range>
 		</no_calculation>
+		<mappings_kto blz="10010111">
+			<mapping from="555">1600220800</mapping>
+		</mappings_kto>
+		<mappings_kto blz="20010111">
+			<mapping from="66666">1299807801</mapping>
+			<mapping from="666666">1798758900</mapping>
+		</mappings_kto>
+		<mappings_kto blz="25010111">
+			<mapping from="110">1015597802</mapping>
+			<mapping from="606">1967153801</mapping>
+			<mapping from="777">1006015200</mapping>
+			<mapping from="1234">1369152400</mapping>
+			<mapping from="1953">1026500901</mapping>
+			<mapping from="2007">1026500907</mapping>
+			<mapping from="5000">1395676000</mapping>
+		</mappings_kto>
+		<mappings_kto blz="26510111">
+			<mapping from="700">1070088000</mapping>
+		</mappings_kto>
+		<mappings_kto blz="29010111">
+			<mapping from="5510">1611754300</mapping>
+		</mappings_kto>
+		<mappings_kto blz="30010111">
+			<mapping from="130500">1413482100</mapping>
+		</mappings_kto>
+		<mappings_kto blz="37010111">
+			<mapping from="1888">1241113000</mapping>
+			<mapping from="4004">1635100100</mapping>
+			<mapping from="102030">1837501600</mapping>
+			<mapping from="202020">1213431002</mapping>
+			<mapping from="5000000">1403124100</mapping>
+		</mappings_kto>
 		<mappings_kto blz="38010111">
 			<mapping from="36">1010240003</mapping>
 			<mapping from="240">1010240000</mapping>
@@ -3972,8 +4004,32 @@
 			<mapping from="55555">1027758200</mapping>
 			<mapping from="414141">1010555101</mapping>
 		</mappings_kto>
+		<mappings_kto blz="39010111">
+			<mapping from="556">1000556100</mapping>
+		</mappings_kto>
+		<mappings_kto blz="43010111">
+			<mapping from="99">1826063000</mapping>
+		</mappings_kto>
 		<mappings_kto blz="48010111">
 			<mapping from="50">1328506100</mapping>
+		</mappings_kto>
+		<mappings_kto blz="50010111">
+			<mapping from="6060">1000400200</mapping>
+			<mapping from="60000">1005007001</mapping>
+		</mappings_kto>
+		<mappings_kto blz="57010111">
+			<mapping from="1313">1017500000</mapping>
+		</mappings_kto>
+		<mappings_kto blz="60010111">
+			<mapping from="500500500">1045720000</mapping>
+		</mappings_kto>
+		<mappings_kto blz="67010111">
+			<mapping from="1998">1547620500</mapping>
+			<mapping from="4444">1304610900</mapping>
+			<mapping from="6800">1296401301</mapping>
+		</mappings_kto>
+		<mappings_kto blz="70010111">
+			<mapping from="121212">1249461502</mapping>
 		</mappings_kto>
 	</rule>
 </rules>
