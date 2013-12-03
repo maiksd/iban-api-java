@@ -1359,5 +1359,13 @@ public class IbanValidatorGermanTest {
 	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
 	}
 
+	try {
+	    iban = new IbanImpl("DE21426101120012345678");
+	    iban.validate();
+	    assertTrue("Asserting exception", false);
+	} catch (IbanException e) {
+	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
+	}
+
     }
 }
