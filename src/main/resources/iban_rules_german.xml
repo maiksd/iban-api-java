@@ -33,7 +33,7 @@
 	</rule>
 
 	<!-- Rule 0005-01 Commerzbank AG -->
-	<rule id="_000501">
+	<rule id="_000502">
 		<no_calculation>
 			<kto_number_range blz="10080900">([9]{2}[8]\d{6}|[9]{3}[0-4]\d{5})</kto_number_range>
 			<kto_number_range blz="12080000">([9]{2}[8]\d{6}|[9]{3}[0-4]\d{5})</kto_number_range>
@@ -224,7 +224,7 @@
 			<mapping from="55555">0305555500</mapping>
 			<mapping from="336666">0105232300</mapping>
 			<mapping from="414141">0108000100</mapping>
-			<mapping from="909090">0001191600</mapping>
+			<mapping from="909090">0119160000</mapping>
 			<mapping from="1555555">0258266600</mapping>
 			<mapping from="43434343">0118163500</mapping>
 		</mappings_kto>
@@ -266,10 +266,10 @@
 			<mapping from="123">0012299300</mapping>
 		</mappings_kto>
 		<mappings_kto blz="55040022">
-			<mapping from="555">0002110500</mapping>
+			<mapping from="555">0211050000</mapping>
 		</mappings_kto>
 		<mappings_kto blz="55040022">
-			<mapping from="343434">0002179000</mapping>
+			<mapping from="343434">0217900000</mapping>
 		</mappings_kto>
 		<mappings_kto blz="57080070">
 			<mapping from="661">0604101200</mapping>

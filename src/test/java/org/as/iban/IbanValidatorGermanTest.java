@@ -88,7 +88,7 @@ public class IbanValidatorGermanTest {
     }
     
     @Test
-    public void rule000501() {
+    public void rule000502() {
 	Iban iban = null;
 	
 	try {
@@ -1353,10 +1353,9 @@ public class IbanValidatorGermanTest {
 
 	try {
 	    iban = new IbanImpl("DE04600101110500500500");
-	    iban.validate();
-	    assertTrue("Asserting exception", false);
+	    assertFalse(iban.validate());
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
+	    e.printStackTrace();
 	}
 
 	try {
