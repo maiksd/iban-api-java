@@ -3888,4 +3888,11 @@
 			<mapping from="2210531180">201053180</mapping>
 		</mappings_kto>
 	</rule>
+
+	<!-- Rule 0055-00 BHW Kreditservice GmbH -->
+	<rule id="_005400">
+		<mappings_blz>
+			<mapping from="\b\d{8}\Z">25410200</mapping>
+		</mappings_blz>
+	</rule>	
 </rules>
