@@ -2236,7 +2236,7 @@ public class IbanGeneratorGermanTest {
         
     @Test
     public void rule005000(){
-	// Regel nicht ausgeführt im BLZ-Verzeichnis - Standard
+	
 	bankIdent = "28252760";
 	ktoIdent = "130084981";
 	
@@ -2246,8 +2246,8 @@ public class IbanGeneratorGermanTest {
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}
-	assertEquals("DE68282527600130084981", iban.toString());
-	assertEquals("BRLADE21WTM", iban.getBic());
+	assertEquals("DE24285500000130084981", iban.toString());
+	assertEquals("BRLADE21LER", iban.getBic());
     }
     
     @Test
