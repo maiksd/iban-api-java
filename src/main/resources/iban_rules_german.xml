@@ -911,9 +911,10 @@
 		</mappings_bic>-->
 	</rule>
 	
-	<!-- Rule 0015-00 Pax-Bank eG -->
-	<rule id="_001500">
+	<!-- Rule 0015-01 Pax-Bank eG -->
+	<rule id="_001501">
 		<mappings_kto blz="37060193">
+			<mapping from="94">3008888018</mapping>
 			<mapping from="556">0000101010</mapping>
 			<mapping from="888">0031870011</mapping>
 			<mapping from="4040">4003600101</mapping>

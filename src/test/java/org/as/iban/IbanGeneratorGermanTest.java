@@ -675,7 +675,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule001500(){
+    public void rule001501(){
     	// BLZ 37060193 Kto 888
     	bankIdent = "37060193";
     	ktoIdent = "888";
