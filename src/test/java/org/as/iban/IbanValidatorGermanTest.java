@@ -1151,7 +1151,7 @@ public class IbanValidatorGermanTest {
     }
     
     @Test
-    public void rule004500() {
+    public void rule004501() {
 	Iban iban = null;
 	
 	try {
