@@ -1176,6 +1176,13 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE68101206001234567890");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	try {
+	    iban = new IbanImpl("DE35250206001234567890");
 	    assertFalse(iban.validate());
 	} catch (IbanException e) {
 	    e.printStackTrace();
