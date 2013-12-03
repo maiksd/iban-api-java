@@ -808,7 +808,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule002001(){
+    public void rule002002(){
     	// BLZ 50070010 Kto 9999
     	bankIdent = "50070010";
     	ktoIdent = "9999";
@@ -852,14 +852,12 @@ public class IbanGeneratorGermanTest {
     	// BLZ 25070024 Kto 12345
     	bankIdent = "25070024";
     	ktoIdent = "12345";
-    	
     	try {
-    	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("Asserting exception", false);
-    	}
-    	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
-    	}
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	assertEquals("DE59250700240001234500", iban.toString());
     }
     
     @Test

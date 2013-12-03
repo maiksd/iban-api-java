@@ -424,7 +424,7 @@ public class IbanValidatorGermanTest {
     }
     
     @Test
-    public void rule002001() {
+    public void rule002002() {
 	Iban iban = null;
 	
 	try {
@@ -443,11 +443,18 @@ public class IbanValidatorGermanTest {
 	
 	try {
 	    iban = new IbanImpl("DE76500700100000123456");
-	    iban.validate();
-	    assertTrue("Asserting exception", false);
+	    assertFalse(iban.validate());
 	} catch (IbanException e) {
-	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
+	    e.printStackTrace();
 	}
+
+	try {
+	    iban = new IbanImpl("DE68500700100012345600");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+
     }
     
     @Test

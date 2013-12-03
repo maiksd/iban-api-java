@@ -975,14 +975,17 @@
 		</mappings_bic>-->
 	</rule>
 	
-	<!-- Rule 0020-01 Deutsche Bank AG -->
-	<rule id="_002001">
+	<!-- Rule 0020-02 Deutsche Bank AG -->
+	<rule id="_002002">
 		<no_calculation>
-			<kto_number_range blz="\d{8}">\b\d*(?&lt;!\d{7,9})(?&lt;!9999)\Z</kto_number_range>
+			<kto_number_range blz="\d{8}">\b\d*(?&lt;!\d{5,9})(?&lt;!9999)\Z</kto_number_range>
 		</no_calculation>
 		<mappings_kto blz="50070010">
 			<mapping from="9999">92777202</mapping>
 		</mappings_kto>
+		<modification_kto>
+			<modification blz="\d{8}">\b(\d{5,6})\Z;$100</modification>
+		</modification_kto>
 	</rule>
 	
 	<!-- Rule 0021-01 National-Bank AG -->
