@@ -2103,6 +2103,16 @@ public class IbanGeneratorGermanTest {
 	    e.printStackTrace();
 	}
     	
+    	assertEquals("DE68101206001234567890", iban.toString());
+    	assertEquals("SCFBDE33XXX", iban.getBic());
+    	
+    	bankIdent = "25020600";
+    	ktoIdent = "1234567890";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
     	assertEquals("DE62310108331234567890", iban.toString());
     	assertEquals("CCBADE31XXX", iban.getBic());
     }
