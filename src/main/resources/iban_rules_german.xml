@@ -3890,9 +3890,90 @@
 	</rule>
 
 	<!-- Rule 0055-00 BHW Kreditservice GmbH -->
-	<rule id="_005400">
+	<rule id="_005500">
 		<mappings_blz>
 			<mapping from="\b\d{8}\Z">25410200</mapping>
 		</mappings_blz>
 	</rule>	
+	
+	<!-- Rule 0056-00 SEB AG -->
+	<rule id="_005600">
+		<no_calculation>
+			<kto_number_range blz="10010111"></kto_number_range>
+			<kto_number_range blz="13010111"></kto_number_range>
+			<kto_number_range blz="16010111"></kto_number_range>
+			<kto_number_range blz="20010111"></kto_number_range>
+			<kto_number_range blz="21010111"></kto_number_range>
+			<kto_number_range blz="21210111"></kto_number_range>
+			<kto_number_range blz="23010111"></kto_number_range>
+			<kto_number_range blz="25010111"></kto_number_range>
+			<kto_number_range blz="25410111"></kto_number_range>
+			<kto_number_range blz="25910111"></kto_number_range>
+			<kto_number_range blz="26010111"></kto_number_range>
+			<kto_number_range blz="26510111"></kto_number_range>
+			<kto_number_range blz="27010111"></kto_number_range>
+			<kto_number_range blz="28010111"></kto_number_range>
+			<kto_number_range blz="29010111"></kto_number_range>
+			<kto_number_range blz="29210111"></kto_number_range>
+			<kto_number_range blz="30010111"></kto_number_range>
+			<kto_number_range blz="31010111"></kto_number_range>
+			<kto_number_range blz="33010111"></kto_number_range>
+			<kto_number_range blz="35010111"></kto_number_range>
+			<kto_number_range blz="35211012"></kto_number_range>
+			<kto_number_range blz="36010111"></kto_number_range>
+			<kto_number_range blz="36210111"></kto_number_range>
+			<kto_number_range blz="37010111"></kto_number_range>
+			<kto_number_range blz="38010111"></kto_number_range>
+			<kto_number_range blz="39010111"></kto_number_range>
+			<kto_number_range blz="40010111"></kto_number_range>
+			<kto_number_range blz="41010111"></kto_number_range>
+			<kto_number_range blz="42010111"></kto_number_range>
+			<kto_number_range blz="42610112"></kto_number_range>
+			<kto_number_range blz="43010111"></kto_number_range>
+			<kto_number_range blz="44010111"></kto_number_range>
+			<kto_number_range blz="46010111"></kto_number_range>
+			<kto_number_range blz="48010111"></kto_number_range>
+			<kto_number_range blz="50010111"></kto_number_range>
+			<kto_number_range blz="50510111"></kto_number_range>
+			<kto_number_range blz="51010111"></kto_number_range>
+			<kto_number_range blz="51310111"></kto_number_range>
+			<kto_number_range blz="51410111"></kto_number_range>
+			<kto_number_range blz="52010111"></kto_number_range>
+			<kto_number_range blz="54210111"></kto_number_range>
+			<kto_number_range blz="55010111"></kto_number_range>
+			<kto_number_range blz="57010111"></kto_number_range>
+			<kto_number_range blz="58510111"></kto_number_range>
+			<kto_number_range blz="59010111"></kto_number_range>
+			<kto_number_range blz="60010111"></kto_number_range>
+			<kto_number_range blz="63010111"></kto_number_range>
+			<kto_number_range blz="65310111"></kto_number_range>
+			<kto_number_range blz="66010111"></kto_number_range>
+			<kto_number_range blz="66610111"></kto_number_range>
+			<kto_number_range blz="67010111"></kto_number_range>
+			<kto_number_range blz="67210111"></kto_number_range>
+			<kto_number_range blz="68010111"></kto_number_range>
+			<kto_number_range blz="68310111"></kto_number_range>
+			<kto_number_range blz="69010111"></kto_number_range>
+			<kto_number_range blz="70010111"></kto_number_range>
+			<kto_number_range blz="72010111"></kto_number_range>
+			<kto_number_range blz="75010111"></kto_number_range>
+			<kto_number_range blz="76010111"></kto_number_range>
+			<kto_number_range blz="79010111"></kto_number_range>
+			<kto_number_range blz="79510111"></kto_number_range>
+			<kto_number_range blz="81010111"></kto_number_range>
+			<kto_number_range blz="82010111"></kto_number_range>
+			<kto_number_range blz="86010111"></kto_number_range>
+		</no_calculation>
+		<mappings_kto blz="38010111">
+			<mapping from="36">1010240003</mapping>
+			<mapping from="240">1010240000</mapping>
+			<mapping from="333">1011296100</mapping>
+			<mapping from="999">1010240001</mapping>
+			<mapping from="55555">1027758200</mapping>
+			<mapping from="414141">1010555101</mapping>
+		</mappings_kto>
+		<mappings_kto blz="48010111">
+			<mapping from="50">1328506100</mapping>
+		</mappings_kto>
+	</rule>
 </rules>
