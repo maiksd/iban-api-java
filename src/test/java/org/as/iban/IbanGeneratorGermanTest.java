@@ -115,7 +115,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test 
-    public void rule000501() {
+    public void rule000502() {
 		bankIdent = "26580070";
 		ktoIdent = "732502200";
 		Iban iban = null;
@@ -501,7 +501,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule001000(){
+    public void rule001001(){
     	// BLZ 50050201 Kto 2000
     	bankIdent = "50050201";
     	ktoIdent = "2000";
@@ -527,6 +527,16 @@ public class IbanGeneratorGermanTest {
 	}
     	
     	assertEquals("DE89500502010000180802", iban.toString());
+    	
+    	
+    	bankIdent = "50050222";
+    	ktoIdent = "1241539870";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	assertEquals("DE45500502011241539870", iban.toString());
     }
     
     @Test
@@ -665,7 +675,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule001500(){
+    public void rule001501(){
     	// BLZ 37060193 Kto 888
     	bankIdent = "37060193";
     	ktoIdent = "888";
@@ -798,7 +808,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule002001(){
+    public void rule002002(){
     	// BLZ 50070010 Kto 9999
     	bankIdent = "50070010";
     	ktoIdent = "9999";
@@ -842,14 +852,12 @@ public class IbanGeneratorGermanTest {
     	// BLZ 25070024 Kto 12345
     	bankIdent = "25070024";
     	ktoIdent = "12345";
-    	
     	try {
-    	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
-	    assertTrue("Asserting exception", false);
-    	}
-    	catch (IbanException e) {
-    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
-    	}
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	assertEquals("DE59250700240001234500", iban.toString());
     }
     
     @Test
@@ -2020,7 +2028,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule004300(){
+    public void rule004301(){
     	// BLZ 60651070, Kto 868
     	bankIdent = "60651070";
     	ktoIdent = "868";
@@ -2066,7 +2074,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule004500(){
+    public void rule004501(){
     	// BLZ 68050101
     	bankIdent = "50210142";
     	ktoIdent = "12345678";
@@ -2095,6 +2103,16 @@ public class IbanGeneratorGermanTest {
 	    e.printStackTrace();
 	}
     	
+    	assertEquals("DE68101206001234567890", iban.toString());
+    	assertEquals("SCFBDE33XXX", iban.getBic());
+    	
+    	bankIdent = "25020600";
+    	ktoIdent = "1234567890";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
     	assertEquals("DE62310108331234567890", iban.toString());
     	assertEquals("CCBADE31XXX", iban.getBic());
     }
@@ -2218,7 +2236,7 @@ public class IbanGeneratorGermanTest {
         
     @Test
     public void rule005000(){
-	// Regel nicht ausgeführt im BLZ-Verzeichnis - Standard
+	
 	bankIdent = "28252760";
 	ktoIdent = "130084981";
 	
@@ -2228,8 +2246,8 @@ public class IbanGeneratorGermanTest {
 	} catch (IbanException e) {
 	    e.printStackTrace();
 	}
-	assertEquals("DE68282527600130084981", iban.toString());
-	assertEquals("BRLADE21WTM", iban.getBic());
+	assertEquals("DE24285500000130084981", iban.toString());
+	assertEquals("BRLADE21LER", iban.getBic());
     }
     
     @Test
@@ -2489,5 +2507,64 @@ public class IbanGeneratorGermanTest {
 	}
     	
     	assertEquals("DE92210602370012796743", iban.toString());
+    }
+    
+    @Test
+    public void rule005500() {
+	bankIdent = "25410300";
+	ktoIdent = "7456123400";
+	
+	Iban iban = null;
+	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	assertEquals("DE47254102007456123400", iban.toString());
+    }
+    
+    @Test
+    public void rule005600() {
+	bankIdent = "38010111";
+	ktoIdent = "12345678";
+	Iban iban = null;
+    	try{
+    	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	    assertTrue("Asserting exception", false);
+  	}
+    	catch (IbanException e) {
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
+    	}
+
+    	
+    	bankIdent = "38010111";
+    	ktoIdent = "36";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	assertEquals("DE29380101111010240003", iban.toString());
+    	
+    	
+    	bankIdent = "67010111";
+    	ktoIdent = "6800";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	assertEquals("DE02670101111296401301", iban.toString());
+    	
+    	bankIdent = "68310111";
+    	ktoIdent = "12345678";
+    	try{
+    	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	    assertTrue("Asserting exception", false);
+  	}
+    	catch (IbanException e) {
+    	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
+    	}
     }
 }
