@@ -106,36 +106,26 @@ public class IbanRuleGerman {
 		for (int j = 0; j < nodeRule.getLength(); j++) {
 		    if (nodeRule.item(j).getNodeType() == Node.ELEMENT_NODE) { 
 			element = (Element) nodeRule.item(j);
-				    
-			switch (nodes.item(i).getNodeName()) {
-			case "no_calculation":
+
+//			switch (nodes.item(i).getNodeName()) {
+			if (nodes.item(i).getNodeName().equals("no_calculation"))
 			    listNoCalculation.add(element);
-			    break;
-						    
-			case "mappings_kto":
+			else if (nodes.item(i).getNodeName().equals("mappings_kto"))
+			{
 			    MappingKto mapKto = new MappingKto(((Element)element.getParentNode()).getAttribute("blz"));
 			    mapKto.setBlzNew(((Element)element.getParentNode()).getAttribute("blz_new"));
 			    mapKto.setFrom(element.getAttribute("from"));
 			    mapKto.setTo(element.getTextContent());
 			    listMappingKto.add(mapKto);
-			    break;
-						    
-			case "mappings_ktokr":
+			}						    
+			else if (nodes.item(i).getNodeName().equals("mappings_ktokr"))
 			    listMappingKtoKr.add(element);
-			    break;
-			    
-			case "mappings_blz":
+			else if (nodes.item(i).getNodeName().equals("mappings_blz"))
 			    listMappingBlz.add(element);
-			    break;
-			    
-			case "modification_kto":
+			else if (nodes.item(i).getNodeName().equals("modification_kto"))
 			    listModificationKto.add(element);
-			    break;
-			    
-			case "mappings_bic":
+			else if (nodes.item(i).getNodeName().equals("mappings_bic"))
 			    listMappingBic.add(element);
-			    break;
-			}
 		    }
 		}
 	    }

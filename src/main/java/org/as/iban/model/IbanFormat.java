@@ -92,16 +92,12 @@ public class IbanFormat {
 		    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
 
 		for (int i = 0; i < nodeFormat.getLength(); i++){
-		    switch (nodeFormat.item(i).getNodeName()){
-		    	case "regexp":
-		    		this.regexp = nodeFormat.item(i).getTextContent();
-		    		break;
-		    	case "bankIdentLength":
-		    		this.bankIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
-		    		break;
-		    	case "ktoIdentLength":
-		    		this.ktoIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
-		    }
+		    if (nodeFormat.item(i).getNodeName().equals("regexp"))
+	    		this.regexp = nodeFormat.item(i).getTextContent();
+		    else if (nodeFormat.item(i).getNodeName().equals("bankIdentLength"))
+	    		this.bankIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
+		    else if (nodeFormat.item(i).getNodeName().equals("ktoIdentLength"))
+	    		this.ktoIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
 		}
     }
 

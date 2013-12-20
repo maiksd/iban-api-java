@@ -102,17 +102,15 @@ public class BankGerman {
 	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
 	
 	for (int i = 0; i < nodeBank.getLength(); i++){
-	    switch (nodeBank.item(i).getNodeName()){
-	    case "bic":
+	    if (nodeBank.item(i).getNodeName().equals("bic"))
+	    {
 		if (!nodeBank.item(i).getTextContent().isEmpty())
 		    this.bic = nodeBank.item(i).getTextContent();
-		break;
-	    case "rule":
-		this.ruleId = nodeBank.item(i).getTextContent();
-		break;
-	    case "name":
-		this.name = nodeBank.item(i).getTextContent();
 	    }
+	    else if (nodeBank.item(i).getNodeName().equals("rule"))
+		this.ruleId = nodeBank.item(i).getTextContent();
+	    else if (nodeBank.item(i).getNodeName().equals("name"))
+		this.name = nodeBank.item(i).getTextContent();
 	}
     }
     
