@@ -9,6 +9,10 @@ Two quick start options are available:
 * [Download the latest release](https://github.com/aventum-solutions/iban-api-java/tree/master/jar/org.as.iban-java-1.0.1-RELEASE.jar) and add it to your Java classpath
 * Build from sourcecode
 
+## Version History
+* Version 1.0.0: Initial Version; German IBAN-rules and banks valid after 09.09.2013
+* Version 1.0.1: German IBAN-rules and banks valid after 09.12.2013
+* Version 1.0.2: Now Java6 compatible
 
 ## Build from sourcecode
 
