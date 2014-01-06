@@ -13,6 +13,7 @@ Two quick start options are available:
 * Version 1.0.0: Initial Version; German IBAN-rules and banks valid after 09.09.2013
 * Version 1.0.1: German IBAN-rules and banks valid after 09.12.2013
 * Version 1.0.2: Now Java6 compatible
+* Version 1.0.3: Fix rule 20 (Deutsche Bank) for 7-place account number
 
 ## Build from sourcecode
 

@@ -984,7 +984,7 @@
 			<mapping from="9999">92777202</mapping>
 		</mappings_kto>
 		<modification_kto>
-			<modification blz="\d{8}">\b(\d{5,6})\Z;$100</modification>
+			<modification blz="\d{8}">\b(\d{5,7})\Z;$100</modification>
 		</modification_kto>
 	</rule>
 	

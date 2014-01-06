@@ -858,6 +858,27 @@ public class IbanGeneratorGermanTest {
 	    e.printStackTrace();
 	}
     	assertEquals("DE59250700240001234500", iban.toString());
+
+    	// BLZ 36070024 Kto 123456
+    	bankIdent = "36070024";
+    	ktoIdent = "123456";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	assertEquals("DE35360700240012345600", iban.toString());
+
+    	// BLZ 36070024 Kto 1234567
+    	bankIdent = "36070024";
+    	ktoIdent = "1234567";
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	assertEquals("DE39360700240123456700", iban.toString());
+
     }
     
     @Test
