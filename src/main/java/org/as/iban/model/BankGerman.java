@@ -16,7 +16,6 @@
 package org.as.iban.model;
 
 import java.io.IOException;
-import java.util.LinkedList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -45,55 +44,58 @@ public class BankGerman {
     private String name;
     private IbanRuleGerman rule;
 
-    DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
-    DocumentBuilder builderBank;
-    Document documentBank = null;
+    private static Document documentBank;
+
 	
 
     /**
-     * Constructor. Reads the informations for a specific bank from banks_german.xml 
+     * Constructor. Reads the informations for a specific bank from banks_german.xml
      * @param blz	The BLZ for a german bank (bank identifier)
-     * @throws Exception 
+     * @throws IbanException
      */
-    public BankGerman (String blz) throws IbanException {
-	this.blz = blz;
+	public BankGerman( String blz ) throws IbanException {
+		this.blz = blz;
 
-	readBankConfig();
-	if (ruleId.equals("000000") || ruleId.equals("000100"))
-	    this.rule = null;
-	else
-	    this.rule = new IbanRuleGerman("_" + ruleId);
+		readBankConfig();
+		if( ruleId.equals( "000000" ) || ruleId.equals( "000100" ) )
+			this.rule = null;
+		else
+			this.rule = new IbanRuleGerman( "_" + ruleId );
+	}
+    
+    private synchronized Document getDocumentBank() {
+    	if( documentBank == null ) {
+    	    DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
+    		try {
+    		    factoryBank.setNamespaceAware(true);
+    		    factoryBank.setValidating(true);
+    		    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
+    		    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
+    		
+    		    DocumentBuilder builderBank = factoryBank.newDocumentBuilder();
+    		    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
+    		} catch (ParserConfigurationException e) {
+    		    e.printStackTrace();
+    		} catch (SAXException e) {
+    		    e.printStackTrace();
+    		} catch (IOException e) {
+    		    e.printStackTrace();
+    		}
+    		// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
+    	}
+    	return documentBank;
     }
     
     /**
      * Reads the configuration of the bank from config file
-     * @throws IbanException 
+     * @throws IbanException
      */
     private void readBankConfig() throws IbanException {
-	try {
-	    factoryBank.setNamespaceAware(true);
-	    factoryBank.setValidating(true);
-	    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-	    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
-	
-	    builderBank = factoryBank.newDocumentBuilder();
-	    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
-	    
-	} catch (ParserConfigurationException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	} catch (SAXException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	} catch (IOException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	}
 
 	NodeList nodeBank = null;
 	
 	try {
-	    nodeBank = documentBank.getElementById("_" + this.blz).getChildNodes();
+	    nodeBank = getDocumentBank().getElementById("_" + this.blz).getChildNodes();
 	} catch (Exception e) {
 	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
 	}
@@ -125,7 +127,7 @@ public class BankGerman {
     /**
      * Set the bank identifier for this bank (i.e. in case of mapping)
      * @param blz The new bank identifier
-     * @throws IbanException 
+     * @throws IbanException
      */
     public void setBlz (String blz) throws IbanException {
 	this.blz = blz;

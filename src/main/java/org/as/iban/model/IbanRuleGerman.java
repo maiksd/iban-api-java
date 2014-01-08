@@ -81,14 +81,12 @@ public class IbanRuleGerman {
 	
 	} catch (ParserConfigurationException e) {
 	    e.printStackTrace();
-	    System.exit(-1);
 	} catch (SAXException e) {
 	    e.printStackTrace();
-	    System.exit(-1);
 	} catch (IOException e) {
 	    e.printStackTrace();
-	    System.exit(-1);
 	}
+	// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
 	
 	readRule();
     }
@@ -104,7 +102,7 @@ public class IbanRuleGerman {
 		NodeList nodeRule = nodes.item(i).getChildNodes();
 			
 		for (int j = 0; j < nodeRule.getLength(); j++) {
-		    if (nodeRule.item(j).getNodeType() == Node.ELEMENT_NODE) { 
+		    if (nodeRule.item(j).getNodeType() == Node.ELEMENT_NODE) {
 			element = (Element) nodeRule.item(j);
 
 //			switch (nodes.item(i).getNodeName()) {
@@ -117,7 +115,7 @@ public class IbanRuleGerman {
 			    mapKto.setFrom(element.getAttribute("from"));
 			    mapKto.setTo(element.getTextContent());
 			    listMappingKto.add(mapKto);
-			}						    
+			}
 			else if (nodes.item(i).getNodeName().equals("mappings_ktokr"))
 			    listMappingKtoKr.add(element);
 			else if (nodes.item(i).getNodeName().equals("mappings_blz"))

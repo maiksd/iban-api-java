@@ -115,7 +115,7 @@ class BbanImpl {
      * Set the account number. There are some validations and mappings for german banks
      * @param ktoIdent	The account number
      * @param length	The max length of the account number
-     * @throws IbanException 
+     * @throws IbanException
      */
     private void setKtoIdent(String ktoIdent, int length) throws IbanException {
 	// Consider Iban rules for Germany
@@ -142,7 +142,7 @@ class BbanImpl {
 		if (ruleGerman.isMappingKto(bankIdent)){
 		    // remember the unmapped account number
 		    String ktoIdentOld = ktoIdent;
-		    if (ruleGerman.getMappedKto(bankIdent, ktoIdent) != null) 
+		    if (ruleGerman.getMappedKto(bankIdent, ktoIdent) != null)
 			ktoIdent = ruleGerman.getMappedKto(bankIdent, ktoIdent);
 		    
 		    // in case of new bank identifier for account number set it here
@@ -188,7 +188,8 @@ class BbanImpl {
     /** Return the String representation of the BBan
      * @return The String representation of the BBan (format: bank identifier + account number)
      */
-    public String toString() {
+    @Override
+	public String toString() {
     	return bankIdent + ktoIdent;
     }
     
@@ -206,7 +207,7 @@ class BbanImpl {
 
 	if (ktoIdent.length() > KTOIDENT_LENGTH)
 	    throw new IbanException(IbanException.IBAN_EXCEPTION_MESSAGE_KTO_LENGTH);
-	else 
+	else
 	    setKtoIdent(ktoIdent, KTOIDENT_LENGTH);
     }
 }

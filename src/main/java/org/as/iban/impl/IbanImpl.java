@@ -60,7 +60,8 @@ public class IbanImpl implements Iban {
     /* (non-Javadoc)
      * @see org.as.iban.Iban#validate()
      */
-    public boolean validate() throws IbanException {
+    @Override
+	public boolean validate() throws IbanException {
 	validateFormat();
 	if (country.equals(Iban.COUNTRY_CODE_GERMAN)) {
 	    BbanImpl bbanTmp = new BbanImpl(country, bban.getBankIdent(), bban.getKtoIdent());
@@ -97,20 +98,22 @@ public class IbanImpl implements Iban {
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
      */
-    public String toString() {
+    @Override
+	public String toString() {
     	return this.country + this.checkDigit + this.bban.toString();
     }
 
     /* (non-Javadoc)
      * @see org.as.iban.Iban#getBic()
      */
-    public String getBic() {
+    @Override
+	public String getBic() {
     	return bban.getBankGerman().getBic();
     }
     
     /**
      * Generates the shifted iban code (bank-ident|kto-ident|country-code|check-digit)
-     * @param bban 
+     * @param bban
      * @return The shifted code
      */
     private String shiftIbanToString(BbanImpl bban, String checkDigit) {
@@ -124,7 +127,7 @@ public class IbanImpl implements Iban {
      */
     private String asciiToNumber(String shiftedIban){
 	char ch;
-	String tmpStr = ""; 
+	String tmpStr = "";
 		
 	shiftedIban.toUpperCase(Locale.ENGLISH);
 		

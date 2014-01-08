@@ -67,14 +67,12 @@ public class IbanFormat {
     		    configDoc = builder.parse(this.getClass().getResourceAsStream("/iban_format.xml"));
     		} catch (ParserConfigurationException e) {
     		    e.printStackTrace();
-    		    System.exit(-1);
     		} catch (SAXException e) {
     		    e.printStackTrace();
-    		    System.exit(-1);
     		} catch (IOException e) {
     		    e.printStackTrace();
-    		    System.exit(-1);
     		}
+    		// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
     	}
     	return configDoc;
     }
