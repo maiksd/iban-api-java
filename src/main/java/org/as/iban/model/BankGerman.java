@@ -34,10 +34,9 @@ import org.xml.sax.SAXException;
  */
 public class BankGerman {
 
-	//	local variables
-    final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
-    final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
-    final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
+    private static final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
+    private static final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
+    private static final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
 
     private String blz;
     private String bic;
@@ -45,7 +44,7 @@ public class BankGerman {
     private String name;
     private IbanRuleGerman rule;
 
-    private static Document documentBank;
+    private static ThreadLocal<Document> documentBank = new ThreadLocal();
 
 	
 
@@ -64,17 +63,17 @@ public class BankGerman {
 			this.rule = new IbanRuleGerman( "_" + ruleId );
 	}
     
-    private synchronized Document getDocumentBank() {
-    	if( documentBank == null ) {
+    private static synchronized Document getDocumentBank() {
+    	if( documentBank.get() == null ) {
     	    DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
     		try {
     		    factoryBank.setNamespaceAware(true);
     		    factoryBank.setValidating(true);
     		    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-    		    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/src/main/resources/banks_german.xsd"));
+    		    factoryBank.setAttribute(SCHEMA_SOURCE, BankGerman.class.getResourceAsStream("/src/main/resources/banks_german.xsd"));
     		
     		    DocumentBuilder builderBank = factoryBank.newDocumentBuilder();
-    		    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/src/main/resources/banks_german.xml"));
+    		    documentBank.set( builderBank.parse(BankGerman.class.getResourceAsStream("/src/main/resources/banks_german.xml")) );
     		} catch (ParserConfigurationException e) {
     		    e.printStackTrace();
     		} catch (SAXException e) {
@@ -86,7 +85,7 @@ public class BankGerman {
     		}
     		// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
     	}
-    	return documentBank;
+    	return documentBank.get();
     }
     
     /**
@@ -97,25 +96,23 @@ public class BankGerman {
 
 		Document doc = getDocumentBank();
 
-		synchronized( doc ) {		// org.w3c.dom stuff is not threadsafe
-			NodeList nodeBank = null;
-			try {
-				nodeBank = doc.getElementById( "_" + this.blz ).getChildNodes();
-			} catch( Exception e ) {
-				throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT );
-			}
+		NodeList nodeBank = null;
+		try {
+			nodeBank = doc.getElementById( "_" + this.blz ).getChildNodes();
+		} catch( Exception e ) {
+			throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT );
+		}
 
-			if( nodeBank.getLength() == 0 ) throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT );
+		if( nodeBank.getLength() == 0 ) throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT );
 
-			for( int i = 0; i < nodeBank.getLength(); i++ ) {
-				Node node = nodeBank.item( i );
-				String nodeName = node.getNodeName();
-				if( nodeName.equals( "bic" ) ) {
-					if( !node.getTextContent().isEmpty() ) this.bic = node.getTextContent();
-				} else if( nodeName.equals( "rule" ) )
-					this.ruleId = node.getTextContent();
-				else if( nodeName.equals( "name" ) ) this.name = node.getTextContent();
-			}
+		for( int i = 0; i < nodeBank.getLength(); i++ ) {
+			Node node = nodeBank.item( i );
+			String nodeName = node.getNodeName();
+			if( nodeName.equals( "bic" ) ) {
+				if( !node.getTextContent().isEmpty() ) this.bic = node.getTextContent();
+			} else if( nodeName.equals( "rule" ) )
+				this.ruleId = node.getTextContent();
+			else if( nodeName.equals( "name" ) ) this.name = node.getTextContent();
 		}
 	}
     

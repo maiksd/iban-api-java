@@ -36,10 +36,10 @@ import org.xml.sax.SAXException;
  *
  */
 public class IbanRuleGerman {
-	//	local variables
-    final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
-    final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
-    final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
+
+	private static final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
+    private static final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
+    private static final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
 
     private String rule_id;
     
@@ -57,7 +57,7 @@ public class IbanRuleGerman {
     private ArrayList<Element> listMappingKtoKr = new ArrayList<Element>();
     private ArrayList<Element> listMappingBic = new ArrayList<Element>();
 
-    private static Document document;
+    private static ThreadLocal<Document> document = new ThreadLocal();
 		
     Element element = null;
 		    
@@ -70,16 +70,16 @@ public class IbanRuleGerman {
 		readRule();
 	}
     
-	private synchronized Document getDocument() {
-		if( document == null ) {
+	private static synchronized Document getDocument() {
+		if( document.get() == null ) {
 			try {
 			    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				factory.setNamespaceAware( true );
 				factory.setValidating( true );
 				factory.setAttribute( SCHEMA_LANG, XML_SCHEMA );
-				factory.setAttribute( SCHEMA_SOURCE, this.getClass().getResourceAsStream( "/src/main/resources/iban_rules_german.xsd" ) );
+				factory.setAttribute( SCHEMA_SOURCE, IbanRuleGerman.class.getResourceAsStream( "/src/main/resources/iban_rules_german.xsd" ) );
 				DocumentBuilder builder = factory.newDocumentBuilder();
-				document = builder.parse( this.getClass().getResourceAsStream( "/src/main/resources/iban_rules_german.xml" ) );
+				document.set( builder.parse( IbanRuleGerman.class.getResourceAsStream( "/src/main/resources/iban_rules_german.xml" ) ) );
 			} catch( ParserConfigurationException e ) {
 				e.printStackTrace();
 			} catch( SAXException e ) {
@@ -89,7 +89,7 @@ public class IbanRuleGerman {
 			}
 			// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
 		}
-		return document;
+		return document.get();
 	}
 	
     /**
@@ -97,34 +97,32 @@ public class IbanRuleGerman {
      */
 	private void readRule() {
 		Document doc = getDocument();
-		synchronized( doc ) {
-			NodeList nodes = doc.getElementById( rule_id ).getChildNodes();
+		NodeList nodes = doc.getElementById( rule_id ).getChildNodes();
 
-			for( int i = 0; i < nodes.getLength(); i++ ) {
-				if( nodes.item( i ).getNodeType() == Node.ELEMENT_NODE ) {
-					NodeList nodeRule = nodes.item( i ).getChildNodes();
+		for( int i = 0; i < nodes.getLength(); i++ ) {
+			if( nodes.item( i ).getNodeType() == Node.ELEMENT_NODE ) {
+				NodeList nodeRule = nodes.item( i ).getChildNodes();
 
-					for( int j = 0; j < nodeRule.getLength(); j++ ) {
-						if( nodeRule.item( j ).getNodeType() == Node.ELEMENT_NODE ) {
-							element = (Element) nodeRule.item( j );
+				for( int j = 0; j < nodeRule.getLength(); j++ ) {
+					if( nodeRule.item( j ).getNodeType() == Node.ELEMENT_NODE ) {
+						element = (Element) nodeRule.item( j );
 
 //							switch (nodes.item(i).getNodeName()) {
-							if( nodes.item( i ).getNodeName().equals( "no_calculation" ) )
-								listNoCalculation.add( element );
-							else if( nodes.item( i ).getNodeName().equals( "mappings_kto" ) ) {
-								MappingKto mapKto = new MappingKto( ((Element) element.getParentNode()).getAttribute( "blz" ) );
-								mapKto.setBlzNew( ((Element) element.getParentNode()).getAttribute( "blz_new" ) );
-								mapKto.setFrom( element.getAttribute( "from" ) );
-								mapKto.setTo( element.getTextContent() );
-								listMappingKto.add( mapKto );
-							} else if( nodes.item( i ).getNodeName().equals( "mappings_ktokr" ) )
-								listMappingKtoKr.add( element );
-							else if( nodes.item( i ).getNodeName().equals( "mappings_blz" ) )
-								listMappingBlz.add( element );
-							else if( nodes.item( i ).getNodeName().equals( "modification_kto" ) )
-								listModificationKto.add( element );
-							else if( nodes.item( i ).getNodeName().equals( "mappings_bic" ) ) listMappingBic.add( element );
-						}
+						if( nodes.item( i ).getNodeName().equals( "no_calculation" ) )
+							listNoCalculation.add( element );
+						else if( nodes.item( i ).getNodeName().equals( "mappings_kto" ) ) {
+							MappingKto mapKto = new MappingKto( ((Element) element.getParentNode()).getAttribute( "blz" ) );
+							mapKto.setBlzNew( ((Element) element.getParentNode()).getAttribute( "blz_new" ) );
+							mapKto.setFrom( element.getAttribute( "from" ) );
+							mapKto.setTo( element.getTextContent() );
+							listMappingKto.add( mapKto );
+						} else if( nodes.item( i ).getNodeName().equals( "mappings_ktokr" ) )
+							listMappingKtoKr.add( element );
+						else if( nodes.item( i ).getNodeName().equals( "mappings_blz" ) )
+							listMappingBlz.add( element );
+						else if( nodes.item( i ).getNodeName().equals( "modification_kto" ) )
+							listModificationKto.add( element );
+						else if( nodes.item( i ).getNodeName().equals( "mappings_bic" ) ) listMappingBic.add( element );
 					}
 				}
 			}
