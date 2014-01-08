@@ -57,9 +57,7 @@ public class IbanRuleGerman {
     private ArrayList<Element> listMappingKtoKr = new ArrayList<Element>();
     private ArrayList<Element> listMappingBic = new ArrayList<Element>();
 
-    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-    DocumentBuilder builder;
-    Document document = null;
+    private static Document document;
 		
     Element element = null;
 		    
@@ -67,68 +65,71 @@ public class IbanRuleGerman {
      * Constructor. Loads a specified Rule by a given ruleID
      * @param rule_id	The id that identifies the specific rule from iban_rule_german.xml
      */
-    public IbanRuleGerman (String rule_id) {
-	this.rule_id = rule_id;
-
-	try {
-	    factory.setNamespaceAware(true);
-	    factory.setValidating(true);
-	    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-	    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/iban_rules_german.xsd"));
-		    
-	    builder = factory.newDocumentBuilder();
-	    document = builder.parse(this.getClass().getResourceAsStream("/iban_rules_german.xml"));
-	
-	} catch (ParserConfigurationException e) {
-	    e.printStackTrace();
-	} catch (SAXException e) {
-	    e.printStackTrace();
-	} catch (IOException e) {
-	    e.printStackTrace();
+	public IbanRuleGerman( String rule_id ) {
+		this.rule_id = rule_id;
+		readRule();
 	}
-	// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
-	
-	readRule();
-    }
     
+	private synchronized Document getDocument() {
+		if( document == null ) {
+			try {
+			    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+				factory.setNamespaceAware( true );
+				factory.setValidating( true );
+				factory.setAttribute( SCHEMA_LANG, XML_SCHEMA );
+				factory.setAttribute( SCHEMA_SOURCE, this.getClass().getResourceAsStream( "/src/main/resources/iban_rules_german.xsd" ) );
+				DocumentBuilder builder = factory.newDocumentBuilder();
+				document = builder.parse( this.getClass().getResourceAsStream( "/src/main/resources/iban_rules_german.xml" ) );
+			} catch( ParserConfigurationException e ) {
+				e.printStackTrace();
+			} catch( SAXException e ) {
+				e.printStackTrace();
+			} catch( IOException e ) {
+				e.printStackTrace();
+			}
+			// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
+		}
+		return document;
+	}
+	
     /**
      * Reads the rule from config file
      */
-    private void readRule() {
-	NodeList nodes = document.getElementById(rule_id).getChildNodes();
-		
-	for (int i = 0; i < nodes.getLength(); i++) {
-	    if (nodes.item(i).getNodeType() == Node.ELEMENT_NODE) {
-		NodeList nodeRule = nodes.item(i).getChildNodes();
-			
-		for (int j = 0; j < nodeRule.getLength(); j++) {
-		    if (nodeRule.item(j).getNodeType() == Node.ELEMENT_NODE) {
-			element = (Element) nodeRule.item(j);
+	private void readRule() {
+		Document doc = getDocument();
+		synchronized( doc ) {
+			NodeList nodes = doc.getElementById( rule_id ).getChildNodes();
 
-//			switch (nodes.item(i).getNodeName()) {
-			if (nodes.item(i).getNodeName().equals("no_calculation"))
-			    listNoCalculation.add(element);
-			else if (nodes.item(i).getNodeName().equals("mappings_kto"))
-			{
-			    MappingKto mapKto = new MappingKto(((Element)element.getParentNode()).getAttribute("blz"));
-			    mapKto.setBlzNew(((Element)element.getParentNode()).getAttribute("blz_new"));
-			    mapKto.setFrom(element.getAttribute("from"));
-			    mapKto.setTo(element.getTextContent());
-			    listMappingKto.add(mapKto);
+			for( int i = 0; i < nodes.getLength(); i++ ) {
+				if( nodes.item( i ).getNodeType() == Node.ELEMENT_NODE ) {
+					NodeList nodeRule = nodes.item( i ).getChildNodes();
+
+					for( int j = 0; j < nodeRule.getLength(); j++ ) {
+						if( nodeRule.item( j ).getNodeType() == Node.ELEMENT_NODE ) {
+							element = (Element) nodeRule.item( j );
+
+//							switch (nodes.item(i).getNodeName()) {
+							if( nodes.item( i ).getNodeName().equals( "no_calculation" ) )
+								listNoCalculation.add( element );
+							else if( nodes.item( i ).getNodeName().equals( "mappings_kto" ) ) {
+								MappingKto mapKto = new MappingKto( ((Element) element.getParentNode()).getAttribute( "blz" ) );
+								mapKto.setBlzNew( ((Element) element.getParentNode()).getAttribute( "blz_new" ) );
+								mapKto.setFrom( element.getAttribute( "from" ) );
+								mapKto.setTo( element.getTextContent() );
+								listMappingKto.add( mapKto );
+							} else if( nodes.item( i ).getNodeName().equals( "mappings_ktokr" ) )
+								listMappingKtoKr.add( element );
+							else if( nodes.item( i ).getNodeName().equals( "mappings_blz" ) )
+								listMappingBlz.add( element );
+							else if( nodes.item( i ).getNodeName().equals( "modification_kto" ) )
+								listModificationKto.add( element );
+							else if( nodes.item( i ).getNodeName().equals( "mappings_bic" ) ) listMappingBic.add( element );
+						}
+					}
+				}
 			}
-			else if (nodes.item(i).getNodeName().equals("mappings_ktokr"))
-			    listMappingKtoKr.add(element);
-			else if (nodes.item(i).getNodeName().equals("mappings_blz"))
-			    listMappingBlz.add(element);
-			else if (nodes.item(i).getNodeName().equals("modification_kto"))
-			    listModificationKto.add(element);
-			else if (nodes.item(i).getNodeName().equals("mappings_bic"))
-			    listMappingBic.add(element);
-		    }
 		}
-	    }
 	}
-    }
     
     /**
      * Check for no calculation rules for a specific bank identifier

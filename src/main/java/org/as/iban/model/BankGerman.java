@@ -23,6 +23,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.as.iban.exception.IbanException;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -70,16 +71,18 @@ public class BankGerman {
     		    factoryBank.setNamespaceAware(true);
     		    factoryBank.setValidating(true);
     		    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-    		    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
+    		    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/src/main/resources/banks_german.xsd"));
     		
     		    DocumentBuilder builderBank = factoryBank.newDocumentBuilder();
-    		    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
+    		    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/src/main/resources/banks_german.xml"));
     		} catch (ParserConfigurationException e) {
     		    e.printStackTrace();
     		} catch (SAXException e) {
     		    e.printStackTrace();
     		} catch (IOException e) {
     		    e.printStackTrace();
+    		} catch (IllegalArgumentException e ) {
+    			e.printStackTrace();
     		}
     		// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
     	}
@@ -90,31 +93,31 @@ public class BankGerman {
      * Reads the configuration of the bank from config file
      * @throws IbanException
      */
-    private void readBankConfig() throws IbanException {
+	private void readBankConfig() throws IbanException {
 
-	NodeList nodeBank = null;
-	
-	try {
-	    nodeBank = getDocumentBank().getElementById("_" + this.blz).getChildNodes();
-	} catch (Exception e) {
-	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
+		Document doc = getDocumentBank();
+
+		synchronized( doc ) {		// org.w3c.dom stuff is not threadsafe
+			NodeList nodeBank = null;
+			try {
+				nodeBank = doc.getElementById( "_" + this.blz ).getChildNodes();
+			} catch( Exception e ) {
+				throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT );
+			}
+
+			if( nodeBank.getLength() == 0 ) throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT );
+
+			for( int i = 0; i < nodeBank.getLength(); i++ ) {
+				Node node = nodeBank.item( i );
+				String nodeName = node.getNodeName();
+				if( nodeName.equals( "bic" ) ) {
+					if( !node.getTextContent().isEmpty() ) this.bic = node.getTextContent();
+				} else if( nodeName.equals( "rule" ) )
+					this.ruleId = node.getTextContent();
+				else if( nodeName.equals( "name" ) ) this.name = node.getTextContent();
+			}
+		}
 	}
-	    	    
-	if (nodeBank.getLength() == 0)
-	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
-	
-	for (int i = 0; i < nodeBank.getLength(); i++){
-	    if (nodeBank.item(i).getNodeName().equals("bic"))
-	    {
-		if (!nodeBank.item(i).getTextContent().isEmpty())
-		    this.bic = nodeBank.item(i).getTextContent();
-	    }
-	    else if (nodeBank.item(i).getNodeName().equals("rule"))
-		this.ruleId = nodeBank.item(i).getTextContent();
-	    else if (nodeBank.item(i).getNodeName().equals("name"))
-		this.name = nodeBank.item(i).getTextContent();
-	}
-    }
     
     /**
      * Get the current bank identifier of the bank

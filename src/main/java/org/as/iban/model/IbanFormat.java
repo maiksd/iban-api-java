@@ -61,16 +61,18 @@ public class IbanFormat {
     		    factory.setNamespaceAware(true);
     		    factory.setValidating(true);
     		    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-    		    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/iban_format.xsd"));
+    		    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/src/main/resources/iban_format.xsd"));
     		    
     		    DocumentBuilder builder = factory.newDocumentBuilder();
-    		    configDoc = builder.parse(this.getClass().getResourceAsStream("/iban_format.xml"));
+    		    configDoc = builder.parse(this.getClass().getResourceAsStream("/src/main/resources/iban_format.xml"));
     		} catch (ParserConfigurationException e) {
     		    e.printStackTrace();
     		} catch (SAXException e) {
     		    e.printStackTrace();
     		} catch (IOException e) {
     		    e.printStackTrace();
+    		} catch (IllegalArgumentException e ) {
+    			e.printStackTrace();
     		}
     		// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
     	}
@@ -83,24 +85,28 @@ public class IbanFormat {
      */
     private void readFormatConfig() throws IbanException {
 		
-		NodeList nodeFormat = null;
-		try {
-		    nodeFormat = getConfigDoc().getElementById(countryCode).getChildNodes();
-		} catch (Exception e) {
-		    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
-		}
+    	Document doc = getConfigDoc();
+    	synchronized( doc ) {		// org.w3c.dom stuff is not threadsafe
+    		NodeList nodeFormat = null;
+    		try {
+    			nodeFormat = doc.getElementById(countryCode).getChildNodes();
+    		} catch (Exception e) {
+    			e.printStackTrace();	// FIXME
+    			throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
+    		}
 
-		if (nodeFormat.getLength() == 0)
-		    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
+    		if (nodeFormat.getLength() == 0)
+    			throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
 
-		for (int i = 0; i < nodeFormat.getLength(); i++){
-		    if (nodeFormat.item(i).getNodeName().equals("regexp"))
-	    		this.regexp = nodeFormat.item(i).getTextContent();
-		    else if (nodeFormat.item(i).getNodeName().equals("bankIdentLength"))
-	    		this.bankIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
-		    else if (nodeFormat.item(i).getNodeName().equals("ktoIdentLength"))
-	    		this.ktoIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
-		}
+    		for (int i = 0; i < nodeFormat.getLength(); i++){
+    			if (nodeFormat.item(i).getNodeName().equals("regexp"))
+    				this.regexp = nodeFormat.item(i).getTextContent();
+    			else if (nodeFormat.item(i).getNodeName().equals("bankIdentLength"))
+    				this.bankIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
+    			else if (nodeFormat.item(i).getNodeName().equals("ktoIdentLength"))
+    				this.ktoIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
+    		}
+    	}
     }
 
     /**
