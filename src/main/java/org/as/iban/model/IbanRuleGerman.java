@@ -24,6 +24,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.as.iban.exception.IbanException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -64,8 +65,9 @@ public class IbanRuleGerman {
     /**
      * Constructor. Loads a specified Rule by a given ruleID
      * @param rule_id	The id that identifies the specific rule from iban_rule_german.xml
+     * @throws IbanException
      */
-	public IbanRuleGerman( String rule_id ) {
+	public IbanRuleGerman( String rule_id ) throws IbanException {
 		this.rule_id = rule_id;
 		readRule();
 	}
@@ -94,10 +96,15 @@ public class IbanRuleGerman {
 	
     /**
      * Reads the rule from config file
+     * @throws IbanException
      */
-	private void readRule() {
+	private void readRule() throws IbanException {
 		Document doc = getDocument();
-		NodeList nodes = doc.getElementById( rule_id ).getChildNodes();
+		Element ruleElem = doc.getElementById( rule_id );
+		if( ruleElem == null ) {
+			throw new IbanException( IbanException.IBAN_EXCEPTION_NO_RULE_FOR_BANK + " " + rule_id );
+		}
+		NodeList nodes = ruleElem.getChildNodes();
 
 		for( int i = 0; i < nodes.getLength(); i++ ) {
 			if( nodes.item( i ).getNodeType() == Node.ELEMENT_NODE ) {

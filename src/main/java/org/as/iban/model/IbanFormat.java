@@ -90,7 +90,7 @@ public class IbanFormat {
     	try {
     		nodeFormat = doc.getElementById(countryCode).getChildNodes();
     	} catch (Exception e) {
-    		e.printStackTrace();	// FIXME
+    		e.printStackTrace();
     		throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
     	}
 
