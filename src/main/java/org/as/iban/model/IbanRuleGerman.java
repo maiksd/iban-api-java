@@ -79,9 +79,9 @@ public class IbanRuleGerman {
 				factory.setNamespaceAware( true );
 				factory.setValidating( true );
 				factory.setAttribute( SCHEMA_LANG, XML_SCHEMA );
-				factory.setAttribute( SCHEMA_SOURCE, IbanRuleGerman.class.getResourceAsStream( "/src/main/resources/iban_rules_german.xsd" ) );
+				factory.setAttribute( SCHEMA_SOURCE, IbanRuleGerman.class.getResourceAsStream( "/iban_rules_german.xsd" ) );
 				DocumentBuilder builder = factory.newDocumentBuilder();
-				document.set( builder.parse( IbanRuleGerman.class.getResourceAsStream( "/src/main/resources/iban_rules_german.xml" ) ) );
+				document.set( builder.parse( IbanRuleGerman.class.getResourceAsStream( "/iban_rules_german.xml" ) ) );
 			} catch( ParserConfigurationException e ) {
 				e.printStackTrace();
 			} catch( SAXException e ) {

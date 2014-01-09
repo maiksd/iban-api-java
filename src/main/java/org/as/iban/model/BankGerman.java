@@ -70,10 +70,10 @@ public class BankGerman {
     		    factoryBank.setNamespaceAware(true);
     		    factoryBank.setValidating(true);
     		    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-    		    factoryBank.setAttribute(SCHEMA_SOURCE, BankGerman.class.getResourceAsStream("/src/main/resources/banks_german.xsd"));
+    		    factoryBank.setAttribute(SCHEMA_SOURCE, BankGerman.class.getResourceAsStream("/banks_german.xsd"));
     		
     		    DocumentBuilder builderBank = factoryBank.newDocumentBuilder();
-    		    documentBank.set( builderBank.parse(BankGerman.class.getResourceAsStream("/src/main/resources/banks_german.xml")) );
+    		    documentBank.set( builderBank.parse(BankGerman.class.getResourceAsStream("/banks_german.xml")) );
     		} catch (ParserConfigurationException e) {
     		    e.printStackTrace();
     		} catch (SAXException e) {

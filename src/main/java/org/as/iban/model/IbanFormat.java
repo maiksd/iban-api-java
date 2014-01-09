@@ -61,10 +61,10 @@ public class IbanFormat {
     		    factory.setNamespaceAware(true);
     		    factory.setValidating(true);
     		    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-    		    factory.setAttribute(SCHEMA_SOURCE, IbanFormat.class.getResourceAsStream("/src/main/resources/iban_format.xsd"));
+    		    factory.setAttribute(SCHEMA_SOURCE, IbanFormat.class.getResourceAsStream("/iban_format.xsd"));
     		    
     		    DocumentBuilder builder = factory.newDocumentBuilder();
-    		    configDoc.set( builder.parse(IbanFormat.class.getResourceAsStream("/src/main/resources/iban_format.xml")) );
+    		    configDoc.set( builder.parse(IbanFormat.class.getResourceAsStream("/iban_format.xml")) );
     		} catch (ParserConfigurationException e) {
     		    e.printStackTrace();
     		} catch (SAXException e) {
