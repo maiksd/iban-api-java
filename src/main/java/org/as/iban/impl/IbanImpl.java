@@ -20,6 +20,7 @@ import java.util.regex.Pattern;
 
 import org.as.iban.Iban;
 import org.as.iban.exception.IbanException;
+import org.as.iban.model.BankGerman;
 import org.as.iban.model.IbanFormat;
 
 /**
@@ -115,7 +116,8 @@ public class IbanImpl implements Iban {
      */
     @Override
 	public String getBic() {
-    	return bban.getBankGerman().getBic();
+    	BankGerman bank = bban.getBankGerman();
+		return ( bank != null ? bank.getBic() : null );		// cannot determine this for non-german banks
     }
     
     /**
