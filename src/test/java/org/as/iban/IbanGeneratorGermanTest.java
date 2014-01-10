@@ -1062,7 +1062,19 @@ public class IbanGeneratorGermanTest {
     
     @Test
     public void rule002700(){
-    	//	TODO
+    	bankIdent = "32060362";
+    	ktoIdent = "4444";
+    	
+    	Iban iban = null;
+    	
+    	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    	
+    	assertEquals("DE23320603620000004444", iban.toString());
+    	assertEquals("GENODED1HTK", iban.getBic());
     }
     
     @Test

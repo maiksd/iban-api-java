@@ -597,6 +597,18 @@ public class IbanValidatorGermanTest {
     }
     
     @Test
+    public void rule002700() {
+	Iban iban = null;
+	
+	try {
+	    iban = new IbanImpl("DE47320603620000003333");
+	    assertTrue(iban.validate());
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+    }
+    
+    @Test
     public void rule002800() {
 	Iban iban = null;
 	
