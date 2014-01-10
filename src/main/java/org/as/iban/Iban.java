@@ -72,7 +72,8 @@ public interface Iban {
      * Returns the string representation of the IBAN
      * @return The IBAN in the format "country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
      */
-    public String toString();
+    @Override
+	public String toString();
     
     /**
      * Get the BIC refers to the IBAN

@@ -32,10 +32,12 @@ import org.xml.sax.SAXException;
  *
  */
 public class IbanFormat {
-    //	local variables
-    final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
-    final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
-    final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
+
+	private static final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
+    private static final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
+    private static final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
+    
+    private static ThreadLocal<Document> configDoc = new ThreadLocal();
     
     private String countryCode;
     private String regexp;
@@ -45,60 +47,64 @@ public class IbanFormat {
     /**
      * Constructor for the IbanFormat for a specific country
      * @param countryCode	The country code for which the IBAN format definition is loaded
-     * @throws IbanException 
+     * @throws IbanException
      */
     public IbanFormat(String countryCode) throws IbanException {
 		this.countryCode = countryCode;
 		readFormatConfig();
     }
 
+    private static synchronized Document getConfigDoc() {
+    	if( configDoc.get() == null ) {
+    		try {
+    			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    		    factory.setNamespaceAware(true);
+    		    factory.setValidating(true);
+    		    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
+    		    factory.setAttribute(SCHEMA_SOURCE, IbanFormat.class.getResourceAsStream("/iban_format.xsd"));
+    		    
+    		    DocumentBuilder builder = factory.newDocumentBuilder();
+    		    configDoc.set( builder.parse(IbanFormat.class.getResourceAsStream("/iban_format.xml")) );
+    		} catch (ParserConfigurationException e) {
+    		    e.printStackTrace();
+    		} catch (SAXException e) {
+    		    e.printStackTrace();
+    		} catch (IOException e) {
+    		    e.printStackTrace();
+    		} catch (IllegalArgumentException e ) {
+    			e.printStackTrace();
+    		}
+    		// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
+    	}
+    	return configDoc.get();
+    }
+    
     /**
      * Reads the iban format information from the config file
-     * @throws IbanException 
+     * @throws IbanException
      */
     private void readFormatConfig() throws IbanException {
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder;
-		Document document = null;
 		
-		try {
-		    factory.setNamespaceAware(true);
-		    factory.setValidating(true);
-		    factory.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-		    factory.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/iban_format.xsd"));
-		    
-		    builder = factory.newDocumentBuilder();
-		    document = builder.parse(this.getClass().getResourceAsStream("/iban_format.xml"));
-	
-		} catch (ParserConfigurationException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		} catch (SAXException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		} catch (IOException e) {
-		    e.printStackTrace();
-		    System.exit(-1);
-		}
-		
-		NodeList nodeFormat = null;
-		try {
-		    nodeFormat = document.getElementById(countryCode).getChildNodes();
-		} catch (Exception e) {
-		    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
-		}
+    	Document doc = getConfigDoc();
+    	NodeList nodeFormat = null;
+    	try {
+    		nodeFormat = doc.getElementById(countryCode).getChildNodes();
+    	} catch (Exception e) {
+    		e.printStackTrace();
+    		throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
+    	}
 
-		if (nodeFormat.getLength() == 0)
-		    throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
+    	if (nodeFormat.getLength() == 0)
+    		throw new IbanException(IbanException.IBAN_EXCEPTION_UNSUPPORTED_COUNTRY);
 
-		for (int i = 0; i < nodeFormat.getLength(); i++){
-		    if (nodeFormat.item(i).getNodeName().equals("regexp"))
-	    		this.regexp = nodeFormat.item(i).getTextContent();
-		    else if (nodeFormat.item(i).getNodeName().equals("bankIdentLength"))
-	    		this.bankIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
-		    else if (nodeFormat.item(i).getNodeName().equals("ktoIdentLength"))
-	    		this.ktoIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
-		}
+    	for (int i = 0; i < nodeFormat.getLength(); i++){
+    		if (nodeFormat.item(i).getNodeName().equals("regexp"))
+    			this.regexp = nodeFormat.item(i).getTextContent();
+    		else if (nodeFormat.item(i).getNodeName().equals("bankIdentLength"))
+    			this.bankIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
+    		else if (nodeFormat.item(i).getNodeName().equals("ktoIdentLength"))
+    			this.ktoIdentLength = Integer.valueOf(nodeFormat.item(i).getTextContent());
+    	}
     }
 
     /**

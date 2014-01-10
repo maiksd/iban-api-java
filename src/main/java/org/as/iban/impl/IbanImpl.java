@@ -16,9 +16,11 @@
 package org.as.iban.impl;
 
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 import org.as.iban.Iban;
 import org.as.iban.exception.IbanException;
+import org.as.iban.model.BankGerman;
 import org.as.iban.model.IbanFormat;
 
 /**
@@ -28,6 +30,8 @@ import org.as.iban.model.IbanFormat;
  */
 public class IbanImpl implements Iban {
     
+	private static final Pattern BROAD_IBAN_PATTERN = Pattern.compile( "^[A-Z]{2}[0-9]{2}[0-9A-Z]{11,30}$" );
+
 	//	local variables
     private String country;
     private String checkDigit;
@@ -38,11 +42,15 @@ public class IbanImpl implements Iban {
      * @param ibanString	A iban-code with format "country-code|checkdigit|bank-ident|kto-ident", for example "DE62701500000020228888"
      * @throws IbanException
      */
-    public IbanImpl(String ibanString) throws IbanException{
-	this.setCountry(ibanString);
-	this.setCheckDigit(ibanString);
-	this.setBban(new BbanImpl(country, ibanString.substring(4, ibanString.length())));
-    }
+	public IbanImpl( String ibanString ) throws IbanException {
+		// Start with a general fast check of overall format, avoiding subsequent errors like StringIndexOutOfBoundsException at parsing
+		if( ibanString == null || !BROAD_IBAN_PATTERN.matcher( ibanString ).find() ) {
+			throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_GENERAL_FORMAT );
+		}
+		this.setCountry( ibanString );
+		this.setCheckDigit( ibanString );
+		this.setBban( new BbanImpl( country, ibanString.substring( 4, ibanString.length() ) ) );
+	}
 
     /**
      * Constructor generating the IBAN for a specific country with the given bank identifier and account number
@@ -60,7 +68,8 @@ public class IbanImpl implements Iban {
     /* (non-Javadoc)
      * @see org.as.iban.Iban#validate()
      */
-    public boolean validate() throws IbanException {
+    @Override
+	public boolean validate() throws IbanException {
 	validateFormat();
 	if (country.equals(Iban.COUNTRY_CODE_GERMAN)) {
 	    BbanImpl bbanTmp = new BbanImpl(country, bban.getBankIdent(), bban.getKtoIdent());
@@ -97,20 +106,23 @@ public class IbanImpl implements Iban {
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
      */
-    public String toString() {
+    @Override
+	public String toString() {
     	return this.country + this.checkDigit + this.bban.toString();
     }
 
     /* (non-Javadoc)
      * @see org.as.iban.Iban#getBic()
      */
-    public String getBic() {
-    	return bban.getBankGerman().getBic();
+    @Override
+	public String getBic() {
+    	BankGerman bank = bban.getBankGerman();
+		return ( bank != null ? bank.getBic() : null );		// cannot determine this for non-german banks
     }
     
     /**
      * Generates the shifted iban code (bank-ident|kto-ident|country-code|check-digit)
-     * @param bban 
+     * @param bban
      * @return The shifted code
      */
     private String shiftIbanToString(BbanImpl bban, String checkDigit) {
@@ -124,7 +136,7 @@ public class IbanImpl implements Iban {
      */
     private String asciiToNumber(String shiftedIban){
 	char ch;
-	String tmpStr = ""; 
+	String tmpStr = "";
 		
 	shiftedIban.toUpperCase(Locale.ENGLISH);
 		

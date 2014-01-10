@@ -30,6 +30,8 @@ public class IbanException extends Exception {
     public static final String IBAN_EXCEPTION_UNSUPPORTED_COUNTRY = "Country code ist not supported in this version";
     public static final String IBAN_EXCEPTION_NO_IBAN_CALCULATION = "No Iban Calculation for this accountnumber";
     public static final String IBAN_EXCEPTION_INVALID_BANKIDENT = "No existing bank with this BLZ";
+    public static final String IBAN_EXCEPTION_INVALID_GENERAL_FORMAT = "Invalid IBAN format in general";
+    public static final String IBAN_EXCEPTION_NO_RULE_FOR_BANK = "No rule found for bank";
     
     /**
      * Constructor

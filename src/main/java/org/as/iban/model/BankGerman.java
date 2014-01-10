@@ -16,7 +16,6 @@
 package org.as.iban.model;
 
 import java.io.IOException;
-import java.util.LinkedList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -24,6 +23,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.as.iban.exception.IbanException;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -34,10 +34,9 @@ import org.xml.sax.SAXException;
  */
 public class BankGerman {
 
-	//	local variables
-    final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
-    final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
-    final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
+    private static final String XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
+    private static final String SCHEMA_LANG = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
+    private static final String SCHEMA_SOURCE = "http://java.sun.com/xml/jaxp/properties/schemaSource";
 
     private String blz;
     private String bic;
@@ -45,74 +44,77 @@ public class BankGerman {
     private String name;
     private IbanRuleGerman rule;
 
-    DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
-    DocumentBuilder builderBank;
-    Document documentBank = null;
+    private static ThreadLocal<Document> documentBank = new ThreadLocal();
+
 	
 
     /**
-     * Constructor. Reads the informations for a specific bank from banks_german.xml 
+     * Constructor. Reads the informations for a specific bank from banks_german.xml
      * @param blz	The BLZ for a german bank (bank identifier)
-     * @throws Exception 
+     * @throws IbanException
      */
-    public BankGerman (String blz) throws IbanException {
-	this.blz = blz;
+	public BankGerman( String blz ) throws IbanException {
+		this.blz = blz;
 
-	readBankConfig();
-	if (ruleId.equals("000000") || ruleId.equals("000100"))
-	    this.rule = null;
-	else
-	    this.rule = new IbanRuleGerman("_" + ruleId);
+		readBankConfig();
+		if( ruleId.equals( "000000" ) || ruleId.equals( "000100" ) )
+			this.rule = null;
+		else
+			this.rule = new IbanRuleGerman( "_" + ruleId );
+	}
+    
+    private static synchronized Document getDocumentBank() {
+    	if( documentBank.get() == null ) {
+    	    DocumentBuilderFactory factoryBank = DocumentBuilderFactory.newInstance();
+    		try {
+    		    factoryBank.setNamespaceAware(true);
+    		    factoryBank.setValidating(true);
+    		    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
+    		    factoryBank.setAttribute(SCHEMA_SOURCE, BankGerman.class.getResourceAsStream("/banks_german.xsd"));
+    		
+    		    DocumentBuilder builderBank = factoryBank.newDocumentBuilder();
+    		    documentBank.set( builderBank.parse(BankGerman.class.getResourceAsStream("/banks_german.xml")) );
+    		} catch (ParserConfigurationException e) {
+    		    e.printStackTrace();
+    		} catch (SAXException e) {
+    		    e.printStackTrace();
+    		} catch (IOException e) {
+    		    e.printStackTrace();
+    		} catch (IllegalArgumentException e ) {
+    			e.printStackTrace();
+    		}
+    		// no System.exit, let it run into an NPE later on or whatever, but do not terminate the entire application!
+    	}
+    	return documentBank.get();
     }
     
     /**
      * Reads the configuration of the bank from config file
-     * @throws IbanException 
+     * @throws IbanException
      */
-    private void readBankConfig() throws IbanException {
-	try {
-	    factoryBank.setNamespaceAware(true);
-	    factoryBank.setValidating(true);
-	    factoryBank.setAttribute(SCHEMA_LANG,XML_SCHEMA);
-	    factoryBank.setAttribute(SCHEMA_SOURCE, this.getClass().getResourceAsStream("/banks_german.xsd"));
-	
-	    builderBank = factoryBank.newDocumentBuilder();
-	    documentBank = builderBank.parse(this.getClass().getResourceAsStream("/banks_german.xml"));
-	    
-	} catch (ParserConfigurationException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	} catch (SAXException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	} catch (IOException e) {
-	    e.printStackTrace();
-	    System.exit(-1);
-	}
+	private void readBankConfig() throws IbanException {
 
-	NodeList nodeBank = null;
-	
-	try {
-	    nodeBank = documentBank.getElementById("_" + this.blz).getChildNodes();
-	} catch (Exception e) {
-	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
+		Document doc = getDocumentBank();
+
+		NodeList nodeBank = null;
+		try {
+			nodeBank = doc.getElementById( "_" + this.blz ).getChildNodes();
+		} catch( Exception e ) {
+			throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT );
+		}
+
+		if( nodeBank.getLength() == 0 ) throw new IbanException( IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT );
+
+		for( int i = 0; i < nodeBank.getLength(); i++ ) {
+			Node node = nodeBank.item( i );
+			String nodeName = node.getNodeName();
+			if( nodeName.equals( "bic" ) ) {
+				if( !node.getTextContent().isEmpty() ) this.bic = node.getTextContent();
+			} else if( nodeName.equals( "rule" ) )
+				this.ruleId = node.getTextContent();
+			else if( nodeName.equals( "name" ) ) this.name = node.getTextContent();
+		}
 	}
-	    	    
-	if (nodeBank.getLength() == 0)
-	    throw new IbanException(IbanException.IBAN_EXCEPTION_INVALID_BANKIDENT);
-	
-	for (int i = 0; i < nodeBank.getLength(); i++){
-	    if (nodeBank.item(i).getNodeName().equals("bic"))
-	    {
-		if (!nodeBank.item(i).getTextContent().isEmpty())
-		    this.bic = nodeBank.item(i).getTextContent();
-	    }
-	    else if (nodeBank.item(i).getNodeName().equals("rule"))
-		this.ruleId = nodeBank.item(i).getTextContent();
-	    else if (nodeBank.item(i).getNodeName().equals("name"))
-		this.name = nodeBank.item(i).getTextContent();
-	}
-    }
     
     /**
      * Get the current bank identifier of the bank
@@ -125,7 +127,7 @@ public class BankGerman {
     /**
      * Set the bank identifier for this bank (i.e. in case of mapping)
      * @param blz The new bank identifier
-     * @throws IbanException 
+     * @throws IbanException
      */
     public void setBlz (String blz) throws IbanException {
 	this.blz = blz;
