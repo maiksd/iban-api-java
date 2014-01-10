@@ -1046,6 +1046,11 @@
 		</mappings_blz>
 	</rule>
 	
+	<!-- Rule 0026-00 Bank für Kirche und Diakonie eG, KD Bank -->
+	<rule id="_002600">
+		<!-- Rule not necessary cause acount number validation not implemented  -->
+	</rule>
+	
 	<!-- Rule 0028-00 Sparkasse Hannover -->
 	<rule id="_002800">
 		<mappings_blz>
