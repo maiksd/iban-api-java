@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <banks xmlns="org.as.iban" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
- <bank blz="_10000000">
+  <bank blz="_10000000">
    <bic>MARKDEF1100</bic>
    <rule>004200</rule>
    <name>Bundesbank</name>
@@ -14,11 +14,6 @@
    <bic>ESSEDE5F100</bic>
    <rule>005600</rule>
    <name>SEB</name>
- </bank>
-  <bank blz="_10010222">
-   <bic>ABNADEFFBER</bic>
-   <rule>000100</rule>
-   <name>The Royal Bank of Scotland Niederlassung Frankfurt</name>
  </bank>
   <bank blz="_10010424">
    <bic>AARBDE5W100</bic>
@@ -48,7 +43,7 @@
   <bank blz="_10030200">
    <bic>BHYPDEB2XXX</bic>
    <rule>000000</rule>
-   <name>Berlin-Hannoversche Hypothekenbank</name>
+   <name>Berlin Hyp</name>
  </bank>
   <bank blz="_10030400">
    <bic>ABKBDEB1XXX</bic>
@@ -77,37 +72,37 @@
  </bank>
   <bank blz="_10040000">
    <bic>COBADEBBXXX</bic>
-   <rule>000502</rule>
-   <name>Commerzbank Berlin (West)</name>
+   <rule>000503</rule>
+   <name>Commerzbank, Filiale Berlin 1</name>
  </bank>
   <bank blz="_10040010">
    <bic>COBADEFFS01</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, CC SP</name>
  </bank>
   <bank blz="_10040048">
    <bic>COBADEFF910</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank GF-B48</name>
  </bank>
   <bank blz="_10040060">
    <bic>COBADEFF060</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 160</name>
  </bank>
   <bank blz="_10040061">
    <bic>COBADEFF061</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 161</name>
  </bank>
   <bank blz="_10040062">
    <bic>COBADEFF102</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_10040063">
    <bic>COBADEFF103</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_10040085">
@@ -117,7 +112,7 @@
  </bank>
   <bank blz="_10045050">
    <bic>COBADEFFBZB</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Service-BZ</name>
  </bank>
   <bank blz="_10050000">
@@ -150,11 +145,6 @@
    <rule>000000</rule>
    <name>LBB S-Kreditpartner, Berlin</name>
  </bank>
-  <bank blz="_10050021">
-   <bic>SKPADEB1HOM</bic>
-   <rule>000000</rule>
-   <name>LBB S-Kreditpartner Bad Homburg v d Höhe</name>
- </bank>
   <bank blz="_10050500">
    <bic>LBSODEB1BLN</bic>
    <rule>000000</rule>
@@ -177,7 +167,7 @@
  </bank>
   <bank blz="_10060237">
    <bic>GENODEF1EDG</bic>
-   <rule>005400</rule>
+   <rule>005401</rule>
    <name>Evangelische Darlehnsgenossenschaft</name>
  </bank>
   <bank blz="_10061006">
@@ -217,67 +207,67 @@
  </bank>
   <bank blz="_10080000">
    <bic>DRESDEFF100</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Filiale Berlin I</name>
  </bank>
   <bank blz="_10080005">
    <bic>DRESDEFFI26</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw A</name>
  </bank>
   <bank blz="_10080006">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw B</name>
  </bank>
   <bank blz="_10080055">
    <bic>DRESDEFF112</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 55</name>
  </bank>
   <bank blz="_10080057">
    <bic>DRESDEFF114</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf ZW 57</name>
  </bank>
   <bank blz="_10080085">
    <bic>DRESDEFFI53</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 3</name>
  </bank>
   <bank blz="_10080086">
    <bic>DRESDEFFI71</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4</name>
  </bank>
   <bank blz="_10080087">
    <bic>DRESDEFFI72</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5</name>
  </bank>
   <bank blz="_10080088">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank IBLZ</name>
  </bank>
   <bank blz="_10080089">
    <bic>DRESDEFFI73</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6</name>
  </bank>
   <bank blz="_10080900">
    <bic>DRESDEFF199</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Filiale Berlin III</name>
  </bank>
   <bank blz="_10089260">
    <bic>DRESDEFFI14</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_10089999">
    <bic>DRESDEFFI99</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK 2</name>
  </bank>
   <bank blz="_10090000">
@@ -326,7 +316,7 @@
    <name>Santander Consumer Bank</name>
  </bank>
   <bank blz="_10120760">
-   <bic>HYVEDEM1079</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 260 BIn</name>
  </bank>
@@ -377,8 +367,8 @@
  </bank>
   <bank blz="_12040000">
    <bic>COBADEBB120</bic>
-   <rule>000502</rule>
-   <name>Commerzbank Berlin Ost</name>
+   <rule>000503</rule>
+   <name>Commerzbank Filiale Berlin 2</name>
  </bank>
   <bank blz="_12050555">
    <bic>NOLADE21DVS</bic>
@@ -412,7 +402,7 @@
  </bank>
   <bank blz="_12080000">
    <bic>DRESDEFF120</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Filiale Berlin II</name>
  </bank>
   <bank blz="_12090640">
@@ -437,7 +427,7 @@
  </bank>
   <bank blz="_13040000">
    <bic>COBADEFF130</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_13050000">
@@ -487,7 +477,7 @@
  </bank>
   <bank blz="_13080000">
    <bic>DRESDEFF130</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_13090000">
@@ -512,7 +502,7 @@
  </bank>
   <bank blz="_14040000">
    <bic>COBADEFF140</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_14051000">
@@ -547,12 +537,12 @@
  </bank>
   <bank blz="_14080000">
    <bic>DRESDEFF140</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_14080011">
    <bic>DRESDEFFI27</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw W</name>
  </bank>
   <bank blz="_14091464">
@@ -567,7 +557,7 @@
  </bank>
   <bank blz="_15040068">
    <bic>COBADEFF151</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_15050100">
@@ -612,7 +602,7 @@
  </bank>
   <bank blz="_15080000">
    <bic>DRESDEFF150</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_15091674">
@@ -647,7 +637,7 @@
  </bank>
   <bank blz="_16040000">
    <bic>COBADEFF160</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_16050000">
@@ -692,7 +682,7 @@
  </bank>
   <bank blz="_16080000">
    <bic>DRESDEFF160</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_16091994">
@@ -712,7 +702,7 @@
  </bank>
   <bank blz="_17040000">
    <bic>COBADEFF170</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_17052000">
@@ -747,7 +737,7 @@
  </bank>
   <bank blz="_17080000">
    <bic>DRESDEFF170</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_17092404">
@@ -767,7 +757,7 @@
  </bank>
   <bank blz="_18040000">
    <bic>COBADEFF180</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_18050000">
@@ -797,7 +787,7 @@
  </bank>
   <bank blz="_18080000">
    <bic>DRESDEFF180</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_18092684">
@@ -882,67 +872,67 @@
  </bank>
   <bank blz="_20040000">
    <bic>COBADEHHXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_20040020">
    <bic>COBADEFFS02</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, CC SP</name>
  </bank>
   <bank blz="_20040040">
    <bic>COBADEFFRME</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank GF RME</name>
  </bank>
   <bank blz="_20040048">
    <bic>COBADEFF920</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank GF-H48</name>
  </bank>
   <bank blz="_20040050">
    <bic>COBADEFF208</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank GF COC</name>
  </bank>
   <bank blz="_20040060">
    <bic>COBADEFF062</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 260</name>
  </bank>
   <bank blz="_20040061">
    <bic>COBADEFF063</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 261</name>
  </bank>
   <bank blz="_20040062">
    <bic>COBADEFF074</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_20040063">
    <bic>COBADEFF075</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_20041111">
    <bic>COBADEHDXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>comdirect bank</name>
  </bank>
   <bank blz="_20041133">
    <bic>COBADEHD001</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>comdirect bank</name>
  </bank>
   <bank blz="_20041144">
    <bic>COBADEHD044</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>comdirect bank</name>
  </bank>
   <bank blz="_20041155">
    <bic>COBADEHD055</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>comdirect bank</name>
  </bank>
   <bank blz="_20050000">
@@ -1057,72 +1047,72 @@
  </bank>
   <bank blz="_20080000">
    <bic>DRESDEFF200</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_20080055">
    <bic>DRESDEFF207</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 55</name>
  </bank>
   <bank blz="_20080057">
    <bic>DRESDEFF208</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf ZW 57</name>
  </bank>
   <bank blz="_20080085">
    <bic>DRESDEFFI56</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_20080086">
    <bic>DRESDEFFI63</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3</name>
  </bank>
   <bank blz="_20080087">
    <bic>DRESDEFFI64</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4</name>
  </bank>
   <bank blz="_20080088">
    <bic>DRESDEFFI74</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5</name>
  </bank>
   <bank blz="_20080089">
    <bic>DRESDEFFI75</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6</name>
  </bank>
   <bank blz="_20080091">
    <bic>DRESDEFFJ33</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7</name>
  </bank>
   <bank blz="_20080092">
    <bic>DRESDEFFJ34</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 8</name>
  </bank>
   <bank blz="_20080093">
    <bic>DRESDEFFJ35</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 9</name>
  </bank>
   <bank blz="_20080094">
    <bic>DRESDEFFJ36</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 10</name>
  </bank>
   <bank blz="_20080095">
    <bic>DRESDEFFJ37</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 11</name>
  </bank>
   <bank blz="_20089200">
    <bic>DRESDEFFI06</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_20090400">
@@ -1204,21 +1194,6 @@
    <bic>HSTBDEHHXXX</bic>
    <rule>000000</rule>
    <name>Hanseatic Bank</name>
- </bank>
-  <bank blz="_20120701">
-   <bic>HSTBDEH1OV1</bic>
-   <rule>000000</rule>
-   <name>Hanseatic Bank Zw Nord</name>
- </bank>
-  <bank blz="_20120744">
-   <bic>HSTBDEH1NKO</bic>
-   <rule>000000</rule>
-   <name>Hanseatic Bank Filiale Ost</name>
- </bank>
-  <bank blz="_20120766">
-   <bic>HSTBDEH1NKS</bic>
-   <rule>000000</rule>
-   <name>Hanseatic Bank Filiale Süd</name>
  </bank>
   <bank blz="_20130400">
    <bic>GREBDEH1XXX</bic>
@@ -1304,11 +1279,6 @@
    <bic></bic>
    <rule>000000</rule>
    <name>Europäisch-Iranische Handelsbank</name>
- </bank>
-  <bank blz="_20310600">
-   <bic>ABNADEFFHAM</bic>
-   <rule>000100</rule>
-   <name>The Royal Bank of Scotland Niederlassung Frankfurt</name>
  </bank>
   <bank blz="_20320500">
    <bic>DABADEHHXXX</bic>
@@ -1592,12 +1562,12 @@
  </bank>
   <bank blz="_21040010">
    <bic>COBADEFF210</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21042076">
    <bic>COBADEFF245</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21050000">
@@ -1627,7 +1597,7 @@
  </bank>
   <bank blz="_21060237">
    <bic>GENODEF1EDG</bic>
-   <rule>005400</rule>
+   <rule>005401</rule>
    <name>Evangelische Darlehnsgenossenschaft</name>
  </bank>
   <bank blz="_21070020">
@@ -1642,12 +1612,12 @@
  </bank>
   <bank blz="_21080050">
    <bic>DRESDEFF210</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_21089201">
    <bic>DRESDEFFI07</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_21090007">
@@ -1687,12 +1657,12 @@
  </bank>
   <bank blz="_21240040">
    <bic>COBADEFF212</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21241540">
    <bic>COBADEFF225</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21261089">
@@ -1717,7 +1687,7 @@
  </bank>
   <bank blz="_21280002">
    <bic>DRESDEFF212</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_21290016">
@@ -1727,7 +1697,7 @@
  </bank>
   <bank blz="_21340010">
    <bic>COBADEFF226</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21352240">
@@ -1752,7 +1722,7 @@
  </bank>
   <bank blz="_21440045">
    <bic>COBADEFF214</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21450000">
@@ -1782,7 +1752,7 @@
  </bank>
   <bank blz="_21480003">
    <bic>DRESDEFF214</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_21500000">
@@ -1807,13 +1777,8 @@
  </bank>
   <bank blz="_21540060">
    <bic>COBADEFF215</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
- </bank>
-  <bank blz="_21550050">
-   <bic>NOLADE21FLS</bic>
-   <rule>000100</rule>
-   <name>Nord-Ostsee Sparkasse</name>
  </bank>
   <bank blz="_21565316">
    <bic>GENODEF1HDW</bic>
@@ -1842,7 +1807,7 @@
  </bank>
   <bank blz="_21580000">
    <bic>DRESDEFF215</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_21630060">
@@ -1864,11 +1829,6 @@
    <bic>HYVEDEMM397</bic>
    <rule>000000</rule>
    <name>UniCredit Bank - HypoVereinsbank (ex VereinWest)</name>
- </bank>
-  <bank blz="_21650110">
-   <bic>NOLADE21SLN</bic>
-   <rule>000100</rule>
-   <name>Sparkasse Schleswig-Flensburg -alt-</name>
  </bank>
   <bank blz="_21661719">
    <bic>GENODEF1RSL</bic>
@@ -1917,17 +1877,17 @@
  </bank>
   <bank blz="_21740043">
    <bic>COBADEFF217</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21741674">
    <bic>COBADEFF211</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21741825">
    <bic>COBADEFF220</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21750000">
@@ -1997,12 +1957,12 @@
  </bank>
   <bank blz="_21840078">
    <bic>COBADEFF218</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21841328">
    <bic>COBADEFF219</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_21851720">
@@ -2037,22 +1997,22 @@
  </bank>
   <bank blz="_22140028">
    <bic>COBADEFF221</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_22141028">
    <bic>COBADEFF224</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_22141428">
    <bic>COBADEFF206</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_22141628">
    <bic>COBADEFF223</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_22150000">
@@ -2072,12 +2032,12 @@
  </bank>
   <bank blz="_22180000">
    <bic>DRESDEFF221</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_22181400">
    <bic>DRESDEFF206</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_22190030">
@@ -2117,7 +2077,7 @@
  </bank>
   <bank blz="_22240073">
    <bic>COBADEFF222</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_22250020">
@@ -2137,7 +2097,7 @@
  </bank>
   <bank blz="_22280000">
    <bic>DRESDEFF201</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_22290031">
@@ -2162,7 +2122,7 @@
  </bank>
   <bank blz="_23040022">
    <bic>COBADEFF230</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_23050000">
@@ -2227,23 +2187,18 @@
  </bank>
   <bank blz="_23080040">
    <bic>DRESDEFF230</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_23089201">
    <bic>DRESDEFFI08</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_23090142">
    <bic>GENODEF1HLU</bic>
    <rule>000000</rule>
    <name>Volksbank Lübeck</name>
- </bank>
-  <bank blz="_23092502">
-   <bic>GENODEF1VLB</bic>
-   <rule>000000</rule>
-   <name>Volksbank Lauenburg -alt-</name>
  </bank>
   <bank blz="_23092620">
    <bic>DAAEDED1020</bic>
@@ -2262,7 +2217,7 @@
  </bank>
   <bank blz="_24040000">
    <bic>COBADEFF240</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_24050110">
@@ -2292,7 +2247,7 @@
  </bank>
   <bank blz="_24080000">
    <bic>DRESDEFF240</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_24090041">
@@ -2312,7 +2267,7 @@
  </bank>
   <bank blz="_24140041">
    <bic>COBADEFF241</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_24150001">
@@ -2347,12 +2302,12 @@
  </bank>
   <bank blz="_24180000">
    <bic>DRESDEFF242</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_24180001">
    <bic>DRESDEFF241</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_24191015">
@@ -2388,7 +2343,7 @@
   <bank blz="_25010700">
    <bic>BHYPDEB1HAN</bic>
    <rule>000100</rule>
-   <name>Berlin-Hannoversche Hypothekenbank</name>
+   <name>Berlin Hyp</name>
  </bank>
   <bank blz="_25010900">
    <bic>CKVHDE21XXX</bic>
@@ -2405,11 +2360,6 @@
    <rule>004600</rule>
    <name>Santander Consumer Bank</name>
  </bank>
-  <bank blz="_25020700">
-   <bic>HSTBDEH1HAN</bic>
-   <rule>000000</rule>
-   <name>Hanseatic Bank</name>
- </bank>
   <bank blz="_25030000">
    <bic>HYVEDEMM210</bic>
    <rule>000000</rule>
@@ -2417,17 +2367,17 @@
  </bank>
   <bank blz="_25040060">
    <bic>COBADEFF076</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_25040061">
    <bic>COBADEFF077</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_25040066">
    <bic>COBADEFF250</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25050000">
@@ -2527,17 +2477,17 @@
  </bank>
   <bank blz="_25080020">
    <bic>DRESDEFF250</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_25080085">
    <bic>DRESDEFFI65</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_25089220">
    <bic>DRESDEFFI09</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_25090300">
@@ -2632,7 +2582,7 @@
  </bank>
   <bank blz="_25440047">
    <bic>COBADEFF254</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25450001">
@@ -2692,7 +2642,7 @@
  </bank>
   <bank blz="_25480021">
    <bic>DRESDEFF254</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_25491273">
@@ -2707,7 +2657,7 @@
  </bank>
   <bank blz="_25541426">
    <bic>COBADEFF275</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25551480">
@@ -2727,7 +2677,7 @@
  </bank>
   <bank blz="_25641302">
    <bic>COBADEFF256</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25650106">
@@ -2772,7 +2722,7 @@
  </bank>
   <bank blz="_25740061">
    <bic>COBADEFF257</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25750001">
@@ -2797,7 +2747,7 @@
  </bank>
   <bank blz="_25780022">
    <bic>DRESDEFF257</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_25791516">
@@ -2817,17 +2767,17 @@
  </bank>
   <bank blz="_25840048">
    <bic>COBADEFF249</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25841403">
    <bic>COBADEFF244</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25841708">
    <bic>COBADEFF239</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25850110">
@@ -2892,7 +2842,7 @@
  </bank>
   <bank blz="_25940033">
    <bic>COBADEFF259</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_25950001">
@@ -2927,7 +2877,7 @@
  </bank>
   <bank blz="_25980027">
    <bic>DRESDEFF259</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_25990011">
@@ -2962,7 +2912,7 @@
  </bank>
   <bank blz="_26040030">
    <bic>COBADEFF260</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_26050001">
@@ -3012,7 +2962,7 @@
  </bank>
   <bank blz="_26080024">
    <bic>DRESDEFF260</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_26090050">
@@ -3022,7 +2972,7 @@
  </bank>
   <bank blz="_26240039">
    <bic>COBADEFF264</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_26250001">
@@ -3038,7 +2988,7 @@
   <bank blz="_26261396">
    <bic>GENODEF1VDA</bic>
    <rule>000000</rule>
-   <name>Volksbank Dassel</name>
+   <name>Volksbank Dassel -alt-</name>
  </bank>
   <bank blz="_26261492">
    <bic>GENODEF1EIN</bic>
@@ -3062,22 +3012,22 @@
  </bank>
   <bank blz="_26280020">
    <bic>DRESDEFF261</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_26281420">
    <bic>DRESDEFF262</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_26340056">
    <bic>COBADEFF263</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_26341072">
    <bic>COBADEFF278</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_26350001">
@@ -3127,7 +3077,7 @@
  </bank>
   <bank blz="_26540070">
    <bic>COBADEFF265</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_26550105">
@@ -3192,12 +3142,12 @@
  </bank>
   <bank blz="_26580070">
    <bic>DRESDEFF265</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_26589210">
    <bic>DRESDEFFI10</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_26590025">
@@ -3222,7 +3172,7 @@
  </bank>
   <bank blz="_26640049">
    <bic>COBADEFF266</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_26650001">
@@ -3267,7 +3217,7 @@
  </bank>
   <bank blz="_26740044">
    <bic>COBADEFF267</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_26750001">
@@ -3297,7 +3247,7 @@
  </bank>
   <bank blz="_26840032">
    <bic>COBADEFF268</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_26850001">
@@ -3327,7 +3277,7 @@
  </bank>
   <bank blz="_26880063">
    <bic>DRESDEFF268</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_26890019">
@@ -3342,7 +3292,7 @@
  </bank>
   <bank blz="_26941053">
    <bic>COBADEFF269</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Wolfsburg</name>
  </bank>
   <bank blz="_26951311">
@@ -3362,12 +3312,12 @@
  </bank>
   <bank blz="_26981062">
    <bic>DRESDEFF269</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_26989221">
    <bic>DRESDEFFI11</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_26991066">
@@ -3427,7 +3377,7 @@
  </bank>
   <bank blz="_27040080">
    <bic>COBADEFF270</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_27062290">
@@ -3497,12 +3447,12 @@
  </bank>
   <bank blz="_27080060">
    <bic>DRESDEFF270</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_27089221">
    <bic>DRESDEFFI12</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_27090077">
@@ -3537,7 +3487,7 @@
  </bank>
   <bank blz="_27240004">
    <bic>COBADEFF251</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_27290087">
@@ -3647,12 +3597,12 @@
  </bank>
   <bank blz="_28040046">
    <bic>COBADEFF286</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_28042865">
    <bic>COBADEFF281</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_28050100">
@@ -3917,7 +3867,7 @@
  </bank>
   <bank blz="_28240023">
    <bic>COBADEFF282</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_28250110">
@@ -3952,7 +3902,7 @@
  </bank>
   <bank blz="_28280012">
    <bic>DRESDEFF282</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_28290063">
@@ -3997,7 +3947,7 @@
  </bank>
   <bank blz="_28440037">
    <bic>COBADEFF284</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_28450000">
@@ -4032,7 +3982,7 @@
  </bank>
   <bank blz="_28540034">
    <bic>COBADEFF285</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_28550000">
@@ -4127,17 +4077,17 @@
  </bank>
   <bank blz="_29040060">
    <bic>COBADEFF072</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_29040061">
    <bic>COBADEFF073</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_29040090">
    <bic>COBADEFF290</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_29050000">
@@ -4182,12 +4132,12 @@
  </bank>
   <bank blz="_29080010">
    <bic>DRESDEFF290</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Bremer Bank (Dresdner Bank)</name>
  </bank>
   <bank blz="_29089210">
    <bic>DRESDEFFI13</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Bremer Bank (Dresdner Bank) ITGK</name>
  </bank>
   <bank blz="_29090605">
@@ -4292,7 +4242,7 @@
  </bank>
   <bank blz="_29240024">
    <bic>COBADEFF292</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_29250000">
@@ -4317,7 +4267,7 @@
  </bank>
   <bank blz="_29280011">
    <bic>DRESDEFF292</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_29290034">
@@ -4412,32 +4362,32 @@
  </bank>
   <bank blz="_30040000">
    <bic>COBADEDDXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_30040048">
    <bic>COBADEFF930</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank GF-D48</name>
  </bank>
   <bank blz="_30040060">
    <bic>COBADEFF064</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 660</name>
  </bank>
   <bank blz="_30040061">
    <bic>COBADEFF065</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 661</name>
  </bank>
   <bank blz="_30040062">
    <bic>COBADEFF084</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_30040063">
    <bic>COBADEFF085</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_30050000">
@@ -4477,117 +4427,117 @@
  </bank>
   <bank blz="_30080000">
    <bic>DRESDEFF300</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_30080005">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 05</name>
  </bank>
   <bank blz="_30080022">
    <bic>DRESDEFFI28</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Ztv 22</name>
  </bank>
   <bank blz="_30080038">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 38</name>
  </bank>
   <bank blz="_30080041">
    <bic>DRESDEFFI29</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 41</name>
  </bank>
   <bank blz="_30080053">
    <bic>DRESDEFFI30</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 53</name>
  </bank>
   <bank blz="_30080055">
    <bic>DRESDEFF309</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 55</name>
  </bank>
   <bank blz="_30080057">
    <bic>DRESDEFF316</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf ZW 57</name>
  </bank>
   <bank blz="_30080061">
    <bic>DRESDEFFI31</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 61</name>
  </bank>
   <bank blz="_30080074">
    <bic>DRESDEFFI32</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 74</name>
  </bank>
   <bank blz="_30080080">
    <bic>DRESDEFFI76</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3</name>
  </bank>
   <bank blz="_30080081">
    <bic>DRESDEFFI77</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4</name>
  </bank>
   <bank blz="_30080082">
    <bic>DRESDEFFI78</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5</name>
  </bank>
   <bank blz="_30080083">
    <bic>DRESDEFFI79</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6</name>
  </bank>
   <bank blz="_30080084">
    <bic>DRESDEFFI80</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7</name>
  </bank>
   <bank blz="_30080085">
    <bic>DRESDEFFI81</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 8</name>
  </bank>
   <bank blz="_30080086">
    <bic>DRESDEFFI82</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 9</name>
  </bank>
   <bank blz="_30080087">
    <bic>DRESDEFFI83</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 10</name>
  </bank>
   <bank blz="_30080088">
    <bic>DRESDEFFI84</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 11</name>
  </bank>
   <bank blz="_30080089">
    <bic>DRESDEFFI85</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 12</name>
  </bank>
   <bank blz="_30080095">
    <bic>DRESDEFFI33</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 95</name>
  </bank>
   <bank blz="_30089300">
    <bic>DRESDEFFI02</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK I</name>
  </bank>
   <bank blz="_30089302">
    <bic>DRESDEFFI03</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK II</name>
  </bank>
   <bank blz="_30110300">
@@ -4595,18 +4545,13 @@
    <rule>000000</rule>
    <name>Sumitomo Mitsui Banking Corporation</name>
  </bank>
-  <bank blz="_30120400">
-   <bic>ABNADEFFDUS</bic>
-   <rule>000100</rule>
-   <name>The Royal Bank of Scotland Niederlassung Frankfurt</name>
- </bank>
   <bank blz="_30120500">
    <bic>BANVDEHB300</bic>
    <rule>000000</rule>
    <name>KBC Bank Deutschland</name>
  </bank>
   <bank blz="_30120764">
-   <bic>HYVEDEM1086</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 450 Düs</name>
  </bank>
@@ -4670,6 +4615,11 @@
    <rule>000000</rule>
    <name>RCI Banque Direkt</name>
  </bank>
+  <bank blz="_30524400">
+   <bic>KREDDEDDXXX</bic>
+   <rule>000000</rule>
+   <name>KBC Bank Ndl Deutschland</name>
+ </bank>
   <bank blz="_30530000">
    <bic>WERHDED1XXX</bic>
    <rule>000000</rule>
@@ -4717,17 +4667,17 @@
  </bank>
   <bank blz="_31040015">
    <bic>COBADEFF310</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_31040060">
    <bic>COBADEFF088</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_31040061">
    <bic>COBADEFF089</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_31050000">
@@ -4767,12 +4717,12 @@
  </bank>
   <bank blz="_31080015">
    <bic>DRESDEFF310</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_31080061">
    <bic>DRESDEFFI34</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 61</name>
  </bank>
   <bank blz="_31251220">
@@ -4812,7 +4762,7 @@
  </bank>
   <bank blz="_32040024">
    <bic>COBADEFF320</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_32050000">
@@ -4852,7 +4802,7 @@
  </bank>
   <bank blz="_32080010">
    <bic>DRESDEFF320</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_32250050">
@@ -4867,7 +4817,7 @@
  </bank>
   <bank blz="_32440023">
    <bic>COBADEFF324</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_32450000">
@@ -4917,12 +4867,12 @@
  </bank>
   <bank blz="_33040001">
    <bic>COBADEFF330</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_33040310">
    <bic>COBADEDHXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Zw 117</name>
  </bank>
   <bank blz="_33050000">
@@ -4957,37 +4907,37 @@
  </bank>
   <bank blz="_33080001">
    <bic>DRESDEFFI86</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_33080030">
    <bic>DRESDEFF332</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_33080085">
    <bic>DRESDEFFI87</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_33080086">
    <bic>DRESDEFFI88</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3</name>
  </bank>
   <bank blz="_33080087">
    <bic>DRESDEFFI89</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4</name>
  </bank>
   <bank blz="_33080088">
    <bic>DRESDEFFI90</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5</name>
  </bank>
   <bank blz="_33440035">
    <bic>COBADEFF334</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_33450000">
@@ -5002,7 +4952,7 @@
  </bank>
   <bank blz="_34040049">
    <bic>COBADEFF340</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_34050000">
@@ -5037,12 +4987,12 @@
  </bank>
   <bank blz="_34080031">
    <bic>DRESDEFF340</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_34240050">
    <bic>COBADEFF342</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_34250000">
@@ -5062,7 +5012,7 @@
  </bank>
   <bank blz="_34280032">
    <bic>DRESDEFF342</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_35000000">
@@ -5082,7 +5032,7 @@
  </bank>
   <bank blz="_35040038">
    <bic>COBADEFF350</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_35040085">
@@ -5122,32 +5072,32 @@
  </bank>
   <bank blz="_35080070">
    <bic>DRESDEFF350</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_35080085">
    <bic>DRESDEFFI91</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_35080086">
    <bic>DRESDEFFI92</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_35080087">
    <bic>DRESDEFFI93</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3</name>
  </bank>
   <bank blz="_35080088">
    <bic>DRESDEFFI94</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4</name>
  </bank>
   <bank blz="_35080089">
    <bic>DRESDEFFI95</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5</name>
  </bank>
   <bank blz="_35090300">
@@ -5197,7 +5147,7 @@
  </bank>
   <bank blz="_35640064">
    <bic>COBADEFF356</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_35650000">
@@ -5282,17 +5232,17 @@
  </bank>
   <bank blz="_36040039">
    <bic>COBADEFF360</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_36040060">
    <bic>COBADEFF082</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_36040061">
    <bic>COBADEFF083</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_36040085">
@@ -5347,17 +5297,17 @@
  </bank>
   <bank blz="_36080080">
    <bic>DRESDEFF360</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_36080085">
    <bic>DRESDEFFI66</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK  2</name>
  </bank>
   <bank blz="_36089321">
    <bic>DRESDEFFI17</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_36200000">
@@ -5377,7 +5327,7 @@
  </bank>
   <bank blz="_36240045">
    <bic>COBADEFF362</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_36250000">
@@ -5397,7 +5347,7 @@
  </bank>
   <bank blz="_36280071">
    <bic>DRESDEFF362</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_36500000">
@@ -5412,7 +5362,7 @@
  </bank>
   <bank blz="_36540046">
    <bic>COBADEFF365</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_36550000">
@@ -5432,7 +5382,7 @@
  </bank>
   <bank blz="_36580072">
    <bic>DRESDEFF365</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_37000000">
@@ -5450,15 +5400,10 @@
    <rule>005600</rule>
    <name>SEB</name>
  </bank>
-  <bank blz="_37010222">
-   <bic>ABNADEFFKOE</bic>
-   <rule>000100</rule>
-   <name>The Royal Bank of Scotland Niederlassung Frankfurt</name>
- </bank>
   <bank blz="_37010600">
    <bic>GEBADE33XXX</bic>
    <rule>000000</rule>
-   <name>Fortis Bank Ndl Deutschland</name>
+   <name>BNP Paribas Fortis Ndl Deutschland</name>
  </bank>
   <bank blz="_37011000">
    <bic>PBNKDEFFXXX</bic>
@@ -5536,7 +5481,7 @@
    <name>Oppenheim, Sal - jr &amp; Cie</name>
  </bank>
   <bank blz="_37030700">
-   <bic>WWBADE31XXX</bic>
+   <bic>WWBADE3AXXX</bic>
    <rule>000000</rule>
    <name>abcbank</name>
  </bank>
@@ -5547,27 +5492,27 @@
  </bank>
   <bank blz="_37040037">
    <bic>COBADEFFS03</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, CC SP</name>
  </bank>
   <bank blz="_37040044">
    <bic>COBADEFF370</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_37040048">
    <bic>COBADEFF937</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank GF-K48</name>
  </bank>
   <bank blz="_37040060">
    <bic>COBADEFF086</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_37040061">
    <bic>COBADEFF087</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_37050198">
@@ -5817,92 +5762,92 @@
  </bank>
   <bank blz="_37080040">
    <bic>DRESDEFF370</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_37080085">
    <bic>DRESDEFFI51</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_37080086">
    <bic>DRESDEFFI67</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4</name>
  </bank>
   <bank blz="_37080087">
    <bic>DRESDEFFI96</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5</name>
  </bank>
   <bank blz="_37080088">
    <bic>DRESDEFFI97</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6</name>
  </bank>
   <bank blz="_37080089">
    <bic>DRESDEFFI98</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7</name>
  </bank>
   <bank blz="_37080090">
    <bic>DRESDEFFJ01</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 8</name>
  </bank>
   <bank blz="_37080091">
    <bic>DRESDEFFJ02</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 9</name>
  </bank>
   <bank blz="_37080092">
    <bic>DRESDEFFJ03</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 10</name>
  </bank>
   <bank blz="_37080093">
    <bic>DRESDEFFJ04</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 11</name>
  </bank>
   <bank blz="_37080094">
    <bic>DRESDEFFJ05</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 12</name>
  </bank>
   <bank blz="_37080095">
    <bic>DRESDEFFJ06</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 13</name>
  </bank>
   <bank blz="_37080096">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 96</name>
  </bank>
   <bank blz="_37080097">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 97</name>
  </bank>
   <bank blz="_37080098">
    <bic>DRESDEFFJ07</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 14</name>
  </bank>
   <bank blz="_37080099">
    <bic>DRESDEFFI36</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 99</name>
  </bank>
   <bank blz="_37089340">
    <bic>DRESDEFFI04</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK I</name>
  </bank>
   <bank blz="_37089342">
    <bic>DRESDEFFI05</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK II</name>
  </bank>
   <bank blz="_37160087">
@@ -5917,7 +5862,7 @@
  </bank>
   <bank blz="_37540050">
    <bic>COBADEFF375</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_37551020">
@@ -5929,11 +5874,6 @@
    <bic>WELADEDLLEV</bic>
    <rule>000000</rule>
    <name>Sparkasse Leverkusen</name>
- </bank>
-  <bank blz="_37551670">
-   <bic>DUSSDED1MON</bic>
-   <rule>000100</rule>
-   <name>Stadtsparkasse Düsseldorf - Filiale Monheim</name>
  </bank>
   <bank blz="_37551780">
    <bic>WELADED1LAF</bic>
@@ -6037,7 +5977,7 @@
  </bank>
   <bank blz="_38040007">
    <bic>COBADEFF380</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_38050000">
@@ -6077,7 +6017,7 @@
  </bank>
   <bank blz="_38080055">
    <bic>DRESDEFF380</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_38160220">
@@ -6097,7 +6037,7 @@
  </bank>
   <bank blz="_38440016">
    <bic>COBADEFF384</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_38450000">
@@ -6162,7 +6102,7 @@
  </bank>
   <bank blz="_39040013">
    <bic>COBADEFF390</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_39050000">
@@ -6197,17 +6137,17 @@
  </bank>
   <bank blz="_39080005">
    <bic>DRESDEFF390</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_39080098">
    <bic>DRESDEFFI37</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 98</name>
  </bank>
   <bank blz="_39080099">
    <bic>DRESDEFFI38</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 99</name>
  </bank>
   <bank blz="_39160191">
@@ -6237,7 +6177,7 @@
  </bank>
   <bank blz="_39540052">
    <bic>COBADEFF395</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_39550110">
@@ -6262,7 +6202,7 @@
  </bank>
   <bank blz="_39580041">
    <bic>DRESDEFF395</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_40000000">
@@ -6287,7 +6227,7 @@
  </bank>
   <bank blz="_40040028">
    <bic>COBADEFF400</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_40050000">
@@ -6437,12 +6377,12 @@
  </bank>
   <bank blz="_40080040">
    <bic>DRESDEFF400</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_40080085">
    <bic>DRESDEFFI68</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_40090900">
@@ -6542,7 +6482,7 @@
  </bank>
   <bank blz="_40340030">
    <bic>COBADEFF403</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_40350005">
@@ -6597,12 +6537,12 @@
  </bank>
   <bank blz="_41040018">
    <bic>COBADEFF410</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_41041000">
    <bic>COBADEFFZTB</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>ZTB der Commerzbank</name>
  </bank>
   <bank blz="_41050095">
@@ -6652,7 +6592,7 @@
  </bank>
   <bank blz="_41240048">
    <bic>COBADEFF941</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_41250035">
@@ -6687,12 +6627,12 @@
  </bank>
   <bank blz="_41280043">
    <bic>DRESDEFF413</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_41440018">
    <bic>COBADEFF414</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_41450075">
@@ -6817,7 +6757,7 @@
  </bank>
   <bank blz="_42040040">
    <bic>COBADEFF420</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_42050001">
@@ -6837,7 +6777,7 @@
  </bank>
   <bank blz="_42080082">
    <bic>DRESDEFF420</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_42260001">
@@ -6872,7 +6812,7 @@
  </bank>
   <bank blz="_42640048">
    <bic>COBADEFF426</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_42650150">
@@ -6912,12 +6852,12 @@
  </bank>
   <bank blz="_42680081">
    <bic>DRESDEFF426</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_42840005">
    <bic>COBADEFF428</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_42850035">
@@ -6987,7 +6927,7 @@
  </bank>
   <bank blz="_43040036">
    <bic>COBADEFF430</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_43050001">
@@ -7022,7 +6962,7 @@
  </bank>
   <bank blz="_43080083">
    <bic>DRESDEFF430</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_43250030">
@@ -7050,11 +6990,6 @@
    <rule>000100</rule>
    <name>BHW Bausparkasse</name>
  </bank>
-  <bank blz="_44010300">
-   <bic>ABNADEFFDOR</bic>
-   <rule>000100</rule>
-   <name>The Royal Bank of Scotland Niederlassung Frankfurt</name>
- </bank>
   <bank blz="_44020090">
    <bic>HYVEDEMM808</bic>
    <rule>003200</rule>
@@ -7062,17 +6997,17 @@
  </bank>
   <bank blz="_44040037">
    <bic>COBADEFF440</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_44040060">
    <bic>COBADEFF080</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_44040061">
    <bic>COBADEFF081</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_44040085">
@@ -7117,27 +7052,27 @@
  </bank>
   <bank blz="_44080050">
    <bic>DRESDEFF440</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_44080055">
    <bic>DRESDEFF446</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 55</name>
  </bank>
   <bank blz="_44080057">
    <bic>DRESDEFF447</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf ZW 57</name>
  </bank>
   <bank blz="_44080085">
    <bic>DRESDEFFI69</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_44089320">
    <bic>DRESDEFFI18</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_44090920">
@@ -7162,7 +7097,7 @@
  </bank>
   <bank blz="_44340037">
    <bic>COBADEFF443</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_44350060">
@@ -7192,7 +7127,7 @@
  </bank>
   <bank blz="_44540022">
    <bic>COBADEFF445</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_44550045">
@@ -7217,12 +7152,12 @@
  </bank>
   <bank blz="_44580070">
    <bic>DRESDEFF445</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_44580085">
    <bic>DRESDEFFI70</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_44750065">
@@ -7247,7 +7182,7 @@
  </bank>
   <bank blz="_45040042">
    <bic>COBADEFF450</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_45050001">
@@ -7282,12 +7217,12 @@
  </bank>
   <bank blz="_45080060">
    <bic>DRESDEFF450</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_45240056">
    <bic>COBADEFF452</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_45250035">
@@ -7342,12 +7277,12 @@
  </bank>
   <bank blz="_45840026">
    <bic>COBADEFF458</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_45841031">
    <bic>COBADEFF459</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_45850005">
@@ -7392,7 +7327,7 @@
  </bank>
   <bank blz="_46040033">
    <bic>COBADEFF460</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_46050001">
@@ -7457,12 +7392,12 @@
  </bank>
   <bank blz="_46080010">
    <bic>DRESDEFF460</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_46240016">
    <bic>COBADEFF462</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_46250049">
@@ -7484,11 +7419,6 @@
    <bic>GENODEM1OLP</bic>
    <rule>000000</rule>
    <name>Volksbank Olpe -alt-</name>
- </bank>
-  <bank blz="_46261306">
-   <bic>GENODEM1ATT</bic>
-   <rule>000000</rule>
-   <name>Volksbank Attendorn -alt-</name>
  </bank>
   <bank blz="_46261607">
    <bic>GENODEM1GLG</bic>
@@ -7512,7 +7442,7 @@
  </bank>
   <bank blz="_46441003">
    <bic>COBADEFF468</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_46451012">
@@ -7542,7 +7472,7 @@
  </bank>
   <bank blz="_46640018">
    <bic>COBADEFF466</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_46650005">
@@ -7572,7 +7502,7 @@
  </bank>
   <bank blz="_47240047">
    <bic>COBADEFF472</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_47250101">
@@ -7662,7 +7592,7 @@
  </bank>
   <bank blz="_47640051">
    <bic>COBADEFF476</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_47650130">
@@ -7688,7 +7618,7 @@
   <bank blz="_47691200">
    <bic>GENODEM1OLB</bic>
    <rule>000000</rule>
-   <name>Volksbank</name>
+   <name>Volksbank Ostlippe</name>
  </bank>
   <bank blz="_47800000">
    <bic>MARKDEF1478</bic>
@@ -7697,12 +7627,12 @@
  </bank>
   <bank blz="_47840065">
    <bic>COBADEFF478</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_47840080">
    <bic>COBADEFF470</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Zw 80</name>
  </bank>
   <bank blz="_47850065">
@@ -7767,7 +7697,7 @@
  </bank>
   <bank blz="_47880031">
    <bic>DRESDEFF478</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_48000000">
@@ -7797,17 +7727,17 @@
  </bank>
   <bank blz="_48040035">
    <bic>COBADEFF480</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_48040060">
    <bic>COBADEFF078</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_48040061">
    <bic>COBADEFF079</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_48050000">
@@ -7887,12 +7817,12 @@
  </bank>
   <bank blz="_48080020">
    <bic>DRESDEFF480</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_48089350">
    <bic>DRESDEFFI19</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_48091315">
@@ -7922,7 +7852,7 @@
  </bank>
   <bank blz="_49040043">
    <bic>COBADEFF490</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_49050101">
@@ -7982,7 +7912,7 @@
  </bank>
   <bank blz="_49080025">
    <bic>DRESDEFF491</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_49092650">
@@ -7992,7 +7922,7 @@
  </bank>
   <bank blz="_49240096">
    <bic>COBADEFF492</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_49262364">
@@ -8002,7 +7932,7 @@
  </bank>
   <bank blz="_49440043">
    <bic>COBADEFF494</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_49450120">
@@ -8071,7 +8001,7 @@
    <name>ALTE LEIPZIGER Bauspar</name>
  </bank>
   <bank blz="_50020160">
-   <bic>HYVEDEM1084</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 427 Ffm</name>
  </bank>
@@ -8170,9 +8100,14 @@
    <rule>004700</rule>
    <name>Santander Consumer Bank</name>
  </bank>
+  <bank blz="_50038800">
+   <bic>ABOCDEFFXXX</bic>
+   <rule>000000</rule>
+   <name>Agricultural Bank of China, Frankfurt Branch</name>
+ </bank>
   <bank blz="_50040000">
    <bic>COBADEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_50040033">
@@ -8182,57 +8117,57 @@
  </bank>
   <bank blz="_50040038">
    <bic>COBADEFFMBP</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, MBP</name>
  </bank>
   <bank blz="_50040040">
    <bic>COBADEFFZRK</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf ZRK</name>
  </bank>
   <bank blz="_50040048">
    <bic>COBADEFF950</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank GF-F48</name>
  </bank>
   <bank blz="_50040050">
    <bic>COBADEFFS05</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, CC SP</name>
  </bank>
   <bank blz="_50040051">
    <bic>COBADEFF070</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Center Dresdner Bank Frankfurt</name>
  </bank>
   <bank blz="_50040052">
    <bic>COBADEFF071</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Service - BZ Frankfurt</name>
  </bank>
   <bank blz="_50040060">
    <bic>COBADEFF066</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 460</name>
  </bank>
   <bank blz="_50040061">
    <bic>COBADEFF067</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 461</name>
  </bank>
   <bank blz="_50040062">
    <bic>COBADEFF090</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_50040063">
    <bic>COBADEFF091</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_50040075">
    <bic>COBADEFFZCM</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf ZCM</name>
  </bank>
   <bank blz="_50040085">
@@ -8242,32 +8177,32 @@
  </bank>
   <bank blz="_50040086">
    <bic>COBADEFFXXX</bic>
-   <rule>000000</rule>
+   <rule>000503</rule>
    <name>Commerzbank, GF Web-K CMTS</name>
  </bank>
   <bank blz="_50040088">
    <bic>COBADEFFINT</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, INT 1</name>
  </bank>
   <bank blz="_50040099">
    <bic>COBADEFFINT</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank INT</name>
  </bank>
   <bank blz="_50042500">
    <bic>COBADEFFTUI</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Zw 425 - keine Auslandsbanken</name>
  </bank>
   <bank blz="_50044444">
    <bic>COBADEFFZAM</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Vermögensverwaltung</name>
  </bank>
   <bank blz="_50047010">
    <bic>COBADEFFBZF</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Service - BZ</name>
  </bank>
   <bank blz="_50050000">
@@ -8417,117 +8352,117 @@
  </bank>
   <bank blz="_50080000">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_50080015">
    <bic>DRESDEFFI39</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 15</name>
  </bank>
   <bank blz="_50080025">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 25</name>
  </bank>
   <bank blz="_50080035">
    <bic>DRESDEFFI40</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 35</name>
  </bank>
   <bank blz="_50080055">
    <bic>DRESDEFF516</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 55</name>
  </bank>
   <bank blz="_50080057">
    <bic>DRESDEFF522</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf ZW 57</name>
  </bank>
   <bank blz="_50080060">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf DrKW</name>
  </bank>
   <bank blz="_50080061">
    <bic>DRESDEFFLDG</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf DrKWSL</name>
  </bank>
   <bank blz="_50080077">
    <bic>DRESDEFFBSP</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, GF Wüstenrot BSPK</name>
  </bank>
   <bank blz="_50080079">
    <bic>DRESDEFFXXX</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ESOP</name>
  </bank>
   <bank blz="_50080080">
    <bic>DRESDEFFI41</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Bs 80</name>
  </bank>
   <bank blz="_50080082">
    <bic>DRESDEFFAVB</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf AVB</name>
  </bank>
   <bank blz="_50080086">
    <bic>DRESDEFFI49</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK 3</name>
  </bank>
   <bank blz="_50080087">
    <bic>DRESDEFFJ08</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4</name>
  </bank>
   <bank blz="_50080088">
    <bic>DRESDEFFJ09</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5</name>
  </bank>
   <bank blz="_50080089">
    <bic>DRESDEFFJ10</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6</name>
  </bank>
   <bank blz="_50080091">
    <bic>DRESDEFFJ11</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7</name>
  </bank>
   <bank blz="_50080092">
    <bic>DRESDEFFFCO</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Finance and Controlling</name>
  </bank>
   <bank blz="_50080099">
    <bic>DRESDEFFI42</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 99</name>
  </bank>
   <bank blz="_50080300">
    <bic>DRESDEFF500</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Private Banking Inland</name>
  </bank>
   <bank blz="_50083007">
    <bic>DRESDEFF502</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_50083838">
    <bic>DRESDEFFMBP</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank in Frankfurt MBP</name>
  </bank>
   <bank blz="_50089400">
    <bic>DRESDEFFI01</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_50090200">
@@ -9547,7 +9482,7 @@
  </bank>
   <bank blz="_50540028">
    <bic>COBADEFF505</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_50550020">
@@ -9577,12 +9512,12 @@
  </bank>
   <bank blz="_50580005">
    <bic>DRESDEFF505</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_50580085">
    <bic>DRESDEFFJ12</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_50590000">
@@ -9600,14 +9535,9 @@
    <rule>000100</rule>
    <name>Bundesbank eh Hanau</name>
  </bank>
-  <bank blz="_50620700">
-   <bic>HSTBDEH1HAU</bic>
-   <rule>000000</rule>
-   <name>Hanseatic Bank</name>
- </bank>
   <bank blz="_50640015">
    <bic>COBADEFF506</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_50650023">
@@ -9657,12 +9587,12 @@
  </bank>
   <bank blz="_50680002">
    <bic>DRESDEFF506</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_50680085">
    <bic>DRESDEFFJ13</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_50690000">
@@ -9682,7 +9612,7 @@
  </bank>
   <bank blz="_50740048">
    <bic>COBADEFF955</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_50750094">
@@ -9707,7 +9637,7 @@
  </bank>
   <bank blz="_50780006">
    <bic>DRESDEFF524</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_50790000">
@@ -9732,7 +9662,7 @@
  </bank>
   <bank blz="_50810900">
    <bic>BBSPDE6KXXX</bic>
-   <rule>000000</rule>
+   <rule>005700</rule>
    <name>Deutsche Bausparkasse Badenia (ehem. DBS Bausparkasse)</name>
  </bank>
   <bank blz="_50820292">
@@ -9747,7 +9677,7 @@
  </bank>
   <bank blz="_50840005">
    <bic>COBADEFF508</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_50850049">
@@ -9857,17 +9787,17 @@
  </bank>
   <bank blz="_50880050">
    <bic>DRESDEFF508</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_50880085">
    <bic>DRESDEFFJ14</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_50880086">
    <bic>DRESDEFFJ15</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_50890000">
@@ -9957,7 +9887,7 @@
  </bank>
   <bank blz="_51040038">
    <bic>COBADEFF510</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_51050015">
@@ -9982,22 +9912,22 @@
  </bank>
   <bank blz="_51080060">
    <bic>DRESDEFF510</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_51080085">
    <bic>DRESDEFFJ16</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_51080086">
    <bic>DRESDEFFJ17</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK2</name>
  </bank>
   <bank blz="_51089410">
    <bic>DRESDEFFI20</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_51090000">
@@ -10032,7 +9962,7 @@
  </bank>
   <bank blz="_51140029">
    <bic>COBADEFF511</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_51150018">
@@ -10062,7 +9992,7 @@
  </bank>
   <bank blz="_51180041">
    <bic>DRESDEFF511</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_51190000">
@@ -10207,12 +10137,12 @@
  </bank>
   <bank blz="_51340013">
    <bic>COBADEFF513</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_51343224">
    <bic>COBADEFF514</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_51350025">
@@ -10262,12 +10192,12 @@
  </bank>
   <bank blz="_51380040">
    <bic>DRESDEFF513</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_51380085">
    <bic>DRESDEFFJ18</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_51390000">
@@ -10327,7 +10257,7 @@
  </bank>
   <bank blz="_51540037">
    <bic>COBADEFF515</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_51550035">
@@ -10352,7 +10282,7 @@
  </bank>
   <bank blz="_51580044">
    <bic>DRESDEFF515</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_51591300">
@@ -10362,7 +10292,7 @@
  </bank>
   <bank blz="_51640043">
    <bic>COBADEFF516</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_51650045">
@@ -10447,7 +10377,7 @@
  </bank>
   <bank blz="_52040021">
    <bic>COBADEFF520</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_52050000">
@@ -10597,12 +10527,12 @@
  </bank>
   <bank blz="_52080080">
    <bic>DRESDEFF520</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_52080085">
    <bic>DRESDEFFJ19</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK1</name>
  </bank>
   <bank blz="_52090000">
@@ -10617,7 +10547,7 @@
  </bank>
   <bank blz="_52240006">
    <bic>COBADEFF522</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_52250030">
@@ -10664,11 +10594,6 @@
    <bic>KOEXDEFAXXX</bic>
    <rule>000000</rule>
    <name>Korea Exchange Bank (Deutschland)</name>
- </bank>
-  <bank blz="_52410700">
-   <bic>FTSBDEFFXXX</bic>
-   <rule>000000</rule>
-   <name>ABN AMRO Clearing Bank, Frankfurt Branch</name>
  </bank>
   <bank blz="_52410900">
    <bic>MPBKDEFFXXX</bic>
@@ -10722,7 +10647,7 @@
  </bank>
   <bank blz="_53040012">
    <bic>COBADEFF530</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_53050180">
@@ -10777,7 +10702,7 @@
  </bank>
   <bank blz="_53080030">
    <bic>DRESDEFF530</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_53093200">
@@ -10797,7 +10722,7 @@
  </bank>
   <bank blz="_53240048">
    <bic>COBADEFF532</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_53250000">
@@ -10847,7 +10772,7 @@
  </bank>
   <bank blz="_53280081">
    <bic>DRESDEFF532</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_53290000">
@@ -10857,7 +10782,7 @@
  </bank>
   <bank blz="_53340024">
    <bic>COBADEFF533</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_53350000">
@@ -10882,12 +10807,12 @@
  </bank>
   <bank blz="_53380042">
    <bic>DRESDEFF533</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_53381843">
    <bic>DRESDEFF568</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_53390635">
@@ -10906,7 +10831,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_54020474">
-   <bic>HYVEDEM1105</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 697 Kais</name>
  </bank>
@@ -10917,7 +10842,7 @@
  </bank>
   <bank blz="_54040042">
    <bic>COBADEFF540</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_54050110">
@@ -10967,7 +10892,7 @@
  </bank>
   <bank blz="_54080021">
    <bic>DRESDEFF540</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_54090000">
@@ -11001,13 +10926,13 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_54220576">
-   <bic>HYVEDEM1081</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 358 Pirm</name>
  </bank>
   <bank blz="_54240032">
    <bic>COBADEFF542</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_54250010">
@@ -11037,7 +10962,7 @@
  </bank>
   <bank blz="_54280023">
    <bic>DRESDEFF542</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_54290000">
@@ -11061,7 +10986,7 @@
    <name>Postbank</name>
  </bank>
   <bank blz="_54520071">
-   <bic>HYVEDEM1094</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 650 Lu</name>
  </bank>
@@ -11072,7 +10997,7 @@
  </bank>
   <bank blz="_54540033">
    <bic>COBADEFF545</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_54550010">
@@ -11102,7 +11027,7 @@
  </bank>
   <bank blz="_54580020">
    <bic>DRESDEFF545</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_54620093">
@@ -11111,13 +11036,13 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_54620574">
-   <bic>HYVEDEM1096</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 660 Ne/W</name>
  </bank>
   <bank blz="_54640035">
    <bic>COBADEFF546</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_54651240">
@@ -11147,7 +11072,7 @@
  </bank>
   <bank blz="_54680022">
    <bic>DRESDEFF546</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_54690623">
@@ -11181,7 +11106,7 @@
    <name>Volksbank Kur- und Rheinpfalz</name>
  </bank>
   <bank blz="_54820674">
-   <bic>HYVEDEM1095</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 659 LanP</name>
  </bank>
@@ -11292,17 +11217,17 @@
  </bank>
   <bank blz="_55040022">
    <bic>COBADEFF550</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_55040060">
    <bic>COBADEFF092</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_55040061">
    <bic>COBADEFF093</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_55050000">
@@ -11362,27 +11287,27 @@
  </bank>
   <bank blz="_55080044">
    <bic>COBADEFF555</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, TF MZ 1</name>
  </bank>
   <bank blz="_55080065">
    <bic>DRESDEFF550</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_55080085">
    <bic>DRESDEFFJ20</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_55080086">
    <bic>DRESDEFFJ21</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_55080088">
    <bic>DRESDEFF555</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, TF MZ 2</name>
  </bank>
   <bank blz="_55090500">
@@ -11447,7 +11372,7 @@
  </bank>
   <bank blz="_55340041">
    <bic>COBADEFF553</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_55350010">
@@ -11527,7 +11452,7 @@
  </bank>
   <bank blz="_56240050">
    <bic>COBADEFF562</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_56250030">
@@ -11587,7 +11512,7 @@
  </bank>
   <bank blz="_57040044">
    <bic>COBADEFF570</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_57050120">
@@ -11692,7 +11617,7 @@
  </bank>
   <bank blz="_57080070">
    <bic>DRESDEFF570</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_57090000">
@@ -11832,7 +11757,7 @@
  </bank>
   <bank blz="_58540035">
    <bic>COBADEFF585</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_58550130">
@@ -11882,7 +11807,7 @@
  </bank>
   <bank blz="_58580074">
    <bic>DRESDEFF585</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_58590900">
@@ -12155,14 +12080,9 @@
    <rule>003200</rule>
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
-  <bank blz="_59020700">
-   <bic>HSTBDEH1SAA</bic>
-   <rule>000000</rule>
-   <name>Hanseatic Bank</name>
- </bank>
   <bank blz="_59040000">
    <bic>COBADEFF590</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_59050000">
@@ -12197,7 +12117,7 @@
  </bank>
   <bank blz="_59080090">
    <bic>DRESDEFF590</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_59090626">
@@ -12390,11 +12310,6 @@
    <rule>004800</rule>
    <name>VON ESSEN Bankgesellschaft</name>
  </bank>
-  <bank blz="_60020700">
-   <bic>HSTBDEH1STU</bic>
-   <rule>000000</rule>
-   <name>Hanseatic Bank</name>
- </bank>
   <bank blz="_60030000">
    <bic>MEBEDE6SDCB</bic>
    <rule>000000</rule>
@@ -12416,7 +12331,7 @@
    <name>CreditPlus Bank</name>
  </bank>
   <bank blz="_60030666">
-   <bic>CPLUDES1XXX</bic>
+   <bic>CPLUDES1666</bic>
    <rule>000000</rule>
    <name>CreditPlus Bank</name>
  </bank>
@@ -12442,17 +12357,17 @@
  </bank>
   <bank blz="_60040060">
    <bic>COBADEFF096</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_60040061">
    <bic>COBADEFF097</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_60040071">
    <bic>COBADEFF600</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_60050000">
@@ -12520,11 +12435,6 @@
    <rule>000000</rule>
    <name>Raiffeisenbank Bühlertal</name>
  </bank>
-  <bank blz="_60069126">
-   <bic>GENODES1ROM</bic>
-   <rule>000100</rule>
-   <name>Raiffeisenbank Römerstein -alt-</name>
- </bank>
   <bank blz="_60069147">
    <bic>GENODES1RSF</bic>
    <rule>000000</rule>
@@ -12561,9 +12471,9 @@
    <name>Raiffeisenbank Gruibingen</name>
  </bank>
   <bank blz="_60069245">
-   <bic>GENODES1ROB</bic>
+   <bic>GENODES1RVG</bic>
    <rule>000000</rule>
-   <name>Raiffeisenbank Oberes Bühlertal</name>
+   <name>Raiffeisenbank Bühlertal</name>
  </bank>
   <bank blz="_60069251">
    <bic>GENODES1RDI</bic>
@@ -12648,7 +12558,7 @@
   <bank blz="_60069420">
    <bic>GENODES1MBI</bic>
    <rule>000000</rule>
-   <name>Raiffeisenbank Mittelbiberach</name>
+   <name>Raiffeisenbank Mittelbiberach -alt-</name>
  </bank>
   <bank blz="_60069431">
    <bic>GENODES1OED</bic>
@@ -12762,7 +12672,7 @@
  </bank>
   <bank blz="_60069669">
    <bic>GENODES1EHB</bic>
-   <rule>000000</rule>
+   <rule>000100</rule>
    <name>Erligheimer Bank -alt-</name>
  </bank>
   <bank blz="_60069670">
@@ -12928,7 +12838,7 @@
   <bank blz="_60069980">
    <bic>GENODES1RMH</bic>
    <rule>000000</rule>
-   <name>Raiffeisenbank Maselheim-Äpfingen</name>
+   <name>Raiffeisenbank Maselheim-Äpfingen -alt-</name>
  </bank>
   <bank blz="_60070024">
    <bic>DEUTDEDBSTG</bic>
@@ -12942,42 +12852,42 @@
  </bank>
   <bank blz="_60080000">
    <bic>DRESDEFF600</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_60080055">
    <bic>DRESDEFF608</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 55</name>
  </bank>
   <bank blz="_60080057">
    <bic>DRESDEFF609</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf Zw 57</name>
  </bank>
   <bank blz="_60080085">
    <bic>DRESDEFFI50</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK 2</name>
  </bank>
   <bank blz="_60080086">
    <bic>DRESDEFFI54</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf PCC-ITGK 3</name>
  </bank>
   <bank blz="_60080087">
    <bic>DRESDEFFI57</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DC-ITGK 4</name>
  </bank>
   <bank blz="_60080088">
    <bic>DRESDEFFI58</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DC-ITGK 5</name>
  </bank>
   <bank blz="_60089450">
    <bic>DRESDEFFI21</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_60090100">
@@ -13011,7 +12921,7 @@
    <name>PSD Bank RheinNeckarSaar</name>
  </bank>
   <bank blz="_60120050">
-   <bic>HYVEDEM1085</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 434 Stgt</name>
  </bank>
@@ -13047,7 +12957,7 @@
  </bank>
   <bank blz="_60241074">
    <bic>COBADEFF602</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_60250010">
@@ -13127,7 +13037,7 @@
  </bank>
   <bank blz="_60340071">
    <bic>COBADEFF606</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Sindelfingen</name>
  </bank>
   <bank blz="_60350130">
@@ -13142,7 +13052,7 @@
  </bank>
   <bank blz="_60380002">
    <bic>DRESDEFF601</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_60390000">
@@ -13202,7 +13112,7 @@
  </bank>
   <bank blz="_60440073">
    <bic>COBADEFF604</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_60450050">
@@ -13237,7 +13147,7 @@
  </bank>
   <bank blz="_60480008">
    <bic>DRESDEFF604</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_60490150">
@@ -13297,7 +13207,7 @@
  </bank>
   <bank blz="_61040014">
    <bic>COBADEFF610</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_61050000">
@@ -13327,7 +13237,7 @@
  </bank>
   <bank blz="_61080006">
    <bic>DRESDEFF610</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_61091200">
@@ -13352,7 +13262,7 @@
  </bank>
   <bank blz="_61140071">
    <bic>COBADEFF611</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_61150020">
@@ -13382,7 +13292,7 @@
  </bank>
   <bank blz="_61180004">
    <bic>DRESDEFF611</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_61190110">
@@ -13402,7 +13312,7 @@
  </bank>
   <bank blz="_61240048">
    <bic>COBADEFF965</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_61261213">
@@ -13427,7 +13337,7 @@
  </bank>
   <bank blz="_61281007">
    <bic>DRESDEFF612</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_61290120">
@@ -13437,7 +13347,7 @@
  </bank>
   <bank blz="_61340079">
    <bic>COBADEFF613</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_61361722">
@@ -13487,7 +13397,7 @@
  </bank>
   <bank blz="_61440086">
    <bic>COBADEFF614</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_61450050">
@@ -13502,7 +13412,7 @@
  </bank>
   <bank blz="_61480001">
    <bic>DRESDEFF614</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_61490150">
@@ -13552,7 +13462,7 @@
  </bank>
   <bank blz="_62040060">
    <bic>COBADEFF620</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_62050000">
@@ -13597,7 +13507,7 @@
  </bank>
   <bank blz="_62080012">
    <bic>DRESDEFF620</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_62090100">
@@ -13637,7 +13547,7 @@
  </bank>
   <bank blz="_62240048">
    <bic>COBADEFF966</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_62250030">
@@ -13657,7 +13567,7 @@
  </bank>
   <bank blz="_62280012">
    <bic>DRESDEFF622</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_62290110">
@@ -13706,13 +13616,13 @@
    <name>Baden-Württembergische Bank</name>
  </bank>
   <bank blz="_63020450">
-   <bic>HYVEDEM1080</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 274 Ulm</name>
  </bank>
   <bank blz="_63040053">
    <bic>COBADEFF630</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_63050000">
@@ -13742,12 +13652,12 @@
  </bank>
   <bank blz="_63080015">
    <bic>DRESDEFF630</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_63080085">
    <bic>DRESDEFFI59</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_63090100">
@@ -13777,7 +13687,7 @@
  </bank>
   <bank blz="_63240016">
    <bic>COBADEFF632</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_63250030">
@@ -13812,12 +13722,12 @@
  </bank>
   <bank blz="_64040033">
    <bic>COBADEFF640</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_64040045">
    <bic>COBADEFF645</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_64050000">
@@ -13847,7 +13757,7 @@
  </bank>
   <bank blz="_64080014">
    <bic>DRESDEFF640</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_64090100">
@@ -13872,7 +13782,7 @@
  </bank>
   <bank blz="_64140036">
    <bic>COBADEFF641</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Tübingen</name>
  </bank>
   <bank blz="_64150020">
@@ -13907,7 +13817,7 @@
  </bank>
   <bank blz="_64180014">
    <bic>DRESDEFF641</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_64190110">
@@ -13937,12 +13847,12 @@
  </bank>
   <bank blz="_64240048">
    <bic>COBADEFF967</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_64240071">
    <bic>COBADEFF642</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_64250040">
@@ -14012,7 +13922,7 @@
  </bank>
   <bank blz="_64380011">
    <bic>DRESDEFF643</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_64390130">
@@ -14047,7 +13957,7 @@
  </bank>
   <bank blz="_65040073">
    <bic>COBADEFF650</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_65050110">
@@ -14092,11 +14002,11 @@
  </bank>
   <bank blz="_65080009">
    <bic>DRESDEFF650</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_65090100">
-   <bic>ULMVDE66001</bic>
+   <bic>ULMVDE66XXX</bic>
    <rule>000000</rule>
    <name>Volksbank Ulm-Biberach -alt-</name>
  </bank>
@@ -14109,11 +14019,6 @@
    <bic>GENODES1BWB</bic>
    <rule>000000</rule>
    <name>Bad Waldseer Bank -alt-</name>
- </bank>
-  <bank blz="_65091400">
-   <bic>GENODES1ISN</bic>
-   <rule>000000</rule>
-   <name>Isnyer Volksbank -alt-</name>
  </bank>
   <bank blz="_65091600">
    <bic>GENODES1VWG</bic>
@@ -14147,7 +14052,7 @@
  </bank>
   <bank blz="_65140072">
    <bic>COBADEFF651</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_65161497">
@@ -14162,7 +14067,7 @@
  </bank>
   <bank blz="_65180005">
    <bic>DRESDEFF651</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_65190110">
@@ -14187,12 +14092,12 @@
  </bank>
   <bank blz="_65340004">
    <bic>COBADEFF653</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_65341204">
    <bic>COBADEFF655</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_65350186">
@@ -14242,7 +14147,7 @@
  </bank>
   <bank blz="_65380003">
    <bic>DRESDEFF653</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_65390120">
@@ -14262,7 +14167,7 @@
  </bank>
   <bank blz="_65440087">
    <bic>COBADEFF654</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_65450070">
@@ -14278,17 +14183,17 @@
   <bank blz="_65462231">
    <bic>GENODES1ERO</bic>
    <rule>000000</rule>
-   <name>Raiffeisenbank Illertal</name>
+   <name>Raiffeisenbank Illertal -alt-</name>
  </bank>
   <bank blz="_65490130">
-   <bic>GENODES1VBC</bic>
+   <bic>ULMVDE66XXX</bic>
    <rule>000100</rule>
    <name>Volksbank Ulm-Biberach</name>
  </bank>
   <bank blz="_65491320">
    <bic>GENODES1VBL</bic>
    <rule>000000</rule>
-   <name>Volksbank Laupheim</name>
+   <name>Volksbank Raiffeisenbank Laupheim-Illertal</name>
  </bank>
   <bank blz="_65491510">
    <bic>GENODES1VRR</bic>
@@ -14326,7 +14231,7 @@
    <name>Baden-Württembergische Bank</name>
  </bank>
   <bank blz="_66020150">
-   <bic>HYVEDEM1076</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 145 Kruh</name>
  </bank>
@@ -14347,12 +14252,12 @@
  </bank>
   <bank blz="_66040018">
    <bic>COBADEFF660</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_66040026">
    <bic>COBADEFF661</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank/Kreditcenter Badenia</name>
  </bank>
   <bank blz="_66050000">
@@ -14442,7 +14347,7 @@
  </bank>
   <bank blz="_66080052">
    <bic>DRESDEFF660</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_66090621">
@@ -14470,11 +14375,6 @@
    <rule>000000</rule>
    <name>Volksbank Karlsruhe</name>
  </bank>
-  <bank blz="_66190100">
-   <bic>GENODE61KA2</bic>
-   <rule>000000</rule>
-   <name>Volksbank Durlach -alt-</name>
- </bank>
   <bank blz="_66200000">
    <bic>MARKDEF1662</bic>
    <rule>000100</rule>
@@ -14487,7 +14387,7 @@
  </bank>
   <bank blz="_66240002">
    <bic>COBADEFF662</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_66250030">
@@ -14522,7 +14422,7 @@
  </bank>
   <bank blz="_66280053">
    <bic>DRESDEFF662</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_66290000">
@@ -14542,33 +14442,13 @@
  </bank>
   <bank blz="_66340018">
    <bic>COBADEFF663</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_66350036">
    <bic>BRUSDE66XXX</bic>
    <rule>000000</rule>
    <name>Sparkasse Kraichgau Bruchsal-Bretten-Sinsheim</name>
- </bank>
-  <bank blz="_66361178">
-   <bic>GENODE61FST</bic>
-   <rule>000000</rule>
-   <name>Raiffeisenbank Kraich-Hardt -alt-</name>
- </bank>
-  <bank blz="_66361335">
-   <bic>GENODE61WAG</bic>
-   <rule>000000</rule>
-   <name>Volksbank Kirrlach -alt-</name>
- </bank>
-  <bank blz="_66362345">
-   <bic>GENODE61KRO</bic>
-   <rule>000000</rule>
-   <name>Raiffeisenbank Kronau -alt-</name>
- </bank>
-  <bank blz="_66363487">
-   <bic>GENODE61OOM</bic>
-   <rule>000000</rule>
-   <name>Raiffeisenbank Odenheim-Tiefenbach -alt-</name>
  </bank>
   <bank blz="_66390000">
    <bic>GENODE61BRU</bic>
@@ -14602,7 +14482,7 @@
  </bank>
   <bank blz="_66440084">
    <bic>COBADEFF664</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_66450050">
@@ -14697,7 +14577,7 @@
  </bank>
   <bank blz="_66640035">
    <bic>COBADEFF666</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_66650085">
@@ -14747,7 +14627,7 @@
  </bank>
   <bank blz="_66680013">
    <bic>DRESDEFF666</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_66690000">
@@ -14791,23 +14671,23 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_67020259">
-   <bic>HYVEDEM1103</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 681 Mnh</name>
  </bank>
   <bank blz="_67040031">
    <bic>COBADEFF670</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_67040060">
    <bic>COBADEFF094</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_67040061">
    <bic>COBADEFF095</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_67040085">
@@ -14847,22 +14727,22 @@
  </bank>
   <bank blz="_67080050">
    <bic>DRESDEFF670</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_67080085">
    <bic>DRESDEFFI60</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_67080086">
    <bic>DRESDEFFI61</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3</name>
  </bank>
   <bank blz="_67089440">
    <bic>DRESDEFFI22</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_67090000">
@@ -14901,7 +14781,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_67220464">
-   <bic>HYVEDEM1087</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 488 Hd</name>
  </bank>
@@ -14917,7 +14797,7 @@
  </bank>
   <bank blz="_67240039">
    <bic>COBADEFF672</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_67250020">
@@ -14947,7 +14827,7 @@
  </bank>
   <bank blz="_67280051">
    <bic>DRESDEFF672</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_67290000">
@@ -15056,7 +14936,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_68020460">
-   <bic>HYVEDEM1082</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 405 Frb</name>
  </bank>
@@ -15067,7 +14947,7 @@
  </bank>
   <bank blz="_68040007">
    <bic>COBADEFF680</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_68050000">
@@ -15152,22 +15032,22 @@
  </bank>
   <bank blz="_68080030">
    <bic>DRESDEFF680</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_68080031">
    <bic>DRESDEFFI44</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw Münsterstraße</name>
  </bank>
   <bank blz="_68080085">
    <bic>DRESDEFFI62</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_68080086">
    <bic>DRESDEFFJ22</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_68090000">
@@ -15232,7 +15112,7 @@
  </bank>
   <bank blz="_68340058">
    <bic>COBADEFF683</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_68350048">
@@ -15327,7 +15207,7 @@
  </bank>
   <bank blz="_69040045">
    <bic>COBADEFF690</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_69050001">
@@ -15387,7 +15267,7 @@
  </bank>
   <bank blz="_69240075">
    <bic>COBADEFF692</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_69250035">
@@ -15417,7 +15297,7 @@
  </bank>
   <bank blz="_69280035">
    <bic>DRESDEFF692</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_69290000">
@@ -15447,12 +15327,12 @@
  </bank>
   <bank blz="_69440007">
    <bic>COBADEFF694</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Villingen u Schwenningen</name>
  </bank>
   <bank blz="_69440060">
    <bic>COBADEFF108</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_69450065">
@@ -15581,9 +15461,9 @@
    <name>VEM Aktienbank</name>
  </bank>
   <bank blz="_70012200">
-   <bic>SRRADEM1XXX</bic>
+   <bic>SRRADEM1BBK</bic>
    <rule>000000</rule>
-   <name>Bank Sarasin</name>
+   <name>Bank J. Safra Sarasin (Deutschland)</name>
  </bank>
   <bank blz="_70012300">
    <bic>VBANDEMMXXX</bic>
@@ -15593,7 +15473,7 @@
   <bank blz="_70012400">
    <bic>FLGMDE77XXX</bic>
    <rule>000000</rule>
-   <name>flatex alpha</name>
+   <name>Die AKTIONÄRSBANK Kulmbach</name>
  </bank>
   <bank blz="_70012600">
    <bic>SUSKDEM1XXX</bic>
@@ -15656,7 +15536,7 @@
    <name>PayCenter</name>
  </bank>
   <bank blz="_70020001">
-   <bic>HYVEDEM1092</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 645 M</name>
  </bank>
@@ -15742,42 +15622,42 @@
  </bank>
   <bank blz="_70040041">
    <bic>COBADEFF700</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_70040048">
    <bic>COBADEFF970</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank GF-M48</name>
  </bank>
   <bank blz="_70040060">
    <bic>COBADEFF068</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 860</name>
  </bank>
   <bank blz="_70040061">
    <bic>COBADEFF069</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Gf 861</name>
  </bank>
   <bank blz="_70040062">
    <bic>COBADEFF098</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_70040063">
    <bic>COBADEFF099</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_70040070">
    <bic>COBADEFFS07</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank, CC SP</name>
  </bank>
   <bank blz="_70045050">
    <bic>COBADEFFBZM</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Service-BZ</name>
  </bank>
   <bank blz="_70050000">
@@ -15832,47 +15712,47 @@
  </bank>
   <bank blz="_70080000">
    <bic>DRESDEFF700</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_70080056">
    <bic>DRESDEFF714</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 56</name>
  </bank>
   <bank blz="_70080057">
    <bic>DRESDEFF724</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf ZW 57</name>
  </bank>
   <bank blz="_70080085">
    <bic>DRESDEFFI55</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 3</name>
  </bank>
   <bank blz="_70080086">
    <bic>DRESDEFFJ23</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4</name>
  </bank>
   <bank blz="_70080087">
    <bic>DRESDEFFJ24</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5</name>
  </bank>
   <bank blz="_70080088">
    <bic>DRESDEFFJ25</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6</name>
  </bank>
   <bank blz="_70089470">
    <bic>DRESDEFFI23</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_70089472">
    <bic>DRESDEFFI45</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_70090100">
@@ -15940,11 +15820,6 @@
    <rule>000000</rule>
    <name>State Street Bank</name>
  </bank>
-  <bank blz="_70120200">
-   <bic>ABNADEFFMUN</bic>
-   <rule>000100</rule>
-   <name>The Royal Bank of Scotland Niederlassung Frankfurt</name>
- </bank>
   <bank blz="_70120400">
    <bic>DABBDEMMXXX</bic>
    <rule>000000</rule>
@@ -15966,7 +15841,7 @@
    <name>Oberbank Ndl Deutschland</name>
  </bank>
   <bank blz="_70120900">
-   <bic>HYVEDEM1107</bic>
+   <bic></bic>
    <rule>000000</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl BACA</name>
  </bank>
@@ -16055,11 +15930,6 @@
    <rule>000000</rule>
    <name>Raiffeisenbank Alxing-Bruck</name>
  </bank>
-  <bank blz="_70169322">
-   <bic>GENODEF1AFK</bic>
-   <rule>000000</rule>
-   <name>Raiffeisenbank Aufkirchen -alt-</name>
- </bank>
   <bank blz="_70169331">
    <bic>GENODEF1SSB</bic>
    <rule>000000</rule>
@@ -16113,7 +15983,7 @@
   <bank blz="_70169433">
    <bic>GENODEF1KOG</bic>
    <rule>000000</rule>
-   <name>Raiffeisenbank Königsdorf-Gelting</name>
+   <name>Raiffeisenbank Königsdorf-Gelting -alt-</name>
  </bank>
   <bank blz="_70169444">
    <bic>GENODEF1LGR</bic>
@@ -16310,11 +16180,6 @@
    <rule>000000</rule>
    <name>Münchner Bank</name>
  </bank>
-  <bank blz="_70190200">
-   <bic>GENODEF1M09</bic>
-   <rule>000000</rule>
-   <name>GLS Gemeinschaftsbank</name>
- </bank>
   <bank blz="_70220000">
    <bic>LFFBDEMMXXX</bic>
    <rule>000000</rule>
@@ -16366,7 +16231,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_70320305">
-   <bic>HYVEDEM1091</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 635 Gar</name>
  </bank>
@@ -16397,7 +16262,7 @@
  </bank>
   <bank blz="_70380006">
    <bic>DRESDEFF703</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_70390000">
@@ -16492,17 +16357,17 @@
  </bank>
   <bank blz="_71140041">
    <bic>COBADEFF711</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Rosenheim</name>
  </bank>
   <bank blz="_71141041">
    <bic>COBADEFF704</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_71142041">
    <bic>COBADEFF712</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_71150000">
@@ -16538,7 +16403,7 @@
   <bank blz="_71160161">
    <bic>GENODEF1ROR</bic>
    <rule>000000</rule>
-   <name>VR Bank Rosenheim-Chiemsee</name>
+   <name>VR Bank Rosenheim-Chiemsee -alt-</name>
  </bank>
   <bank blz="_71161964">
    <bic>GENODEF1PRV</bic>
@@ -16562,7 +16427,7 @@
  </bank>
   <bank blz="_71180005">
    <bic>DRESDEFF711</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_71190000">
@@ -16596,7 +16461,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_72020240">
-   <bic>HYVEDEM1102</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 677 Agsb</name>
  </bank>
@@ -16627,7 +16492,7 @@
  </bank>
   <bank blz="_72040046">
    <bic>COBADEFF720</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_72050000">
@@ -16643,7 +16508,7 @@
   <bank blz="_72051210">
    <bic>BYLADEM1AIC</bic>
    <rule>000000</rule>
-   <name>Stadtsparkasse Aichach</name>
+   <name>Sparkasse Aichach-Schrobenhausen</name>
  </bank>
   <bank blz="_72051840">
    <bic>BYLADEM1GZK</bic>
@@ -16812,7 +16677,7 @@
  </bank>
   <bank blz="_72080001">
    <bic>DRESDEFF720</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_72090000">
@@ -16851,7 +16716,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_72120207">
-   <bic>HYVEDEM1093</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 648 Ing</name>
  </bank>
@@ -16862,7 +16727,7 @@
  </bank>
   <bank blz="_72140052">
    <bic>COBADEFF721</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_72150000">
@@ -16883,7 +16748,7 @@
   <bank blz="_72151880">
    <bic>BYLADEM1SSH</bic>
    <rule>000000</rule>
-   <name>Stadtsparkasse Schrobenhausen</name>
+   <name>Sparkasse Aichach-Schrobenhausen -alt-</name>
  </bank>
   <bank blz="_72152070">
    <bic>BYLADEM1NEB</bic>
@@ -16972,7 +16837,7 @@
  </bank>
   <bank blz="_72180002">
    <bic>DRESDEFF721</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_72191300">
@@ -17062,7 +16927,7 @@
  </bank>
   <bank blz="_73140046">
    <bic>COBADEFF731</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Memmingen</name>
  </bank>
   <bank blz="_73150000">
@@ -17077,7 +16942,7 @@
  </bank>
   <bank blz="_73180011">
    <bic>DRESDEFF731</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_73190000">
@@ -17086,7 +16951,7 @@
    <name>VR-Bank Memmingen</name>
  </bank>
   <bank blz="_73191500">
-   <bic>ULMVDE66002</bic>
+   <bic>ULMVDE66XXX</bic>
    <rule>000000</rule>
    <name>Volksbank Ulm-Biberach -alt-</name>
  </bank>
@@ -17096,7 +16961,7 @@
    <name>Bundesbank eh Kempten</name>
  </bank>
   <bank blz="_73311600">
-   <bic>HYPVDE71XXX</bic>
+   <bic></bic>
    <rule>000100</rule>
    <name>Vorarlberger Landes- und Hypothekenbank</name>
  </bank>
@@ -17106,7 +16971,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_73320442">
-   <bic>HYVEDEM1097</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 669 Kpt</name>
  </bank>
@@ -17127,7 +16992,7 @@
  </bank>
   <bank blz="_73340046">
    <bic>COBADEFF733</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Kempten Allgäu</name>
  </bank>
   <bank blz="_73350000">
@@ -17168,17 +17033,12 @@
   <bank blz="_73369821">
    <bic>GENODEF1LBB</bic>
    <rule>000000</rule>
-   <name>Raiffeisen-Bodenseebank</name>
+   <name>BodenseeBank</name>
  </bank>
   <bank blz="_73369823">
    <bic>GENODEF1WWA</bic>
    <rule>000000</rule>
    <name>Raiffeisenbank Westallgäu</name>
- </bank>
-  <bank blz="_73369824">
-   <bic>GENODEF1HKE</bic>
-   <rule>000000</rule>
-   <name>Raiffeisenbank Heimenkirch-Ellhofen -alt-</name>
  </bank>
   <bank blz="_73369826">
    <bic>GENODEF1LIA</bic>
@@ -17267,7 +17127,7 @@
  </bank>
   <bank blz="_73380004">
    <bic>DRESDEFF733</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_73390000">
@@ -17296,7 +17156,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_73420546">
-   <bic>HYVEDEM1104</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 693 Kaufb</name>
  </bank>
@@ -17307,7 +17167,7 @@
  </bank>
   <bank blz="_73440048">
    <bic>COBADEFF971</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_73450000">
@@ -17327,7 +17187,7 @@
  </bank>
   <bank blz="_73480013">
    <bic>DRESDEFF734</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_73491300">
@@ -17356,13 +17216,13 @@
    <name>Raiffeisenlandesbank OÖ Zndl Südde - für interne Zwecke</name>
  </bank>
   <bank blz="_74020414">
-   <bic>HYVEDEM1100</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 672 Pass</name>
  </bank>
   <bank blz="_74040082">
    <bic>COBADEFF740</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Passau</name>
  </bank>
   <bank blz="_74050000">
@@ -17471,7 +17331,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_74120514">
-   <bic>HYVEDEM1101</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank 674 Dgdf</name>
  </bank>
@@ -17482,7 +17342,7 @@
  </bank>
   <bank blz="_74140048">
    <bic>COBADEFF977</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_74150000">
@@ -17517,7 +17377,7 @@
  </bank>
   <bank blz="_74180009">
    <bic>DRESDEFF741</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_74190000">
@@ -17542,7 +17402,7 @@
  </bank>
   <bank blz="_74240062">
    <bic>COBADEFF742</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Straubing</name>
  </bank>
   <bank blz="_74250000">
@@ -17586,13 +17446,13 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_74320307">
-   <bic>HYVEDEM1090</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 601 Ldsht</name>
  </bank>
   <bank blz="_74340077">
    <bic>COBADEFF743</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_74350000">
@@ -17677,7 +17537,7 @@
  </bank>
   <bank blz="_74380007">
    <bic>DRESDEFF743</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_74390000">
@@ -17716,7 +17576,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_75020314">
-   <bic>HYVEDEM1099</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 670 Rgsb</name>
  </bank>
@@ -17727,7 +17587,7 @@
  </bank>
   <bank blz="_75040062">
    <bic>COBADEFF750</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Regensburg</name>
  </bank>
   <bank blz="_75050000">
@@ -17758,7 +17618,7 @@
   <bank blz="_75061851">
    <bic>GENODEF1REF</bic>
    <rule>000000</rule>
-   <name>Raiffeisenbank</name>
+   <name>Raiffeisenbank Regenstauf</name>
  </bank>
   <bank blz="_75062026">
    <bic>GENODEF1DST</bic>
@@ -17852,7 +17712,7 @@
  </bank>
   <bank blz="_75080003">
    <bic>DRESDEFF750</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_75090000">
@@ -17892,7 +17752,7 @@
  </bank>
   <bank blz="_75240000">
    <bic>COBADEFF765</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_75250000">
@@ -17922,7 +17782,7 @@
  </bank>
   <bank blz="_75340090">
    <bic>COBADEFF753</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_75350000">
@@ -17981,7 +17841,7 @@
    <name>UniCredit Bank - HypoVereinsbank Prepaid Card</name>
  </bank>
   <bank blz="_76020214">
-   <bic>HYVEDEM1078</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 156 Nbg</name>
  </bank>
@@ -18027,21 +17887,21 @@
  </bank>
   <bank blz="_76040060">
    <bic>COBADEFF100</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_76040061">
    <bic>COBADEFF760</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_76040062">
    <bic>COBADEFF101</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_76050000">
-   <bic>BYLADE77XXX</bic>
+   <bic>BYLADEMMXXX</bic>
    <rule>000000</rule>
    <name>Bayerische Landesbank</name>
  </bank>
@@ -18232,37 +18092,37 @@
  </bank>
   <bank blz="_76080040">
    <bic>DRESDEFF760</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_76080053">
    <bic>DRESDEFFAGI</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 53</name>
  </bank>
   <bank blz="_76080055">
    <bic>DRESDEFFI25</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 55</name>
  </bank>
   <bank blz="_76080085">
    <bic>DRESDEFFJ26</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_76080086">
    <bic>DRESDEFFJ27</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_76089480">
    <bic>DRESDEFFI24</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_76089482">
    <bic>DRESDEFFI46</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_76090300">
@@ -18312,7 +18172,7 @@
  </bank>
   <bank blz="_76240011">
    <bic>COBADEFF762</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Fürth Bayern</name>
  </bank>
   <bank blz="_76250000">
@@ -18347,7 +18207,7 @@
  </bank>
   <bank blz="_76340061">
    <bic>COBADEFF763</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Erlangen</name>
  </bank>
   <bank blz="_76350000">
@@ -18457,7 +18317,7 @@
  </bank>
   <bank blz="_77040080">
    <bic>COBADEFF770</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Bamberg</name>
  </bank>
   <bank blz="_77050000">
@@ -18490,11 +18350,6 @@
    <rule>000000</rule>
    <name>Raiffeisen-Volksbank Bad Staffelstein</name>
  </bank>
-  <bank blz="_77063048">
-   <bic>GENODEF1HLD</bic>
-   <rule>000000</rule>
-   <name>Raiffeisenbank Hallstadt -alt-</name>
- </bank>
   <bank blz="_77065141">
    <bic>GENODEF1STC</bic>
    <rule>000000</rule>
@@ -18520,11 +18375,6 @@
    <rule>000000</rule>
    <name>Raiffeisenbank</name>
  </bank>
-  <bank blz="_77069084">
-   <bic>GENODEF1MEM</bic>
-   <rule>000000</rule>
-   <name>Raiffeisenbank -alt-</name>
- </bank>
   <bank blz="_77069091">
    <bic>GENODEF1SFD</bic>
    <rule>000000</rule>
@@ -18534,11 +18384,6 @@
    <bic>GENODEF1PRE</bic>
    <rule>000000</rule>
    <name>Raiffeisenbank Pretzfeld -alt-</name>
- </bank>
-  <bank blz="_77069128">
-   <bic>GENODEF1STZ</bic>
-   <rule>000000</rule>
-   <name>Raiffeisenbank Scheßlitz-Zapfendorf -alt-</name>
  </bank>
   <bank blz="_77069461">
    <bic>GENODEF1GBF</bic>
@@ -18612,7 +18457,7 @@
  </bank>
   <bank blz="_77140061">
    <bic>COBADEFF771</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_77150000">
@@ -18642,7 +18487,7 @@
  </bank>
   <bank blz="_77340076">
    <bic>COBADEFF773</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_77350110">
@@ -18691,7 +18536,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_78020429">
-   <bic>HYVEDEM1074</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 128 Hof</name>
  </bank>
@@ -18707,7 +18552,7 @@
  </bank>
   <bank blz="_78040081">
    <bic>COBADEFF780</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Hof Saale</name>
  </bank>
   <bank blz="_78050000">
@@ -18732,7 +18577,7 @@
  </bank>
   <bank blz="_78140000">
    <bic>COBADEFF755</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_78160069">
@@ -18757,7 +18602,7 @@
  </bank>
   <bank blz="_78340091">
    <bic>COBADEFF783</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_78350000">
@@ -18786,7 +18631,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_79020325">
-   <bic>HYVEDEM1077</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 149 Wzb</name>
  </bank>
@@ -18807,7 +18652,7 @@
  </bank>
   <bank blz="_79040047">
    <bic>COBADEFF790</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Würzburg</name>
  </bank>
   <bank blz="_79050000">
@@ -18927,12 +18772,12 @@
  </bank>
   <bank blz="_79080052">
    <bic>DRESDEFF790</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_79080085">
    <bic>DRESDEFFJ28</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_79090000">
@@ -18971,7 +18816,7 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_79320432">
-   <bic>HYVEDEM1075</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 137 Schft</name>
  </bank>
@@ -18982,7 +18827,7 @@
  </bank>
   <bank blz="_79340054">
    <bic>COBADEFF793</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank Schweinfurt</name>
  </bank>
   <bank blz="_79350000">
@@ -19037,7 +18882,7 @@
  </bank>
   <bank blz="_79380051">
    <bic>DRESDEFF793</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_79500000">
@@ -19056,13 +18901,13 @@
    <name>UniCredit Bank - HypoVereinsbank</name>
  </bank>
   <bank blz="_79520533">
-   <bic>HYVEDEM1106</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 125 Aschb</name>
  </bank>
   <bank blz="_79540049">
    <bic>COBADEFF795</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_79550000">
@@ -19112,12 +18957,12 @@
  </bank>
   <bank blz="_79580099">
    <bic>DRESDEFF795</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_79589402">
    <bic>DRESDEFFI47</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_79590000">
@@ -19177,7 +19022,7 @@
  </bank>
   <bank blz="_80040000">
    <bic>COBADEFF800</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_80050500">
@@ -19272,7 +19117,7 @@
  </bank>
   <bank blz="_80080000">
    <bic>DRESDEFF800</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_80093574">
@@ -19317,7 +19162,7 @@
  </bank>
   <bank blz="_81040000">
    <bic>COBADEFF810</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_81050000">
@@ -19397,7 +19242,7 @@
  </bank>
   <bank blz="_81080000">
    <bic>DRESDEFF810</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_81093034">
@@ -19447,7 +19292,7 @@
  </bank>
   <bank blz="_82040000">
    <bic>COBADEFF820</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_82040085">
@@ -19537,7 +19382,7 @@
  </bank>
   <bank blz="_82080000">
    <bic>DRESDEFF827</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_82094004">
@@ -19572,7 +19417,7 @@
  </bank>
   <bank blz="_83040000">
    <bic>COBADEFF830</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_83050000">
@@ -19622,7 +19467,7 @@
  </bank>
   <bank blz="_83080000">
    <bic>DRESDEFF830</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_83094444">
@@ -19667,7 +19512,7 @@
  </bank>
   <bank blz="_84040000">
    <bic>COBADEFF840</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_84050000">
@@ -19707,7 +19552,7 @@
  </bank>
   <bank blz="_84080000">
    <bic>DRESDEFF843</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_84094754">
@@ -19746,23 +19591,23 @@
    <name>Bank für Sozialwirtschaft</name>
  </bank>
   <bank blz="_85020890">
-   <bic>HYVEDEM1089</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 536 Dre</name>
  </bank>
   <bank blz="_85040000">
    <bic>COBADEFF850</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_85040060">
    <bic>COBADEFF104</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_85040061">
    <bic>COBADEFF105</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_85050100">
@@ -19802,27 +19647,27 @@
  </bank>
   <bank blz="_85080000">
    <bic>DRESDEFF850</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_85080085">
    <bic>DRESDEFFJ29</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_85080086">
    <bic>DRESDEFFJ30</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_85080200">
    <bic>DRESDEFF857</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_85089270">
    <bic>DRESDEFFI15</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_85090000">
@@ -19849,11 +19694,6 @@
    <bic>SOLADES1BAT</bic>
    <rule>000000</rule>
    <name>Kreissparkasse Bautzen</name>
- </bank>
-  <bank blz="_85550200">
-   <bic>SOLADES1ZIT</bic>
-   <rule>000000</rule>
-   <name>Kreissparkasse Löbau-Zittau -alt-</name>
  </bank>
   <bank blz="_85590000">
    <bic>GENODEF1BZV</bic>
@@ -19916,7 +19756,7 @@
    <name>Hanseatic Bank</name>
  </bank>
   <bank blz="_86020880">
-   <bic>HYVEDEM1088</bic>
+   <bic></bic>
    <rule>003101</rule>
    <name>UniCredit Bank - HypoVereinsbank Ndl 508 Lei</name>
  </bank>
@@ -19927,17 +19767,17 @@
  </bank>
   <bank blz="_86040000">
    <bic>COBADEFF860</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_86040060">
    <bic>COBADEFF106</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_86040061">
    <bic>COBADEFF107</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank CC</name>
  </bank>
   <bank blz="_86050000">
@@ -20007,32 +19847,32 @@
  </bank>
   <bank blz="_86080000">
    <bic>DRESDEFF860</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_86080055">
    <bic>DRESDEFF862</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Zw 55</name>
  </bank>
   <bank blz="_86080057">
    <bic>DRESDEFF867</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank Gf ZW 57</name>
  </bank>
   <bank blz="_86080085">
    <bic>DRESDEFFJ31</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1</name>
  </bank>
   <bank blz="_86080086">
    <bic>DRESDEFFJ32</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2</name>
  </bank>
   <bank blz="_86089280">
    <bic>DRESDEFFI16</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank ITGK</name>
  </bank>
   <bank blz="_86095484">
@@ -20048,7 +19888,7 @@
   <bank blz="_86095604">
    <bic>GENODEF1LVB</bic>
    <rule>000000</rule>
-   <name>Volksbank Leipzig</name>
+   <name>Leipziger Volksbank</name>
  </bank>
   <bank blz="_87000000">
    <bic>MARKDEF1870</bic>
@@ -20072,7 +19912,7 @@
  </bank>
   <bank blz="_87040000">
    <bic>COBADEFF870</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank</name>
  </bank>
   <bank blz="_87050000">
@@ -20147,7 +19987,7 @@
  </bank>
   <bank blz="_87080000">
    <bic>DRESDEFF870</bic>
-   <rule>000502</rule>
+   <rule>000503</rule>
    <name>Commerzbank vormals Dresdner Bank</name>
  </bank>
   <bank blz="_87095824">

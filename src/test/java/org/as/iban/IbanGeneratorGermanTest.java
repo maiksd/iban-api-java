@@ -2612,4 +2612,19 @@ public class IbanGeneratorGermanTest {
     	    assertEquals(IbanException.IBAN_EXCEPTION_NO_IBAN_CALCULATION, e.getMessage());
     	}
     }
+    
+    @Test
+    public void rule005700() {
+	bankIdent = "50810900";
+	ktoIdent = "9988776655";
+	
+	Iban iban = null;
+	try {
+	    iban = new IbanImpl(Iban.COUNTRY_CODE_GERMAN, bankIdent, ktoIdent);
+	} catch (IbanException e) {
+	    e.printStackTrace();
+	}
+	
+	assertEquals("DE97660102009988776655", iban.toString());
+    }
 }

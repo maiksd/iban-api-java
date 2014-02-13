@@ -32,8 +32,8 @@
 		</mappings_kto>
 	</rule>
 
-	<!-- Rule 0005-01 Commerzbank AG -->
-	<rule id="_000502">
+	<!-- Rule 0005-03 Commerzbank AG -->
+	<rule id="_000503">
 		<no_calculation>
 			<kto_number_range blz="10080900">([9]{2}[8]\d{6}|[9]{3}[0-4]\d{5})</kto_number_range>
 			<kto_number_range blz="12080000">([9]{2}[8]\d{6}|[9]{3}[0-4]\d{5})</kto_number_range>
@@ -3789,7 +3789,7 @@
 	</rule>
 	
 	<!-- Rule 0054-00 Evangelische Darlehnsgenossenschaft eG -->
-	<rule id="_005400">
+	<rule id="_005401">
 		<mappings_kto blz="10060237">
 			<mapping from="500">500500</mapping>
 			<mapping from="502">502502</mapping>
@@ -4048,5 +4048,12 @@
 		<mappings_kto blz="70010111">
 			<mapping from="121212">1249461502</mapping>
 		</mappings_kto>
+	</rule>
+	
+	<!-- Rule 0057-00 Badenia Bausparkasse -->
+	<rule id="_005700">
+		<mappings_blz>
+			<mapping from="50810900">66010200</mapping>
+		</mappings_blz>
 	</rule>
 </rules>
