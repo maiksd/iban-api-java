@@ -88,7 +88,7 @@ public class IbanValidatorGermanTest {
     }
     
     @Test
-    public void rule000502() {
+    public void rule000503() {
 	Iban iban = null;
 	
 	try {
@@ -1360,7 +1360,7 @@ public class IbanValidatorGermanTest {
     }
     
     @Test
-    public void rule005400() {
+    public void rule005401() {
 	Iban iban = null;
 	
 	try {

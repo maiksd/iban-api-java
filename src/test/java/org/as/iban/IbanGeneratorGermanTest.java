@@ -115,7 +115,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test 
-    public void rule000502() {
+    public void rule000503() {
 		bankIdent = "26580070";
 		ktoIdent = "732502200";
 		Iban iban = null;
@@ -2529,7 +2529,7 @@ public class IbanGeneratorGermanTest {
     }
     
     @Test
-    public void rule005400(){
+    public void rule005401(){
     	bankIdent = "10060237";
     	ktoIdent = "16307000";
     	
