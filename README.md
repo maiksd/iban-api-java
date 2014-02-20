@@ -6,7 +6,7 @@ Open Source Java-API for generating an IBAN from a given bank account and valida
 
 Two quick start options are available:
 
-* [Download the latest release](https://github.com/aventum-solutions/iban-api-java/tree/master/jar/org.as.iban-java-1.0.4-RELEASE.jar) and add it to your Java classpath
+* [Download the latest release](https://github.com/aventum-solutions/iban-api-java/tree/master/jar/org.as.iban-java-1.0.5-RELEASE.jar) and add it to your Java classpath
 * Build from sourcecode
 
 ## Version History
@@ -15,6 +15,7 @@ Two quick start options are available:
 * Version 1.0.2: Now Java6 compatible
 * Version 1.0.3: Fix rule 20 (Deutsche Bank) for 7-place account number
 * Version 1.0.4: Performance and safety improvements (from maiksd) / Fixes for rule 002600 and 002700
+* Version 1.0.5: German IBAN-rules and banks valid after 03.03.2014
 
 ## Build from sourcecode
 
@@ -26,7 +27,7 @@ Two quick start options are available:
 
 
 ## Using the API
-* Javadoc of the current release is available [here](https://github.com/aventum-solutions/iban-api-java/tree/master/jar/org.as.iban-java-1.0.4-RELEASE-javadoc.jar)
+* Javadoc of the current release is available [here](https://github.com/aventum-solutions/iban-api-java/tree/master/jar/org.as.iban-java-1.0.5-RELEASE-javadoc.jar)
 
 ---
 * For generating an Iban for a given bank account just call the constructor from interface 'Iban' with the following parameters
