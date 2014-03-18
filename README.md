@@ -1,6 +1,6 @@
 # Java-API for Generation/Validation IBAN [![Build Status](https://travis-ci.org/aventum-solutions/iban-api-java.png?branch=master)](https://travis-ci.org/aventum-solutions/iban-api-java)
 
-Open Source Java-API for generating an IBAN from a given bank account and validate an IBAN
+Open Source Java-API for generating an IBAN from a given bank account and validate an IBAN.
 
 ## Quick Start
 
