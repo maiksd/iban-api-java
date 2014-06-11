@@ -1379,25 +1379,26 @@ public class IbanValidatorGermanTest {
 	}
     }
     
-    @Test
-    public void rule005500() {
-	Iban iban = null;
-	
-	try {
-	    iban = new IbanImpl("DE47254102007456123400");
-	    assertTrue(iban.validate());
-	    assertEquals("BHWBDE2HXXX", iban.getBic());
-	} catch (IbanException e) {
-	    e.printStackTrace();
-	}
-	
-	try {
-	    iban = new IbanImpl("DE55254103007456123400");
-	    assertFalse(iban.validate());
-	} catch (IbanException e) {
-	    e.printStackTrace();
-	}
-    }
+    // BLZ und Regel nicht im Regelwerk vorhanden
+//    @Test
+//    public void rule005500() {
+//	Iban iban = null;
+//	
+//	try {
+//	    iban = new IbanImpl("DE47254102007456123400");
+//	    assertTrue(iban.validate());
+//	    assertEquals("BHWBDE2HXXX", iban.getBic());
+//	} catch (IbanException e) {
+//	    e.printStackTrace();
+//	}
+//	
+//	try {
+//	    iban = new IbanImpl("DE55254103007456123400");
+//	    assertFalse(iban.validate());
+//	} catch (IbanException e) {
+//	    e.printStackTrace();
+//	}
+//    }
     
     @Test
     public void rule005600() {
